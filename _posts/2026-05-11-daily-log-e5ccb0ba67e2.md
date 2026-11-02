@@ -1,7 +1,7 @@
 ---
 title: "데일리로그260511"
 date: 2026-05-11 12:00:00 +0900
-categories: ["데일리 로그"]
+categories: ["데일리로그"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "XR Grab Interactable의 잡기 위치와 양손 잡기를 실습하고, 발사 입력·XR UI·AR Foundation의 기초를 살펴봤다."
 description: "XR Grab Interactable의 잡기 위치와 양손 잡기를 실습하고, 발사 입력·XR UI·AR Foundation의 기초를 살펴봤다."

@@ -125,7 +125,6 @@
       },
       {
         "categories": [
-          "데일리 로그",
           "개발일지",
           "개발 메모",
           "데일리로그",
@@ -137,7 +136,7 @@
         "show_top": true,
         "show_side": true,
         "id": "daily-log",
-        "title": "데일리 로그",
+        "title": "데일리로그",
         "parent": ""
       },
       {

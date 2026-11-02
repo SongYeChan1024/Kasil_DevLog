@@ -1,7 +1,7 @@
 ---
 title: "[데일리 로그] 같은 코드를 세 번 읽으며 기본기를 쌓다"
 date: 2026-10-28 17:30:00 +0900
-categories: [데일리 로그]
+categories: [데일리로그]
 tags: [Unity, CSharp, 의사코드, 학습기록, Notion, GitHubPages]
 ---
 

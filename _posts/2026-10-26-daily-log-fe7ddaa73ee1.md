@@ -1,7 +1,7 @@
 ---
 title: "2026-10-26 데일리 로그 애프터 세컨즈 연구소 시안과 Unity 계층 분리"
 date: 2026-10-26 12:00:00 +0900
-categories: ["데일리 로그"]
+categories: ["데일리로그"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "After Seconds 연구소 시안을 정리하고, Unity에서 여섯 폴더와 어셈블리 정의를 만들어 계층별 참조 경계를 구성했다."
 description: "After Seconds 연구소 시안을 정리하고, Unity에서 여섯 폴더와 어셈블리 정의를 만들어 계층별 참조 경계를 구성했다."
