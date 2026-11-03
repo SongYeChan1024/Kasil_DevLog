@@ -41,3 +41,11 @@ Volume은 대상 프로젝트에 있는 컴포넌트 유형만 생성할 수 있
 ## 확인 범위
 
 원본 프로젝트에서 에셋 생성과 다시 불러오기를 확인함. Terminal·Garden·Oasis 대표 광원 강도, HighQuality Bloom 0.25, TerminalRoom Post Exposure 2를 확인함. 별도 대상 프로젝트에서의 최종 렌더·성능·베이크 일치까지 검증한 결과는 아님.
+
+## 출처·이용 조건 확인 상태
+
+2026-11-03 확인: 원본 프로젝트 루트와 Assets에서 LICENSE·Third Party Notices 문서를 찾지 못함. 패키지별 라이선스를 환경 에셋 전체의 라이선스로 간주하지 않음.
+
+이 보관물은 기술 비교용 로컬 참조 사본이며, 전체 에셋의 상용 이용·수정·재배포 권한을 확인 완료했다는 의미는 아님. 실제 채택 전에 원본 획득 경로와 파일별 이용 조건을 확인하고 출처·고지·수정 기록을 유지함. 수정한 파일도 원본의 이용 조건이 적용될 수 있음. 원본 셰이더·텍스처·unitypackage는 블로그 공개 ZIP에 포함하지 않음.
+
+참고: https://unity.com/legal/licenses/unity-companion-license · https://unity.com/legal/as-terms

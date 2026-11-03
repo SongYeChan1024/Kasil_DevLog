@@ -1,77 +1,77 @@
-[
+﻿[
     {
         "file":  "CockpitScene.json",
-        "bytes":  65180,
-        "sha256":  "3a8fb64a9003283bafa2bfc1ed72b26790d3ea8d1153dcccae597821b4d22f0c"
+        "sha256":  "3a8fb64a9003283bafa2bfc1ed72b26790d3ea8d1153dcccae597821b4d22f0c",
+        "bytes":  65180
     },
     {
         "file":  "EnvironmentTrainingDataImporter.cs",
-        "bytes":  9196,
-        "sha256":  "13448e5736cc2a88d344ddd5aa671bd938290be269ca529a80f83a0b1c7d1d9a"
+        "sha256":  "13448e5736cc2a88d344ddd5aa671bd938290be269ca529a80f83a0b1c7d1d9a",
+        "bytes":  9196
     },
     {
         "file":  "GardenScene.json",
-        "bytes":  941545,
-        "sha256":  "8398c06b8596dae5c878332179c151a3fb02935abb24aa891d3131f298fd1357"
+        "sha256":  "8398c06b8596dae5c878332179c151a3fb02935abb24aa891d3131f298fd1357",
+        "bytes":  941545
     },
     {
         "file":  "import-report.txt",
-        "bytes":  970,
-        "sha256":  "99e9f49b2640cb2cf43b7b75fe13b2a5f7569189796850b5d1d7d3e882ccbeff"
+        "sha256":  "99e9f49b2640cb2cf43b7b75fe13b2a5f7569189796850b5d1d7d3e882ccbeff",
+        "bytes":  970
     },
     {
         "file":  "import-validation.json",
-        "bytes":  806,
-        "sha256":  "8d911ae762e2d79fcb49cb7ea70b7c35df85f51457ad59cef8e280f9526ec25d"
+        "sha256":  "8d911ae762e2d79fcb49cb7ea70b7c35df85f51457ad59cef8e280f9526ec25d",
+        "bytes":  806
     },
     {
         "file":  "OasisScene.json",
-        "bytes":  75908,
-        "sha256":  "6f357133583df32917dab89b1a51a733dc074c623b7dac7d544c28b0350ee2bc"
+        "sha256":  "6f357133583df32917dab89b1a51a733dc074c623b7dac7d544c28b0350ee2bc",
+        "bytes":  75908
     },
     {
         "file":  "portable-presets.json",
-        "bytes":  1176816,
-        "sha256":  "1be4b5da2560c740c45397b732a4febce1f69cb420e9ce576fbef1a87d59b8d5"
+        "sha256":  "1be4b5da2560c740c45397b732a4febce1f69cb420e9ce576fbef1a87d59b8d5",
+        "bytes":  1176816
     },
     {
         "file":  "project.json",
-        "bytes":  5530,
-        "sha256":  "1aa88db99ad6174e46eff54bb73c86f457c81d8e68b32dc8f3e0377c4a4d3fb6"
+        "sha256":  "1aa88db99ad6174e46eff54bb73c86f457c81d8e68b32dc8f3e0377c4a4d3fb6",
+        "bytes":  5530
     },
     {
         "file":  "README.md",
-        "bytes":  4076,
-        "sha256":  "4bf88f5f0394724a1fac0726515a7426098a90cccece76a31d36e76140ebc932"
+        "sha256":  "6c030ce96556b435f1d850c8195266725d36d53e60c5cae77e53f108ef6aef88",
+        "bytes":  4878
     },
     {
         "file":  "render-settings.json",
-        "bytes":  307172,
-        "sha256":  "d303f5c4a4bb900455961237dc48b79b68db7eccb77fab38bc9f93bed5a6fef0"
+        "sha256":  "d303f5c4a4bb900455961237dc48b79b68db7eccb77fab38bc9f93bed5a6fef0",
+        "bytes":  307172
     },
     {
         "file":  "shader-graph-features.json",
-        "bytes":  185324,
-        "sha256":  "c5b0190a7cf8094edcb8424964af21b65ef38261935ce9f68085f749f0fc8078"
+        "sha256":  "c5b0190a7cf8094edcb8424964af21b65ef38261935ce9f68085f749f0fc8078",
+        "bytes":  185324
     },
     {
         "file":  "shader-inventory.json",
-        "bytes":  135274,
-        "sha256":  "94fa6a10aa26ed33d4097e5123b8b7c34648149732542761e72e5d5d71ddd320"
+        "sha256":  "94fa6a10aa26ed33d4097e5123b8b7c34648149732542761e72e5d5d71ddd320",
+        "bytes":  135274
     },
     {
         "file":  "shader-materials.json",
-        "bytes":  384721,
-        "sha256":  "4944ef577df80e82ce2c7dfad13ebdc97e5c7db3f15eaa165f6f7c5c61a7cd86"
+        "sha256":  "4944ef577df80e82ce2c7dfad13ebdc97e5c7db3f15eaa165f6f7c5c61a7cd86",
+        "bytes":  384721
     },
     {
         "file":  "TerminalScene.json",
-        "bytes":  1366103,
-        "sha256":  "7a9a405461a372bc93adab6f30e56e353afd114a3b8ff7304499da5b4f56b67d"
+        "sha256":  "7a9a405461a372bc93adab6f30e56e353afd114a3b8ff7304499da5b4f56b67d",
+        "bytes":  1366103
     },
     {
         "file":  "volume-profiles.json",
-        "bytes":  88830,
-        "sha256":  "239de00d9fce251a9cef53d8aa91e2c3aed507f5b9a6dddb8c752297aebbac0f"
+        "sha256":  "239de00d9fce251a9cef53d8aa91e2c3aed507f5b9a6dddb8c752297aebbac0f",
+        "bytes":  88830
     }
 ]
