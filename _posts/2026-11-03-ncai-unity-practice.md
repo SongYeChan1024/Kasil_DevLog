@@ -2,7 +2,7 @@
 title: "261103_NCAI_Unity_실습"
 date: 2026-11-03 10:07:00 +0900
 categories: [데일리로그, Unity]
-tags: [Unity, CSharp, Invector, 로코모션, Rigidbody, Animator, 점프]
+tags: [Unity, CSharp, Invector, 로코모션, Rigidbody, Animator, 점프, Skybox]
 pin: false
 toc: true
 ---
@@ -283,6 +283,81 @@ Rigidbody로 위치 교환을 만드는 것도 가능함\
 
 지금은 현재 이동 구조에서 지상 이동, 공중 입력, 수직 속도, 몸 회전, 애니메이션을 나눠서 이해하는 게 먼저일 듯\
 이번에는 기존 코드를 읽고 설정을 확인한 상태고, 내 프로젝트의 이동 코드를 교체하거나 점프를 구현한 건 아님
+
+## 스카이박스 유형
+
+스카이박스는 씬 바깥에 보이는 하늘이나 먼 배경을 표현하는 머티리얼\
+같은 하늘을 보여 주더라도 이미지를 어떤 형태로 넣는지, 이미지 없이 계산해서 만드는지에 따라 유형이 나뉨
+
+이번에 정리할 건 `6 Sided`, `Cubemap`, `Panoramic`, `Procedural` 네 가지\
+앞의 세 가지는 텍스처를 사용하는 방식이고, Procedural은 머티리얼 설정값으로 하늘을 만드는 방식임\
+[Unity 스카이박스 유형 설명](https://docs.unity3d.com/6000.4/Documentation/Manual/skybox-shaders.html) 기준으로 정리
+
+### 6 Sided · 6사이디드
+
+앞, 뒤, 왼쪽, 오른쪽, 위, 아래에 사용할 이미지 6장을 각각 넣는 방식\
+큰 상자 안쪽 여섯 면에 배경 그림을 붙인다고 생각하면 이해하기 쉬움
+
+각 방향 이미지를 따로 넣을 수 있어서 6면으로 나눠진 배경 자료를 사용할 때 맞는 방식\
+대신 방향이나 회전이 맞지 않으면 하늘이 뒤집히거나 경계가 어색하게 이어질 수 있음\
+면끼리 맞닿는 부분의 구름이나 색이 연결되는지도 확인해야 함
+
+머티리얼 Shader에서 `Skybox/6 Sided`를 선택하고 각 면의 텍스처 슬롯에 연결\
+색감, 노출, 회전도 조절할 수 있음\
+[6 Sided 설정 설명](https://docs.unity3d.com/6000.4/Documentation/Manual/shader-skybox-6sided.html)
+
+### Cubemap · 큐브맵
+
+여섯 방향을 담은 **Cubemap 에셋 하나**를 연결하는 방식\
+이것도 여섯 면으로 주변을 표현하지만, 머티리얼에서 이미지 6장을 따로 받는 6 Sided와 입력 형태가 다름
+
+`Skybox/Cubemap`을 선택하고 `Cubemap (HDR)` 슬롯에 연결\
+일반 Texture2D 이미지를 그대로 넣는 슬롯과는 구분해야 함
+
+이미 준비된 Cubemap 에셋을 배경으로 쓸 때 검토할 수 있음\
+노출과 색감, Y축 회전을 조절해서 배경 방향을 맞출 수 있음\
+[Cubemap 설정 설명](https://docs.unity3d.com/6000.4/Documentation/Manual/shader-skybox-cubemap.html)
+
+### Panoramic · 파노라믹
+
+주변 풍경을 한 장에 펼친 2D 이미지를 씬 주위로 감싸는 방식\
+가로와 세로에 경도, 위도 방향을 펼쳐 놓은 Lat-Long 이미지가 기준\
+일반 사진 한 장을 넣는다고 자동으로 자연스러운 전 방향 배경이 되는 건 아님
+
+`Skybox/Panoramic`을 사용하고 텍스처는 `Texture Shape=2D`로 준비\
+전 방향으로 펼쳐진 HDRI 같은 자료를 배경으로 활용할 때 검토하기 좋은 방식
+
+Cubemap도 하나, Panoramic도 하나를 연결하니까 비슷해 보일 수 있는데\
+Cubemap은 여섯 면을 담은 큐브 텍스처 에셋이고, Panoramic은 펼쳐진 2D 텍스처라는 차이가 있음\
+[Panoramic 입력 형태 설명](https://docs.unity3d.com/6000.4/Documentation/Manual/skybox-shaders.html#panoramic-skybox-shader)
+
+### Procedural · 프로시저럴
+
+하늘 이미지를 넣는 대신 설정값을 계산해서 하늘을 만드는 방식\
+`Skybox/Procedural`에서 하늘 색, 대기 두께, 지평선 아래 색, 노출, 태양 크기 등을 조절할 수 있음
+
+태양 원반을 표시하는 경우에는 사용하는 Directional Light의 회전으로 태양 방향을 정함\
+빛의 방향과 머티리얼 설정값을 바꾸는 식으로 낮이나 노을 분위기를 만들 때 검토할 수 있을 듯
+
+다만 Procedural을 고르는 것만으로 시간이 흐르거나 날씨가 자동으로 바뀌는 건 아님\
+기본 제공 항목에 구름, 비, 밤낮 주기 전체가 들어 있는 것도 아니라서 필요한 기능은 따로 구성해야 함\
+[Procedural 설정 설명](https://docs.unity3d.com/6000.4/Documentation/Manual/shader-skybox-procedural.html)
+
+### 네 가지 비교
+
+| 유형 | 넣는 자료 | 구분할 부분 |
+| --- | --- | --- |
+| 6 Sided | 방향별 텍스처 6장 | 각 면에 직접 연결, 방향과 경계 확인 |
+| Cubemap | Cubemap 에셋 1개 | 여섯 방향을 담은 큐브 텍스처 |
+| Panoramic | 펼쳐진 2D 텍스처 1장 | Lat-Long 형태로 준비 |
+| Procedural | 별도 하늘 텍스처 없이 설정값 사용 | 하늘과 태양 표현을 계산해서 생성 |
+
+준비한 이미지가 여섯 장인지, Cubemap인지, 펼쳐진 한 장인지부터 보면 선택하기 쉬울 듯\
+이미지를 준비하지 않고 하늘 색과 태양부터 조절해 보고 싶으면 Procedural을 검토
+
+위 설명은 Built-in과 URP의 Skybox Shader 기준\
+HDRP는 별도의 Sky 시스템을 사용하므로 같은 Shader 메뉴를 그대로 적용하는 방식과는 다름\
+이번 항목은 유형 설명을 정리한 메모이고 실제 프로젝트의 스카이박스를 교체한 건 아님
 
 ## 참고 자료
 
