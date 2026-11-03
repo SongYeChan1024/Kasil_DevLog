@@ -49,3 +49,10 @@ Volume은 대상 프로젝트에 있는 컴포넌트 유형만 생성할 수 있
 이 보관물은 기술 비교용 로컬 참조 사본이며, 전체 에셋의 상용 이용·수정·재배포 권한을 확인 완료했다는 의미는 아님. 실제 채택 전에 원본 획득 경로와 파일별 이용 조건을 확인하고 출처·고지·수정 기록을 유지함. 수정한 파일도 원본의 이용 조건이 적용될 수 있음. 원본 셰이더·텍스처·unitypackage는 블로그 공개 ZIP에 포함하지 않음.
 
 참고: https://unity.com/legal/licenses/unity-companion-license · https://unity.com/legal/as-terms
+
+## 전체 프로젝트 재사용 후보 추가
+
+- `reuse-catalog.md`: 광원·물·홀로그램·모니터·환경 VFX·연출·품질·편집 도구의 위치와 도입 조건.
+- `project-asset-index.json`: Assets 전체의 상대 경로·파일 크기·확장자·meta 존재 여부. FBX 내부 서브에셋은 별도 집계하지 않음.
+
+TPSControl 실습·외부 에셋도 전체 목록에는 포함됨. Unity 기본 환경 샘플의 출처·조건과 구분해서 사용함. 실제 반입·대상 프로젝트 렌더 검증 완료 목록은 아님.

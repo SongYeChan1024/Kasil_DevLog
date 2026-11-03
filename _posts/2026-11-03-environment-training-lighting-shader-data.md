@@ -23,6 +23,8 @@ Terminal, Garden, Cockpit, Oasis 구성이 들어 있으며 [Unity URP 3D Sample
 - [Unity Editor 가져오기 스크립트](/assets/data/environment-training-20261103/EnvironmentTrainingDataImporter.cs)
 - [생성·검수 결과](/assets/data/environment-training-20261103/import-validation.json)
 - [자동 변환에서 제외된 항목](/assets/data/environment-training-20261103/import-report.txt)
+- [전체 프로젝트 재사용 후보와 연결 조건](/assets/data/environment-training-20261103/reuse-catalog.md)
+- [Assets 전체 파일 목록](/assets/data/environment-training-20261103/project-asset-index.json)
 
 다운로드에는 설정값과 참조 목록, 새로 작성한 가져오기 도구를 넣어 둠\
 원본 셰이더와 의존 에셋은 로컬 참조 폴더에도 unitypackage와 파일 사본으로 따로 보관함\

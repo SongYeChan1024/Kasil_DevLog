@@ -40,14 +40,24 @@
         "bytes":  5530
     },
     {
+        "file":  "project-asset-index.json",
+        "sha256":  "37fa365928813af49cf057b292a139e3bd689531fb54fda61b12d7a153c4aa6b",
+        "bytes":  510727
+    },
+    {
         "file":  "README.md",
-        "sha256":  "6c030ce96556b435f1d850c8195266725d36d53e60c5cae77e53f108ef6aef88",
-        "bytes":  4878
+        "sha256":  "0f12cb54250dd09e6750d8b7212ca5d9409d5e1c4bcf02da7ebb55dd13a5d654",
+        "bytes":  5435
     },
     {
         "file":  "render-settings.json",
         "sha256":  "d303f5c4a4bb900455961237dc48b79b68db7eccb77fab38bc9f93bed5a6fef0",
         "bytes":  307172
+    },
+    {
+        "file":  "reuse-catalog.md",
+        "sha256":  "6f18f2a82194cb1414ebc54bf1151417c75325e661f06a1fb7d023e1bfa66d66",
+        "bytes":  9473
     },
     {
         "file":  "shader-graph-features.json",
