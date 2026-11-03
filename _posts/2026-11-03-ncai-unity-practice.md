@@ -2,7 +2,7 @@
 title: "261103_NCAI_Unity_실습"
 date: 2026-11-03 10:07:00 +0900
 categories: [데일리로그, Unity]
-tags: [Unity, CSharp, Invector, 로코모션, Rigidbody, Animator, 점프, Skybox]
+tags: [Unity, CSharp, Invector, 로코모션, Rigidbody, Animator, 점프, Skybox, UVC, Shader]
 pin: false
 toc: true
 ---
@@ -375,6 +375,105 @@ _텍스처 없이 설정값으로 계산한 하늘. 위쪽의 구름은 자동�
 위 설명은 Built-in과 URP의 Skybox Shader 기준\
 HDRP는 별도의 Sky 시스템을 사용하므로 같은 Shader 메뉴를 그대로 적용하는 방식과는 다름\
 비교용 이미지 촬영 후 임시 에셋은 정리했고, 실제 프로젝트의 기존 스카이박스는 그대로 유지함
+
+## UVC Shader의 스카이박스
+
+프로젝트에 `UVC Shader/UVC_Skybox`라는 셰이더도 있어서 코드를 확인해 봄\
+파일은 `Shaders/URPC#/UVC_Skybox.shader`에 있고, 소스 머리말에는 GBX Studio 저작권 표기가 있음\
+이번 설명은 프로젝트에 들어 있는 이 파일 기준
+
+입력 텍스처가 `samplerCUBE`이고 실제 색도 큐브맵에서 가져오는 구조\
+앞에서 본 네 가지와 별개의 다섯 번째 입력 유형이라기보다는\
+**큐브맵 방식에 시간에 따른 회전과 Fog 색 혼합을 추가한 커스텀 셰이더**로 보면 이해하기 쉬움
+
+### Inspector에 보이는 항목
+
+| 표시 이름 | 코드 속성 | 실제 처리 |
+| --- | --- | --- |
+| Color | `_Color` | 항목과 변수는 있지만 현재 최종 색 계산에는 사용하지 않음 |
+| Match Fog Color | `_FogColorMix` | 큐브맵 색과 씬의 Fog 색을 섞는 비율, 0~1 |
+| Exposure | `_Exposure` | 혼합한 색 전체에 곱하는 밝기 값, 0~8 |
+| Speed | `_Speed` | 시간에 따라 하늘을 Y축으로 회전시키는 계산에 사용, 0~360 |
+| Cubemap (HDR) | `_Tex` | 배경으로 사용할 Cubemap 입력 |
+
+### 하늘 색이 만들어지는 순서
+
+```text
+보는 방향으로 Cubemap 색을 읽음
+→ Fog 색과 설정 비율만큼 섞음
+→ Exposure를 곱함
+→ 배경 색으로 출력
+```
+
+최종 색 계산만 줄여 적으면 이런 흐름
+
+```hlsl
+skyColor = sampleCubemap(viewDirection);
+finalColor = lerp(skyColor, fogColor, fogMix) * exposure;
+```
+
+`Match Fog Color=0`이면 큐브맵 색을 그대로 사용하고\
+0.5면 두 색을 절반씩 섞음\
+1이면 큐브맵 무늬 대신 Fog 색만 남고, 거기에 Exposure가 곱해짐
+
+여기서 Match Fog Color는 거리가 멀어질수록 안개가 짙어지는 일반적인 거리 Fog 계산과는 다름\
+현재 코드는 하늘 전체에 같은 비율로 Fog 색을 섞는 방식\
+지평선 쪽에만 안개가 생기는 기능도 아님
+
+씬의 Fog 체크 여부를 검사하는 분기도 없어서\
+이 셰이더의 색 혼합과 일반 Fog의 켜짐, 꺼짐은 구분해서 봐야 함
+
+### 실제로 적용된 머티리얼
+
+현재 `Invector_Basic` 씬에 지정된 스카이박스는 `Pure_Skybox`\
+이 머티리얼이 실제로 UVC 스카이박스 셰이더를 사용하고 있었음
+
+| 머티리얼 | Cubemap | Exposure | Match Fog Color | Speed |
+| --- | --- | ---: | ---: | ---: |
+| Pure_Skybox · 현재 씬에 적용 | Pure_Sky.exr | 1.2 | 0 | 0 |
+| Day_Skybox · 프로젝트에 보관 | Day_Skybox.hdr | 0.8 | 0.04 | 0 |
+
+두 머티리얼 모두 현재 Speed가 0이라 자동 회전이 없는 설정\
+확인 시점에 씬의 일반 Fog는 꺼져 있었음
+
+아래는 `Pure_Skybox`를 복제한 임시 머티리얼로 촬영한 Unity 카메라 렌더\
+두 이미지 모두 같은 시점, Exposure 1.2, Speed 0으로 두고 Fog 혼합값만 바꿔 봄
+
+![UVC 스카이박스에서 Match Fog Color를 0으로 둔 Unity 렌더](/assets/img/uploads/2026-11-03-unity-uvc-skybox-original.png)
+_Match Fog Color 0. 큐브맵의 하늘 색과 구름을 유지하는 설정_
+
+![UVC 스카이박스에서 Match Fog Color를 0.6으로 높인 Unity 렌더](/assets/img/uploads/2026-11-03-unity-uvc-skybox-fog-mix.png)
+_Match Fog Color 0.6. 회색 Fog 색이 섞이면서 하늘 전체의 대비와 색감이 줄어든 모습_
+
+이미지는 색 혼합 차이를 보여 주기 위한 예시이고\
+실제 씬의 머티리얼 값이나 스카이박스 연결은 바꾸지 않음
+
+### Speed는 구름을 새로 만드는 기능이 아님
+
+버텍스 처리에서 시간값과 Speed를 조합한 각도로 하늘을 Y축 회전시키는 구조\
+큐브맵에 그려져 있는 구름과 풍경 전체가 돌아가 보이는 방식임\
+구름 모양이 변하거나 새 구름이 생성되는 시뮬레이션은 아님
+
+현재 식에는 Speed 자체를 각도에 더하는 부분과 `_Time`을 사용하는 부분이 함께 있음\
+그래서 Inspector의 숫자를 그대로 초당 몇 도라고 읽으면 안 됨\
+실제 연출 속도를 정하려면 이 계산과 화면상의 회전을 같이 확인하는 게 좋을 듯
+
+### 기본 Cubemap 셰이더와 비교하면서 볼 부분
+
+**Color가 실제로 쓰이는지 확인하기**\
+현재 파일은 `_Color`를 선언만 하고 마지막 색 계산에 넣지 않음\
+이 코드 그대로라면 Inspector에서 Color를 바꿔도 기대한 색상 보정은 적용되지 않음\
+항목이 보인다고 무조건 기능이 연결돼 있는 건 아니라는 예시
+
+**HDR 슬롯 이름과 실제 디코딩 구분하기**\
+`_Tex_HDR` 변수가 있지만 `DecodeHDR`를 호출하는 줄은 주석 처리돼 있음\
+현재는 샘플링한 텍스처의 RGB를 직접 사용 중\
+슬롯에 HDR이라고 적혀 있다고 기본 `Skybox/Cubemap`과 모든 HDR 처리 결과가 같은 것으로 보면 안 됨\
+입력 텍스처의 저장, 임포트 형식과 실행 환경에 따라 명암 결과를 따로 확인할 필요가 있음
+
+내가 사용할 때는 먼저 원하는 Cubemap을 넣고 Exposure로 밝기를 맞춘 다음\
+배경과 안개 색을 맞추고 싶을 때 Match Fog Color를 조금씩 올려 보는 순서가 좋을 듯\
+자동으로 도는 배경이 필요하면 Speed를 조절하되, 하늘 전체가 회전한다는 걸 생각하고 사용해야 함
 
 ## 참고 자료
 
