@@ -571,8 +571,8 @@ TPSControl의 Invector·UVC·VARCO 연동은 Unity 환경 샘플과 출처를 �
 실제로 UVC 셰이더에는 GBX Studio 고지가 있고, SplineFollower의 보간 함수에도 별도 저작권·허가문이 있었음\
 프로젝트 전체에 하나의 라이선스를 일괄 적용하면 안 되는 이유도 여기서 확인됨
 
-자세한 파일 위치·연결 조건·도입 우선순위는 [전체 재사용 후보 목록](/assets/data/environment-training-20261103/reuse-catalog.md)에 보관\
-조명·셰이더 설정값과 가져오기 도구는 [데이터 카테고리의 정리 글](/posts/environment-training-lighting-shader-data/)에서 다시 확인 가능\
+자세한 파일 위치·연결 조건·도입 우선순위는 [전체 재사용 후보 목록]({{ '/assets/data/environment-training-20261103/reuse-catalog.md' | relative_url }})에 보관\
+조명·셰이더 설정값과 가져오기 도구는 [데이터 카테고리의 정리 글]({{ '/posts/environment-training-lighting-shader-data/' | relative_url }})에서 다시 확인 가능\
 이번 작업은 조사와 기록까지이며 실제 게임에 에셋을 반입하거나 씬을 변경한 건 아님
 
 ## 참고 자료

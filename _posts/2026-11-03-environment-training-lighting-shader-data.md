@@ -17,14 +17,14 @@ Terminal, Garden, Cockpit, Oasis 구성이 들어 있으며 [Unity URP 3D Sample
 
 ## 데이터 내려받기
 
-- [설정 데이터와 가져오기 도구 ZIP](/assets/data/environment-training-20261103.zip)
-- [자료 구성과 사용 순서](/assets/data/environment-training-20261103/README.md)
-- [Light·Volume 가져오기용 JSON](/assets/data/environment-training-20261103/portable-presets.json)
-- [Unity Editor 가져오기 스크립트](/assets/data/environment-training-20261103/EnvironmentTrainingDataImporter.cs)
-- [생성·검수 결과](/assets/data/environment-training-20261103/import-validation.json)
-- [자동 변환에서 제외된 항목](/assets/data/environment-training-20261103/import-report.txt)
-- [전체 프로젝트 재사용 후보와 연결 조건](/assets/data/environment-training-20261103/reuse-catalog.md)
-- [Assets 전체 파일 목록](/assets/data/environment-training-20261103/project-asset-index.json)
+- [설정 데이터와 가져오기 도구 ZIP]({{ '/assets/data/environment-training-20261103.zip' | relative_url }})
+- [자료 구성과 사용 순서]({{ '/assets/data/environment-training-20261103/README.md' | relative_url }})
+- [Light·Volume 가져오기용 JSON]({{ '/assets/data/environment-training-20261103/portable-presets.json' | relative_url }})
+- [Unity Editor 가져오기 스크립트]({{ '/assets/data/environment-training-20261103/EnvironmentTrainingDataImporter.cs' | relative_url }})
+- [생성·검수 결과]({{ '/assets/data/environment-training-20261103/import-validation.json' | relative_url }})
+- [자동 변환에서 제외된 항목]({{ '/assets/data/environment-training-20261103/import-report.txt' | relative_url }})
+- [전체 프로젝트 재사용 후보와 연결 조건]({{ '/assets/data/environment-training-20261103/reuse-catalog.md' | relative_url }})
+- [Assets 전체 파일 목록]({{ '/assets/data/environment-training-20261103/project-asset-index.json' | relative_url }})
 
 다운로드에는 설정값과 참조 목록, 새로 작성한 가져오기 도구를 넣어 둠\
 원본 셰이더와 의존 에셋은 로컬 참조 폴더에도 unitypackage와 파일 사본으로 따로 보관함\
@@ -62,7 +62,7 @@ Renderer의 Depth Priming이나 개별 커스텀 패스의 Depth 입력 요청�
 깊이를 읽는 효과를 다른 프로젝트로 옮길 때는 실제로 Depth Texture가 제공되는지 확인해야 함\
 [Scene Depth 노드 설명](https://docs.unity.cn/Packages/com.unity.shadergraph@17.4/manual/Scene-Depth-Node.html)
 
-상세 기록은 [렌더 설정 JSON](/assets/data/environment-training-20261103/render-settings.json)과 [프로젝트 정보](/assets/data/environment-training-20261103/project.json)에 보관
+상세 기록은 [렌더 설정 JSON]({{ '/assets/data/environment-training-20261103/render-settings.json' | relative_url }})과 [프로젝트 정보]({{ '/assets/data/environment-training-20261103/project.json' | relative_url }})에 보관
 
 ## 씬별 광원 구성
 
@@ -85,10 +85,10 @@ Intensity 숫자만으로 어느 씬이 더 밝다고 단정하면 안 됨\
 광원 유형, 색, 거리, 면적, 머티리얼, 베이크와 노출이 같이 영향을 주기 때문\
 대표값은 복사의 출발점으로 보고 새 씬에서 다시 맞추는 게 좋을 듯
 
-- [Terminal 광원과 연결 정보](/assets/data/environment-training-20261103/TerminalScene.json)
-- [Garden 광원과 연결 정보](/assets/data/environment-training-20261103/GardenScene.json)
-- [Cockpit 광원과 연결 정보](/assets/data/environment-training-20261103/CockpitScene.json)
-- [Oasis 광원과 연결 정보](/assets/data/environment-training-20261103/OasisScene.json)
+- [Terminal 광원과 연결 정보]({{ '/assets/data/environment-training-20261103/TerminalScene.json' | relative_url }})
+- [Garden 광원과 연결 정보]({{ '/assets/data/environment-training-20261103/GardenScene.json' | relative_url }})
+- [Cockpit 광원과 연결 정보]({{ '/assets/data/environment-training-20261103/CockpitScene.json' | relative_url }})
+- [Oasis 광원과 연결 정보]({{ '/assets/data/environment-training-20261103/OasisScene.json' | relative_url }})
 
 ## 빛이 보이는 효과와 실제 광원은 구분하기
 
@@ -144,7 +144,7 @@ Profile에 숫자가 적혀 있어도 그 값이 항상 최종 화면에 적용�
 컴포넌트 활성 상태, 각 항목의 Override 체크, Volume의 Weight·Priority·범위와 카메라 레이어를 함께 봐야 함\
 예를 들어 HighQuality Profile의 Motion Blur에는 값이 들어 있지만 컴포넌트는 비활성 상태였음
 
-전체 값과 Override 상태는 [Volume Profile 데이터](/assets/data/environment-training-20261103/volume-profiles.json)에 보관함
+전체 값과 Override 상태는 [Volume Profile 데이터]({{ '/assets/data/environment-training-20261103/volume-profiles.json' | relative_url }})에 보관함
 
 ## 셰이더 파일과 세팅 보관
 
@@ -170,9 +170,9 @@ TextMeshPro 기본 셰이더를 제외하고 확인한 관련 파일은 총 138�
 노드가 들어 있다는 것과 모든 기능을 현재 머티리얼에서 켜서 쓰고 있다는 건 별개\
 셰이더 이름만 복사하지 않도록 실제 머티리얼 113개의 프로퍼티, 텍스처 참조, 키워드도 저장해 둠
 
-- [셰이더·의존 파일 목록](/assets/data/environment-training-20261103/shader-inventory.json)
-- [Shader Graph 노드·참조 이름 목록](/assets/data/environment-training-20261103/shader-graph-features.json)
-- [머티리얼 설정값](/assets/data/environment-training-20261103/shader-materials.json)
+- [셰이더·의존 파일 목록]({{ '/assets/data/environment-training-20261103/shader-inventory.json' | relative_url }})
+- [Shader Graph 노드·참조 이름 목록]({{ '/assets/data/environment-training-20261103/shader-graph-features.json' | relative_url }})
+- [머티리얼 설정값]({{ '/assets/data/environment-training-20261103/shader-materials.json' | relative_url }})
 
 다른 프로젝트에서 물이나 Fog 효과가 보이지 않으면\
 Sub Graph, Custom Function HLSL, 텍스처뿐 아니라 Opaque·Depth 입력과 렌더 패스 시점까지 같이 확인해야 함
