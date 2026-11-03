@@ -31,6 +31,17 @@
       },
       {
         "categories": [
+          "데이터"
+        ],
+        "all": false,
+        "show_top": true,
+        "show_side": true,
+        "id": "data",
+        "title": "데이터",
+        "parent": ""
+      },
+      {
+        "categories": [
           "Unity 실습"
         ],
         "all": false,

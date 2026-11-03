@@ -1,0 +1,177 @@
+{
+  "capturedAtUtc": "2026-11-03T02:42:29.0662563Z",
+  "sourceProject": "Unity_NCAI_Environment_Training_V0.02",
+  "unityVersion": "6000.4.0f1",
+  "colorSpace": "Linear",
+  "quality": "PC High",
+  "qualityLevels": [
+    "PC Low",
+    "PC High"
+  ],
+  "graphicsPipeline": null,
+  "qualityPipeline": {
+    "name": "PC_High",
+    "type": "UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset",
+    "path": "Assets/Settings/PC/PC_High.asset",
+    "guid": "4b83569d67af61e458304325a23e5dfd",
+    "fileId": 11400000
+  },
+  "activePipeline": {
+    "name": "PC_High",
+    "type": "UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset",
+    "path": "Assets/Settings/PC/PC_High.asset",
+    "guid": "4b83569d67af61e458304325a23e5dfd",
+    "fileId": 11400000
+  },
+  "activeScene": "Assets/Scenes/Terminal/TerminalScene.unity",
+  "activeSceneDirty": false,
+  "activeSky": {
+    "asset": {
+      "name": "TerminalSkybox_Mat",
+      "type": "UnityEngine.Material",
+      "path": "Assets/Scenes/Terminal/Art/Environment/Materials/TerminalSkybox_Mat.mat",
+      "guid": "4e094c1b3935c48498317958bcb3eee0",
+      "fileId": 2100000
+    },
+    "shader": "Skybox/Cubemap",
+    "shaderAsset": {
+      "name": "Skybox/Cubemap",
+      "type": "UnityEngine.Shader",
+      "path": "Resources/unity_builtin_extra",
+      "guid": "0000000000000000f000000000000000",
+      "fileId": 103
+    },
+    "renderQueue": 1000,
+    "keywords": [
+      "_MAPPING_LATITUDE_LONGITUDE_LAYOUT",
+      "_SUNDISK_HIGH_QUALITY"
+    ],
+    "properties": [
+      {
+        "name": "_Tint",
+        "type": "Color",
+        "value": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "name": "_Exposure",
+        "type": "Range",
+        "value": 1.25
+      },
+      {
+        "name": "_Rotation",
+        "type": "Range",
+        "value": 276.0
+      },
+      {
+        "name": "_Tex",
+        "type": "Texture",
+        "value": {
+          "texture": {
+            "name": "TerminalSky_T_HDRI",
+            "type": "UnityEngine.Cubemap",
+            "path": "Assets/Scenes/Terminal/Art/Environment/Textures/TerminalSky_T_HDRI.exr",
+            "guid": "2e72a76db2572184ba807091fe4e4d82",
+            "fileId": 8900000
+          },
+          "scale": "(1.00, 1.00)",
+          "offset": "(0.00, 0.00)"
+        }
+      }
+    ]
+  },
+  "activeEnvironment": {
+    "fog": true,
+    "fogMode": "Linear",
+    "fogDensity": 0.0,
+    "fogStartDistance": 20.0,
+    "fogEndDistance": 500.0,
+    "fogColor": [
+      0.9292453,
+      0.975493968,
+      1.0,
+      1.0
+    ],
+    "ambientMode": "Skybox",
+    "ambientIntensity": 1.7,
+    "ambientSky": [
+      0.212,
+      0.227,
+      0.259,
+      1.0
+    ],
+    "ambientEquator": [
+      0.114,
+      0.125,
+      0.133,
+      1.0
+    ],
+    "ambientGround": [
+      0.047,
+      0.043,
+      0.035,
+      1.0
+    ],
+    "reflectionIntensity": 1.0
+  },
+  "packages": {
+    "dependencies": {
+      "com.unity.ai.assistant": "2.21.0-pre.2",
+      "com.unity.ai.inference": "2.6.1",
+      "com.unity.cinemachine": "3.1.6",
+      "com.unity.ide.rider": "3.0.39",
+      "com.unity.ide.visualstudio": "2.0.27",
+      "com.unity.inputsystem": "1.19.0",
+      "com.unity.learn.iet-framework": "5.0.3",
+      "com.unity.memoryprofiler": "1.1.12",
+      "com.unity.multiplayer.center": "1.0.1",
+      "com.unity.pipeline": "0.9.1-exp.1",
+      "com.unity.recorder": "5.1.6",
+      "com.unity.render-pipelines.universal": "17.4.0",
+      "com.unity.render-pipelines.universal-config": "17.4.0",
+      "com.unity.splines": "2.8.4",
+      "com.unity.test-framework": "1.6.0",
+      "com.unity.timeline": "1.8.11",
+      "com.unity.ugui": "2.0.0",
+      "com.unity.visualeffectgraph": "17.4.0",
+      "com.unity.modules.accessibility": "1.0.0",
+      "com.unity.modules.adaptiveperformance": "1.0.0",
+      "com.unity.modules.ai": "1.0.0",
+      "com.unity.modules.androidjni": "1.0.0",
+      "com.unity.modules.animation": "1.0.0",
+      "com.unity.modules.assetbundle": "1.0.0",
+      "com.unity.modules.audio": "1.0.0",
+      "com.unity.modules.cloth": "1.0.0",
+      "com.unity.modules.director": "1.0.0",
+      "com.unity.modules.imageconversion": "1.0.0",
+      "com.unity.modules.imgui": "1.0.0",
+      "com.unity.modules.jsonserialize": "1.0.0",
+      "com.unity.modules.particlesystem": "1.0.0",
+      "com.unity.modules.physics": "1.0.0",
+      "com.unity.modules.physics2d": "1.0.0",
+      "com.unity.modules.screencapture": "1.0.0",
+      "com.unity.modules.terrain": "1.0.0",
+      "com.unity.modules.terrainphysics": "1.0.0",
+      "com.unity.modules.tilemap": "1.0.0",
+      "com.unity.modules.ui": "1.0.0",
+      "com.unity.modules.uielements": "1.0.0",
+      "com.unity.modules.umbra": "1.0.0",
+      "com.unity.modules.unityanalytics": "1.0.0",
+      "com.unity.modules.unitywebrequest": "1.0.0",
+      "com.unity.modules.unitywebrequestassetbundle": "1.0.0",
+      "com.unity.modules.unitywebrequestaudio": "1.0.0",
+      "com.unity.modules.unitywebrequesttexture": "1.0.0",
+      "com.unity.modules.unitywebrequestwww": "1.0.0",
+      "com.unity.modules.vectorgraphics": "1.0.0",
+      "com.unity.modules.vehicles": "1.0.0",
+      "com.unity.modules.video": "1.0.0",
+      "com.unity.modules.vr": "1.0.0",
+      "com.unity.modules.wind": "1.0.0",
+      "com.unity.modules.xr": "1.0.0"
+    }
+  }
+}

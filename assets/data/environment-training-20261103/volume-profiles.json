@@ -1,0 +1,2888 @@
+[
+  {
+    "path": "Assets/Settings/VolumeProfiles/HighQualityVolumeProfile.asset",
+    "components": [
+      {
+        "type": "UnityEngine.Rendering.Universal.Tonemapping",
+        "active": true,
+        "properties": {
+          "active": true,
+          "mode.m_OverrideState": true,
+          "mode.m_Value": {
+            "value": 2,
+            "index": 2,
+            "names": [
+              "None",
+              "Neutral",
+              "ACES"
+            ]
+          },
+          "neutralHDRRangeReductionMode.m_OverrideState": false,
+          "neutralHDRRangeReductionMode.m_Value": {
+            "value": 2,
+            "index": 1,
+            "names": [
+              "Reinhard",
+              "BT2390"
+            ]
+          },
+          "acesPreset.m_OverrideState": false,
+          "acesPreset.m_Value": {
+            "value": 3,
+            "index": 0,
+            "names": [
+              "ACES1000Nits",
+              "ACES2000Nits",
+              "ACES4000Nits"
+            ]
+          },
+          "hueShiftAmount.m_OverrideState": false,
+          "hueShiftAmount.m_Value": 0.0,
+          "detectPaperWhite.m_OverrideState": true,
+          "detectPaperWhite.m_Value": false,
+          "paperWhite.m_OverrideState": true,
+          "paperWhite.m_Value": 234.0,
+          "detectBrightnessLimits.m_OverrideState": true,
+          "detectBrightnessLimits.m_Value": true,
+          "minNits.m_OverrideState": true,
+          "minNits.m_Value": 0.004999999888241291,
+          "maxNits.m_OverrideState": true,
+          "maxNits.m_Value": 647.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.Bloom",
+        "active": true,
+        "properties": {
+          "active": true,
+          "skipIterations.m_OverrideState": true,
+          "skipIterations.m_Value": 0,
+          "threshold.m_OverrideState": true,
+          "threshold.m_Value": 1.0,
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.25,
+          "scatter.m_OverrideState": true,
+          "scatter.m_Value": 0.5,
+          "clamp.m_OverrideState": false,
+          "clamp.m_Value": 65472.0,
+          "tint.m_OverrideState": false,
+          "tint.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "highQualityFiltering.m_OverrideState": true,
+          "highQualityFiltering.m_Value": true,
+          "filter.m_OverrideState": false,
+          "filter.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "Gaussian",
+              "Dual",
+              "Kawase"
+            ]
+          },
+          "downscale.m_OverrideState": false,
+          "downscale.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "Half",
+              "Quarter"
+            ]
+          },
+          "maxIterations.m_OverrideState": false,
+          "maxIterations.m_Value": 6,
+          "dirtTexture.m_OverrideState": false,
+          "dirtTexture.m_Value": null,
+          "dirtTexture.dimension": {
+            "value": 1,
+            "index": 2,
+            "names": [
+              "Unknown",
+              "None",
+              "Any",
+              "Tex2D",
+              "Tex3D",
+              "Cube",
+              "Tex2DArray",
+              "CubeArray"
+            ]
+          },
+          "dirtIntensity.m_OverrideState": false,
+          "dirtIntensity.m_Value": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.MotionBlur",
+        "active": false,
+        "properties": {
+          "active": false,
+          "mode.m_OverrideState": false,
+          "mode.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "CameraOnly",
+              "CameraAndObjects"
+            ]
+          },
+          "quality.m_OverrideState": true,
+          "quality.m_Value": {
+            "value": 2,
+            "index": 2,
+            "names": [
+              "Low",
+              "Medium",
+              "High"
+            ]
+          },
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.60000002384185791,
+          "clamp.m_OverrideState": false,
+          "clamp.m_Value": 0.05000000074505806
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.Vignette",
+        "active": true,
+        "properties": {
+          "active": true,
+          "color.m_OverrideState": false,
+          "color.m_Value": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "center.m_OverrideState": false,
+          "center.m_Value": [
+            0.5,
+            0.5
+          ],
+          "center.m_Value.x": 0.5,
+          "center.m_Value.y": 0.5,
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.20000000298023224,
+          "smoothness.m_OverrideState": false,
+          "smoothness.m_Value": 0.20000000298023224,
+          "rounded.m_OverrideState": false,
+          "rounded.m_Value": false
+        }
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Settings/Oasis_Outdoor_Volume_Profile.asset",
+    "components": [
+      {
+        "type": "UnityEngine.Rendering.Universal.ColorAdjustments",
+        "active": true,
+        "properties": {
+          "active": true,
+          "postExposure.m_OverrideState": true,
+          "postExposure.m_Value": 0.25,
+          "contrast.m_OverrideState": false,
+          "contrast.m_Value": 15.0,
+          "colorFilter.m_OverrideState": false,
+          "colorFilter.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hueShift.m_OverrideState": false,
+          "hueShift.m_Value": 0.0,
+          "saturation.m_OverrideState": false,
+          "saturation.m_Value": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.Bloom",
+        "active": true,
+        "properties": {
+          "active": true,
+          "skipIterations.m_OverrideState": false,
+          "skipIterations.m_Value": 1,
+          "threshold.m_OverrideState": false,
+          "threshold.m_Value": 0.60000002384185791,
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.5,
+          "scatter.m_OverrideState": false,
+          "scatter.m_Value": 0.699999988079071,
+          "clamp.m_OverrideState": false,
+          "clamp.m_Value": 65472.0,
+          "tint.m_OverrideState": false,
+          "tint.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "highQualityFiltering.m_OverrideState": false,
+          "highQualityFiltering.m_Value": false,
+          "filter.m_OverrideState": false,
+          "filter.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "Gaussian",
+              "Dual",
+              "Kawase"
+            ]
+          },
+          "downscale.m_OverrideState": false,
+          "downscale.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "Half",
+              "Quarter"
+            ]
+          },
+          "maxIterations.m_OverrideState": false,
+          "maxIterations.m_Value": 6,
+          "dirtTexture.m_OverrideState": false,
+          "dirtTexture.m_Value": null,
+          "dirtTexture.dimension": {
+            "value": 1,
+            "index": 2,
+            "names": [
+              "Unknown",
+              "None",
+              "Any",
+              "Tex2D",
+              "Tex3D",
+              "Cube",
+              "Tex2DArray",
+              "CubeArray"
+            ]
+          },
+          "dirtIntensity.m_OverrideState": false,
+          "dirtIntensity.m_Value": 0.0
+        }
+      },
+      {
+        "type": "OasisFogVolumeComponent",
+        "active": true,
+        "properties": {
+          "active": true,
+          "Density.m_OverrideState": true,
+          "Density.m_Value": 0.004999999888241291,
+          "StartDistance.m_OverrideState": true,
+          "StartDistance.m_Value": 20.0,
+          "HeightRange.m_OverrideState": true,
+          "HeightRange.m_Value": [
+            0.0,
+            20.0
+          ],
+          "HeightRange.m_Value.x": 0.0,
+          "HeightRange.m_Value.y": 20.0,
+          "Tint.m_OverrideState": true,
+          "Tint.m_Value": [
+            1.0,
+            0.5215277,
+            0.3254717,
+            1.0
+          ],
+          "SunScatteringIntensity.m_OverrideState": true,
+          "SunScatteringIntensity.m_Value": 2.0
+        }
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Settings/Oasis_Screenshot08_Profile.asset",
+    "components": [
+      {
+        "type": "UnityEngine.Rendering.Universal.DepthOfField",
+        "active": true,
+        "properties": {
+          "active": true,
+          "mode.m_OverrideState": true,
+          "mode.m_Value": {
+            "value": 2,
+            "index": 2,
+            "names": [
+              "Off",
+              "Gaussian",
+              "Bokeh"
+            ]
+          },
+          "gaussianStart.m_OverrideState": false,
+          "gaussianStart.m_Value": 10.0,
+          "gaussianEnd.m_OverrideState": false,
+          "gaussianEnd.m_Value": 30.0,
+          "gaussianMaxRadius.m_OverrideState": false,
+          "gaussianMaxRadius.m_Value": 1.0,
+          "highQualitySampling.m_OverrideState": false,
+          "highQualitySampling.m_Value": false,
+          "focusDistance.m_OverrideState": true,
+          "focusDistance.m_Value": 14.600000381469727,
+          "aperture.m_OverrideState": true,
+          "aperture.m_Value": 3.0,
+          "focalLength.m_OverrideState": true,
+          "focalLength.m_Value": 120.0,
+          "bladeCount.m_OverrideState": false,
+          "bladeCount.m_Value": 5,
+          "bladeCurvature.m_OverrideState": false,
+          "bladeCurvature.m_Value": 1.0,
+          "bladeRotation.m_OverrideState": false,
+          "bladeRotation.m_Value": 0.0
+        }
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Settings/TerminalRoom_Profile.asset",
+    "components": [
+      {
+        "type": "UnityEngine.Rendering.Universal.ColorAdjustments",
+        "active": true,
+        "properties": {
+          "active": true,
+          "postExposure.m_OverrideState": true,
+          "postExposure.m_Value": 2.0,
+          "contrast.m_OverrideState": false,
+          "contrast.m_Value": 0.0,
+          "colorFilter.m_OverrideState": false,
+          "colorFilter.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hueShift.m_OverrideState": false,
+          "hueShift.m_Value": 0.0,
+          "saturation.m_OverrideState": true,
+          "saturation.m_Value": 13.699999809265137
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.WhiteBalance",
+        "active": true,
+        "properties": {
+          "active": true,
+          "temperature.m_OverrideState": true,
+          "temperature.m_Value": 0.0,
+          "tint.m_OverrideState": false,
+          "tint.m_Value": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.LiftGammaGain",
+        "active": true,
+        "properties": {
+          "active": true,
+          "lift.m_OverrideState": true,
+          "lift.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "lift.m_Value.x": 1.0,
+          "lift.m_Value.y": 1.0,
+          "lift.m_Value.z": 1.0,
+          "lift.m_Value.w": 0.0,
+          "gamma.m_OverrideState": true,
+          "gamma.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "gamma.m_Value.x": 1.0,
+          "gamma.m_Value.y": 1.0,
+          "gamma.m_Value.z": 1.0,
+          "gamma.m_Value.w": 0.0,
+          "gain.m_OverrideState": true,
+          "gain.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "gain.m_Value.x": 1.0,
+          "gain.m_Value.y": 1.0,
+          "gain.m_Value.z": 1.0,
+          "gain.m_Value.w": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.Bloom",
+        "active": true,
+        "properties": {
+          "active": true,
+          "skipIterations.m_OverrideState": false,
+          "skipIterations.m_Value": 1,
+          "threshold.m_OverrideState": true,
+          "threshold.m_Value": 1.0,
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.25,
+          "scatter.m_OverrideState": false,
+          "scatter.m_Value": 0.699999988079071,
+          "clamp.m_OverrideState": false,
+          "clamp.m_Value": 65472.0,
+          "tint.m_OverrideState": false,
+          "tint.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "highQualityFiltering.m_OverrideState": false,
+          "highQualityFiltering.m_Value": false,
+          "filter.m_OverrideState": false,
+          "filter.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "Gaussian",
+              "Dual",
+              "Kawase"
+            ]
+          },
+          "downscale.m_OverrideState": false,
+          "downscale.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "Half",
+              "Quarter"
+            ]
+          },
+          "maxIterations.m_OverrideState": false,
+          "maxIterations.m_Value": 6,
+          "dirtTexture.m_OverrideState": false,
+          "dirtTexture.m_Value": null,
+          "dirtTexture.dimension": {
+            "value": 1,
+            "index": 2,
+            "names": [
+              "Unknown",
+              "None",
+              "Any",
+              "Tex2D",
+              "Tex3D",
+              "Cube",
+              "Tex2DArray",
+              "CubeArray"
+            ]
+          },
+          "dirtIntensity.m_OverrideState": false,
+          "dirtIntensity.m_Value": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.ShadowsMidtonesHighlights",
+        "active": true,
+        "properties": {
+          "active": true,
+          "shadows.m_OverrideState": true,
+          "shadows.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "shadows.m_Value.x": 1.0,
+          "shadows.m_Value.y": 1.0,
+          "shadows.m_Value.z": 1.0,
+          "shadows.m_Value.w": 0.0,
+          "midtones.m_OverrideState": true,
+          "midtones.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "midtones.m_Value.x": 1.0,
+          "midtones.m_Value.y": 1.0,
+          "midtones.m_Value.z": 1.0,
+          "midtones.m_Value.w": 0.0,
+          "highlights.m_OverrideState": true,
+          "highlights.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "highlights.m_Value.x": 1.0,
+          "highlights.m_Value.y": 1.0,
+          "highlights.m_Value.z": 1.0,
+          "highlights.m_Value.w": 0.0,
+          "shadowsStart.m_OverrideState": false,
+          "shadowsStart.m_Value": 0.0,
+          "shadowsEnd.m_OverrideState": false,
+          "shadowsEnd.m_Value": 0.30000001192092896,
+          "highlightsStart.m_OverrideState": false,
+          "highlightsStart.m_Value": 0.550000011920929,
+          "highlightsEnd.m_OverrideState": false,
+          "highlightsEnd.m_Value": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Garden/Settings/ScreenshotsTimelineVolumeProfile.asset",
+    "components": [
+      {
+        "type": "UnityEngine.Rendering.Universal.DepthOfField",
+        "active": false,
+        "properties": {
+          "active": false,
+          "mode.m_OverrideState": true,
+          "mode.m_Value": {
+            "value": 2,
+            "index": 2,
+            "names": [
+              "Off",
+              "Gaussian",
+              "Bokeh"
+            ]
+          },
+          "gaussianStart.m_OverrideState": true,
+          "gaussianStart.m_Value": 10.0,
+          "gaussianEnd.m_OverrideState": true,
+          "gaussianEnd.m_Value": 30.0,
+          "gaussianMaxRadius.m_OverrideState": true,
+          "gaussianMaxRadius.m_Value": 1.5,
+          "highQualitySampling.m_OverrideState": true,
+          "highQualitySampling.m_Value": true,
+          "focusDistance.m_OverrideState": true,
+          "focusDistance.m_Value": 7.0,
+          "aperture.m_OverrideState": true,
+          "aperture.m_Value": 4.0,
+          "focalLength.m_OverrideState": true,
+          "focalLength.m_Value": 50.0,
+          "bladeCount.m_OverrideState": true,
+          "bladeCount.m_Value": 6,
+          "bladeCurvature.m_OverrideState": true,
+          "bladeCurvature.m_Value": 1.0,
+          "bladeRotation.m_OverrideState": true,
+          "bladeRotation.m_Value": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.Vignette",
+        "active": true,
+        "properties": {
+          "active": true,
+          "color.m_OverrideState": true,
+          "color.m_Value": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "center.m_OverrideState": true,
+          "center.m_Value": [
+            0.5,
+            0.5
+          ],
+          "center.m_Value.x": 0.5,
+          "center.m_Value.y": 0.5,
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.10000000149011612,
+          "smoothness.m_OverrideState": true,
+          "smoothness.m_Value": 0.20000000298023224,
+          "rounded.m_OverrideState": true,
+          "rounded.m_Value": false
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.Bloom",
+        "active": true,
+        "properties": {
+          "active": true,
+          "skipIterations.m_OverrideState": false,
+          "skipIterations.m_Value": 1,
+          "threshold.m_OverrideState": false,
+          "threshold.m_Value": 0.89999997615814209,
+          "intensity.m_OverrideState": false,
+          "intensity.m_Value": 0.0,
+          "scatter.m_OverrideState": false,
+          "scatter.m_Value": 0.699999988079071,
+          "clamp.m_OverrideState": false,
+          "clamp.m_Value": 65472.0,
+          "tint.m_OverrideState": false,
+          "tint.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "highQualityFiltering.m_OverrideState": false,
+          "highQualityFiltering.m_Value": false,
+          "filter.m_OverrideState": false,
+          "filter.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "Gaussian",
+              "Dual",
+              "Kawase"
+            ]
+          },
+          "downscale.m_OverrideState": true,
+          "downscale.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "Half",
+              "Quarter"
+            ]
+          },
+          "maxIterations.m_OverrideState": true,
+          "maxIterations.m_Value": 8,
+          "dirtTexture.m_OverrideState": false,
+          "dirtTexture.m_Value": null,
+          "dirtTexture.dimension": {
+            "value": 1,
+            "index": 2,
+            "names": [
+              "Unknown",
+              "None",
+              "Any",
+              "Tex2D",
+              "Tex3D",
+              "Cube",
+              "Tex2DArray",
+              "CubeArray"
+            ]
+          },
+          "dirtIntensity.m_OverrideState": false,
+          "dirtIntensity.m_Value": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.LiftGammaGain",
+        "active": false,
+        "properties": {
+          "active": false,
+          "lift.m_OverrideState": false,
+          "lift.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            0.0700525343
+          ],
+          "lift.m_Value.x": 1.0,
+          "lift.m_Value.y": 1.0,
+          "lift.m_Value.z": 1.0,
+          "lift.m_Value.w": 0.070052534341812134,
+          "gamma.m_OverrideState": true,
+          "gamma.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            0.150662854
+          ],
+          "gamma.m_Value.x": 1.0,
+          "gamma.m_Value.y": 1.0,
+          "gamma.m_Value.z": 1.0,
+          "gamma.m_Value.w": 0.1506628543138504,
+          "gain.m_OverrideState": false,
+          "gain.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "gain.m_Value.x": 1.0,
+          "gain.m_Value.y": 1.0,
+          "gain.m_Value.z": 1.0,
+          "gain.m_Value.w": 0.0
+        }
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Settings/Oasis_Screenshot10_Profile.asset",
+    "components": [
+      {
+        "type": "UnityEngine.Rendering.Universal.DepthOfField",
+        "active": true,
+        "properties": {
+          "active": true,
+          "mode.m_OverrideState": true,
+          "mode.m_Value": {
+            "value": 2,
+            "index": 2,
+            "names": [
+              "Off",
+              "Gaussian",
+              "Bokeh"
+            ]
+          },
+          "gaussianStart.m_OverrideState": false,
+          "gaussianStart.m_Value": 10.0,
+          "gaussianEnd.m_OverrideState": false,
+          "gaussianEnd.m_Value": 30.0,
+          "gaussianMaxRadius.m_OverrideState": false,
+          "gaussianMaxRadius.m_Value": 1.0,
+          "highQualitySampling.m_OverrideState": false,
+          "highQualitySampling.m_Value": false,
+          "focusDistance.m_OverrideState": true,
+          "focusDistance.m_Value": 3.0,
+          "aperture.m_OverrideState": true,
+          "aperture.m_Value": 4.0,
+          "focalLength.m_OverrideState": true,
+          "focalLength.m_Value": 50.0,
+          "bladeCount.m_OverrideState": true,
+          "bladeCount.m_Value": 8,
+          "bladeCurvature.m_OverrideState": false,
+          "bladeCurvature.m_Value": 1.0,
+          "bladeRotation.m_OverrideState": false,
+          "bladeRotation.m_Value": 0.0
+        }
+      }
+    ]
+  },
+  {
+    "path": "Assets/Settings/VolumeProfiles/LowQualityVolumeProfile.asset",
+    "components": [
+      {
+        "type": "UnityEngine.Rendering.Universal.Tonemapping",
+        "active": true,
+        "properties": {
+          "active": true,
+          "mode.m_OverrideState": true,
+          "mode.m_Value": {
+            "value": 1,
+            "index": 1,
+            "names": [
+              "None",
+              "Neutral",
+              "ACES"
+            ]
+          },
+          "neutralHDRRangeReductionMode.m_OverrideState": false,
+          "neutralHDRRangeReductionMode.m_Value": {
+            "value": 2,
+            "index": 1,
+            "names": [
+              "Reinhard",
+              "BT2390"
+            ]
+          },
+          "acesPreset.m_OverrideState": false,
+          "acesPreset.m_Value": {
+            "value": 3,
+            "index": 0,
+            "names": [
+              "ACES1000Nits",
+              "ACES2000Nits",
+              "ACES4000Nits"
+            ]
+          },
+          "hueShiftAmount.m_OverrideState": false,
+          "hueShiftAmount.m_Value": 0.0,
+          "detectPaperWhite.m_OverrideState": false,
+          "detectPaperWhite.m_Value": false,
+          "paperWhite.m_OverrideState": false,
+          "paperWhite.m_Value": 300.0,
+          "detectBrightnessLimits.m_OverrideState": false,
+          "detectBrightnessLimits.m_Value": true,
+          "minNits.m_OverrideState": false,
+          "minNits.m_Value": 0.004999999888241291,
+          "maxNits.m_OverrideState": false,
+          "maxNits.m_Value": 1000.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.Bloom",
+        "active": true,
+        "properties": {
+          "active": true,
+          "skipIterations.m_OverrideState": true,
+          "skipIterations.m_Value": 0,
+          "threshold.m_OverrideState": true,
+          "threshold.m_Value": 2.0,
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.5,
+          "scatter.m_OverrideState": false,
+          "scatter.m_Value": 0.20000000298023224,
+          "clamp.m_OverrideState": false,
+          "clamp.m_Value": 65472.0,
+          "tint.m_OverrideState": false,
+          "tint.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "highQualityFiltering.m_OverrideState": true,
+          "highQualityFiltering.m_Value": false,
+          "filter.m_OverrideState": false,
+          "filter.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "Gaussian",
+              "Dual",
+              "Kawase"
+            ]
+          },
+          "downscale.m_OverrideState": true,
+          "downscale.m_Value": {
+            "value": 1,
+            "index": 1,
+            "names": [
+              "Half",
+              "Quarter"
+            ]
+          },
+          "maxIterations.m_OverrideState": true,
+          "maxIterations.m_Value": 4,
+          "dirtTexture.m_OverrideState": false,
+          "dirtTexture.m_Value": null,
+          "dirtTexture.dimension": {
+            "value": 1,
+            "index": 2,
+            "names": [
+              "Unknown",
+              "None",
+              "Any",
+              "Tex2D",
+              "Tex3D",
+              "Cube",
+              "Tex2DArray",
+              "CubeArray"
+            ]
+          },
+          "dirtIntensity.m_OverrideState": false,
+          "dirtIntensity.m_Value": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.ColorAdjustments",
+        "active": true,
+        "properties": {
+          "active": true,
+          "postExposure.m_OverrideState": false,
+          "postExposure.m_Value": 0.0,
+          "contrast.m_OverrideState": true,
+          "contrast.m_Value": 50.0,
+          "colorFilter.m_OverrideState": true,
+          "colorFilter.m_Value": [
+            0.8207547,
+            0.8207547,
+            0.8207547,
+            1.0
+          ],
+          "hueShift.m_OverrideState": false,
+          "hueShift.m_Value": 0.0,
+          "saturation.m_OverrideState": true,
+          "saturation.m_Value": -10.0
+        }
+      }
+    ]
+  },
+  {
+    "path": "Assets/Settings/VolumeProfiles/OutlineEnabled.asset",
+    "components": [
+      {
+        "type": "OutlineVolumeComponent",
+        "active": true,
+        "properties": {
+          "active": true,
+          "Enabled.m_OverrideState": true,
+          "Enabled.m_Value": true
+        }
+      }
+    ]
+  },
+  {
+    "path": "Assets/Settings/VolumeProfiles/CinematicProfile.asset",
+    "components": [
+      {
+        "type": "UnityEngine.Rendering.Universal.MotionBlur",
+        "active": false,
+        "properties": {
+          "active": false,
+          "mode.m_OverrideState": false,
+          "mode.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "CameraOnly",
+              "CameraAndObjects"
+            ]
+          },
+          "quality.m_OverrideState": true,
+          "quality.m_Value": {
+            "value": 2,
+            "index": 2,
+            "names": [
+              "Low",
+              "Medium",
+              "High"
+            ]
+          },
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.5,
+          "clamp.m_OverrideState": false,
+          "clamp.m_Value": 0.05000000074505806
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.FilmGrain",
+        "active": true,
+        "properties": {
+          "active": true,
+          "type.m_OverrideState": true,
+          "type.m_Value": {
+            "value": 2,
+            "index": 2,
+            "names": [
+              "Thin1",
+              "Thin2",
+              "Medium1",
+              "Medium2",
+              "Medium3",
+              "Medium4",
+              "Medium5",
+              "Medium6",
+              "Large01",
+              "Large02",
+              "Custom"
+            ]
+          },
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.30000001192092896,
+          "response.m_OverrideState": false,
+          "response.m_Value": 0.800000011920929,
+          "texture.m_OverrideState": false,
+          "texture.m_Value": null
+        }
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Settings/TerminalScreenshot05_Profile.asset",
+    "components": [
+      {
+        "type": "UnityEngine.Rendering.Universal.DepthOfField",
+        "active": true,
+        "properties": {
+          "active": true,
+          "mode.m_OverrideState": true,
+          "mode.m_Value": {
+            "value": 2,
+            "index": 2,
+            "names": [
+              "Off",
+              "Gaussian",
+              "Bokeh"
+            ]
+          },
+          "gaussianStart.m_OverrideState": false,
+          "gaussianStart.m_Value": 10.0,
+          "gaussianEnd.m_OverrideState": false,
+          "gaussianEnd.m_Value": 30.0,
+          "gaussianMaxRadius.m_OverrideState": false,
+          "gaussianMaxRadius.m_Value": 1.0,
+          "highQualitySampling.m_OverrideState": false,
+          "highQualitySampling.m_Value": false,
+          "focusDistance.m_OverrideState": true,
+          "focusDistance.m_Value": 21.0,
+          "aperture.m_OverrideState": true,
+          "aperture.m_Value": 1.0,
+          "focalLength.m_OverrideState": true,
+          "focalLength.m_Value": 35.0,
+          "bladeCount.m_OverrideState": false,
+          "bladeCount.m_Value": 5,
+          "bladeCurvature.m_OverrideState": false,
+          "bladeCurvature.m_Value": 1.0,
+          "bladeRotation.m_OverrideState": false,
+          "bladeRotation.m_Value": 0.0
+        }
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Garden/Settings/GardenOutdoorVolumeProfile.asset",
+    "components": [
+      {
+        "type": "UnityEngine.Rendering.Universal.ColorAdjustments",
+        "active": true,
+        "properties": {
+          "active": true,
+          "postExposure.m_OverrideState": true,
+          "postExposure.m_Value": 1.0,
+          "contrast.m_OverrideState": false,
+          "contrast.m_Value": 0.0,
+          "colorFilter.m_OverrideState": false,
+          "colorFilter.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hueShift.m_OverrideState": false,
+          "hueShift.m_Value": 0.0,
+          "saturation.m_OverrideState": false,
+          "saturation.m_Value": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.WhiteBalance",
+        "active": true,
+        "properties": {
+          "active": true,
+          "temperature.m_OverrideState": true,
+          "temperature.m_Value": -16.0,
+          "tint.m_OverrideState": true,
+          "tint.m_Value": 10.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.Bloom",
+        "active": true,
+        "properties": {
+          "active": true,
+          "skipIterations.m_OverrideState": false,
+          "skipIterations.m_Value": 1,
+          "threshold.m_OverrideState": true,
+          "threshold.m_Value": 0.60000002384185791,
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 1.0,
+          "scatter.m_OverrideState": true,
+          "scatter.m_Value": 0.5,
+          "clamp.m_OverrideState": false,
+          "clamp.m_Value": 65472.0,
+          "tint.m_OverrideState": false,
+          "tint.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "highQualityFiltering.m_OverrideState": false,
+          "highQualityFiltering.m_Value": false,
+          "filter.m_OverrideState": false,
+          "filter.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "Gaussian",
+              "Dual",
+              "Kawase"
+            ]
+          },
+          "downscale.m_OverrideState": false,
+          "downscale.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "Half",
+              "Quarter"
+            ]
+          },
+          "maxIterations.m_OverrideState": false,
+          "maxIterations.m_Value": 6,
+          "dirtTexture.m_OverrideState": false,
+          "dirtTexture.m_Value": null,
+          "dirtTexture.dimension": {
+            "value": 1,
+            "index": 2,
+            "names": [
+              "Unknown",
+              "None",
+              "Any",
+              "Tex2D",
+              "Tex3D",
+              "Cube",
+              "Tex2DArray",
+              "CubeArray"
+            ]
+          },
+          "dirtIntensity.m_OverrideState": false,
+          "dirtIntensity.m_Value": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.LiftGammaGain",
+        "active": true,
+        "properties": {
+          "active": true,
+          "lift.m_OverrideState": false,
+          "lift.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "lift.m_Value.x": 1.0,
+          "lift.m_Value.y": 1.0,
+          "lift.m_Value.z": 1.0,
+          "lift.m_Value.w": 0.0,
+          "gamma.m_OverrideState": true,
+          "gamma.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            0.10403122
+          ],
+          "gamma.m_Value.x": 1.0,
+          "gamma.m_Value.y": 1.0,
+          "gamma.m_Value.z": 1.0,
+          "gamma.m_Value.w": 0.10403122007846832,
+          "gain.m_OverrideState": false,
+          "gain.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "gain.m_Value.x": 1.0,
+          "gain.m_Value.y": 1.0,
+          "gain.m_Value.z": 1.0,
+          "gain.m_Value.w": 0.0
+        }
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Settings/CockpitVolume.asset",
+    "components": [
+      {
+        "type": "UnityEngine.Rendering.Universal.Bloom",
+        "active": true,
+        "properties": {
+          "active": true,
+          "skipIterations.m_OverrideState": true,
+          "skipIterations.m_Value": 5,
+          "threshold.m_OverrideState": true,
+          "threshold.m_Value": 1.0,
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.699999988079071,
+          "scatter.m_OverrideState": false,
+          "scatter.m_Value": 0.765999972820282,
+          "clamp.m_OverrideState": false,
+          "clamp.m_Value": 65472.0,
+          "tint.m_OverrideState": false,
+          "tint.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "highQualityFiltering.m_OverrideState": false,
+          "highQualityFiltering.m_Value": false,
+          "filter.m_OverrideState": false,
+          "filter.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "Gaussian",
+              "Dual",
+              "Kawase"
+            ]
+          },
+          "downscale.m_OverrideState": false,
+          "downscale.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "Half",
+              "Quarter"
+            ]
+          },
+          "maxIterations.m_OverrideState": false,
+          "maxIterations.m_Value": 6,
+          "dirtTexture.m_OverrideState": false,
+          "dirtTexture.m_Value": null,
+          "dirtTexture.dimension": {
+            "value": 1,
+            "index": 2,
+            "names": [
+              "Unknown",
+              "None",
+              "Any",
+              "Tex2D",
+              "Tex3D",
+              "Cube",
+              "Tex2DArray",
+              "CubeArray"
+            ]
+          },
+          "dirtIntensity.m_OverrideState": false,
+          "dirtIntensity.m_Value": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.LiftGammaGain",
+        "active": true,
+        "properties": {
+          "active": true,
+          "lift.m_OverrideState": true,
+          "lift.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "lift.m_Value.x": 1.0,
+          "lift.m_Value.y": 1.0,
+          "lift.m_Value.z": 1.0,
+          "lift.m_Value.w": 0.0,
+          "gamma.m_OverrideState": true,
+          "gamma.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "gamma.m_Value.x": 1.0,
+          "gamma.m_Value.y": 1.0,
+          "gamma.m_Value.z": 1.0,
+          "gamma.m_Value.w": 0.0,
+          "gain.m_OverrideState": true,
+          "gain.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "gain.m_Value.x": 1.0,
+          "gain.m_Value.y": 1.0,
+          "gain.m_Value.z": 1.0,
+          "gain.m_Value.w": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.ColorAdjustments",
+        "active": true,
+        "properties": {
+          "active": true,
+          "postExposure.m_OverrideState": true,
+          "postExposure.m_Value": 0.5,
+          "contrast.m_OverrideState": true,
+          "contrast.m_Value": 0.0,
+          "colorFilter.m_OverrideState": true,
+          "colorFilter.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hueShift.m_OverrideState": true,
+          "hueShift.m_Value": 0.0,
+          "saturation.m_OverrideState": true,
+          "saturation.m_Value": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.Vignette",
+        "active": true,
+        "properties": {
+          "active": true,
+          "color.m_OverrideState": false,
+          "color.m_Value": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "center.m_OverrideState": false,
+          "center.m_Value": [
+            0.5,
+            0.5
+          ],
+          "center.m_Value.x": 0.5,
+          "center.m_Value.y": 0.5,
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.30399999022483826,
+          "smoothness.m_OverrideState": false,
+          "smoothness.m_Value": 0.20000000298023224,
+          "rounded.m_OverrideState": false,
+          "rounded.m_Value": false
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.Tonemapping",
+        "active": true,
+        "properties": {
+          "active": true,
+          "mode.m_OverrideState": true,
+          "mode.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "None",
+              "Neutral",
+              "ACES"
+            ]
+          },
+          "neutralHDRRangeReductionMode.m_OverrideState": false,
+          "neutralHDRRangeReductionMode.m_Value": {
+            "value": 2,
+            "index": 1,
+            "names": [
+              "Reinhard",
+              "BT2390"
+            ]
+          },
+          "acesPreset.m_OverrideState": false,
+          "acesPreset.m_Value": {
+            "value": 3,
+            "index": 0,
+            "names": [
+              "ACES1000Nits",
+              "ACES2000Nits",
+              "ACES4000Nits"
+            ]
+          },
+          "hueShiftAmount.m_OverrideState": false,
+          "hueShiftAmount.m_Value": 0.0,
+          "detectPaperWhite.m_OverrideState": false,
+          "detectPaperWhite.m_Value": false,
+          "paperWhite.m_OverrideState": false,
+          "paperWhite.m_Value": 300.0,
+          "detectBrightnessLimits.m_OverrideState": false,
+          "detectBrightnessLimits.m_Value": true,
+          "minNits.m_OverrideState": false,
+          "minNits.m_Value": 0.004999999888241291,
+          "maxNits.m_OverrideState": false,
+          "maxNits.m_Value": 1000.0
+        }
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Settings/Oasis_Tent_Volume_Profile.asset",
+    "components": [
+      {
+        "type": "UnityEngine.Rendering.Universal.ColorAdjustments",
+        "active": true,
+        "properties": {
+          "active": true,
+          "postExposure.m_OverrideState": true,
+          "postExposure.m_Value": 3.0,
+          "contrast.m_OverrideState": false,
+          "contrast.m_Value": 0.0,
+          "colorFilter.m_OverrideState": false,
+          "colorFilter.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hueShift.m_OverrideState": false,
+          "hueShift.m_Value": 0.0,
+          "saturation.m_OverrideState": false,
+          "saturation.m_Value": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.Bloom",
+        "active": true,
+        "properties": {
+          "active": true,
+          "skipIterations.m_OverrideState": false,
+          "skipIterations.m_Value": 1,
+          "threshold.m_OverrideState": true,
+          "threshold.m_Value": 0.800000011920929,
+          "intensity.m_OverrideState": false,
+          "intensity.m_Value": 0.0,
+          "scatter.m_OverrideState": true,
+          "scatter.m_Value": 0.800000011920929,
+          "clamp.m_OverrideState": false,
+          "clamp.m_Value": 65472.0,
+          "tint.m_OverrideState": false,
+          "tint.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "highQualityFiltering.m_OverrideState": false,
+          "highQualityFiltering.m_Value": false,
+          "filter.m_OverrideState": false,
+          "filter.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "Gaussian",
+              "Dual",
+              "Kawase"
+            ]
+          },
+          "downscale.m_OverrideState": false,
+          "downscale.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "Half",
+              "Quarter"
+            ]
+          },
+          "maxIterations.m_OverrideState": false,
+          "maxIterations.m_Value": 6,
+          "dirtTexture.m_OverrideState": false,
+          "dirtTexture.m_Value": null,
+          "dirtTexture.dimension": {
+            "value": 1,
+            "index": 2,
+            "names": [
+              "Unknown",
+              "None",
+              "Any",
+              "Tex2D",
+              "Tex3D",
+              "Cube",
+              "Tex2DArray",
+              "CubeArray"
+            ]
+          },
+          "dirtIntensity.m_OverrideState": false,
+          "dirtIntensity.m_Value": 0.0
+        }
+      },
+      {
+        "type": "OasisFogVolumeComponent",
+        "active": true,
+        "properties": {
+          "active": true,
+          "Density.m_OverrideState": true,
+          "Density.m_Value": 0.0020000000949949026,
+          "StartDistance.m_OverrideState": false,
+          "StartDistance.m_Value": 0.0,
+          "HeightRange.m_OverrideState": true,
+          "HeightRange.m_Value": [
+            0.0,
+            35.0
+          ],
+          "HeightRange.m_Value.x": 0.0,
+          "HeightRange.m_Value.y": 35.0,
+          "Tint.m_OverrideState": true,
+          "Tint.m_Value": [
+            1.0,
+            0.357080638,
+            0.230188668,
+            1.0
+          ],
+          "SunScatteringIntensity.m_OverrideState": true,
+          "SunScatteringIntensity.m_Value": 0.0
+        }
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Settings/TerminalDarkArea_Profile.asset",
+    "components": [
+      {
+        "type": "UnityEngine.Rendering.Universal.ColorAdjustments",
+        "active": true,
+        "properties": {
+          "active": true,
+          "postExposure.m_OverrideState": true,
+          "postExposure.m_Value": 0.75,
+          "contrast.m_OverrideState": false,
+          "contrast.m_Value": 0.0,
+          "colorFilter.m_OverrideState": false,
+          "colorFilter.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hueShift.m_OverrideState": false,
+          "hueShift.m_Value": 0.0,
+          "saturation.m_OverrideState": false,
+          "saturation.m_Value": 0.0
+        }
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Settings/TerminalScreenshot02_Profile.asset",
+    "components": [
+      {
+        "type": "UnityEngine.Rendering.Universal.DepthOfField",
+        "active": true,
+        "properties": {
+          "active": true,
+          "mode.m_OverrideState": true,
+          "mode.m_Value": {
+            "value": 2,
+            "index": 2,
+            "names": [
+              "Off",
+              "Gaussian",
+              "Bokeh"
+            ]
+          },
+          "gaussianStart.m_OverrideState": false,
+          "gaussianStart.m_Value": 10.0,
+          "gaussianEnd.m_OverrideState": false,
+          "gaussianEnd.m_Value": 30.0,
+          "gaussianMaxRadius.m_OverrideState": false,
+          "gaussianMaxRadius.m_Value": 1.0,
+          "highQualitySampling.m_OverrideState": false,
+          "highQualitySampling.m_Value": false,
+          "focusDistance.m_OverrideState": true,
+          "focusDistance.m_Value": 4.940000057220459,
+          "aperture.m_OverrideState": true,
+          "aperture.m_Value": 4.0,
+          "focalLength.m_OverrideState": true,
+          "focalLength.m_Value": 200.0,
+          "bladeCount.m_OverrideState": false,
+          "bladeCount.m_Value": 5,
+          "bladeCurvature.m_OverrideState": false,
+          "bladeCurvature.m_Value": 1.0,
+          "bladeRotation.m_OverrideState": false,
+          "bladeRotation.m_Value": 0.0
+        }
+      }
+    ]
+  },
+  {
+    "path": "Assets/Settings/VolumeProfiles/DefaultVolumeProfile.asset",
+    "components": [
+      {
+        "type": "UnityEngine.Rendering.Universal.LiftGammaGain",
+        "active": true,
+        "properties": {
+          "active": true,
+          "lift.m_OverrideState": true,
+          "lift.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "lift.m_Value.x": 1.0,
+          "lift.m_Value.y": 1.0,
+          "lift.m_Value.z": 1.0,
+          "lift.m_Value.w": 0.0,
+          "gamma.m_OverrideState": true,
+          "gamma.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "gamma.m_Value.x": 1.0,
+          "gamma.m_Value.y": 1.0,
+          "gamma.m_Value.z": 1.0,
+          "gamma.m_Value.w": 0.0,
+          "gain.m_OverrideState": true,
+          "gain.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "gain.m_Value.x": 1.0,
+          "gain.m_Value.y": 1.0,
+          "gain.m_Value.z": 1.0,
+          "gain.m_Value.w": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.ColorLookup",
+        "active": true,
+        "properties": {
+          "active": true,
+          "texture.m_OverrideState": true,
+          "texture.m_Value": null,
+          "texture.dimension": {
+            "value": 1,
+            "index": 2,
+            "names": [
+              "Unknown",
+              "None",
+              "Any",
+              "Tex2D",
+              "Tex3D",
+              "Cube",
+              "Tex2DArray",
+              "CubeArray"
+            ]
+          },
+          "contribution.m_OverrideState": true,
+          "contribution.m_Value": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.ScreenSpaceLensFlare",
+        "active": true,
+        "properties": {
+          "active": true,
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.0,
+          "tintColor.m_OverrideState": true,
+          "tintColor.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "bloomMip.m_OverrideState": true,
+          "bloomMip.m_Value": 1,
+          "firstFlareIntensity.m_OverrideState": true,
+          "firstFlareIntensity.m_Value": 1.0,
+          "secondaryFlareIntensity.m_OverrideState": true,
+          "secondaryFlareIntensity.m_Value": 1.0,
+          "warpedFlareIntensity.m_OverrideState": true,
+          "warpedFlareIntensity.m_Value": 1.0,
+          "warpedFlareScale.m_OverrideState": true,
+          "warpedFlareScale.m_Value": [
+            1.0,
+            1.0
+          ],
+          "warpedFlareScale.m_Value.x": 1.0,
+          "warpedFlareScale.m_Value.y": 1.0,
+          "samples.m_OverrideState": true,
+          "samples.m_Value": 1,
+          "sampleDimmer.m_OverrideState": true,
+          "sampleDimmer.m_Value": 0.5,
+          "vignetteEffect.m_OverrideState": true,
+          "vignetteEffect.m_Value": 1.0,
+          "startingPosition.m_OverrideState": true,
+          "startingPosition.m_Value": 1.25,
+          "scale.m_OverrideState": true,
+          "scale.m_Value": 1.5,
+          "streaksIntensity.m_OverrideState": true,
+          "streaksIntensity.m_Value": 0.0,
+          "streaksLength.m_OverrideState": true,
+          "streaksLength.m_Value": 0.5,
+          "streaksOrientation.m_OverrideState": true,
+          "streaksOrientation.m_Value": 0.0,
+          "streaksThreshold.m_OverrideState": true,
+          "streaksThreshold.m_Value": 0.25,
+          "resolution.m_OverrideState": true,
+          "resolution.m_Value": {
+            "value": 4,
+            "index": 1,
+            "names": [
+              "Half",
+              "Quarter",
+              "Eighth"
+            ]
+          },
+          "chromaticAbberationIntensity.m_OverrideState": true,
+          "chromaticAbberationIntensity.m_Value": 0.5
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.ShadowsMidtonesHighlights",
+        "active": true,
+        "properties": {
+          "active": true,
+          "shadows.m_OverrideState": true,
+          "shadows.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "shadows.m_Value.x": 1.0,
+          "shadows.m_Value.y": 1.0,
+          "shadows.m_Value.z": 1.0,
+          "shadows.m_Value.w": 0.0,
+          "midtones.m_OverrideState": true,
+          "midtones.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "midtones.m_Value.x": 1.0,
+          "midtones.m_Value.y": 1.0,
+          "midtones.m_Value.z": 1.0,
+          "midtones.m_Value.w": 0.0,
+          "highlights.m_OverrideState": true,
+          "highlights.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "highlights.m_Value.x": 1.0,
+          "highlights.m_Value.y": 1.0,
+          "highlights.m_Value.z": 1.0,
+          "highlights.m_Value.w": 0.0,
+          "shadowsStart.m_OverrideState": true,
+          "shadowsStart.m_Value": 0.0,
+          "shadowsEnd.m_OverrideState": true,
+          "shadowsEnd.m_Value": 0.30000001192092896,
+          "highlightsStart.m_OverrideState": true,
+          "highlightsStart.m_Value": 0.550000011920929,
+          "highlightsEnd.m_OverrideState": true,
+          "highlightsEnd.m_Value": 1.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.WhiteBalance",
+        "active": true,
+        "properties": {
+          "active": true,
+          "temperature.m_OverrideState": true,
+          "temperature.m_Value": 0.0,
+          "tint.m_OverrideState": true,
+          "tint.m_Value": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.SplitToning",
+        "active": true,
+        "properties": {
+          "active": true,
+          "shadows.m_OverrideState": true,
+          "shadows.m_Value": [
+            0.5,
+            0.5,
+            0.5,
+            1.0
+          ],
+          "highlights.m_OverrideState": true,
+          "highlights.m_Value": [
+            0.5,
+            0.5,
+            0.5,
+            1.0
+          ],
+          "balance.m_OverrideState": true,
+          "balance.m_Value": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.Tonemapping",
+        "active": true,
+        "properties": {
+          "active": true,
+          "mode.m_OverrideState": true,
+          "mode.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "None",
+              "Neutral",
+              "ACES"
+            ]
+          },
+          "neutralHDRRangeReductionMode.m_OverrideState": true,
+          "neutralHDRRangeReductionMode.m_Value": {
+            "value": 2,
+            "index": 1,
+            "names": [
+              "Reinhard",
+              "BT2390"
+            ]
+          },
+          "acesPreset.m_OverrideState": true,
+          "acesPreset.m_Value": {
+            "value": 3,
+            "index": 0,
+            "names": [
+              "ACES1000Nits",
+              "ACES2000Nits",
+              "ACES4000Nits"
+            ]
+          },
+          "hueShiftAmount.m_OverrideState": true,
+          "hueShiftAmount.m_Value": 0.0,
+          "detectPaperWhite.m_OverrideState": true,
+          "detectPaperWhite.m_Value": false,
+          "paperWhite.m_OverrideState": true,
+          "paperWhite.m_Value": 300.0,
+          "detectBrightnessLimits.m_OverrideState": true,
+          "detectBrightnessLimits.m_Value": true,
+          "minNits.m_OverrideState": true,
+          "minNits.m_Value": 0.004999999888241291,
+          "maxNits.m_OverrideState": true,
+          "maxNits.m_Value": 1000.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.Vignette",
+        "active": true,
+        "properties": {
+          "active": true,
+          "color.m_OverrideState": true,
+          "color.m_Value": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "center.m_OverrideState": true,
+          "center.m_Value": [
+            0.5,
+            0.5
+          ],
+          "center.m_Value.x": 0.5,
+          "center.m_Value.y": 0.5,
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.0,
+          "smoothness.m_OverrideState": true,
+          "smoothness.m_Value": 0.20000000298023224,
+          "rounded.m_OverrideState": true,
+          "rounded.m_Value": false
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.ColorCurves",
+        "active": true,
+        "properties": {
+          "active": true,
+          "master.m_OverrideState": true,
+          "master.m_Value.<length>k__BackingField": 2,
+          "master.m_Value.m_Loop": false,
+          "master.m_Value.m_ZeroValue": 0.0,
+          "master.m_Value.m_Range": 1.0,
+          "master.m_Value.m_Curve": [
+            {
+              "time": 0.0,
+              "value": 0.0,
+              "inTangent": 1.0,
+              "outTangent": 1.0
+            },
+            {
+              "time": 1.0,
+              "value": 1.0,
+              "inTangent": 1.0,
+              "outTangent": 1.0
+            }
+          ],
+          "red.m_OverrideState": true,
+          "red.m_Value.<length>k__BackingField": 2,
+          "red.m_Value.m_Loop": false,
+          "red.m_Value.m_ZeroValue": 0.0,
+          "red.m_Value.m_Range": 1.0,
+          "red.m_Value.m_Curve": [
+            {
+              "time": 0.0,
+              "value": 0.0,
+              "inTangent": 1.0,
+              "outTangent": 1.0
+            },
+            {
+              "time": 1.0,
+              "value": 1.0,
+              "inTangent": 1.0,
+              "outTangent": 1.0
+            }
+          ],
+          "green.m_OverrideState": true,
+          "green.m_Value.<length>k__BackingField": 2,
+          "green.m_Value.m_Loop": false,
+          "green.m_Value.m_ZeroValue": 0.0,
+          "green.m_Value.m_Range": 1.0,
+          "green.m_Value.m_Curve": [
+            {
+              "time": 0.0,
+              "value": 0.0,
+              "inTangent": 1.0,
+              "outTangent": 1.0
+            },
+            {
+              "time": 1.0,
+              "value": 1.0,
+              "inTangent": 1.0,
+              "outTangent": 1.0
+            }
+          ],
+          "blue.m_OverrideState": true,
+          "blue.m_Value.<length>k__BackingField": 2,
+          "blue.m_Value.m_Loop": false,
+          "blue.m_Value.m_ZeroValue": 0.0,
+          "blue.m_Value.m_Range": 1.0,
+          "blue.m_Value.m_Curve": [
+            {
+              "time": 0.0,
+              "value": 0.0,
+              "inTangent": 1.0,
+              "outTangent": 1.0
+            },
+            {
+              "time": 1.0,
+              "value": 1.0,
+              "inTangent": 1.0,
+              "outTangent": 1.0
+            }
+          ],
+          "hueVsHue.m_OverrideState": true,
+          "hueVsHue.m_Value.<length>k__BackingField": 0,
+          "hueVsHue.m_Value.m_Loop": true,
+          "hueVsHue.m_Value.m_ZeroValue": 0.5,
+          "hueVsHue.m_Value.m_Range": 1.0,
+          "hueVsHue.m_Value.m_Curve": [],
+          "hueVsSat.m_OverrideState": true,
+          "hueVsSat.m_Value.<length>k__BackingField": 0,
+          "hueVsSat.m_Value.m_Loop": true,
+          "hueVsSat.m_Value.m_ZeroValue": 0.5,
+          "hueVsSat.m_Value.m_Range": 1.0,
+          "hueVsSat.m_Value.m_Curve": [],
+          "satVsSat.m_OverrideState": true,
+          "satVsSat.m_Value.<length>k__BackingField": 0,
+          "satVsSat.m_Value.m_Loop": false,
+          "satVsSat.m_Value.m_ZeroValue": 0.5,
+          "satVsSat.m_Value.m_Range": 1.0,
+          "satVsSat.m_Value.m_Curve": [],
+          "lumVsSat.m_OverrideState": true,
+          "lumVsSat.m_Value.<length>k__BackingField": 0,
+          "lumVsSat.m_Value.m_Loop": false,
+          "lumVsSat.m_Value.m_ZeroValue": 0.5,
+          "lumVsSat.m_Value.m_Range": 1.0,
+          "lumVsSat.m_Value.m_Curve": []
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.ChannelMixer",
+        "active": true,
+        "properties": {
+          "active": true,
+          "redOutRedIn.m_OverrideState": true,
+          "redOutRedIn.m_Value": 100.0,
+          "redOutGreenIn.m_OverrideState": true,
+          "redOutGreenIn.m_Value": 0.0,
+          "redOutBlueIn.m_OverrideState": true,
+          "redOutBlueIn.m_Value": 0.0,
+          "greenOutRedIn.m_OverrideState": true,
+          "greenOutRedIn.m_Value": 0.0,
+          "greenOutGreenIn.m_OverrideState": true,
+          "greenOutGreenIn.m_Value": 100.0,
+          "greenOutBlueIn.m_OverrideState": true,
+          "greenOutBlueIn.m_Value": 0.0,
+          "blueOutRedIn.m_OverrideState": true,
+          "blueOutRedIn.m_Value": 0.0,
+          "blueOutGreenIn.m_OverrideState": true,
+          "blueOutGreenIn.m_Value": 0.0,
+          "blueOutBlueIn.m_OverrideState": true,
+          "blueOutBlueIn.m_Value": 100.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.ColorAdjustments",
+        "active": true,
+        "properties": {
+          "active": true,
+          "postExposure.m_OverrideState": true,
+          "postExposure.m_Value": 0.0,
+          "contrast.m_OverrideState": true,
+          "contrast.m_Value": 0.0,
+          "colorFilter.m_OverrideState": true,
+          "colorFilter.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hueShift.m_OverrideState": true,
+          "hueShift.m_Value": 0.0,
+          "saturation.m_OverrideState": true,
+          "saturation.m_Value": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.Bloom",
+        "active": true,
+        "properties": {
+          "active": true,
+          "skipIterations.m_OverrideState": true,
+          "skipIterations.m_Value": 1,
+          "threshold.m_OverrideState": true,
+          "threshold.m_Value": 0.89999997615814209,
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.0,
+          "scatter.m_OverrideState": true,
+          "scatter.m_Value": 0.699999988079071,
+          "clamp.m_OverrideState": true,
+          "clamp.m_Value": 65472.0,
+          "tint.m_OverrideState": true,
+          "tint.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "highQualityFiltering.m_OverrideState": true,
+          "highQualityFiltering.m_Value": false,
+          "filter.m_OverrideState": false,
+          "filter.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "Gaussian",
+              "Dual",
+              "Kawase"
+            ]
+          },
+          "downscale.m_OverrideState": true,
+          "downscale.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "Half",
+              "Quarter"
+            ]
+          },
+          "maxIterations.m_OverrideState": true,
+          "maxIterations.m_Value": 6,
+          "dirtTexture.m_OverrideState": true,
+          "dirtTexture.m_Value": null,
+          "dirtTexture.dimension": {
+            "value": 1,
+            "index": 2,
+            "names": [
+              "Unknown",
+              "None",
+              "Any",
+              "Tex2D",
+              "Tex3D",
+              "Cube",
+              "Tex2DArray",
+              "CubeArray"
+            ]
+          },
+          "dirtIntensity.m_OverrideState": true,
+          "dirtIntensity.m_Value": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.DepthOfField",
+        "active": true,
+        "properties": {
+          "active": true,
+          "mode.m_OverrideState": true,
+          "mode.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "Off",
+              "Gaussian",
+              "Bokeh"
+            ]
+          },
+          "gaussianStart.m_OverrideState": true,
+          "gaussianStart.m_Value": 10.0,
+          "gaussianEnd.m_OverrideState": true,
+          "gaussianEnd.m_Value": 30.0,
+          "gaussianMaxRadius.m_OverrideState": true,
+          "gaussianMaxRadius.m_Value": 1.0,
+          "highQualitySampling.m_OverrideState": true,
+          "highQualitySampling.m_Value": false,
+          "focusDistance.m_OverrideState": true,
+          "focusDistance.m_Value": 10.0,
+          "aperture.m_OverrideState": true,
+          "aperture.m_Value": 5.5999999046325684,
+          "focalLength.m_OverrideState": true,
+          "focalLength.m_Value": 50.0,
+          "bladeCount.m_OverrideState": true,
+          "bladeCount.m_Value": 5,
+          "bladeCurvature.m_OverrideState": true,
+          "bladeCurvature.m_Value": 1.0,
+          "bladeRotation.m_OverrideState": true,
+          "bladeRotation.m_Value": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.MotionBlur",
+        "active": true,
+        "properties": {
+          "active": true,
+          "mode.m_OverrideState": true,
+          "mode.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "CameraOnly",
+              "CameraAndObjects"
+            ]
+          },
+          "quality.m_OverrideState": true,
+          "quality.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "Low",
+              "Medium",
+              "High"
+            ]
+          },
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.0,
+          "clamp.m_OverrideState": true,
+          "clamp.m_Value": 0.05000000074505806
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.ChromaticAberration",
+        "active": true,
+        "properties": {
+          "active": true,
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.PaniniProjection",
+        "active": true,
+        "properties": {
+          "active": true,
+          "distance.m_OverrideState": true,
+          "distance.m_Value": 0.0,
+          "cropToFit.m_OverrideState": true,
+          "cropToFit.m_Value": 1.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.FilmGrain",
+        "active": true,
+        "properties": {
+          "active": true,
+          "type.m_OverrideState": true,
+          "type.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "Thin1",
+              "Thin2",
+              "Medium1",
+              "Medium2",
+              "Medium3",
+              "Medium4",
+              "Medium5",
+              "Medium6",
+              "Large01",
+              "Large02",
+              "Custom"
+            ]
+          },
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.0,
+          "response.m_OverrideState": true,
+          "response.m_Value": 0.800000011920929,
+          "texture.m_OverrideState": true,
+          "texture.m_Value": null
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.LensDistortion",
+        "active": true,
+        "properties": {
+          "active": true,
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.0,
+          "xMultiplier.m_OverrideState": true,
+          "xMultiplier.m_Value": 1.0,
+          "yMultiplier.m_OverrideState": true,
+          "yMultiplier.m_Value": 1.0,
+          "center.m_OverrideState": true,
+          "center.m_Value": [
+            0.5,
+            0.5
+          ],
+          "center.m_Value.x": 0.5,
+          "center.m_Value.y": 0.5,
+          "scale.m_OverrideState": true,
+          "scale.m_Value": 1.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.ProbeVolumesOptions",
+        "active": true,
+        "properties": {
+          "active": true,
+          "normalBias.m_OverrideState": true,
+          "normalBias.m_Value": 0.33000001311302185,
+          "viewBias.m_OverrideState": true,
+          "viewBias.m_Value": 0.0,
+          "scaleBiasWithMinProbeDistance.m_OverrideState": true,
+          "scaleBiasWithMinProbeDistance.m_Value": false,
+          "samplingNoise.m_OverrideState": true,
+          "samplingNoise.m_Value": 0.10000000149011612,
+          "animateSamplingNoise.m_OverrideState": true,
+          "animateSamplingNoise.m_Value": true,
+          "leakReductionMode.m_OverrideState": true,
+          "leakReductionMode.m_Value": {
+            "value": 1,
+            "index": 1,
+            "names": [
+              "None",
+              "Performance",
+              "ValidityBased",
+              "Quality",
+              "ValidityAndNormalBased"
+            ]
+          },
+          "minValidDotProductValue.m_OverrideState": true,
+          "minValidDotProductValue.m_Value": 0.10000000149011612,
+          "occlusionOnlyReflectionNormalization.m_OverrideState": true,
+          "occlusionOnlyReflectionNormalization.m_Value": true,
+          "intensityMultiplier.m_OverrideState": true,
+          "intensityMultiplier.m_Value": 1.0,
+          "skyOcclusionIntensityMultiplier.m_OverrideState": true,
+          "skyOcclusionIntensityMultiplier.m_Value": 1.0,
+          "worldOffset.m_OverrideState": false,
+          "worldOffset.m_Value": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "worldOffset.m_Value.x": 0.0,
+          "worldOffset.m_Value.y": 0.0,
+          "worldOffset.m_Value.z": 0.0
+        }
+      },
+      {
+        "type": "OutlineVolumeComponent",
+        "active": true,
+        "properties": {
+          "active": true,
+          "Enabled.m_OverrideState": true,
+          "Enabled.m_Value": false
+        }
+      },
+      {
+        "type": "OasisFogVolumeComponent",
+        "active": true,
+        "properties": {
+          "active": true,
+          "Density.m_OverrideState": true,
+          "Density.m_Value": 0.0,
+          "StartDistance.m_OverrideState": true,
+          "StartDistance.m_Value": 0.0,
+          "HeightRange.m_OverrideState": true,
+          "HeightRange.m_Value": [
+            0.0,
+            50.0
+          ],
+          "HeightRange.m_Value.x": 0.0,
+          "HeightRange.m_Value.y": 50.0,
+          "Tint.m_OverrideState": true,
+          "Tint.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "SunScatteringIntensity.m_OverrideState": true,
+          "SunScatteringIntensity.m_Value": 2.0
+        }
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Settings/TerminalScreenshot06_Profile.asset",
+    "components": []
+  },
+  {
+    "path": "Assets/Scenes/Garden/Settings/GardenIndoorVolumeProfile.asset",
+    "components": [
+      {
+        "type": "UnityEngine.Rendering.Universal.ColorAdjustments",
+        "active": true,
+        "properties": {
+          "active": true,
+          "postExposure.m_OverrideState": true,
+          "postExposure.m_Value": 0.0,
+          "contrast.m_OverrideState": false,
+          "contrast.m_Value": 0.0,
+          "colorFilter.m_OverrideState": false,
+          "colorFilter.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hueShift.m_OverrideState": false,
+          "hueShift.m_Value": 0.0,
+          "saturation.m_OverrideState": false,
+          "saturation.m_Value": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.WhiteBalance",
+        "active": true,
+        "properties": {
+          "active": true,
+          "temperature.m_OverrideState": true,
+          "temperature.m_Value": -20.0,
+          "tint.m_OverrideState": true,
+          "tint.m_Value": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.Bloom",
+        "active": true,
+        "properties": {
+          "active": true,
+          "skipIterations.m_OverrideState": false,
+          "skipIterations.m_Value": 1,
+          "threshold.m_OverrideState": true,
+          "threshold.m_Value": 1.0,
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.75,
+          "scatter.m_OverrideState": true,
+          "scatter.m_Value": 0.5,
+          "clamp.m_OverrideState": false,
+          "clamp.m_Value": 65472.0,
+          "tint.m_OverrideState": false,
+          "tint.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "highQualityFiltering.m_OverrideState": false,
+          "highQualityFiltering.m_Value": false,
+          "filter.m_OverrideState": false,
+          "filter.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "Gaussian",
+              "Dual",
+              "Kawase"
+            ]
+          },
+          "downscale.m_OverrideState": false,
+          "downscale.m_Value": {
+            "value": 1,
+            "index": 1,
+            "names": [
+              "Half",
+              "Quarter"
+            ]
+          },
+          "maxIterations.m_OverrideState": false,
+          "maxIterations.m_Value": 6,
+          "dirtTexture.m_OverrideState": false,
+          "dirtTexture.m_Value": null,
+          "dirtTexture.dimension": {
+            "value": 1,
+            "index": 2,
+            "names": [
+              "Unknown",
+              "None",
+              "Any",
+              "Tex2D",
+              "Tex3D",
+              "Cube",
+              "Tex2DArray",
+              "CubeArray"
+            ]
+          },
+          "dirtIntensity.m_OverrideState": false,
+          "dirtIntensity.m_Value": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.LiftGammaGain",
+        "active": true,
+        "properties": {
+          "active": true,
+          "lift.m_OverrideState": false,
+          "lift.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "lift.m_Value.x": 1.0,
+          "lift.m_Value.y": 1.0,
+          "lift.m_Value.z": 1.0,
+          "lift.m_Value.w": 0.0,
+          "gamma.m_OverrideState": true,
+          "gamma.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            0.145655066
+          ],
+          "gamma.m_Value.x": 1.0,
+          "gamma.m_Value.y": 1.0,
+          "gamma.m_Value.z": 1.0,
+          "gamma.m_Value.w": 0.1456550657749176,
+          "gain.m_OverrideState": false,
+          "gain.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "gain.m_Value.x": 1.0,
+          "gain.m_Value.y": 1.0,
+          "gain.m_Value.z": 1.0,
+          "gain.m_Value.w": 0.0
+        }
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Settings/Oasis_Screenshot05_Profile.asset",
+    "components": [
+      {
+        "type": "UnityEngine.Rendering.Universal.DepthOfField",
+        "active": true,
+        "properties": {
+          "active": true,
+          "mode.m_OverrideState": true,
+          "mode.m_Value": {
+            "value": 2,
+            "index": 2,
+            "names": [
+              "Off",
+              "Gaussian",
+              "Bokeh"
+            ]
+          },
+          "gaussianStart.m_OverrideState": true,
+          "gaussianStart.m_Value": 80.0,
+          "gaussianEnd.m_OverrideState": true,
+          "gaussianEnd.m_Value": 90.0,
+          "gaussianMaxRadius.m_OverrideState": true,
+          "gaussianMaxRadius.m_Value": 1.5,
+          "highQualitySampling.m_OverrideState": true,
+          "highQualitySampling.m_Value": true,
+          "focusDistance.m_OverrideState": true,
+          "focusDistance.m_Value": 75.0,
+          "aperture.m_OverrideState": true,
+          "aperture.m_Value": 3.2000000476837158,
+          "focalLength.m_OverrideState": true,
+          "focalLength.m_Value": 150.0,
+          "bladeCount.m_OverrideState": true,
+          "bladeCount.m_Value": 8,
+          "bladeCurvature.m_OverrideState": false,
+          "bladeCurvature.m_Value": 1.0,
+          "bladeRotation.m_OverrideState": false,
+          "bladeRotation.m_Value": 0.0
+        }
+      }
+    ]
+  },
+  {
+    "path": "Assets/Settings/VolumeProfiles/MediaOverrides.asset",
+    "components": [
+      {
+        "type": "UnityEngine.Rendering.Universal.FilmGrain",
+        "active": true,
+        "properties": {
+          "active": true,
+          "type.m_OverrideState": false,
+          "type.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "Thin1",
+              "Thin2",
+              "Medium1",
+              "Medium2",
+              "Medium3",
+              "Medium4",
+              "Medium5",
+              "Medium6",
+              "Large01",
+              "Large02",
+              "Custom"
+            ]
+          },
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.40000000596046448,
+          "response.m_OverrideState": false,
+          "response.m_Value": 0.800000011920929,
+          "texture.m_OverrideState": false,
+          "texture.m_Value": null
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.MotionBlur",
+        "active": true,
+        "properties": {
+          "active": true,
+          "mode.m_OverrideState": false,
+          "mode.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "CameraOnly",
+              "CameraAndObjects"
+            ]
+          },
+          "quality.m_OverrideState": true,
+          "quality.m_Value": {
+            "value": 2,
+            "index": 2,
+            "names": [
+              "Low",
+              "Medium",
+              "High"
+            ]
+          },
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.5,
+          "clamp.m_OverrideState": false,
+          "clamp.m_Value": 0.05000000074505806
+        }
+      }
+    ]
+  },
+  {
+    "path": "Assets/Settings/VolumeProfiles/MarketProfile.asset",
+    "components": [
+      {
+        "type": "UnityEngine.Rendering.Universal.ColorAdjustments",
+        "active": true,
+        "properties": {
+          "active": true,
+          "postExposure.m_OverrideState": true,
+          "postExposure.m_Value": 1.3999999761581421,
+          "contrast.m_OverrideState": true,
+          "contrast.m_Value": 6.8000001907348633,
+          "colorFilter.m_OverrideState": false,
+          "colorFilter.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hueShift.m_OverrideState": false,
+          "hueShift.m_Value": 0.0,
+          "saturation.m_OverrideState": true,
+          "saturation.m_Value": 7.4000000953674316
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.Tonemapping",
+        "active": true,
+        "properties": {
+          "active": true,
+          "mode.m_OverrideState": true,
+          "mode.m_Value": {
+            "value": 2,
+            "index": 2,
+            "names": [
+              "None",
+              "Neutral",
+              "ACES"
+            ]
+          },
+          "neutralHDRRangeReductionMode.m_OverrideState": false,
+          "neutralHDRRangeReductionMode.m_Value": {
+            "value": 2,
+            "index": 1,
+            "names": [
+              "Reinhard",
+              "BT2390"
+            ]
+          },
+          "acesPreset.m_OverrideState": false,
+          "acesPreset.m_Value": {
+            "value": 3,
+            "index": 0,
+            "names": [
+              "ACES1000Nits",
+              "ACES2000Nits",
+              "ACES4000Nits"
+            ]
+          },
+          "hueShiftAmount.m_OverrideState": false,
+          "hueShiftAmount.m_Value": 0.0,
+          "detectPaperWhite.m_OverrideState": false,
+          "detectPaperWhite.m_Value": false,
+          "paperWhite.m_OverrideState": false,
+          "paperWhite.m_Value": 300.0,
+          "detectBrightnessLimits.m_OverrideState": false,
+          "detectBrightnessLimits.m_Value": true,
+          "minNits.m_OverrideState": false,
+          "minNits.m_Value": 0.004999999888241291,
+          "maxNits.m_OverrideState": false,
+          "maxNits.m_Value": 1000.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.PaniniProjection",
+        "active": true,
+        "properties": {
+          "active": true,
+          "distance.m_OverrideState": true,
+          "distance.m_Value": 0.10000000149011612,
+          "cropToFit.m_OverrideState": false,
+          "cropToFit.m_Value": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Settings/Oasis_Screenshot06_Profile.asset",
+    "components": [
+      {
+        "type": "UnityEngine.Rendering.Universal.DepthOfField",
+        "active": true,
+        "properties": {
+          "active": true,
+          "mode.m_OverrideState": true,
+          "mode.m_Value": {
+            "value": 2,
+            "index": 2,
+            "names": [
+              "Off",
+              "Gaussian",
+              "Bokeh"
+            ]
+          },
+          "gaussianStart.m_OverrideState": false,
+          "gaussianStart.m_Value": 10.0,
+          "gaussianEnd.m_OverrideState": false,
+          "gaussianEnd.m_Value": 30.0,
+          "gaussianMaxRadius.m_OverrideState": false,
+          "gaussianMaxRadius.m_Value": 1.0,
+          "highQualitySampling.m_OverrideState": false,
+          "highQualitySampling.m_Value": false,
+          "focusDistance.m_OverrideState": true,
+          "focusDistance.m_Value": 60.0,
+          "aperture.m_OverrideState": true,
+          "aperture.m_Value": 1.2000000476837158,
+          "focalLength.m_OverrideState": true,
+          "focalLength.m_Value": 90.0,
+          "bladeCount.m_OverrideState": false,
+          "bladeCount.m_Value": 5,
+          "bladeCurvature.m_OverrideState": false,
+          "bladeCurvature.m_Value": 1.0,
+          "bladeRotation.m_OverrideState": false,
+          "bladeRotation.m_Value": 0.0
+        }
+      }
+    ]
+  },
+  {
+    "path": "Assets/Settings/VolumeProfiles/ZenGardenProfile.asset",
+    "components": [
+      {
+        "type": "UnityEngine.Rendering.Universal.Bloom",
+        "active": true,
+        "properties": {
+          "active": true,
+          "skipIterations.m_OverrideState": true,
+          "skipIterations.m_Value": 0,
+          "threshold.m_OverrideState": true,
+          "threshold.m_Value": 2.0,
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.5,
+          "scatter.m_OverrideState": false,
+          "scatter.m_Value": 0.699999988079071,
+          "clamp.m_OverrideState": false,
+          "clamp.m_Value": 65472.0,
+          "tint.m_OverrideState": false,
+          "tint.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "highQualityFiltering.m_OverrideState": false,
+          "highQualityFiltering.m_Value": false,
+          "filter.m_OverrideState": false,
+          "filter.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "Gaussian",
+              "Dual",
+              "Kawase"
+            ]
+          },
+          "downscale.m_OverrideState": false,
+          "downscale.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "Half",
+              "Quarter"
+            ]
+          },
+          "maxIterations.m_OverrideState": false,
+          "maxIterations.m_Value": 6,
+          "dirtTexture.m_OverrideState": false,
+          "dirtTexture.m_Value": null,
+          "dirtTexture.dimension": {
+            "value": 1,
+            "index": 2,
+            "names": [
+              "Unknown",
+              "None",
+              "Any",
+              "Tex2D",
+              "Tex3D",
+              "Cube",
+              "Tex2DArray",
+              "CubeArray"
+            ]
+          },
+          "dirtIntensity.m_OverrideState": false,
+          "dirtIntensity.m_Value": 0.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.Vignette",
+        "active": true,
+        "properties": {
+          "active": true,
+          "color.m_OverrideState": false,
+          "color.m_Value": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "center.m_OverrideState": false,
+          "center.m_Value": [
+            0.5,
+            0.5
+          ],
+          "center.m_Value.x": 0.5,
+          "center.m_Value.y": 0.5,
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.30000001192092896,
+          "smoothness.m_OverrideState": true,
+          "smoothness.m_Value": 0.40000000596046448,
+          "rounded.m_OverrideState": false,
+          "rounded.m_Value": false
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.PaniniProjection",
+        "active": true,
+        "properties": {
+          "active": true,
+          "distance.m_OverrideState": true,
+          "distance.m_Value": 0.10000000149011612,
+          "cropToFit.m_OverrideState": false,
+          "cropToFit.m_Value": 1.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.ColorAdjustments",
+        "active": true,
+        "properties": {
+          "active": true,
+          "postExposure.m_OverrideState": false,
+          "postExposure.m_Value": 0.40000000596046448,
+          "contrast.m_OverrideState": true,
+          "contrast.m_Value": 7.0,
+          "colorFilter.m_OverrideState": false,
+          "colorFilter.m_Value": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hueShift.m_OverrideState": false,
+          "hueShift.m_Value": 0.0,
+          "saturation.m_OverrideState": true,
+          "saturation.m_Value": -5.0
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.FilmGrain",
+        "active": false,
+        "properties": {
+          "active": false,
+          "type.m_OverrideState": true,
+          "type.m_Value": {
+            "value": 2,
+            "index": 2,
+            "names": [
+              "Thin1",
+              "Thin2",
+              "Medium1",
+              "Medium2",
+              "Medium3",
+              "Medium4",
+              "Medium5",
+              "Medium6",
+              "Large01",
+              "Large02",
+              "Custom"
+            ]
+          },
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.30000001192092896,
+          "response.m_OverrideState": false,
+          "response.m_Value": 0.800000011920929,
+          "texture.m_OverrideState": false,
+          "texture.m_Value": null
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.MotionBlur",
+        "active": false,
+        "properties": {
+          "active": false,
+          "mode.m_OverrideState": false,
+          "mode.m_Value": {
+            "value": 0,
+            "index": 0,
+            "names": [
+              "CameraOnly",
+              "CameraAndObjects"
+            ]
+          },
+          "quality.m_OverrideState": true,
+          "quality.m_Value": {
+            "value": 2,
+            "index": 2,
+            "names": [
+              "Low",
+              "Medium",
+              "High"
+            ]
+          },
+          "intensity.m_OverrideState": true,
+          "intensity.m_Value": 0.40000000596046448,
+          "clamp.m_OverrideState": true,
+          "clamp.m_Value": 0.05000000074505806
+        }
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.LiftGammaGain",
+        "active": true,
+        "properties": {
+          "active": true,
+          "lift.m_OverrideState": true,
+          "lift.m_Value": [
+            0.931968749,
+            0.971338868,
+            1.0,
+            0.0
+          ],
+          "lift.m_Value.x": 0.93196874856948853,
+          "lift.m_Value.y": 0.97133886814117432,
+          "lift.m_Value.z": 1.0,
+          "lift.m_Value.w": 0.0,
+          "gamma.m_OverrideState": true,
+          "gamma.m_Value": [
+            0.865393639,
+            0.9352932,
+            1.0,
+            -0.164670557
+          ],
+          "gamma.m_Value.x": 0.86539363861083984,
+          "gamma.m_Value.y": 0.93529319763183594,
+          "gamma.m_Value.z": 1.0,
+          "gamma.m_Value.w": -0.16467055678367615,
+          "gain.m_OverrideState": true,
+          "gain.m_Value": [
+            0.7604477,
+            0.8087917,
+            1.0,
+            0.606287539
+          ],
+          "gain.m_Value.x": 0.76044768095016479,
+          "gain.m_Value.y": 0.80879169702529907,
+          "gain.m_Value.z": 1.0,
+          "gain.m_Value.w": 0.60628753900527954
+        }
+      }
+    ]
+  }
+]

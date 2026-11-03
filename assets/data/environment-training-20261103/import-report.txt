@@ -1,0 +1,12 @@
+Source Unity 6000.4.0f1, URP 17.4.0
+Only new assets created. No pipeline assignment, scene connection, bake, scripts or shader installation.
+Light prefabs preserve base Light settings, not cookies, URP extensions, source positions, or runtime controllers.
+Skipped DefaultVolumeProfile/ColorCurves/master.m_Value.m_Curve (Unsupported)
+Skipped DefaultVolumeProfile/ColorCurves/red.m_Value.m_Curve (Unsupported)
+Skipped DefaultVolumeProfile/ColorCurves/green.m_Value.m_Curve (Unsupported)
+Skipped DefaultVolumeProfile/ColorCurves/blue.m_Value.m_Curve (Unsupported)
+Skipped DefaultVolumeProfile/ColorCurves/hueVsHue.m_Value.m_Curve (Unsupported)
+Skipped DefaultVolumeProfile/ColorCurves/hueVsSat.m_Value.m_Curve (Unsupported)
+Skipped DefaultVolumeProfile/ColorCurves/satVsSat.m_Value.m_Curve (Unsupported)
+Skipped DefaultVolumeProfile/ColorCurves/lumVsSat.m_Value.m_Curve (Unsupported)
+Created light prefabs: 19; Volume profiles: 23; skipped properties/types: 8

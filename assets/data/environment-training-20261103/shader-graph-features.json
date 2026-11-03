@@ -1,0 +1,3370 @@
+[
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/Subgraphs/DepthFade.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BranchOnInputConnectionNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SceneDepthNode",
+                          "UnityEditor.ShaderGraph.ScreenPositionNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.ViewVectorNode"
+                      ],
+        "referenceNames":  [
+                               "_Fade",
+                               "_Offset",
+                               "_ViewVector"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/Shockwave.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AbsoluteNode",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.ColorNode",
+                          "UnityEditor.ShaderGraph.DotProductNode",
+                          "UnityEditor.ShaderGraph.LengthNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NoiseNode",
+                          "UnityEditor.ShaderGraph.NormalVectorNode",
+                          "UnityEditor.ShaderGraph.PolarCoordinatesNode",
+                          "UnityEditor.ShaderGraph.PosterizeNode",
+                          "UnityEditor.ShaderGraph.PowerNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.Vector4Node",
+                          "UnityEditor.ShaderGraph.VertexColorNode",
+                          "UnityEditor.ShaderGraph.ViewDirectionNode"
+                      ],
+        "referenceNames":  [
+
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/DepthStencilMask.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.BlockNode"
+                      ],
+        "referenceNames":  [
+
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/Cockpit/Cockpit.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode"
+                      ],
+        "referenceNames":  [
+                               "_Albedo",
+                               "_Color",
+                               "_GIContribution",
+                               "_Lightmap_Emissive",
+                               "_MAINLIGHTKEYWORD",
+                               "_SOFT_SHADOWS"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Oasis/Shaders/LayeredLitLayer_Packed_SubGraph.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SamplerStateNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.TilingAndOffsetNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector2Node",
+                          "UnityEditor.ShaderGraph.Vector3Node"
+                      ],
+        "referenceNames":  [
+                               "_Dark_Color",
+                               "_Highlight_Color",
+                               "_InColor",
+                               "_InNormalXYSmoothness",
+                               "_Normal_Intensity",
+                               "_Offset",
+                               "_Opacity",
+                               "_Packed_Map",
+                               "_Tiling"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Shaders/ScreenBlockerDissolve_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalLitSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.BranchNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode"
+                      ],
+        "referenceNames":  [
+                               "_AOMap",
+                               "_BaseMap",
+                               "_Color",
+                               "_EdgeColor",
+                               "_EmissiveColor",
+                               "_EmissiveMap",
+                               "_ManualDissolve",
+                               "_ManualSwitch",
+                               "_Metallic_Smoothness_AO",
+                               "_NormalMap",
+                               "_Scale",
+                               "_TransitionAmount",
+                               "_TransitionTexture"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Oasis/Shaders/BasicDecal_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalDecalSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.DivideNode",
+                          "UnityEditor.ShaderGraph.LengthNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SamplerStateNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode"
+                      ],
+        "referenceNames":  [
+                               "_AO",
+                               "_BaseColor_Tint",
+                               "_BaseMap",
+                               "_Fade",
+                               "_HeighMapOffset",
+                               "_HeightMap_Blend",
+                               "_Metallic_Smoothness",
+                               "_Normal",
+                               "_Scale"
+                           ]
+    },
+    {
+        "path":  "Assets/SharedAssets/Shaders/UtilitySubgraphs/FaceNormal.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.BranchNode",
+                          "UnityEditor.ShaderGraph.CrossProductNode",
+                          "UnityEditor.ShaderGraph.DDXNode",
+                          "UnityEditor.ShaderGraph.DDYNode",
+                          "UnityEditor.ShaderGraph.NormalizeNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.TransformNode"
+                      ],
+        "referenceNames":  [
+                               "_World"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Shaders/Screen_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.CameraNode",
+                          "UnityEditor.ShaderGraph.DistanceNode",
+                          "UnityEditor.ShaderGraph.FloorNode",
+                          "UnityEditor.ShaderGraph.FogNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PowerNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.ScreenPositionNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.Vector2Node"
+                      ],
+        "referenceNames":  [
+                               "_BOXPROJECTED",
+                               "_CLUSTER_LIGHT_LOOP",
+                               "_Color",
+                               "_ColorFilter",
+                               "_Exposure",
+                               "_LEDPatternResolution",
+                               "_MaxPixelation",
+                               "_MinimumBlackness",
+                               "_Pixelation",
+                               "_REFLECTION_PROBE_BLENDING",
+                               "_ScreenColor",
+                               "_SwitchAnimation",
+                               "_TransitionAmount",
+                               "_TransitionEdgeColor",
+                               "_TransitionMap"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Oasis/Shaders/HeightFog.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalFullscreenSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.CameraNode",
+                          "UnityEditor.ShaderGraph.DotProductNode",
+                          "UnityEditor.ShaderGraph.ExponentialNode",
+                          "UnityEditor.ShaderGraph.FractionNode",
+                          "UnityEditor.ShaderGraph.LengthNode",
+                          "UnityEditor.ShaderGraph.MaximumNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NegateNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PowerNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SceneDepthNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.ViewDirectionNode"
+                      ],
+        "referenceNames":  [
+                               "_Density",
+                               "_Height_Range",
+                               "_StartDistance",
+                               "_SunScatteringIntensity",
+                               "_Tint"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Garden/Shaders/AlphaBlendedColorDecal_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalDecalSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.BranchNode",
+                          "UnityEditor.ShaderGraph.MaximumNode",
+                          "UnityEditor.ShaderGraph.MinimumNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector2Node"
+                      ],
+        "referenceNames":  [
+                               "_BaseMap",
+                               "_BlendMask",
+                               "_EdgeFade",
+                               "_Scale",
+                               "_WorldSpaceUVs"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/Subgraphs/SpaceFog.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BranchOnInputConnectionNode",
+                          "UnityEditor.ShaderGraph.CameraNode",
+                          "UnityEditor.ShaderGraph.DotProductNode",
+                          "UnityEditor.ShaderGraph.FogNode",
+                          "UnityEditor.ShaderGraph.LengthNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NegateNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PreviewNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SamplerStateNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DLODNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.StepNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.Texture2DAssetNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.Vector2Node",
+                          "UnityEditor.ShaderGraph.Vector3Node",
+                          "UnityEditor.ShaderGraph.Vector4Node",
+                          "UnityEditor.ShaderGraph.ViewDirectionNode",
+                          "UnityEditor.ShaderGraph.ViewVectorNode"
+                      ],
+        "referenceNames":  [
+                               "_Distance",
+                               "_ViewDirection"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Oasis/Shaders/UnpackTerrainData.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.DivideNode",
+                          "UnityEditor.ShaderGraph.FractionNode",
+                          "UnityEditor.ShaderGraph.NormalBlendNode",
+                          "UnityEditor.ShaderGraph.NormalReconstructZNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.Vector2Node"
+                      ],
+        "referenceNames":  [
+                               "_Normal",
+                               "_TerrainData"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Oasis/Shaders/Cliff_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalLitSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NormalBlendNode",
+                          "UnityEditor.ShaderGraph.NormalStrengthNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.UVNode"
+                      ],
+        "referenceNames":  [
+                               "_AOIntensity",
+                               "_BlendMask",
+                               "_ColorMap1",
+                               "_ColorMap2",
+                               "_ColorVariationIntensity",
+                               "_DetailNormal",
+                               "_DetailNormalStrength",
+                               "_DetailNormalTiling",
+                               "_NormalMap",
+                               "_Smoothness",
+                               "_Tiling1",
+                               "_Tiling2"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Art/VFX/Shaders/Triangle_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PolygonNode",
+                          "UnityEditor.ShaderGraph.SineNode",
+                          "UnityEditor.ShaderGraph.TilingAndOffsetNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.Vector2Node",
+                          "UnityEditor.ShaderGraph.Vector3Node",
+                          "UnityEditor.ShaderGraph.VertexColorNode"
+                      ],
+        "referenceNames":  [
+
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/HyperSpace/HyperSpace.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.ColorNode",
+                          "UnityEditor.ShaderGraph.CustomInterpolatorNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NegateNode",
+                          "UnityEditor.ShaderGraph.NoiseNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TilingAndOffsetNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.Vector2Node",
+                          "UnityEditor.ShaderGraph.Vector4Node"
+                      ],
+        "referenceNames":  [
+                               "_Float"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/CockpitInstrumentals.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.ColorNode",
+                          "UnityEditor.ShaderGraph.ColorspaceConversionNode",
+                          "UnityEditor.ShaderGraph.CosineNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.SineNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.VertexColorNode"
+                      ],
+        "referenceNames":  [
+
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Garden/Shaders/Subgraphs/SmoothCurve.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.Vector1Node"
+                      ],
+        "referenceNames":  [
+                               "Vector1_819C55C2"
+                           ]
+    },
+    {
+        "path":  "Assets/SharedAssets/Shaders/UtilitySubgraphs/TransformWorldToHClip.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.BranchOnInputConnectionNode",
+                          "UnityEditor.ShaderGraph.CustomFunctionNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode"
+                      ],
+        "referenceNames":  [
+                               "_PositionWS"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/Planet.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AbsoluteNode",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.BranchNode",
+                          "UnityEditor.ShaderGraph.CustomInterpolatorNode",
+                          "UnityEditor.ShaderGraph.DotProductNode",
+                          "UnityEditor.ShaderGraph.FresnelNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NormalVectorNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PowerNode",
+                          "UnityEditor.ShaderGraph.PreviewNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TilingAndOffsetNode",
+                          "UnityEditor.ShaderGraph.UVNode"
+                      ],
+        "referenceNames":  [
+                               "_ColorA",
+                               "_ColorB",
+                               "_Detail_Noise",
+                               "_Noise_Bias",
+                               "_Noise_Scale",
+                               "_RimColor",
+                               "_RimThickness",
+                               "_RimWidth",
+                               "_ShadowFilter"
+                           ]
+    },
+    {
+        "path":  "Assets/SharedAssets/Shaders/BiplanarMapping/BiplanarNormalConvert.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BranchNode",
+                          "UnityEditor.ShaderGraph.CombineNode",
+                          "UnityEditor.ShaderGraph.CustomFunctionNode",
+                          "UnityEditor.ShaderGraph.MinimumNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NormalizeNode",
+                          "UnityEditor.ShaderGraph.NormalUnpackNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode"
+                      ],
+        "referenceNames":  [
+                               "Boolean_ef7f252ff10a4101a9fb987336b1c06b",
+                               "Vector3_807082eda69945c6b8aad7dc2adc67f6",
+                               "Vector3_e7e9ab5b700d4c54a2c1eb57ed9912d3",
+                               "Vector4_7b95894a30024024af41aae3aeaf5205"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Garden/Shaders/Subgraphs/AnamorphicMap.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.ArctangentNode",
+                          "UnityEditor.ShaderGraph.CameraNode",
+                          "UnityEditor.ShaderGraph.ConstantNode",
+                          "UnityEditor.ShaderGraph.DivideNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NormalizeNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PowerNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SquareRootNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.Vector2Node"
+                      ],
+        "referenceNames":  [
+                               "_Distort",
+                               "_TextureSize",
+                               "_Yaw"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Shaders/Decal_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalDecalSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode"
+                      ],
+        "referenceNames":  [
+                               "_BaseMap",
+                               "_Color",
+                               "_MaskMap"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Shaders/Subgraphs/DepthDiffRemap.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.Vector2Node"
+                      ],
+        "referenceNames":  [
+                               "_DepthDiff",
+                               "_MaxDepth"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/ToonLightmap.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.CustomInterpolatorNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode"
+                      ],
+        "referenceNames":  [
+                               "_BaseMap",
+                               "_LM_AO",
+                               "_LM_Intensity"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Art/VFX/Shaders/HoloRing_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AbsoluteNode",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.CameraNode",
+                          "UnityEditor.ShaderGraph.ColorNode",
+                          "UnityEditor.ShaderGraph.CombineNode",
+                          "UnityEditor.ShaderGraph.DivideNode",
+                          "UnityEditor.ShaderGraph.DotProductNode",
+                          "UnityEditor.ShaderGraph.EllipseNode",
+                          "UnityEditor.ShaderGraph.FractionNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MaximumNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.ObjectNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PolarCoordinatesNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RectangleNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SineNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.TilingAndOffsetNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.Vector2Node",
+                          "UnityEditor.ShaderGraph.Vector3Node"
+                      ],
+        "referenceNames":  [
+                               "_Alpha",
+                               "_Background",
+                               "_Grad",
+                               "_Push",
+                               "_Rad",
+                               "_Speed"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Garden/Shaders/Subgraphs/SmoothTriangleWave.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.CombineNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode"
+                      ],
+        "referenceNames":  [
+                               "Vector4_68DFF216"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/ExplosionParticle_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AbsoluteNode",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.CustomInterpolatorNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PowerNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SceneDepthNode",
+                          "UnityEditor.ShaderGraph.ScreenPositionNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.VertexColorNode",
+                          "UnityEditor.ShaderGraph.ViewVectorNode"
+                      ],
+        "referenceNames":  [
+                               "_AlphaThreshold",
+                               "_EmissiveA",
+                               "_EmissiveThreshold",
+                               "_EmmisiveB",
+                               "_Mask",
+                               "_SmokeColor",
+                               "_Soft_Particle_blend"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Oasis/VFX/Shaders/SG_Wind_Cliff_SceneColor.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MaximumNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NoiseNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DLODNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SineNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SphereMaskNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TilingAndOffsetNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.TransformNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector2Node",
+                          "UnityEditor.ShaderGraph.Vector3Node"
+                      ],
+        "referenceNames":  [
+                               "_Alpha",
+                               "_Color",
+                               "_EdgeIn",
+                               "_EdgeOut",
+                               "_Height",
+                               "_Sand_Speed",
+                               "_TimeOffset",
+                               "_WaveSpeed"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/Skybox3DVertexPosition.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode"
+                      ],
+        "referenceNames":  [
+                               "_Position"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Garden/Shaders/GardenTerrain_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalLitSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.CustomFunctionNode",
+                          "UnityEditor.ShaderGraph.KeywordNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NormalStrengthNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.ScreenPositionNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode"
+                      ],
+        "referenceNames":  [
+                               "_BaseMap",
+                               "_HEIGHTBASEDSSS",
+                               "_HeightMap",
+                               "_Mask",
+                               "_NormalMap",
+                               "_NormalStrength",
+                               "_ScatteringStrength",
+                               "_TextureScale"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Shaders/Subgraphs/WorldSpaceGridNoise.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.CameraNode",
+                          "UnityEditor.ShaderGraph.FloorNode",
+                          "UnityEditor.ShaderGraph.FractionNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RandomRangeNode",
+                          "UnityEditor.ShaderGraph.StepNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.ViewDirectionNode"
+                      ],
+        "referenceNames":  [
+                               "_GridScale"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Oasis/Shaders/OasisTerrain_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalLitSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NormalizeNode",
+                          "UnityEditor.ShaderGraph.NormalUnpackNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SplitTextureTransformNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TilingAndOffsetNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector4Node",
+                          "UnityEditor.ShaderGraph.VertexColorNode"
+                      ],
+        "referenceNames":  [
+                               "_Gravels_Color_Smoothness",
+                               "_Gravels_Height",
+                               "_Gravels_Height_Remap",
+                               "_Gravels_Normal",
+                               "_Sand_Dark_Color",
+                               "_Sand_Footsteps_Packed",
+                               "_Sand_Harsh_Packed",
+                               "_Sand_Highlight_Color",
+                               "_Sand_Smooth_Packed",
+                               "_Sands_Height",
+                               "_SmoothFade",
+                               "_Wet_Gravels_Darkening",
+                               "_Wet_Gravels_Smoothness"
+                           ]
+    },
+    {
+        "path":  "Assets/SharedAssets/Shaders/WaterCausticsDecal.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.HighDefinition.ShaderGraph.DecalSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalDecalSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.AbsoluteNode",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RoundNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.Vector2Node"
+                      ],
+        "referenceNames":  [
+                               "_TextureScale",
+                               "_TimeScale"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Garden/Shaders/HeightBlendedDecal_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalDecalSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode"
+                      ],
+        "referenceNames":  [
+                               "_BaseMap",
+                               "_GroundOffset",
+                               "_HeightMap",
+                               "_HeightScale",
+                               "_NormalMap",
+                               "_Scale"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/Cockpit/CockpitGlass.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.CustomInterpolatorNode",
+                          "UnityEditor.ShaderGraph.DotProductNode",
+                          "UnityEditor.ShaderGraph.FresnelNode",
+                          "UnityEditor.ShaderGraph.MainLightDirectionNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NormalVectorNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.Vector2Node",
+                          "UnityEditor.ShaderGraph.Vector4Node"
+                      ],
+        "referenceNames":  [
+
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Garden/Shaders/Subgraphs/VegetationDeformation.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.CombineNode",
+                          "UnityEditor.ShaderGraph.CustomFunctionNode",
+                          "UnityEditor.ShaderGraph.DotProductNode",
+                          "UnityEditor.ShaderGraph.KeywordNode",
+                          "UnityEditor.ShaderGraph.LengthNode",
+                          "UnityEditor.ShaderGraph.MatrixSplitNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NormalizeNode",
+                          "UnityEditor.ShaderGraph.NormalVectorNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.TransformationMatrixNode",
+                          "UnityEditor.ShaderGraph.TransformNode",
+                          "UnityEditor.ShaderGraph.Vector1Node"
+                      ],
+        "referenceNames":  [
+                               "BOOLEAN_79014BA2A56E4035A083016E2BA17A2C_ON",
+                               "Vector1_1EF6B9C0",
+                               "Vector1_3A36DA35",
+                               "Vector1_665407A7",
+                               "Vector1_71D12A3",
+                               "Vector1_74A19DBC",
+                               "Vector1_8825368F",
+                               "Vector1_A1F46A31",
+                               "Vector1_F62CD300",
+                               "Vector2_445EBE29"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/Subgraphs/CelShading.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.CeilingNode",
+                          "UnityEditor.ShaderGraph.DivideNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode"
+                      ],
+        "referenceNames":  [
+                               "_BandCount",
+                               "_NdotL"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Shaders/ScrollingHologram_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.FresnelNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode"
+                      ],
+        "referenceNames":  [
+                               "_Color",
+                               "_Intensity",
+                               "_ScrollingSpeed",
+                               "_Tiling"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Garden/Shaders/AnamorphicSampler.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.ConstantNode",
+                          "UnityEditor.ShaderGraph.CrossProductNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.RotateAboutAxisNode",
+                          "UnityEditor.ShaderGraph.SampleRawCubemapNode",
+                          "UnityEditor.ShaderGraph.SamplerStateNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector3Node"
+                      ],
+        "referenceNames":  [
+                               "_Aperture",
+                               "_Cube",
+                               "_Fuzz",
+                               "_Yaw"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Shaders/SpotLightBillboard_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.CameraNode",
+                          "UnityEditor.ShaderGraph.MaximumNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NormalizeNode",
+                          "UnityEditor.ShaderGraph.ObjectNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TransformNode",
+                          "UnityEditor.ShaderGraph.UVNode"
+                      ],
+        "referenceNames":  [
+                               "_Intensity",
+                               "_Size",
+                               "_TowardCamera"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/NormalMappedToon.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.CustomInterpolatorNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.TransformNode",
+                          "UnityEditor.ShaderGraph.VertexColorNode"
+                      ],
+        "referenceNames":  [
+                               "_Color",
+                               "_NormalMap",
+                               "_RimColor",
+                               "_RimThickness",
+                               "_RimWidth"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Shaders/ScreenBlockerDissolveUnlit_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode"
+                      ],
+        "referenceNames":  [
+                               "_Color",
+                               "_EdgeColor",
+                               "_ManualDissolve",
+                               "_ManualSwitch",
+                               "_Scale",
+                               "_TransitionAmount",
+                               "_TransitionTexture"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/SpaceFog.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.ColorspaceConversionNode",
+                          "UnityEditor.ShaderGraph.DistanceNode",
+                          "UnityEditor.ShaderGraph.DivideNode",
+                          "UnityEditor.ShaderGraph.FloorNode",
+                          "UnityEditor.ShaderGraph.MaximumNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NegateNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SceneDepthNode",
+                          "UnityEditor.ShaderGraph.ScreenNode",
+                          "UnityEditor.ShaderGraph.ScreenPositionNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.Vector2Node",
+                          "UnityEditor.ShaderGraph.Vector4Node"
+                      ],
+        "referenceNames":  [
+                               "_CamToWorld",
+                               "_InverseProjMat"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Shaders/Subgraphs/WorldspaceFromDepth.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.CustomFunctionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode"
+                      ],
+        "referenceNames":  [
+                               "_Depth",
+                               "_InverseViewProjection",
+                               "_UV"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/EngineTrail_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AbsoluteNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.VertexColorNode"
+                      ],
+        "referenceNames":  [
+                               "_Color"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/StarBG.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.CustomInterpolatorNode",
+                          "UnityEditor.ShaderGraph.FresnelNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TilingAndOffsetNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.VertexColorNode",
+                          "UnityEditor.ShaderGraph.ViewDirectionNode"
+                      ],
+        "referenceNames":  [
+                               "_Galaxy_Alt",
+                               "_Galaxy_Primary",
+                               "_Space_Dust",
+                               "_Stars",
+                               "_Swirly_Nebular"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Shaders/Subgraphs/WaterNormalSampler.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.TilingAndOffsetNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.Vector2Node"
+                      ],
+        "referenceNames":  [
+                               "_NormalMap",
+                               "_OffsetDirection",
+                               "_OffsetSpeed",
+                               "_Tiling"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Garden/Shaders/TerrainBlendingDecal_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalDecalSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.BranchNode",
+                          "UnityEditor.ShaderGraph.DistanceNode",
+                          "UnityEditor.ShaderGraph.GradientNoiseNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.UVNode"
+                      ],
+        "referenceNames":  [
+                               "_Albedo",
+                               "_HeightMap",
+                               "_Invert",
+                               "_Mask",
+                               "_Normal_Map",
+                               "_Scale"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Shaders/Subgraphs/HologramLighting.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NoiseNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SineNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.StepNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector2Node",
+                          "UnityEditor.ShaderGraph.VertexColorNode"
+                      ],
+        "referenceNames":  [
+                               "_Color",
+                               "_Frequency",
+                               "_Mask",
+                               "_Vector3"
+                           ]
+    },
+    {
+        "path":  "Assets/SharedAssets/Shaders/BiplanarMapping/BiplanarShader.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalLitSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.NormalVectorNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SamplerStateNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.TransformNode"
+                      ],
+        "referenceNames":  [
+                               "Boolean_7a08738d8ebf490eb89b40c4a9fb2b22",
+                               "Texture2D_da3eacd8284e473caa46d11c3f6abdfa",
+                               "Texture2D_e78bc9d18bf84548a088886d5143544c",
+                               "Vector1_d450f469e54046bfb152ac1d465f4bcd",
+                               "Vector3_74833e96a780431888a59750c4b334cd"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/IncidenceGlow.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.CameraNode",
+                          "UnityEditor.ShaderGraph.DistanceNode",
+                          "UnityEditor.ShaderGraph.FresnelNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SamplerStateNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.VertexColorNode"
+                      ],
+        "referenceNames":  [
+                               "_Blend",
+                               "_Glow",
+                               "_Incidence_Fade",
+                               "_Offset",
+                               "_Tint"
+                           ]
+    },
+    {
+        "path":  "Assets/SharedAssets/Shaders/FullscreenTransition_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.DistanceNode",
+                          "UnityEditor.ShaderGraph.DivideNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.ScreenNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector2Node"
+                      ],
+        "referenceNames":  [
+                               "_EdgeColor",
+                               "_FullScreenTransition",
+                               "_Pixelation",
+                               "_RenderTexture",
+                               "_TransitionTex"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Oasis/Shaders/OasisTerrainSand_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalLitSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.BranchNode",
+                          "UnityEditor.ShaderGraph.CameraNode",
+                          "UnityEditor.ShaderGraph.ClampNode",
+                          "UnityEditor.ShaderGraph.DistanceNode",
+                          "UnityEditor.ShaderGraph.DivideNode",
+                          "UnityEditor.ShaderGraph.DotProductNode",
+                          "UnityEditor.ShaderGraph.FresnelNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NegateNode",
+                          "UnityEditor.ShaderGraph.NormalBlendNode",
+                          "UnityEditor.ShaderGraph.NormalizeNode",
+                          "UnityEditor.ShaderGraph.NormalReconstructZNode",
+                          "UnityEditor.ShaderGraph.NormalStrengthNode",
+                          "UnityEditor.ShaderGraph.NormalUnpackNode",
+                          "UnityEditor.ShaderGraph.NormalVectorNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SamplerStateNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.ScreenPositionNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SplitTextureTransformNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TilingAndOffsetNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.Vector4Node",
+                          "UnityEditor.ShaderGraph.VertexColorNode",
+                          "UnityEditor.ShaderGraph.ViewDirectionNode"
+                      ],
+        "referenceNames":  [
+                               "_Detail_Distance",
+                               "_Detail_Grain_Dust_Wave_Normal",
+                               "_Detail_Grain_On",
+                               "_Detail_Grain_Strength",
+                               "_Detail_Grain_Tiling",
+                               "_Dust_Normal_Tiling",
+                               "_Dust_Wave",
+                               "_Dust_Wave_Speed",
+                               "_Dust_Wave_Strength",
+                               "_Fade_Distance",
+                               "_Fresnel_Power",
+                               "_Giltter_Tiling",
+                               "_Glitter_Color",
+                               "_Glitter_Noise_Map",
+                               "_Glitter_On",
+                               "_Glitter_Strength",
+                               "_Glitter_Strength_in_Shadow",
+                               "_Gravels_Color_Smoothness",
+                               "_Gravels_Height",
+                               "_Gravels_Height_Remap",
+                               "_Gravels_Normal",
+                               "_Mask_Fuziness",
+                               "_Mask_Range",
+                               "_Moving_Dust",
+                               "_Moving_Dust_Offset_Speed",
+                               "_Moving_Dust_Strength",
+                               "_Sand_Dark_Color",
+                               "_Sand_Footsteps_Packed",
+                               "_Sand_Harsh_Packed",
+                               "_Sand_Highlight_Color",
+                               "_Sand_Smooth_Packed",
+                               "_Sands_Height",
+                               "_SmoothFade",
+                               "_Tent_to_Portal_Area",
+                               "_Wet_Gravels_Darkening",
+                               "_Wet_Gravels_Smoothness"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/HullOutline.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.CameraNode",
+                          "UnityEditor.ShaderGraph.ColorNode",
+                          "UnityEditor.ShaderGraph.LengthNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NormalVectorNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.TransformNode",
+                          "UnityEditor.ShaderGraph.Vector1Node"
+                      ],
+        "referenceNames":  [
+
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Oasis/Shaders/OasisVegetationGraph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalLitSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BakedGINode",
+                          "UnityEditor.ShaderGraph.BitangentVectorNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.BranchNode",
+                          "UnityEditor.ShaderGraph.CustomFunctionNode",
+                          "UnityEditor.ShaderGraph.CustomInterpolatorNode",
+                          "UnityEditor.ShaderGraph.DotProductNode",
+                          "UnityEditor.ShaderGraph.GradientNoiseNode",
+                          "UnityEditor.ShaderGraph.IsFrontFaceNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NegateNode",
+                          "UnityEditor.ShaderGraph.NormalizeNode",
+                          "UnityEditor.ShaderGraph.NormalVectorNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.TangentVectorNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector4Node",
+                          "UnityEditor.ShaderGraph.VertexColorNode",
+                          "UnityEditor.ShaderGraph.ViewDirectionNode"
+                      ],
+        "referenceNames":  [
+                               "_Alpha_Clip_Threshold",
+                               "_Ambient_SSS_Intensity",
+                               "_AO_Intensity",
+                               "_AO_SSS_Enabled",
+                               "_ColorMap",
+                               "_ExtraMap",
+                               "_NormalMap",
+                               "_Smoothness",
+                               "_SSS_Enabled",
+                               "_SubsurfaceMap",
+                               "_Wind_Enabled"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/DepthClear.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalFullscreenSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.BlockNode"
+                      ],
+        "referenceNames":  [
+
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Oasis/Shaders/Heightblend_Graph.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.MaximumNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.SubtractNode"
+                      ],
+        "referenceNames":  [
+                               "_Height_A",
+                               "_Height_B",
+                               "_SmoothBlend"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Shaders/Subgraphs/ScreenScan.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.AbsoluteNode",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SineNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector2Node"
+                      ],
+        "referenceNames":  [
+                               "_Frequency",
+                               "_Gradient",
+                               "_Speed",
+                               "_Width"
+                           ]
+    },
+    {
+        "path":  "Assets/SharedAssets/Shaders/BiplanarMapping/BiplanarMapping.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.AbsoluteNode",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.AndNode",
+                          "UnityEditor.ShaderGraph.BranchNode",
+                          "UnityEditor.ShaderGraph.BranchOnInputConnectionNode",
+                          "UnityEditor.ShaderGraph.CombineNode",
+                          "UnityEditor.ShaderGraph.ComparisonNode",
+                          "UnityEditor.ShaderGraph.CustomFunctionNode",
+                          "UnityEditor.ShaderGraph.DDXNode",
+                          "UnityEditor.ShaderGraph.DDYNode",
+                          "UnityEditor.ShaderGraph.DivideNode",
+                          "UnityEditor.ShaderGraph.MatrixConstructionNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NormalVectorNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PowerNode",
+                          "UnityEditor.ShaderGraph.PreviewNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.Vector3Node"
+                      ],
+        "referenceNames":  [
+                               "Boolean_784e2281db3b483fb64cbab5db3caeee",
+                               "SamplerState_bead3338094c4dbe8f7d5f3024e49fbe",
+                               "Texture2D_51b5564bd2e14a45a555fcec9884ba89",
+                               "Vector1_2d976ca8ad2a4692ae0f2d4d5df93036",
+                               "Vector1_3ff8ca966401420dbe251d0339e37d40",
+                               "Vector3_1ed4f2d5716e4235a6f2cf50a2875928",
+                               "Vector3_41f26aaa4e23473386207e0bdf53c173"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Oasis/VFX/Shaders/SG_VFX_Smoke.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.GradientNoiseNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NoiseNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DLODNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SceneDepthNode",
+                          "UnityEditor.ShaderGraph.ScreenPositionNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SphereMaskNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TilingAndOffsetNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector2Node",
+                          "UnityEditor.ShaderGraph.VoronoiNode"
+                      ],
+        "referenceNames":  [
+                               "_Alpha",
+                               "_AlphaClip",
+                               "_Random",
+                               "_SandColor",
+                               "_ScrollSpeed",
+                               "_SoftParticle"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/Subgraphs/MainLight.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.CustomFunctionNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode"
+                      ],
+        "referenceNames":  [
+
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Oasis/Shaders/LayeredLit_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalLitSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.AbsoluteNode",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.BranchNode",
+                          "UnityEditor.ShaderGraph.GradientNoiseNode",
+                          "UnityEditor.ShaderGraph.LengthNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NormalBlendNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PreviewNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TransformNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector2Node",
+                          "UnityEditor.ShaderGraph.VertexColorNode"
+                      ],
+        "referenceNames":  [
+                               "_BaseMap_Normal_XY_Noise_AO",
+                               "_BlendDistance",
+                               "_Cliff_Ramp_Albedo_Smoothness",
+                               "_Enable",
+                               "_Horizontal_Mask_TNx_TNy_D_AO",
+                               "_MinimumBlendDistance",
+                               "_Offset",
+                               "_SandAlbedoMap",
+                               "_SandNormalMap",
+                               "_SandTiling",
+                               "_Scale",
+                               "_ScaleHorz",
+                               "_ScaleVert",
+                               "_TerrainData",
+                               "_Vertical_Mask_TNx_TNy_D_AO",
+                               "Sampler"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/ToonLitNoShadow_graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.ColorNode",
+                          "UnityEditor.ShaderGraph.CustomFunctionNode",
+                          "UnityEditor.ShaderGraph.CustomInterpolatorNode",
+                          "UnityEditor.ShaderGraph.DotProductNode",
+                          "UnityEditor.ShaderGraph.KeywordNode",
+                          "UnityEditor.ShaderGraph.LengthNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NormalizeNode",
+                          "UnityEditor.ShaderGraph.NormalVectorNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TransformNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector3Node"
+                      ],
+        "referenceNames":  [
+                               "_Albedo",
+                               "_AmbientContribution",
+                               "_Color",
+                               "_EmissiveMap",
+                               "_EmissiveStrength",
+                               "_NormalMap",
+                               "_TextureTiling",
+                               "MainSampler"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Shaders/Subgraphs/ScreenLighting.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BakedGINode",
+                          "UnityEditor.ShaderGraph.CustomFunctionNode",
+                          "UnityEditor.ShaderGraph.FresnelNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NormalVectorNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PowerNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.ScreenPositionNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.ViewDirectionNode"
+                      ],
+        "referenceNames":  [
+                               "_Color"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/Subgraphs/SpaceAmbientLighting.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.ColorNode",
+                          "UnityEditor.ShaderGraph.DotProductNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.NegateNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode"
+                      ],
+        "referenceNames":  [
+                               "_Normal"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Garden/Shaders/Subgraphs/TriangleWave.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.AbsoluteNode",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.FractionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode"
+                      ],
+        "referenceNames":  [
+                               "Vector4_DF96E5E4"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Art/VFX/Shaders/HologramIcon_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.ColorNode",
+                          "UnityEditor.ShaderGraph.DotProductNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SineNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.VertexColorNode"
+                      ],
+        "referenceNames":  [
+                               "_Dot_Selector"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Oasis/Shaders/CalculateTerrainBlendMask_Subgraph.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.DotProductNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.Vector2Node"
+                      ],
+        "referenceNames":  [
+                               "_BlendDistance",
+                               "_Height",
+                               "_MinimumBlendDistance",
+                               "_WS_Normal"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Shaders/HolgramCone_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.CombineNode",
+                          "UnityEditor.ShaderGraph.FresnelNode",
+                          "UnityEditor.ShaderGraph.MaximumNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NoiseNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PowerNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector2Node"
+                      ],
+        "referenceNames":  [
+                               "_Color",
+                               "_Intensity",
+                               "_SmokeScale",
+                               "_TimeOffset"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/WindowDetail_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.GradientNoiseNode",
+                          "UnityEditor.ShaderGraph.MinimumNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PowerNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.UVNode"
+                      ],
+        "referenceNames":  [
+                               "_Color"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/PlanetRing.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.DistanceNode",
+                          "UnityEditor.ShaderGraph.EllipseNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.RotateNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.StepNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector2Node"
+                      ],
+        "referenceNames":  [
+                               "_ColorA",
+                               "_ColorB",
+                               "_DistanceRemap",
+                               "_Mask",
+                               "_ShadowOffset",
+                               "_ShadowRotation",
+                               "_ShadowScale",
+                               "_ShadowStrength"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Shaders/HologramIcon_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode"
+                      ],
+        "referenceNames":  [
+                               "_BaseMap",
+                               "_Color",
+                               "_TriplanarTransition"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/StrokeEffect_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalFullscreenSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.UniversalSampleBufferNode",
+                          "UnityEditor.ShaderGraph.AbsoluteNode",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.ColorNode",
+                          "UnityEditor.ShaderGraph.DotProductNode",
+                          "UnityEditor.ShaderGraph.FloorNode",
+                          "UnityEditor.ShaderGraph.KeywordNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MinimumNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SceneDepthNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.Vector2Node"
+                      ],
+        "referenceNames":  [
+                               "_FLIPY",
+                               "_SampleOffset"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Shaders/Subgraphs/Pixelate.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.CustomFunctionNode",
+                          "UnityEditor.ShaderGraph.DivideNode",
+                          "UnityEditor.ShaderGraph.FloorNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NormalVectorNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TransformNode",
+                          "UnityEditor.ShaderGraph.TriplanarNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.Vector2Node"
+                      ],
+        "referenceNames":  [
+                               "_Res"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/Unlit3DSkybox.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.CustomInterpolatorNode",
+                          "UnityEditor.ShaderGraph.KeywordNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.Vector3Node"
+                      ],
+        "referenceNames":  [
+                               "_BaseColor",
+                               "_BaseMap",
+                               "_FOG"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/Subgraphs/DirectionalAmbient.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.AmbientNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.NegateNode",
+                          "UnityEditor.ShaderGraph.NormalVectorNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode"
+                      ],
+        "referenceNames":  [
+
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Garden/Shaders/Gravels_ShaderGraph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalLitSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.CalculateLevelOfDetailTexture2DNode",
+                          "UnityEditor.ShaderGraph.KeywordNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NormalizeNode",
+                          "UnityEditor.ShaderGraph.NormalStrengthNode",
+                          "UnityEditor.ShaderGraph.ParallaxOcclusionMappingNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SignNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.Vector2Node",
+                          "UnityEditor.ShaderGraph.ViewDirectionNode"
+                      ],
+        "referenceNames":  [
+                               "_AOStrength",
+                               "_BaseMap",
+                               "_HeightMap",
+                               "_M_AO_SmoothnessMap",
+                               "_NormalMap",
+                               "_NormalStrength",
+                               "_PARALLAX",
+                               "_ParallaxAmplitude",
+                               "_ParallaxLOD",
+                               "_ParallaxLODThreshold",
+                               "_ParallaxSteps",
+                               "_TextureScale"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/Histogram_graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.DistanceNode",
+                          "UnityEditor.ShaderGraph.FloorNode",
+                          "UnityEditor.ShaderGraph.FractionNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NoiseNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.StepNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector2Node"
+                      ],
+        "referenceNames":  [
+
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Garden/Shaders/WaterSurface_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalLitSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.CameraNode",
+                          "UnityEditor.ShaderGraph.ClampNode",
+                          "UnityEditor.ShaderGraph.ColorMaskNode",
+                          "UnityEditor.ShaderGraph.CustomFunctionNode",
+                          "UnityEditor.ShaderGraph.DivideNode",
+                          "UnityEditor.ShaderGraph.GradientNoiseNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NormalStrengthNode",
+                          "UnityEditor.ShaderGraph.NormalVectorNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SceneDepthNode",
+                          "UnityEditor.ShaderGraph.ScreenPositionNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TilingAndOffsetNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.Vector2Node",
+                          "UnityEditor.ShaderGraph.VertexColorNode",
+                          "UnityEditor.ShaderGraph.ViewDirectionNode",
+                          "UnityEditor.ShaderGraph.VoronoiNode"
+                      ],
+        "referenceNames":  [
+                               "_Alpha",
+                               "_Flow_Density",
+                               "_Foam_Color",
+                               "_Foam_Distance",
+                               "_Foam_Strength",
+                               "_Noise_Tiling",
+                               "_Normal_Map",
+                               "_Normal_speed",
+                               "_Normal_Strength",
+                               "_Normal_Tiling",
+                               "_Normal_Tiling_2",
+                               "_Reflection_Strength",
+                               "_Smoothness",
+                               "_Water_Color",
+                               "_Water_Trail_Color",
+                               "_Water_Trail_Mask",
+                               "_Water_Trail_Strength",
+                               "_Water_Trail_Tiling"
+                           ]
+    },
+    {
+        "path":  "Assets/SharedAssets/Shaders/UtilitySubgraphs/DecalEdgeMask.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode"
+                      ],
+        "referenceNames":  [
+                               "_Sharpness"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Shaders/Subgraphs/Transition.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.DistanceNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.ReciprocalNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.StepNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.Vector2Node"
+                      ],
+        "referenceNames":  [
+                               "_EdgeFadeTime",
+                               "_t",
+                               "_TransitionSample"
+                           ]
+    },
+    {
+        "path":  "Assets/SharedAssets/FirstPersonController/Mobile/UI/UI_Cirkle_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.DistanceNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.StepNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.UVNode"
+                      ],
+        "referenceNames":  [
+                               "_Color"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Garden/Shaders/Waterfall_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalLitSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.CameraNode",
+                          "UnityEditor.ShaderGraph.ClampNode",
+                          "UnityEditor.ShaderGraph.ColorMaskNode",
+                          "UnityEditor.ShaderGraph.ContrastNode",
+                          "UnityEditor.ShaderGraph.CustomFunctionNode",
+                          "UnityEditor.ShaderGraph.DivideNode",
+                          "UnityEditor.ShaderGraph.GradientNoiseNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NoiseNode",
+                          "UnityEditor.ShaderGraph.NormalStrengthNode",
+                          "UnityEditor.ShaderGraph.NormalVectorNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SceneDepthNode",
+                          "UnityEditor.ShaderGraph.ScreenPositionNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TilingAndOffsetNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.Vector2Node",
+                          "UnityEditor.ShaderGraph.VertexColorNode",
+                          "UnityEditor.ShaderGraph.ViewDirectionNode",
+                          "UnityEditor.ShaderGraph.VoronoiNode"
+                      ],
+        "referenceNames":  [
+                               "_Color",
+                               "_Float",
+                               "_Foam_Color",
+                               "_Foam_Distance",
+                               "_Foam_Strength",
+                               "_Noise_Speed",
+                               "_Normal_Map",
+                               "_Normal_Offset",
+                               "_Normal_speed",
+                               "_Normal_Strength",
+                               "_Normal_Tiling",
+                               "_Offset",
+                               "_Reflection_Strength",
+                               "_Tiling",
+                               "_Water_Color",
+                               "_Water_Fall_Speed",
+                               "_Water_Surface_Alpha",
+                               "_Water_Surface_Smoothness",
+                               "_WaterFall_Alpha",
+                               "_Waterfall_Color_1",
+                               "_Waterfall_Color_2",
+                               "_Waterfall_End_Offset",
+                               "_Waterfall_Foam_Color",
+                               "_Waterfall_Foam_Distance",
+                               "_Waterfall_Foam_Strength",
+                               "_Waterfall_Smoothness",
+                               "Vector2_92d1909da0354c988e3e0c9c5f6542ba"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Oasis/Shaders/MovingSand_SubGraph.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BranchNode",
+                          "UnityEditor.ShaderGraph.ClampNode",
+                          "UnityEditor.ShaderGraph.ColorMaskNode",
+                          "UnityEditor.ShaderGraph.CombineNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NoiseNode",
+                          "UnityEditor.ShaderGraph.NormalBlendNode",
+                          "UnityEditor.ShaderGraph.NormalizeNode",
+                          "UnityEditor.ShaderGraph.NormalReconstructZNode",
+                          "UnityEditor.ShaderGraph.NormalStrengthNode",
+                          "UnityEditor.ShaderGraph.NormalUnpackNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PowerNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SamplerStateNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TilingAndOffsetNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.Vector2Node"
+                      ],
+        "referenceNames":  [
+                               "_Dast_Wave",
+                               "_Dust_Normal_Map",
+                               "_Dust_Normal_Offset_speed",
+                               "_Dust_Normal_Strength",
+                               "_Dust_Normal_Tiling",
+                               "_Dust_Wave_Normal_Map",
+                               "_Dust_Wave_Normal_Strength",
+                               "_Dust_Wave_Speed",
+                               "_InNormal",
+                               "_Mask_Fuzziness",
+                               "_Mask_Range",
+                               "_Moving_Dust",
+                               "_Moving_Dust_Fade",
+                               "_Noise_Map",
+                               "_Offset",
+                               "_Opacity"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/ToonLighting.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BranchOnInputConnectionNode",
+                          "UnityEditor.ShaderGraph.DotProductNode",
+                          "UnityEditor.ShaderGraph.FresnelNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NormalizeNode",
+                          "UnityEditor.ShaderGraph.NormalVectorNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PosterizeNode",
+                          "UnityEditor.ShaderGraph.PowerNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.Vector2Node",
+                          "UnityEditor.ShaderGraph.ViewDirectionNode"
+                      ],
+        "referenceNames":  [
+                               "_Albedo",
+                               "_Ambient_Occlusion",
+                               "_Diffuse_Bias",
+                               "_GIContribution",
+                               "_NormalWS",
+                               "_Specular_Power"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/Subgraphs/CirkularDitherFog.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.DistanceNode",
+                          "UnityEditor.ShaderGraph.FloorNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PosterizeNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SceneDepthNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.Vector2Node",
+                          "UnityEditor.ShaderGraph.ViewDirectionNode"
+                      ],
+        "referenceNames":  [
+                               "_Fade",
+                               "_FogMinMax",
+                               "_Scale"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Shaders/CirclesHologram_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PowerNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.RotateAboutAxisNode",
+                          "UnityEditor.ShaderGraph.SineNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.Vector3Node",
+                          "UnityEditor.ShaderGraph.VertexColorNode"
+                      ],
+        "referenceNames":  [
+                               "_Color",
+                               "_time"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Garden/Shaders/MossRock_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalLitSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.BranchNode",
+                          "UnityEditor.ShaderGraph.DotProductNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NormalVectorNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TransformNode",
+                          "UnityEditor.ShaderGraph.TriplanarNode"
+                      ],
+        "referenceNames":  [
+                               "_BaseMap",
+                               "_MetallicMap",
+                               "_MossAmount",
+                               "_MossColorA",
+                               "_MossColorB",
+                               "_NoiseMap",
+                               "_NormalMap",
+                               "_Triplanar_Blend",
+                               "_Triplanar_Scale",
+                               "_Triplanar_Tile",
+                               "_Use_Triplanar"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Garden/Shaders/Coal_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalLitSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.GradientNoiseNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector2Node"
+                      ],
+        "referenceNames":  [
+                               "_EmissionColor",
+                               "_Mask"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Shaders/LoadingbarHologram_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PolarCoordinatesNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.StepNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SubtractNode"
+                      ],
+        "referenceNames":  [
+                               "_Color",
+                               "_Intensity",
+                               "_time",
+                               "_TransitionAmount"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/EmissiveUnlit.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode"
+                      ],
+        "referenceNames":  [
+                               "_Color",
+                               "_EmissiveTexture"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/Particles.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.KeywordNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.VertexColorNode"
+                      ],
+        "referenceNames":  [
+                               "_BaseMap",
+                               "_FLIPBOOK_BLENDING",
+                               "_FlipBook_Count"
+                           ]
+    },
+    {
+        "path":  "Assets/SharedAssets/Shaders/TriplanarDissolve_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.ObjectNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.TriplanarNode"
+                      ],
+        "referenceNames":  [
+                               "_DissolveTexture",
+                               "_TransitionColor",
+                               "_TriplanarTransition",
+                               "_UV_Scale"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/HyperSpace/HyperSpaceTunnel.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.ColorNode",
+                          "UnityEditor.ShaderGraph.CustomInterpolatorNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NegateNode",
+                          "UnityEditor.ShaderGraph.NoiseNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PowerNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TilingAndOffsetNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.Vector2Node",
+                          "UnityEditor.ShaderGraph.Vector4Node"
+                      ],
+        "referenceNames":  [
+                               "_Float"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Garden/Shaders/WaterfallRipple_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.ColorMaskNode",
+                          "UnityEditor.ShaderGraph.ContrastNode",
+                          "UnityEditor.ShaderGraph.DivideNode",
+                          "UnityEditor.ShaderGraph.GradientNoiseNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NoiseNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TilingAndOffsetNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.VertexColorNode"
+                      ],
+        "referenceNames":  [
+                               "_Alpha_Clip_Threshold",
+                               "_Noise_Scale",
+                               "_Ripple_Color",
+                               "_Ripple_Offset",
+                               "_Ripple_Speed",
+                               "_Ripple_Tiling",
+                               "_Scale"
+                           ]
+    },
+    {
+        "path":  "Assets/SharedAssets/Shaders/UtilitySubgraphs/ObjectScreenSpaceUV.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.DivideNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.ObjectNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.ScreenNode",
+                          "UnityEditor.ShaderGraph.ScreenPositionNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.Vector2Node"
+                      ],
+        "referenceNames":  [
+                               "_ObjectScale"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Garden/Shaders/VegetationSSS_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalLitSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.BranchNode",
+                          "UnityEditor.ShaderGraph.CustomFunctionNode",
+                          "UnityEditor.ShaderGraph.FresnelNode",
+                          "UnityEditor.ShaderGraph.GradientNoiseNode",
+                          "UnityEditor.ShaderGraph.IsFrontFaceNode",
+                          "UnityEditor.ShaderGraph.KeywordNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NormalStrengthNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.ScreenPositionNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.TransformNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.Vector2Node",
+                          "UnityEditor.ShaderGraph.VertexColorNode"
+                      ],
+        "referenceNames":  [
+                               "_Amplitude",
+                               "_BaseMap",
+                               "_Direction",
+                               "_ENABLE",
+                               "_FresnelDamping",
+                               "_MaskMap",
+                               "_NormalMap",
+                               "_NormalStrength",
+                               "_ScatteringColor",
+                               "_ScatteringIntensity",
+                               "_Smoothness",
+                               "_Speed",
+                               "_Vertex_Color_AO"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Shaders/HexagonHologram_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.StepNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.VertexColorNode"
+                      ],
+        "referenceNames":  [
+                               "_Color",
+                               "_ColorB",
+                               "_ColorC",
+                               "_time"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Shaders/HologramAimated_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AbsoluteNode",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector2Node"
+                      ],
+        "referenceNames":  [
+                               "_BaseMap",
+                               "_Color",
+                               "_TriplanarTransition"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Oasis/Shaders/DualColorRamp.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode"
+                      ],
+        "referenceNames":  [
+                               "_Dark_Color_RGB_Edge_A",
+                               "_Highlight_Color_RGB_Edge_A",
+                               "_Ramp"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Oasis/Shaders/LayeredLitLayer_Graph.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SamplerStateNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.TilingAndOffsetNode",
+                          "UnityEditor.ShaderGraph.UVNode"
+                      ],
+        "referenceNames":  [
+                               "_BaseSmoothnessMap",
+                               "_InColorSmoothness",
+                               "_InNormal",
+                               "_NormalMap",
+                               "_Offset",
+                               "_Opacity",
+                               "_Tiling"
+                           ]
+    },
+    {
+        "path":  "Assets/SharedAssets/Shaders/UtilitySubgraphs/QuantizeUV.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.FloorNode",
+                          "UnityEditor.ShaderGraph.MaximumNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.ReciprocalNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode"
+                      ],
+        "referenceNames":  [
+                               "_Res",
+                               "_UV"
+                           ]
+    },
+    {
+        "path":  "Assets/SharedAssets/Shaders/WetnessDecal.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.HighDefinition.ShaderGraph.DecalSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalDecalSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode"
+                      ],
+        "referenceNames":  [
+
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Oasis/Shaders/GrungeDecal_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalDecalSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SplitNode"
+                      ],
+        "referenceNames":  [
+                               "_Color",
+                               "_OpacityMap"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Shaders/FullscreenTransition_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalFullscreenSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.ColorNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode"
+                      ],
+        "referenceNames":  [
+                               "_GridScale",
+                               "_NoiseTex",
+                               "_TransitionAmount",
+                               "_TransitionColor"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Oasis/Shaders/Sand_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalLitSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NormalBlendNode",
+                          "UnityEditor.ShaderGraph.NormalStrengthNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.VertexColorNode"
+                      ],
+        "referenceNames":  [
+                               "_Color",
+                               "_DetailNormal1",
+                               "_DetailNormal1Scale",
+                               "_DetailNormal1Strength",
+                               "_DetailNormal2",
+                               "_DetailNormal2Scale",
+                               "_DetailNormal2Strength",
+                               "_MacroNormal",
+                               "_MacroNormalScale",
+                               "_MacroNormalStrength"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Terminal/Shaders/SpriteSheetHologram_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AbsoluteNode",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.CombineNode",
+                          "UnityEditor.ShaderGraph.FlipbookNode",
+                          "UnityEditor.ShaderGraph.FractionNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NoiseSineWaveNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.TilingAndOffsetNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.Vector2Node"
+                      ],
+        "referenceNames":  [
+                               "_Color",
+                               "_Height",
+                               "_Sheet",
+                               "_time",
+                               "_TransitionAmount",
+                               "_Width"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Oasis/Shaders/DepthRender_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.NormalVectorNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.Vector2Node",
+                          "UnityEditor.ShaderGraph.Vector3Node"
+                      ],
+        "referenceNames":  [
+                               "_Maximum",
+                               "_Minimum"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/UnlitStrokeTest_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.BlockNode"
+                      ],
+        "referenceNames":  [
+                               "_MAINLIGHTKEYWORD"
+                           ]
+    },
+    {
+        "path":  "Assets/SharedAssets/Shaders/QuantizeScreenSpaceTest.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SamplerStateNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode"
+                      ],
+        "referenceNames":  [
+                               "_PostExposure",
+                               "_ScreenColor"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/ToonVertexColorLightmap.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.CustomInterpolatorNode",
+                          "UnityEditor.ShaderGraph.KeywordNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PosterizeNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RoundNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SineNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.VertexColorNode"
+                      ],
+        "referenceNames":  [
+                               "_Damage_Percent",
+                               "_ENABLED",
+                               "_Fire_Color_A",
+                               "_Fire_Color_B",
+                               "_LM_AO",
+                               "_Map"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Garden/Shaders/SmokeTrail_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AbsoluteNode",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.ClampNode",
+                          "UnityEditor.ShaderGraph.FresnelNode",
+                          "UnityEditor.ShaderGraph.GradientNoiseNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NormalVectorNode",
+                          "UnityEditor.ShaderGraph.ObjectNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PowerNode",
+                          "UnityEditor.ShaderGraph.PreviewNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SineNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.TilingAndOffsetNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector3Node"
+                      ],
+        "referenceNames":  [
+                               "_Alpha",
+                               "_Color",
+                               "_NoiseAlpha",
+                               "_NoiseOffset",
+                               "_NoiseSpeed",
+                               "_SineFreq",
+                               "_SineOffset",
+                               "_SineSpeed",
+                               "_TopFadePower"
+                           ]
+    },
+    {
+        "path":  "Assets/SharedAssets/Shaders/Water.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalLitSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.CustomFunctionNode",
+                          "UnityEditor.ShaderGraph.FresnelNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MaximumNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NegateNode",
+                          "UnityEditor.ShaderGraph.NormalizeNode",
+                          "UnityEditor.ShaderGraph.NormalStrengthNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PowerNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.ReflectionNode",
+                          "UnityEditor.ShaderGraph.ReflectionProbeNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SceneColorNode",
+                          "UnityEditor.ShaderGraph.SceneDepthNode",
+                          "UnityEditor.ShaderGraph.ScreenPositionNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TilingAndOffsetNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.TransformNode",
+                          "UnityEditor.ShaderGraph.Vector2Node",
+                          "UnityEditor.ShaderGraph.ViewDirectionNode"
+                      ],
+        "referenceNames":  [
+                               "_Blend_Map",
+                               "_BlendOffsetSpeed",
+                               "_BlendTiling",
+                               "_ColorAlpha",
+                               "_ColorBright",
+                               "_ColorDeep",
+                               "_EdgeColor",
+                               "_EdgeFade",
+                               "_Metallic",
+                               "_Normal_Map",
+                               "_NormalMapStrength",
+                               "_NormalTiling1",
+                               "_NormalTiling2",
+                               "_OffsetSpeed",
+                               "_RefractionFade",
+                               "_RefractionIntensity",
+                               "_WaterDepthRange"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/GlowingButtons_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SineNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.TilingAndOffsetNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.Vector2Node",
+                          "UnityEditor.ShaderGraph.VertexColorNode"
+                      ],
+        "referenceNames":  [
+                               "_Albedo",
+                               "_AmbientContribution",
+                               "_BlinkSpeed",
+                               "_EmissionMask",
+                               "_GIContribution",
+                               "_LightIntensity",
+                               "_MAINLIGHTKEYWORD",
+                               "_SOFTSHADOWS",
+                               "_Tiling"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/ShadowCaster_graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.BlockNode"
+                      ],
+        "referenceNames":  [
+
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Garden/Shaders/FakeVolumetrics_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.FresnelNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PowerNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SplitNode"
+                      ],
+        "referenceNames":  [
+                               "_Color"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/WormBeamHit.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.ColorNode",
+                          "UnityEditor.ShaderGraph.FresnelNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NoiseNode",
+                          "UnityEditor.ShaderGraph.NormalVectorNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PosterizeNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.Vector3Node"
+                      ],
+        "referenceNames":  [
+
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/ToonLightingSubgraph.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.DotProductNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NormalVectorNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.Vector1Node"
+                      ],
+        "referenceNames":  [
+                               "_Albedo",
+                               "_GIContribution"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Garden/Shaders/WashiLight_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AbsoluteNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.CustomFunctionNode",
+                          "UnityEditor.ShaderGraph.CustomInterpolatorNode",
+                          "UnityEditor.ShaderGraph.DivideNode",
+                          "UnityEditor.ShaderGraph.DotProductNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PowerNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubtractNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.Vector2Node"
+                      ],
+        "referenceNames":  [
+                               "_Border_Distance_Fade",
+                               "_Color",
+                               "_Fade_Smoothness",
+                               "_Intensity",
+                               "_Persons_Shadow_Intensity",
+                               "_Persons_Shadow_Speed",
+                               "_PersonsShadowTexture",
+                               "_Texture",
+                               "_Texture_Channel",
+                               "_TilingOffset",
+                               "_World_U",
+                               "_World_V"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/ToonLitCustomLightmap_graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.FogNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode"
+                      ],
+        "referenceNames":  [
+                               "_ColorMap",
+                               "_Lightmap",
+                               "_LightmapRemap",
+                               "_Power",
+                               "_QuantizeSteps"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Oasis/Shaders/WeightedHeightblend_Graph.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.AbsoluteNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NegateNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SmoothstepNode",
+                          "UnityEditor.ShaderGraph.StepNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.SubtractNode"
+                      ],
+        "referenceNames":  [
+                               "_AB_Weight",
+                               "_Height_A",
+                               "_Height_B",
+                               "_SmoothBlend"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Garden/Shaders/Vegetation_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalLitSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.UVNode",
+                          "UnityEditor.ShaderGraph.VertexColorNode"
+                      ],
+        "referenceNames":  [
+                               "_BaseMap",
+                               "_ExtraMap",
+                               "_NormalMap"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Oasis/Shaders/Tent_Graph.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalLitSubTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.AmbientNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.CosineNode",
+                          "UnityEditor.ShaderGraph.DotProductNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NoiseNode",
+                          "UnityEditor.ShaderGraph.NormalVectorNode",
+                          "UnityEditor.ShaderGraph.OneMinusNode",
+                          "UnityEditor.ShaderGraph.PositionNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SamplerStateNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SaturateNode",
+                          "UnityEditor.ShaderGraph.SineNode",
+                          "UnityEditor.ShaderGraph.SplitNode",
+                          "UnityEditor.ShaderGraph.SubGraphNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.TransformNode",
+                          "UnityEditor.ShaderGraph.Vector1Node",
+                          "UnityEditor.ShaderGraph.Vector2Node",
+                          "UnityEditor.ShaderGraph.Vector3Node",
+                          "UnityEditor.ShaderGraph.VertexColorNode"
+                      ],
+        "referenceNames":  [
+                               "_BaseMap",
+                               "_BumpMap",
+                               "_Horizontal_Vertical_Weight",
+                               "_OcclusionMap",
+                               "_Scale",
+                               "_Speed",
+                               "_SSS_Direct",
+                               "_SSS_Indirect",
+                               "_SSS_Shadow_Strength",
+                               "_SSS_Tint"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Cockpit/Shaders/Cockpit/CockpitScreen.shadergraph",
+        "nodeTypes":  [
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+                          "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+                          "UnityEditor.ShaderGraph.AddNode",
+                          "UnityEditor.ShaderGraph.BlockNode",
+                          "UnityEditor.ShaderGraph.LerpNode",
+                          "UnityEditor.ShaderGraph.MultiplyNode",
+                          "UnityEditor.ShaderGraph.NoiseNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SampleTexture2DNode",
+                          "UnityEditor.ShaderGraph.SineNode",
+                          "UnityEditor.ShaderGraph.SwizzleNode",
+                          "UnityEditor.ShaderGraph.TilingAndOffsetNode",
+                          "UnityEditor.ShaderGraph.TimeNode",
+                          "UnityEditor.ShaderGraph.UVNode"
+                      ],
+        "referenceNames":  [
+                               "_BrightColor",
+                               "_DarkColor",
+                               "_Mask",
+                               "_Offset",
+                               "_Stripes",
+                               "_Tiling"
+                           ]
+    },
+    {
+        "path":  "Assets/Scenes/Oasis/Shaders/NormalRemap-Reconstruct.shadersubgraph",
+        "nodeTypes":  [
+                          "UnityEditor.ShaderGraph.NormalReconstructZNode",
+                          "UnityEditor.ShaderGraph.PropertyNode",
+                          "UnityEditor.ShaderGraph.RemapNode",
+                          "UnityEditor.ShaderGraph.SubGraphOutputNode",
+                          "UnityEditor.ShaderGraph.Vector2Node"
+                      ],
+        "referenceNames":  [
+                               "_X",
+                               "_Y"
+                           ]
+    }
+]

@@ -1,0 +1,31 @@
+{
+  "lightPresets": 19,
+  "volumeProfiles": 23,
+  "checks": [
+    {
+      "asset": "Terminal_Directional_Mixed",
+      "expected": 5.0,
+      "actual": 5.0,
+      "passed": true
+    },
+    {
+      "asset": "Garden_Directional_Baked",
+      "expected": 0.4,
+      "actual": 0.4,
+      "passed": true
+    },
+    {
+      "asset": "Oasis_Directional_Mixed",
+      "expected": 2.5,
+      "actual": 2.5,
+      "passed": true
+    }
+  ],
+  "rectangleAreaSize": "(13.43, 3.24)",
+  "bloomIntensity": 0.25,
+  "terminalPostExposure": 2.0,
+  "skippedPropertiesOrTypes": 8,
+  "validationScope": "Generated asset loading and representative numeric values in source Unity 6000.4.0f1; not a separate target project runtime test",
+  "nativePackageFiles": 303,
+  "nativePackageBytes": 19390669
+}

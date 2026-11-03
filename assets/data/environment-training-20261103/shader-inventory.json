@@ -1,0 +1,3653 @@
+[
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/DepthFade.shadersubgraph",
+    "guid": "1093beadef1d04431820b34b11554756",
+    "bytes": 36447,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/Shockwave.shadergraph",
+    "guid": "102ca5a432cb843c29dbc636a0479b30",
+    "bytes": 111654,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/DepthStencilMask.shadergraph",
+    "guid": "20b308f4af78b4e0ebcf24185611986e",
+    "bytes": 9292,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/Cockpit/Cockpit.shadergraph",
+    "guid": "a05c0799f02b06f4b8a7624ca8fc44cf",
+    "bytes": 43258,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.hlsl",
+        "guid": "92d9c521aff00e840a7e6fdcff436622"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/MainLight.shadersubgraph",
+        "guid": "b70e47af8512d9344bbd6fea7f928852"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLightingSubgraph.shadersubgraph",
+        "guid": "0fdc3b21a590e444c834d9bc6be203c3"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/SpaceAmbientLighting.shadersubgraph",
+        "guid": "48d007adf5b958747b84cd7cef1e612d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Shaders/LayeredLitLayer_Packed_SubGraph.shadersubgraph",
+    "guid": "c0ce61eefeb36c642b974c87c5b8fa4f",
+    "bytes": 67958,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Assets/Scenes/Oasis/Shaders/DualColorRamp.shadersubgraph",
+        "guid": "8c675407430d33f449a3150ebbc12d8b"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Shaders/ScreenBlockerDissolve_Graph.shadergraph",
+    "guid": "d03c223093a24984b92190bb7a5b2d3b",
+    "bytes": 111921,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/Transition.shadersubgraph",
+        "guid": "4a46a0a7cc6af11438beb8a5a98efafa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      },
+      {
+        "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/WorldSpaceGridNoise.shadersubgraph",
+        "guid": "7427845baea8e714cad2f895b7c5190b"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/VFX/VFXGraph/VFXG_TerrainSand.vfx",
+    "guid": "f0162a0d777570a40b3ad5122f90d97f",
+    "bytes": 785832,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Oasis/VFX/TXT/TX_Oasis_Color3.exr",
+        "guid": "d1fe1a8a73161a940abe454460a740e7"
+      },
+      {
+        "path": "Packages/com.unity.visualeffectgraph/Editor/Utilities/pCache/Importer/PointCacheImporter.cs",
+        "guid": "42ac9d422990ad246a3dc238b4b2aafe"
+      },
+      {
+        "path": "Packages/com.unity.visualeffectgraph/Editor/Utilities/pCache/PointCacheAsset.cs",
+        "guid": "21811b71c053eff499812a9b7a995d7d"
+      },
+      {
+        "path": "Packages/com.unity.visualeffectgraph/Textures/Noise.tga",
+        "guid": "1d8481de16af723418a688958c41224b"
+      },
+      {
+        "path": "Assets/Scenes/Oasis/VFX/TXT/Oasis_sand.pcache",
+        "guid": "fe054fca1a54a3a40a215e47c12e720d"
+      },
+      {
+        "path": "Packages/com.unity.visualeffectgraph/Editor/Utilities/pCache/Importer/pCache-Icon.png",
+        "guid": "cf28868a0ab107e46b2d953f4f99fed4"
+      },
+      {
+        "path": "Packages/com.unity.visualeffectgraph/Textures/DefaultParticle.tga",
+        "guid": "276d9e395ae18fe40a9b4988549f2349"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Shaders/BasicDecal_Graph.shadergraph",
+    "guid": "21cd24890ed9446e1915b8843121a238",
+    "bytes": 125744,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/SharedAssets/Shaders/UtilitySubgraphs/FaceNormal.shadersubgraph",
+    "guid": "312a3319ee436b34bae9180fc53d52b3",
+    "bytes": 22902,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Shaders/Screen_Graph.shadergraph",
+    "guid": "7140740f73345994ead61cd42f1d2b4c",
+    "bytes": 180239,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/Pixelate.shadersubgraph",
+        "guid": "99bf095e5e2094f41a4203112515179c"
+      },
+      {
+        "path": "Assets/Scenes/Terminal/Art/Props/Textures/Pixel_T_mask.png",
+        "guid": "0fd88261cb4e9444c8b5e0c8f126569b"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/Transition.shadersubgraph",
+        "guid": "4a46a0a7cc6af11438beb8a5a98efafa"
+      },
+      {
+        "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/ScreenScan.shadersubgraph",
+        "guid": "77036ec9d90d9694e942f257f1a58b82"
+      },
+      {
+        "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/ScreenLighting.shadersubgraph",
+        "guid": "f73dd9ab7f278ee45aa9a7889f7a0b0e"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/VFX/VFXGraph/VFXG_Insects.vfx",
+    "guid": "91ce98b62b1095a4e84bfc2371b502cd",
+    "bytes": 180685,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Cockpit/Art/Props/Textures/Trail_T_A.png",
+        "guid": "37bdf74974be349689261ff552d9ad89"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Shaders/HeightFog.shadergraph",
+    "guid": "d10b4840c0c724395b5579f3b7482024",
+    "bytes": 126179,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.hlsl",
+        "guid": "92d9c521aff00e840a7e6fdcff436622"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/MainLight.shadersubgraph",
+        "guid": "b70e47af8512d9344bbd6fea7f928852"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Generation/Targets/Fullscreen/FullscreenMetaData.cs",
+        "guid": "e392ecea19f8779438f0b90905fdee13"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Garden/Shaders/AlphaBlendedColorDecal_Graph.shadergraph",
+    "guid": "f1c1fc2729f05844ea26d001f99da4c9",
+    "bytes": 77320,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/SpaceFog.shadersubgraph",
+    "guid": "f1e421cd4e41040d48b45cd3f92c8dd6",
+    "bytes": 208010,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.hlsl",
+        "guid": "92d9c521aff00e840a7e6fdcff436622"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/MainLight.shadersubgraph",
+        "guid": "b70e47af8512d9344bbd6fea7f928852"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Art/VFX/Textures/SpaceGradient_T_A.png",
+        "guid": "4a53678acb2214c7aa104d85906b0982"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Shaders/UnpackTerrainData.shadersubgraph",
+    "guid": "f18a5502715aea34a93af84010b68373",
+    "bytes": 54019,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Shaders/Cliff_Graph.shadergraph",
+    "guid": "323a32ef22229c147b2062a65a8e6db5",
+    "bytes": 136622,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Art/VFX/Shaders/Triangle_Graph.shadergraph",
+    "guid": "528ad68c70d9b3d45b96a876c5361208",
+    "bytes": 60606,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/HyperSpace/HyperSpace.shadergraph",
+    "guid": "7247c8da5cac24499b89fcc377fc3378",
+    "bytes": 86137,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/CockpitInstrumentals.shadergraph",
+    "guid": "9221b78c11b0640f59cca69a56f1f066",
+    "bytes": 89774,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.hlsl",
+    "guid": "92d9c521aff00e840a7e6fdcff436622",
+    "bytes": 1309,
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Scenes/Garden/Shaders/Subgraphs/SmoothCurve.shadersubgraph",
+    "guid": "b24606f36641e4fcf93768133d4dfad0",
+    "bytes": 24608,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/SharedAssets/Shaders/UtilitySubgraphs/TransformWorldToHClip.shadersubgraph",
+    "guid": "c24cefd10a4084ea2ac40f6ee793d732",
+    "bytes": 13315,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/Planet.shadergraph",
+    "guid": "33c76158819eb8542ad93bd26f8d43de",
+    "bytes": 164732,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.hlsl",
+        "guid": "92d9c521aff00e840a7e6fdcff436622"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/MainLight.shadersubgraph",
+        "guid": "b70e47af8512d9344bbd6fea7f928852"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/SpaceFog.shadersubgraph",
+        "guid": "f1e421cd4e41040d48b45cd3f92c8dd6"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Art/VFX/Textures/Basic_T_Noise.png",
+        "guid": "631eb3b7d12dd4df48cdd8db98a969e4"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Art/VFX/Textures/SpaceGradient_T_A.png",
+        "guid": "4a53678acb2214c7aa104d85906b0982"
+      }
+    ]
+  },
+  {
+    "path": "Assets/SharedAssets/Shaders/BiplanarMapping/BiplanarNormalConvert.shadersubgraph",
+    "guid": "a3a4b2cf5769c60479760f27e2daf0e6",
+    "bytes": 154992,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Garden/Shaders/Subgraphs/AnamorphicMap.shadersubgraph",
+    "guid": "c3ec5da6cc7c592448b6014b2a83a195",
+    "bytes": 85380,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Shaders/Decal_Graph.shadergraph",
+    "guid": "c38e0b6b5dc6b47e2aa2f4d0eebf838c",
+    "bytes": 38890,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/DepthDiffRemap.shadersubgraph",
+    "guid": "e33df7d26b5afc64495538e3d9c9ec11",
+    "bytes": 15530,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/ToonLightmap.shadergraph",
+    "guid": "f3377f3ddc4c2456799b163adce969b3",
+    "bytes": 55414,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.hlsl",
+        "guid": "92d9c521aff00e840a7e6fdcff436622"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/MainLight.shadersubgraph",
+        "guid": "b70e47af8512d9344bbd6fea7f928852"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/SpaceFog.shadersubgraph",
+        "guid": "f1e421cd4e41040d48b45cd3f92c8dd6"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.shadersubgraph",
+        "guid": "ea183e382e52e4537baac2bb6480ce87"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/SpaceAmbientLighting.shadersubgraph",
+        "guid": "48d007adf5b958747b84cd7cef1e612d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Art/VFX/Textures/SpaceGradient_T_A.png",
+        "guid": "4a53678acb2214c7aa104d85906b0982"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Art/VFX/Shaders/HoloRing_Graph.shadergraph",
+    "guid": "f3e7c7efad4bb42478d8d9dc026a5c6b",
+    "bytes": 252966,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Garden/Shaders/Subgraphs/SmoothTriangleWave.shadersubgraph",
+    "guid": "24d4ccfd9f1314570b6d66e272e1620b",
+    "bytes": 28921,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Garden/Shaders/Subgraphs/SmoothCurve.shadersubgraph",
+        "guid": "b24606f36641e4fcf93768133d4dfad0"
+      },
+      {
+        "path": "Assets/Scenes/Garden/Shaders/Subgraphs/TriangleWave.shadersubgraph",
+        "guid": "48cd7b341caff49ce81679662afbb323"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/ExplosionParticle_Graph.shadergraph",
+    "guid": "24b63a3d08b19c54aa4b2cfddf3e5e35",
+    "bytes": 129390,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.hlsl",
+        "guid": "92d9c521aff00e840a7e6fdcff436622"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/MainLight.shadersubgraph",
+        "guid": "b70e47af8512d9344bbd6fea7f928852"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/SpaceFog.shadersubgraph",
+        "guid": "f1e421cd4e41040d48b45cd3f92c8dd6"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Art/VFX/Textures/SpaceGradient_T_A.png",
+        "guid": "4a53678acb2214c7aa104d85906b0982"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/VFX/Shaders/SG_Wind_Cliff_SceneColor.shadergraph",
+    "guid": "24dc25919c6d7bf4c95b5cadd97d97b0",
+    "bytes": 248454,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.visualeffectgraph/Textures/Noise.tga",
+        "guid": "1d8481de16af723418a688958c41224b"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Assets/Scenes/Oasis/VFX/TXT/TX_Oasis_Color2.exr",
+        "guid": "d58ed38f01af3774cae164467aaac4b5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Resources/Icons/sg_graph_icon.png",
+        "guid": "170afdc32bbba284e8d0740a464b9fbd"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Generation/ShaderGraphVfxAsset.cs",
+        "guid": "43f4de31cc4ea49b8ab005fb966d553c"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/Skybox3DVertexPosition.shadersubgraph",
+    "guid": "548192b2a6b5c440ea9a733ad0a79577",
+    "bytes": 5290,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Garden/Shaders/GardenTerrain_Graph.shadergraph",
+    "guid": "64bceed5b003d65409c99b255e552b72",
+    "bytes": 102800,
+    "dependencies": [
+      {
+        "path": "Assets/SharedAssets/Shaders/HLSL/CustomFunctionNodes.hlsl",
+        "guid": "85327a803bcfa7a48b5045443d44d482"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/WorldSpaceGridNoise.shadersubgraph",
+    "guid": "7427845baea8e714cad2f895b7c5190b",
+    "bytes": 71438,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Shaders/OasisTerrain_Graph.shadergraph",
+    "guid": "943758cc600df734d9e8319d784c2acd",
+    "bytes": 257828,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      },
+      {
+        "path": "Assets/Scenes/Oasis/Shaders/WeightedHeightblend_Graph.shadersubgraph",
+        "guid": "af68e031bba1cec4a97df16cd84651cf"
+      },
+      {
+        "path": "Assets/Scenes/Oasis/Shaders/DualColorRamp.shadersubgraph",
+        "guid": "8c675407430d33f449a3150ebbc12d8b"
+      }
+    ]
+  },
+  {
+    "path": "Assets/SharedAssets/Shaders/WaterCausticsDecal.shadergraph",
+    "guid": "94e8c7d345857324c86224e799f9883e",
+    "bytes": 148753,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Terminal/Art/Props/Textures/PoolWave_T_N.png",
+        "guid": "690a6c1ef6e48f64e8a17bd3c142db75"
+      },
+      {
+        "path": "Assets/SharedAssets/Shaders/UtilitySubgraphs/DecalEdgeMask.shadersubgraph",
+        "guid": "4a36a54a7ada6a34eb523b15d58dbea5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Assets/Scenes/Terminal/Art/Props/Textures/WaterCaustics_T_mask.png",
+        "guid": "f1bdaa49db4e069449dd29dc620782b9"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Assets/SharedAssets/Shaders/UtilitySubgraphs/FaceNormal.shadersubgraph",
+        "guid": "312a3319ee436b34bae9180fc53d52b3"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Garden/Shaders/HeightBlendedDecal_Graph.shadergraph",
+    "guid": "d449417627e0baa42a59737e0d17969a",
+    "bytes": 87115,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/Cockpit/CockpitGlass.shadergraph",
+    "guid": "e47a03b2d4acf4cd2b2b794b86e740d4",
+    "bytes": 103231,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.hlsl",
+        "guid": "92d9c521aff00e840a7e6fdcff436622"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/MainLight.shadersubgraph",
+        "guid": "b70e47af8512d9344bbd6fea7f928852"
+      },
+      {
+        "path": "Assets/SharedAssets/Shaders/UtilitySubgraphs/TransformWorldToHClip.shadersubgraph",
+        "guid": "c24cefd10a4084ea2ac40f6ee793d732"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Art/Props/Textures/Glass_T_Noise.png",
+        "guid": "cbeaaa58b351343a1acd97edafdb1ba2"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      },
+      {
+        "path": "Assets/SharedAssets/Shaders/UtilitySubgraphs/ObjectScreenSpaceUV.shadersubgraph",
+        "guid": "0c94e3b8b7e064c07aa2823b00067a8e"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Garden/Shaders/Subgraphs/VegetationDeformation.shadersubgraph",
+    "guid": "5567b9bee87bf495fabd3a75c781ba25",
+    "bytes": 138135,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Garden/Shaders/Subgraphs/SmoothCurve.shadersubgraph",
+        "guid": "b24606f36641e4fcf93768133d4dfad0"
+      },
+      {
+        "path": "Assets/Scenes/Garden/Shaders/Subgraphs/SmoothTriangleWave.shadersubgraph",
+        "guid": "24d4ccfd9f1314570b6d66e272e1620b"
+      },
+      {
+        "path": "Assets/Scenes/Garden/Shaders/Subgraphs/TriangleWave.shadersubgraph",
+        "guid": "48cd7b341caff49ce81679662afbb323"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/CelShading.shadersubgraph",
+    "guid": "65f0ecc875a8da344b82d5b3a5e498c9",
+    "bytes": 24160,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/SharedAssets/Shaders/HLSL/CustomFunctionNodes.hlsl",
+    "guid": "85327a803bcfa7a48b5045443d44d482",
+    "bytes": 982,
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Shaders/ScrollingHologram_Graph.shadergraph",
+    "guid": "b59f111e98592c44bbf4c06a9af258bc",
+    "bytes": 35356,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/HologramLighting.shadersubgraph",
+        "guid": "a655bd17cce37464fafef6219d76a765"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Garden/Shaders/AnamorphicSampler.shadergraph",
+    "guid": "d53ce6608d465bf48bd263fcf05d9df7",
+    "bytes": 71748,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Shaders/SpotLightBillboard_Graph.shadergraph",
+    "guid": "d5fedef4e1ec1884084134f86fecd459",
+    "bytes": 102068,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Terminal/Art/Props/Textures/SpotLight_T_mask.png",
+        "guid": "971cb8dec9a471d46aa1190fa6356e04"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/NormalMappedToon.shadergraph",
+    "guid": "e55764b3fb3c8204ebfa8334db54acd5",
+    "bytes": 46730,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.hlsl",
+        "guid": "92d9c521aff00e840a7e6fdcff436622"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/MainLight.shadersubgraph",
+        "guid": "b70e47af8512d9344bbd6fea7f928852"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/SpaceFog.shadersubgraph",
+        "guid": "f1e421cd4e41040d48b45cd3f92c8dd6"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.shadersubgraph",
+        "guid": "ea183e382e52e4537baac2bb6480ce87"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/SpaceAmbientLighting.shadersubgraph",
+        "guid": "48d007adf5b958747b84cd7cef1e612d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Art/VFX/Textures/SpaceGradient_T_A.png",
+        "guid": "4a53678acb2214c7aa104d85906b0982"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Shaders/ScreenBlockerDissolveUnlit_Graph.shadergraph",
+    "guid": "f58145f9851698e409f2e60a65130bb6",
+    "bytes": 46147,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/Transition.shadersubgraph",
+        "guid": "4a46a0a7cc6af11438beb8a5a98efafa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      },
+      {
+        "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/WorldSpaceGridNoise.shadersubgraph",
+        "guid": "7427845baea8e714cad2f895b7c5190b"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/SpaceFog.shadergraph",
+    "guid": "06e1bcf705ca64cd7b9ca2bf9b3fbb1c",
+    "bytes": 154226,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.hlsl",
+        "guid": "92d9c521aff00e840a7e6fdcff436622"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/MainLight.shadersubgraph",
+        "guid": "b70e47af8512d9344bbd6fea7f928852"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/SpaceFog.shadersubgraph",
+        "guid": "f1e421cd4e41040d48b45cd3f92c8dd6"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Art/VFX/Textures/SpaceGradient_T_A.png",
+        "guid": "4a53678acb2214c7aa104d85906b0982"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/VFX/VFXGraph/VFXG_Falling_Sand_Rocks.vfx",
+    "guid": "0683de9015cc9fc438568a1ec7b28cfa",
+    "bytes": 376341,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Oasis/VFX/TXT/TX_TinyStones_N.tif",
+        "guid": "a00b2df6dc199854ba60af0c001a51b2"
+      },
+      {
+        "path": "Assets/Scenes/Oasis/VFX/TXT/SDF_Oasis_Cliff_HD.asset",
+        "guid": "c5549dd0f87c0cc4a8c82109ba3be70b"
+      },
+      {
+        "path": "Assets/Scenes/Oasis/VFX/TXT/TX_TinyStones_D.png",
+        "guid": "f5f94e20533a400479359f21c26305a5"
+      },
+      {
+        "path": "Packages/com.unity.visualeffectgraph/Textures/DefaultParticle.tga",
+        "guid": "276d9e395ae18fe40a9b4988549f2349"
+      },
+      {
+        "path": "Assets/Scenes/Oasis/VFX/TXT/TX_WispySmoke03b_8x8.png",
+        "guid": "3431ee894c3f2e64ab8aacb2e90291eb"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/WorldspaceFromDepth.shadersubgraph",
+    "guid": "5601a85c990f2354ca1576cb357c1ff9",
+    "bytes": 15169,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/EngineTrail_Graph.shadergraph",
+    "guid": "76b1377ef0a2fa447932961bb0deec64",
+    "bytes": 81461,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/StarBG.shadergraph",
+    "guid": "7659f79bf1e5c42b19c17535b0166686",
+    "bytes": 111738,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.hlsl",
+        "guid": "92d9c521aff00e840a7e6fdcff436622"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/MainLight.shadersubgraph",
+        "guid": "b70e47af8512d9344bbd6fea7f928852"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/SpaceFog.shadersubgraph",
+        "guid": "f1e421cd4e41040d48b45cd3f92c8dd6"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Art/VFX/Textures/SpaceGradient_T_A.png",
+        "guid": "4a53678acb2214c7aa104d85906b0982"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/WaterNormalSampler.shadersubgraph",
+    "guid": "862bb3d7061fb794ea2c1c08224f1381",
+    "bytes": 36252,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Garden/Shaders/TerrainBlendingDecal_Graph.shadergraph",
+    "guid": "a6527c096d734314c9152a7663eb0837",
+    "bytes": 139909,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Garden/Art/Terrain/Textures/Gravel_01_T_H.png",
+        "guid": "501ca71af9bc3614bb46064fe220fd14"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/HologramLighting.shadersubgraph",
+    "guid": "a655bd17cce37464fafef6219d76a765",
+    "bytes": 78838,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/SharedAssets/Shaders/BiplanarMapping/BiplanarShader.shadergraph",
+    "guid": "b65ba6e52b2e6dd4b8d244fe91f52036",
+    "bytes": 54575,
+    "dependencies": [
+      {
+        "path": "Assets/SharedAssets/Shaders/BiplanarMapping/BiplanarMapping.shadersubgraph",
+        "guid": "a7c4a6308fa963d41ac657519444f353"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Assets/SharedAssets/Shaders/BiplanarMapping/BiplanarNormalConvert.shadersubgraph",
+        "guid": "a3a4b2cf5769c60479760f27e2daf0e6"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/IncidenceGlow.shadergraph",
+    "guid": "c67808b6f9b0645d0ba010a2efc2d16a",
+    "bytes": 92456,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/SharedAssets/Shaders/FullscreenTransition_Graph.shadergraph",
+    "guid": "e6a44d1880f54d14896ad4db97a76913",
+    "bytes": 87889,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Terminal/Art/Props/Textures/WhiteNoise_T_mask.png",
+        "guid": "f155b245e32ed9849bbcf9db7c61029b"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/Transition.shadersubgraph",
+        "guid": "4a46a0a7cc6af11438beb8a5a98efafa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Shaders/OasisTerrainSand_Graph.shadergraph",
+    "guid": "f64e5018ccdac53488651bee32337ab1",
+    "bytes": 501816,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.hlsl",
+        "guid": "92d9c521aff00e840a7e6fdcff436622"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/MainLight.shadersubgraph",
+        "guid": "b70e47af8512d9344bbd6fea7f928852"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      },
+      {
+        "path": "Assets/Scenes/Oasis/Shaders/WeightedHeightblend_Graph.shadersubgraph",
+        "guid": "af68e031bba1cec4a97df16cd84651cf"
+      },
+      {
+        "path": "Assets/Scenes/Oasis/Shaders/DualColorRamp.shadersubgraph",
+        "guid": "8c675407430d33f449a3150ebbc12d8b"
+      },
+      {
+        "path": "Assets/Scenes/Oasis/Shaders/MovingSand_SubGraph.shadersubgraph",
+        "guid": "bae3f15379f0d1646b8416bf2cc0fad6"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/HullOutline.shadergraph",
+    "guid": "176a1ce9ef59c4879af9f3612b9dea3f",
+    "bytes": 51808,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.hlsl",
+        "guid": "92d9c521aff00e840a7e6fdcff436622"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/MainLight.shadersubgraph",
+        "guid": "b70e47af8512d9344bbd6fea7f928852"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/SpaceFog.shadersubgraph",
+        "guid": "f1e421cd4e41040d48b45cd3f92c8dd6"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Art/VFX/Textures/SpaceGradient_T_A.png",
+        "guid": "4a53678acb2214c7aa104d85906b0982"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Shaders/OasisVegetationGraph.shadergraph",
+    "guid": "275559749bbab5e4aa76b9e6a7b48b42",
+    "bytes": 248736,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Garden/Shaders/Subgraphs/SmoothCurve.shadersubgraph",
+        "guid": "b24606f36641e4fcf93768133d4dfad0"
+      },
+      {
+        "path": "Assets/Scenes/Garden/Shaders/Subgraphs/SmoothTriangleWave.shadersubgraph",
+        "guid": "24d4ccfd9f1314570b6d66e272e1620b"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.hlsl",
+        "guid": "92d9c521aff00e840a7e6fdcff436622"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/MainLight.shadersubgraph",
+        "guid": "b70e47af8512d9344bbd6fea7f928852"
+      },
+      {
+        "path": "Assets/Scenes/Garden/Shaders/Subgraphs/TriangleWave.shadersubgraph",
+        "guid": "48cd7b341caff49ce81679662afbb323"
+      },
+      {
+        "path": "Assets/Scenes/Garden/Shaders/Subgraphs/VegetationDeformation.shadersubgraph",
+        "guid": "5567b9bee87bf495fabd3a75c781ba25"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/DepthClear.shadergraph",
+    "guid": "47244556baf24404bb44ad0012dab234",
+    "bytes": 7177,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Generation/Targets/Fullscreen/FullscreenMetaData.cs",
+        "guid": "e392ecea19f8779438f0b90905fdee13"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Shaders/Heightblend_Graph.shadersubgraph",
+    "guid": "6735f0b972af6f64d878996328114f8d",
+    "bytes": 29081,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/ScreenScan.shadersubgraph",
+    "guid": "77036ec9d90d9694e942f257f1a58b82",
+    "bytes": 43679,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/SharedAssets/Shaders/BiplanarMapping/BiplanarMapping.shadersubgraph",
+    "guid": "a7c4a6308fa963d41ac657519444f353",
+    "bytes": 268577,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Assets/SharedAssets/Shaders/BiplanarMapping/BiplanarNormalConvert.shadersubgraph",
+        "guid": "a3a4b2cf5769c60479760f27e2daf0e6"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/VFX/Shaders/SG_VFX_Smoke.shadergraph",
+    "guid": "b73797a6f9d4fb145832d93cea357630",
+    "bytes": 230637,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Oasis/VFX/TXT/TX_Oasis_Color3.exr",
+        "guid": "d1fe1a8a73161a940abe454460a740e7"
+      },
+      {
+        "path": "Packages/com.unity.visualeffectgraph/Textures/Noise.tga",
+        "guid": "1d8481de16af723418a688958c41224b"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Resources/Icons/sg_graph_icon.png",
+        "guid": "170afdc32bbba284e8d0740a464b9fbd"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Generation/ShaderGraphVfxAsset.cs",
+        "guid": "43f4de31cc4ea49b8ab005fb966d553c"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/MainLight.shadersubgraph",
+    "guid": "b70e47af8512d9344bbd6fea7f928852",
+    "bytes": 9556,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.hlsl",
+        "guid": "92d9c521aff00e840a7e6fdcff436622"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/SharedAssets/Shaders/HLSL/Water.hlsl",
+    "guid": "b70f2f9c654fd44dca3ff648d097683e",
+    "bytes": 5133,
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Shaders/LayeredLit_Graph.shadergraph",
+    "guid": "d7106592a3926fd42888ed7b8c03e540",
+    "bytes": 265903,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Oasis/Shaders/CalculateTerrainBlendMask_Subgraph.shadersubgraph",
+        "guid": "9824c61a991cd1244b90e7162e2b097d"
+      },
+      {
+        "path": "Assets/SharedAssets/Shaders/BiplanarMapping/BiplanarMapping.shadersubgraph",
+        "guid": "a7c4a6308fa963d41ac657519444f353"
+      },
+      {
+        "path": "Assets/Scenes/Oasis/Shaders/UnpackTerrainData.shadersubgraph",
+        "guid": "f18a5502715aea34a93af84010b68373"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Assets/Scenes/Oasis/Art/Environment/Textures/Cliff_Ramp.asset",
+        "guid": "9a097085cf6484015b77e85b92e60e66"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Assets/SharedAssets/Scripts/Editor/GradientTexture.cs",
+        "guid": "6f05a51f4cf024800962869cda1090f7"
+      },
+      {
+        "path": "Assets/Scenes/Oasis/Shaders/NormalRemap-Reconstruct.shadersubgraph",
+        "guid": "ef53541109b3c4631ad29efb7114867a"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Assets/SharedAssets/Shaders/BiplanarMapping/BiplanarNormalConvert.shadersubgraph",
+        "guid": "a3a4b2cf5769c60479760f27e2daf0e6"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/ToonLitNoShadow_graph.shadergraph",
+    "guid": "d7600c00c50d66a4d9298c4daec9458a",
+    "bytes": 173118,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.hlsl",
+        "guid": "92d9c521aff00e840a7e6fdcff436622"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/MainLight.shadersubgraph",
+        "guid": "b70e47af8512d9344bbd6fea7f928852"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/SpaceFog.shadersubgraph",
+        "guid": "f1e421cd4e41040d48b45cd3f92c8dd6"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/DirectionalAmbient.shadersubgraph",
+        "guid": "c9998529a4aedeb458d799a727b99b0a"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Art/VFX/Textures/SpaceGradient_T_A.png",
+        "guid": "4a53678acb2214c7aa104d85906b0982"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/ScreenLighting.shadersubgraph",
+    "guid": "f73dd9ab7f278ee45aa9a7889f7a0b0e",
+    "bytes": 55309,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/SpaceAmbientLighting.shadersubgraph",
+    "guid": "48d007adf5b958747b84cd7cef1e612d",
+    "bytes": 27923,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Garden/Shaders/Subgraphs/TriangleWave.shadersubgraph",
+    "guid": "48cd7b341caff49ce81679662afbb323",
+    "bytes": 15014,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Art/VFX/Shaders/HologramIcon_Graph.shadergraph",
+    "guid": "58ce9dd543d95644dab2821d7874e403",
+    "bytes": 75539,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Assets/Scenes/Terminal/Art/VFX/Textures/Icons_T_mask.png",
+        "guid": "5e7fc1923ebc88745bbc44d5a9570124"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Shaders/CalculateTerrainBlendMask_Subgraph.shadersubgraph",
+    "guid": "9824c61a991cd1244b90e7162e2b097d",
+    "bytes": 54624,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Shaders/HolgramCone_Graph.shadergraph",
+    "guid": "a8e95bd088c85ed4e8914d97ddb0e750",
+    "bytes": 153276,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/WindowDetail_Graph.shadergraph",
+    "guid": "d8efb1326c82a9344ac648605ae1ede8",
+    "bytes": 51879,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/PlanetRing.shadergraph",
+    "guid": "5994a602f64b1b14fb1d5a2bfc29848d",
+    "bytes": 109269,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Shaders/HologramIcon_Graph.shadergraph",
+    "guid": "59d95f1b6af728848bb79db57d132786",
+    "bytes": 25036,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/StrokeEffect_Graph.shadergraph",
+    "guid": "599ee092c2d4b4b40acb11c68b4cb8fb",
+    "bytes": 160769,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.hlsl",
+        "guid": "92d9c521aff00e840a7e6fdcff436622"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/MainLight.shadersubgraph",
+        "guid": "b70e47af8512d9344bbd6fea7f928852"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/SpaceFog.shadersubgraph",
+        "guid": "f1e421cd4e41040d48b45cd3f92c8dd6"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Generation/Targets/Fullscreen/FullscreenMetaData.cs",
+        "guid": "e392ecea19f8779438f0b90905fdee13"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Art/VFX/Textures/SpaceGradient_T_A.png",
+        "guid": "4a53678acb2214c7aa104d85906b0982"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/Pixelate.shadersubgraph",
+    "guid": "99bf095e5e2094f41a4203112515179c",
+    "bytes": 53788,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Terminal/Art/Props/Textures/Pixel_T_mask.png",
+        "guid": "0fd88261cb4e9444c8b5e0c8f126569b"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/Unlit3DSkybox.shadergraph",
+    "guid": "c910c8e3982ea4551987e3c88109c9f1",
+    "bytes": 52907,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.hlsl",
+        "guid": "92d9c521aff00e840a7e6fdcff436622"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/MainLight.shadersubgraph",
+        "guid": "b70e47af8512d9344bbd6fea7f928852"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/SpaceFog.shadersubgraph",
+        "guid": "f1e421cd4e41040d48b45cd3f92c8dd6"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Art/VFX/Textures/SpaceGradient_T_A.png",
+        "guid": "4a53678acb2214c7aa104d85906b0982"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/DirectionalAmbient.shadersubgraph",
+    "guid": "c9998529a4aedeb458d799a727b99b0a",
+    "bytes": 31738,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Garden/Shaders/Gravels_ShaderGraph.shadergraph",
+    "guid": "f9d821d0342b4294fbb1c5a4cd670a9b",
+    "bytes": 166516,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Assets/Scenes/Garden/Art/Terrain/Textures/GardenGround_T_H.png",
+        "guid": "5e08faf4c9e76684ab8a1a481f6a3922"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/Histogram_graph.shadergraph",
+    "guid": "2a4c259302cdc2846b6616f1d00b6c86",
+    "bytes": 67822,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Garden/Shaders/WaterSurface_Graph.shadergraph",
+    "guid": "3abb043f2572dbc4dacfe84877438211",
+    "bytes": 270098,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Assets/Scenes/Garden/Art/Terrain/Textures/Water_T_N.png",
+        "guid": "dd444bbd1a5706d44a4dd972e16eeb37"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/SharedAssets/Shaders/UtilitySubgraphs/DecalEdgeMask.shadersubgraph",
+    "guid": "4a36a54a7ada6a34eb523b15d58dbea5",
+    "bytes": 41355,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/Transition.shadersubgraph",
+    "guid": "4a46a0a7cc6af11438beb8a5a98efafa",
+    "bytes": 40150,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/SharedAssets/FirstPersonController/Mobile/UI/UI_Cirkle_Graph.shadergraph",
+    "guid": "5af491cbf047d445b988258c5a51ac1f",
+    "bytes": 29937,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Garden/Shaders/Waterfall_Graph.shadergraph",
+    "guid": "7aeb78ad27d0bba46af16427fd2ffba5",
+    "bytes": 423480,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Assets/Scenes/Garden/Art/Terrain/Textures/Water_T_N.png",
+        "guid": "dd444bbd1a5706d44a4dd972e16eeb37"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Garden/Shaders/GravelsPixelDepthOffset_Shader.shader",
+    "guid": "aa9f7f2ad42377c4aba6b1b0c6e4e810",
+    "bytes": 364580,
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Shaders/MovingSand_SubGraph.shadersubgraph",
+    "guid": "bae3f15379f0d1646b8416bf2cc0fad6",
+    "bytes": 229554,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.shadersubgraph",
+    "guid": "ea183e382e52e4537baac2bb6480ce87",
+    "bytes": 190321,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.hlsl",
+        "guid": "92d9c521aff00e840a7e6fdcff436622"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/MainLight.shadersubgraph",
+        "guid": "b70e47af8512d9344bbd6fea7f928852"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/SpaceAmbientLighting.shadersubgraph",
+        "guid": "48d007adf5b958747b84cd7cef1e612d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/CirkularDitherFog.shadersubgraph",
+    "guid": "2b160ff72752543f59dec6b6de8d6296",
+    "bytes": 60477,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Shaders/CirclesHologram_Graph.shadergraph",
+    "guid": "2bec91da2a6ff4d41b7923274607a380",
+    "bytes": 99464,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/HologramLighting.shadersubgraph",
+        "guid": "a655bd17cce37464fafef6219d76a765"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Garden/Shaders/MossRock_Graph.shadergraph",
+    "guid": "3b215c3e58f4f47418634a57cc5c6c2e",
+    "bytes": 135583,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Garden/Shaders/Coal_Graph.shadergraph",
+    "guid": "3bd9eba058e0fb745907168ec0738caf",
+    "bytes": 54971,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Shaders/LoadingbarHologram_Graph.shadergraph",
+    "guid": "4b3659f31ca336b4e801e691de53241b",
+    "bytes": 69674,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/HologramLighting.shadersubgraph",
+        "guid": "a655bd17cce37464fafef6219d76a765"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/EmissiveUnlit.shadergraph",
+    "guid": "5b50b4b95c7e97846b476ff9d9ada31c",
+    "bytes": 22801,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/Particles.shadergraph",
+    "guid": "5b27a9e87ea944625bfdbd449440287f",
+    "bytes": 54680,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/SharedAssets/Shaders/HLSL/StencilOnly.shader",
+    "guid": "7bb9ab7f1a4e82140945ffe44a27a93b",
+    "bytes": 402,
+    "dependencies": []
+  },
+  {
+    "path": "Assets/SharedAssets/Shaders/TriplanarDissolve_Graph.shadergraph",
+    "guid": "8b4ce4302dd839143899f5e47242a2f7",
+    "bytes": 44987,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Terminal/Art/Props/Textures/WhiteNoise_T_mask.png",
+        "guid": "f155b245e32ed9849bbcf9db7c61029b"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/Transition.shadersubgraph",
+        "guid": "4a46a0a7cc6af11438beb8a5a98efafa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/HyperSpace/HyperSpaceTunnel.shadergraph",
+    "guid": "cb1d4a7d583934fa6954c13b9b95c6cc",
+    "bytes": 136291,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Garden/Shaders/Subgraphs/TriangleWave.shadersubgraph",
+        "guid": "48cd7b341caff49ce81679662afbb323"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Garden/Shaders/WaterfallRipple_Graph.shadergraph",
+    "guid": "fbc044629fd33c94dab6dd0427621ab5",
+    "bytes": 86088,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/SharedAssets/Shaders/UtilitySubgraphs/ObjectScreenSpaceUV.shadersubgraph",
+    "guid": "0c94e3b8b7e064c07aa2823b00067a8e",
+    "bytes": 52811,
+    "dependencies": [
+      {
+        "path": "Assets/SharedAssets/Shaders/UtilitySubgraphs/TransformWorldToHClip.shadersubgraph",
+        "guid": "c24cefd10a4084ea2ac40f6ee793d732"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/SharedAssets/FirstPersonController/Mobile/UI/UI_Cirkle_Shader.shader",
+    "guid": "1ca8b4c6b6ddb455fbfdedecdd2b7903",
+    "bytes": 3247,
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Scenes/Garden/Shaders/VegetationSSS_Graph.shadergraph",
+    "guid": "1c4cbaedbae058f47af56a8d4937a4d5",
+    "bytes": 180107,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Garden/Shaders/Subgraphs/SmoothCurve.shadersubgraph",
+        "guid": "b24606f36641e4fcf93768133d4dfad0"
+      },
+      {
+        "path": "Assets/Scenes/Garden/Shaders/Subgraphs/SmoothTriangleWave.shadersubgraph",
+        "guid": "24d4ccfd9f1314570b6d66e272e1620b"
+      },
+      {
+        "path": "Assets/Scenes/Garden/Shaders/Subgraphs/TriangleWave.shadersubgraph",
+        "guid": "48cd7b341caff49ce81679662afbb323"
+      },
+      {
+        "path": "Assets/Scenes/Garden/Shaders/Subgraphs/VegetationDeformation.shadersubgraph",
+        "guid": "5567b9bee87bf495fabd3a75c781ba25"
+      },
+      {
+        "path": "Assets/SharedAssets/Shaders/HLSL/CustomFunctionNodes.hlsl",
+        "guid": "85327a803bcfa7a48b5045443d44d482"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Shaders/HexagonHologram_Graph.shadergraph",
+    "guid": "2c7b14bac93dcac45995ffdabb5f6f54",
+    "bytes": 61630,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Shaders/HologramAimated_Graph.shadergraph",
+    "guid": "2ccd12fc75ff5ec47a97d3f279e33b77",
+    "bytes": 85819,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Shaders/DualColorRamp.shadersubgraph",
+    "guid": "8c675407430d33f449a3150ebbc12d8b",
+    "bytes": 57649,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Shaders/LayeredLitLayer_Graph.shadersubgraph",
+    "guid": "8cd8c20c5b9557741b7a1948d5ff8087",
+    "bytes": 51646,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/SharedAssets/Shaders/UtilitySubgraphs/QuantizeUV.shadersubgraph",
+    "guid": "ac92445aca840b44a8e6b4a21f48ad13",
+    "bytes": 24087,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/SharedAssets/Shaders/WetnessDecal.shadergraph",
+    "guid": "ccb856833d228344ca1a5694af1771b2",
+    "bytes": 23212,
+    "dependencies": [
+      {
+        "path": "Assets/SharedAssets/Shaders/UtilitySubgraphs/DecalEdgeMask.shadersubgraph",
+        "guid": "4a36a54a7ada6a34eb523b15d58dbea5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/VFX/VFXGraph/VFXG_LocalizedSand.vfx",
+    "guid": "fc65758d085751744a4076529b07688d",
+    "bytes": 318489,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Oasis/VFX/TXT/TX_Oasis_Color3.exr",
+        "guid": "d1fe1a8a73161a940abe454460a740e7"
+      },
+      {
+        "path": "Packages/com.unity.visualeffectgraph/Textures/Noise.tga",
+        "guid": "1d8481de16af723418a688958c41224b"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Shaders/GrungeDecal_Graph.shadergraph",
+    "guid": "1dcfcf6cb22c46d479bed98ead9075ea",
+    "bytes": 28186,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Shaders/FullscreenTransition_Graph.shadergraph",
+    "guid": "4d81dc14d091c754f9a498b2d24392eb",
+    "bytes": 27198,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/Transition.shadersubgraph",
+        "guid": "4a46a0a7cc6af11438beb8a5a98efafa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Generation/Targets/Fullscreen/FullscreenMetaData.cs",
+        "guid": "e392ecea19f8779438f0b90905fdee13"
+      },
+      {
+        "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/WorldSpaceGridNoise.shadersubgraph",
+        "guid": "7427845baea8e714cad2f895b7c5190b"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Shaders/Sand_Graph.shadergraph",
+    "guid": "4d39dcd11dd6f4a339b0e05bfe83a3be",
+    "bytes": 94678,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Terminal/Shaders/SpriteSheetHologram_Graph.shadergraph",
+    "guid": "6df5e214b1ea9af47ad136832f65664c",
+    "bytes": 199405,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Terminal/Art/VFX/Textures/LogoAnimationSheet_T.png",
+        "guid": "f7f159c8297c9934582f5e90ae21a1c8"
+      },
+      {
+        "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/HologramLighting.shadersubgraph",
+        "guid": "a655bd17cce37464fafef6219d76a765"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Shaders/DepthRender_Graph.shadergraph",
+    "guid": "6d5cb7d1cbc141c48b0e8af6b10d1d90",
+    "bytes": 38749,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/UnlitStrokeTest_Graph.shadergraph",
+    "guid": "9df9ff9df1a023244a96095246d36573",
+    "bytes": 9200,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/SharedAssets/Shaders/QuantizeScreenSpaceTest.shadergraph",
+    "guid": "9daae30598e25e441a96f5175e6b7977",
+    "bytes": 32084,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Terminal/Shaders/Subgraphs/Pixelate.shadersubgraph",
+        "guid": "99bf095e5e2094f41a4203112515179c"
+      },
+      {
+        "path": "Assets/Scenes/Terminal/Art/Props/Textures/Pixel_T_mask.png",
+        "guid": "0fd88261cb4e9444c8b5e0c8f126569b"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/ToonVertexColorLightmap.shadergraph",
+    "guid": "9def3b77e7cfe423889ec12e2ebc928a",
+    "bytes": 187629,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.hlsl",
+        "guid": "92d9c521aff00e840a7e6fdcff436622"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/MainLight.shadersubgraph",
+        "guid": "b70e47af8512d9344bbd6fea7f928852"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/SpaceFog.shadersubgraph",
+        "guid": "f1e421cd4e41040d48b45cd3f92c8dd6"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.shadersubgraph",
+        "guid": "ea183e382e52e4537baac2bb6480ce87"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/SpaceAmbientLighting.shadersubgraph",
+        "guid": "48d007adf5b958747b84cd7cef1e612d"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Art/VFX/Textures/Damage_T_A.png",
+        "guid": "ab0fbab6d026a46908edd12c77542094"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Art/VFX/Textures/SpaceGradient_T_A.png",
+        "guid": "4a53678acb2214c7aa104d85906b0982"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Garden/Shaders/SmokeTrail_Graph.shadergraph",
+    "guid": "cd3a4f9c33bd6714bbcb0e79ca7c4cc3",
+    "bytes": 217520,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/SharedAssets/Shaders/Water.shadergraph",
+    "guid": "dd152f2faaf084b4a87adf76c5672e5c",
+    "bytes": 335671,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Assets/SharedAssets/Shaders/HLSL/Water.hlsl",
+        "guid": "b70f2f9c654fd44dca3ff648d097683e"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Assets/Scenes/Garden/Art/Terrain/Textures/Water_T_N.png",
+        "guid": "dd444bbd1a5706d44a4dd972e16eeb37"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/GlowingButtons_Graph.shadergraph",
+    "guid": "3e145fe54c0fe3a4da7282f9022fa75f",
+    "bytes": 114695,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.hlsl",
+        "guid": "92d9c521aff00e840a7e6fdcff436622"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/MainLight.shadersubgraph",
+        "guid": "b70e47af8512d9344bbd6fea7f928852"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLightingSubgraph.shadersubgraph",
+        "guid": "0fdc3b21a590e444c834d9bc6be203c3"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/SpaceAmbientLighting.shadersubgraph",
+        "guid": "48d007adf5b958747b84cd7cef1e612d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/ShadowCaster_graph.shadergraph",
+    "guid": "3e758d0fab200264da48a83c62db6882",
+    "bytes": 7976,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/SharedAssets/Shaders/HLSL/CustomLighting.hlsl",
+    "guid": "8ee5da40da89ae4428f18d0864438edf",
+    "bytes": 993,
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Scenes/Garden/Shaders/FakeVolumetrics_Graph.shadergraph",
+    "guid": "8e6fc6d675c9c42438e84967d7d4c7c6",
+    "bytes": 44475,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/WormBeamHit.shadergraph",
+    "guid": "bededa47883a94181a1a518c18040b0e",
+    "bytes": 79961,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/ToonLightingSubgraph.shadersubgraph",
+    "guid": "0fdc3b21a590e444c834d9bc6be203c3",
+    "bytes": 97624,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.hlsl",
+        "guid": "92d9c521aff00e840a7e6fdcff436622"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/MainLight.shadersubgraph",
+        "guid": "b70e47af8512d9344bbd6fea7f928852"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/SpaceAmbientLighting.shadersubgraph",
+        "guid": "48d007adf5b958747b84cd7cef1e612d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Garden/Shaders/WashiLight_Graph.shadergraph",
+    "guid": "3f1a5dc54d0179e4cb1c51baa9c330e4",
+    "bytes": 184643,
+    "dependencies": [
+      {
+        "path": "Assets/SharedAssets/Shaders/HLSL/CustomFunctionNodes.hlsl",
+        "guid": "85327a803bcfa7a48b5045443d44d482"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/VFX/VFXGraph/VFXG_Dune_Sand.vfx",
+    "guid": "8f97f5ae56384a1458c3960edee93c90",
+    "bytes": 260403,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.visualeffectgraph/Editor/Utilities/pCache/Importer/PointCacheImporter.cs",
+        "guid": "42ac9d422990ad246a3dc238b4b2aafe"
+      },
+      {
+        "path": "Packages/com.unity.visualeffectgraph/Editor/Utilities/pCache/PointCacheAsset.cs",
+        "guid": "21811b71c053eff499812a9b7a995d7d"
+      },
+      {
+        "path": "Packages/com.unity.visualeffectgraph/Textures/Noise.tga",
+        "guid": "1d8481de16af723418a688958c41224b"
+      },
+      {
+        "path": "Assets/Scenes/Oasis/VFX/Models/ST_Wind_Cliff.fbx",
+        "guid": "4bd704e1d4a78104d986d02205bdf85e"
+      },
+      {
+        "path": "Assets/Scenes/Oasis/VFX/TXT/TX_Oasis_Color2.exr",
+        "guid": "d58ed38f01af3774cae164467aaac4b5"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/AssetVersion.cs",
+        "guid": "d0353a89b1f911e48b9e16bdc9f2e058"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Runtime/Materials/Lit.mat",
+        "guid": "31321ba15b8f8eb4c954353edc038b1d"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader",
+        "guid": "933532a4fcc9baf4fa0491de14d08ed7"
+      },
+      {
+        "path": "Assets/Scenes/Oasis/VFX/TXT/Oasis_dune.pcache",
+        "guid": "7163373b64a97a34abea84e23601cb9e"
+      },
+      {
+        "path": "Packages/com.unity.visualeffectgraph/Editor/Utilities/pCache/Importer/pCache-Icon.png",
+        "guid": "cf28868a0ab107e46b2d953f4f99fed4"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/ToonLitCustomLightmap_graph.shadergraph",
+    "guid": "9f812819ed931c941a4c617ffecadef4",
+    "bytes": 42546,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Shaders/WeightedHeightblend_Graph.shadersubgraph",
+    "guid": "af68e031bba1cec4a97df16cd84651cf",
+    "bytes": 52420,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Garden/Shaders/Vegetation_Graph.shadergraph",
+    "guid": "afd8c55393e7d864899737fad8bd9b47",
+    "bytes": 41108,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Shaders/Tent_Graph.shadergraph",
+    "guid": "bfd4f20c08839cd41866d10a198f1afa",
+    "bytes": 263406,
+    "dependencies": [
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/ToonLighting.hlsl",
+        "guid": "92d9c521aff00e840a7e6fdcff436622"
+      },
+      {
+        "path": "Assets/Scenes/Cockpit/Shaders/Subgraphs/MainLight.shadersubgraph",
+        "guid": "b70e47af8512d9344bbd6fea7f928852"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Cockpit/Shaders/Cockpit/CockpitScreen.shadergraph",
+    "guid": "df6b590f46f82354ba61318feb72ff73",
+    "bytes": 87825,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+        "guid": "b64ab828cd6c5b3479a4c575ca6617d5"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+        "guid": "625f186215c104763be7675aa2d941aa"
+      },
+      {
+        "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+        "guid": "d2654ad3c17ab8a4ebb9fd0719795d21"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Scenes/Oasis/Shaders/NormalRemap-Reconstruct.shadersubgraph",
+    "guid": "ef53541109b3c4631ad29efb7114867a",
+    "bytes": 15975,
+    "dependencies": [
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+        "guid": "f28ce979dc22145fd8160e458f72f65d"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+        "guid": "60072b568d64c40a485e0fc55012dc9f"
+      },
+      {
+        "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+        "guid": "0169c6aa153625741a0b332e73a43fb2"
+      }
+    ]
+  }
+]

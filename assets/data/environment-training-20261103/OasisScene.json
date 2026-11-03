@@ -1,0 +1,2324 @@
+{
+  "path": "Assets/Scenes/Oasis/OasisScene.unity",
+  "name": "OasisScene",
+  "capture": "live loaded scene",
+  "dirty": false,
+  "lightCount": 3,
+  "lightGroups": [
+    {
+      "type": "Directional",
+      "mode": "Mixed",
+      "count": 1
+    },
+    {
+      "type": "Point",
+      "mode": "Realtime",
+      "count": 2
+    }
+  ],
+  "lights": [
+    {
+      "hierarchy": "Root/Lighting/MainLight",
+      "active": false,
+      "enabled": true,
+      "type": "Directional",
+      "mode": "Mixed",
+      "intensity": 2.5,
+      "color": [
+        1.0,
+        0.763621151,
+        0.48490566,
+        1.0
+      ],
+      "useColorTemperature": false,
+      "colorTemperature": 6570.0,
+      "range": 10.0,
+      "spotAngle": 30.0,
+      "innerSpotAngle": 21.80208,
+      "shadows": "Soft",
+      "shadowStrength": 1.0,
+      "shadowBias": 1.0,
+      "shadowNormalBias": 1.0,
+      "shadowNearPlane": 0.5,
+      "bounceIntensity": 1.5,
+      "cullingMask": -1,
+      "renderingLayerMask": 1,
+      "cookie": null,
+      "position": [
+        -1.38,
+        0.316,
+        -117.16
+      ],
+      "rotation": [
+        13.0000029,
+        340.7,
+        0.0
+      ],
+      "serialized": {
+        "m_Type": {
+          "value": 1,
+          "index": 1,
+          "names": [
+            "Spot",
+            "Directional",
+            "Point",
+            "Rectangle",
+            "Disc",
+            "Pyramid",
+            "Box",
+            "Tube"
+          ]
+        },
+        "m_Color": [
+          1.0,
+          0.763621151,
+          0.48490566,
+          1.0
+        ],
+        "m_Intensity": 2.5,
+        "m_Range": 10.0,
+        "m_SpotAngle": 30.0,
+        "m_InnerSpotAngle": 21.802080154418945,
+        "m_CookieSize2D": [
+          10.0,
+          10.0
+        ],
+        "m_CookieSize2D.x": 10.0,
+        "m_CookieSize2D.y": 10.0,
+        "m_Shadows.m_Type": {
+          "value": 2,
+          "index": 2,
+          "names": [
+            "No Shadows",
+            "Hard Shadows",
+            "Soft Shadows"
+          ]
+        },
+        "m_Shadows.m_Resolution": {
+          "value": -1,
+          "index": 0,
+          "names": [
+            "Use Quality Settings",
+            "Low Resolution",
+            "Medium Resolution",
+            "High Resolution",
+            "Very High Resolution"
+          ]
+        },
+        "m_Shadows.m_CustomResolution": -1,
+        "m_Shadows.m_Strength": 1.0,
+        "m_Shadows.m_Bias": 1.0,
+        "m_Shadows.m_NormalBias": 1.0,
+        "m_Shadows.m_NearPlane": 0.5,
+        "m_Shadows.m_CullingMatrixOverride.e00": 1.0,
+        "m_Shadows.m_CullingMatrixOverride.e01": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e02": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e03": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e10": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e11": 1.0,
+        "m_Shadows.m_CullingMatrixOverride.e12": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e13": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e20": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e21": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e22": 1.0,
+        "m_Shadows.m_CullingMatrixOverride.e23": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e30": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e31": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e32": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e33": 1.0,
+        "m_Shadows.m_UseCullingMatrixOverride": false,
+        "m_Cookie": null,
+        "m_DrawHalo": false,
+        "m_BakingOutput.probeOcclusionLightIndex": 0,
+        "m_BakingOutput.occlusionMaskChannel": 0,
+        "m_BakingOutput.lightmapBakeMode.lightmapBakeType": {
+          "value": 1,
+          "index": 0,
+          "names": [
+            "Mixed",
+            "Baked",
+            "Realtime"
+          ]
+        },
+        "m_BakingOutput.lightmapBakeMode.mixedLightingMode": {
+          "value": 2,
+          "index": 2,
+          "names": [
+            "IndirectOnly",
+            "Subtractive",
+            "Shadowmask"
+          ]
+        },
+        "m_BakingOutput.isBaked": true,
+        "m_Flare": null,
+        "m_RenderMode": {
+          "value": 0,
+          "index": 0,
+          "names": [
+            "Auto",
+            "Important",
+            "Not Important"
+          ]
+        },
+        "m_CullingMask": -1,
+        "m_RenderingLayerMask": 1,
+        "m_Lightmapping": {
+          "value": 1,
+          "index": 0,
+          "names": [
+            "Mixed",
+            "Baked",
+            "Realtime"
+          ]
+        },
+        "m_LightShadowCasterMode": 0,
+        "m_AreaSize": [
+          1.0,
+          1.0
+        ],
+        "m_AreaSize.x": 1.0,
+        "m_AreaSize.y": 1.0,
+        "m_BounceIntensity": 1.5,
+        "m_ColorTemperature": 6570.0,
+        "m_UseColorTemperature": false,
+        "m_BoundingSphereOverride": [
+          7.65109E-43,
+          9.3887E-44,
+          0.0,
+          4.74121666E+29
+        ],
+        "m_BoundingSphereOverride.x": 7.6510896152135012E-43,
+        "m_BoundingSphereOverride.y": 9.3886997109762744E-44,
+        "m_BoundingSphereOverride.z": 0.0,
+        "m_BoundingSphereOverride.w": 4.7412166587119863E+29,
+        "m_UseBoundingSphereOverride": false,
+        "m_UseViewFrustumForShadowCasterCull": true,
+        "m_ForceVisible": false,
+        "m_ShapeRadius": 0.0,
+        "m_ShadowAngle": 1.25,
+        "m_LightUnit": 1,
+        "m_LuxAtDistance": 1.0,
+        "m_EnableSpotReflector": true
+      },
+      "urp": {
+        "m_UsePipelineSettings": true,
+        "m_AdditionalLightsShadowResolutionTier": 2,
+        "m_CustomShadowLayers": false,
+        "m_LightCookieSize": [
+          1.0,
+          1.0
+        ],
+        "m_LightCookieSize.x": 1.0,
+        "m_LightCookieSize.y": 1.0,
+        "m_LightCookieOffset": [
+          0.0,
+          0.0
+        ],
+        "m_LightCookieOffset.x": 0.0,
+        "m_LightCookieOffset.y": 0.0,
+        "m_SoftShadowQuality": {
+          "value": 0,
+          "index": 0,
+          "names": [
+            "UsePipelineSettings",
+            "Low",
+            "Medium",
+            "High"
+          ]
+        },
+        "m_Version": {
+          "value": 4,
+          "index": 3,
+          "names": [
+            "Initial",
+            "RenderingLayers",
+            "SoftShadowQuality",
+            "RenderingLayersMask",
+            "Count"
+          ]
+        },
+        "m_LightLayerMask": {
+          "value": 1,
+          "index": 1,
+          "names": [
+            "Nothing",
+            "LightLayerDefault",
+            "LightLayer1",
+            "LightLayer2",
+            "LightLayer3",
+            "LightLayer4",
+            "LightLayer5",
+            "LightLayer6",
+            "LightLayer7",
+            "Everything"
+          ]
+        },
+        "m_ShadowLayerMask": {
+          "value": 1,
+          "index": 1,
+          "names": [
+            "Nothing",
+            "LightLayerDefault",
+            "LightLayer1",
+            "LightLayer2",
+            "LightLayer3",
+            "LightLayer4",
+            "LightLayer5",
+            "LightLayer6",
+            "LightLayer7",
+            "Everything"
+          ]
+        },
+        "m_RenderingLayers": 1,
+        "m_ShadowRenderingLayers": 4294967295
+      },
+      "controllers": [
+        {
+          "type": "UnityEngine.Rendering.Universal.UniversalAdditionalLightData",
+          "properties": {
+            "m_UsePipelineSettings": true,
+            "m_AdditionalLightsShadowResolutionTier": 2,
+            "m_CustomShadowLayers": false,
+            "m_LightCookieSize": [
+              1.0,
+              1.0
+            ],
+            "m_LightCookieSize.x": 1.0,
+            "m_LightCookieSize.y": 1.0,
+            "m_LightCookieOffset": [
+              0.0,
+              0.0
+            ],
+            "m_LightCookieOffset.x": 0.0,
+            "m_LightCookieOffset.y": 0.0,
+            "m_SoftShadowQuality": {
+              "value": 0,
+              "index": 0,
+              "names": [
+                "UsePipelineSettings",
+                "Low",
+                "Medium",
+                "High"
+              ]
+            },
+            "m_Version": {
+              "value": 4,
+              "index": 3,
+              "names": [
+                "Initial",
+                "RenderingLayers",
+                "SoftShadowQuality",
+                "RenderingLayersMask",
+                "Count"
+              ]
+            },
+            "m_LightLayerMask": {
+              "value": 1,
+              "index": 1,
+              "names": [
+                "Nothing",
+                "LightLayerDefault",
+                "LightLayer1",
+                "LightLayer2",
+                "LightLayer3",
+                "LightLayer4",
+                "LightLayer5",
+                "LightLayer6",
+                "LightLayer7",
+                "Everything"
+              ]
+            },
+            "m_ShadowLayerMask": {
+              "value": 1,
+              "index": 1,
+              "names": [
+                "Nothing",
+                "LightLayerDefault",
+                "LightLayer1",
+                "LightLayer2",
+                "LightLayer3",
+                "LightLayer4",
+                "LightLayer5",
+                "LightLayer6",
+                "LightLayer7",
+                "Everything"
+              ]
+            },
+            "m_RenderingLayers": 1,
+            "m_ShadowRenderingLayers": 4294967295
+          }
+        },
+        {
+          "type": "UnityEngine.Rendering.LensFlareComponentSRP",
+          "properties": {
+            "m_LensFlareData": {
+              "name": "OasisSun_Flare",
+              "type": "UnityEngine.Rendering.LensFlareDataSRP",
+              "path": "Assets/Scenes/Oasis/Art/Environment/LensFlares/OasisSun_Flare.asset",
+              "guid": "d0f179920b791ff479b5fed24e80b74b",
+              "fileId": 11400000
+            },
+            "version": {
+              "value": 0,
+              "index": 0,
+              "names": [
+                "Initial"
+              ]
+            },
+            "intensity": 1.0,
+            "maxAttenuationDistance": 100.0,
+            "maxAttenuationScale": 100.0,
+            "distanceAttenuationCurve": [
+              {
+                "time": 0.0,
+                "value": 1.0,
+                "inTangent": 0.0,
+                "outTangent": 0.0
+              },
+              {
+                "time": 1.0,
+                "value": 0.0,
+                "inTangent": 0.0,
+                "outTangent": 0.0
+              }
+            ],
+            "scaleByDistanceCurve": [
+              {
+                "time": 0.0,
+                "value": 1.0,
+                "inTangent": 0.0,
+                "outTangent": 0.0
+              },
+              {
+                "time": 1.0,
+                "value": 0.0,
+                "inTangent": 0.0,
+                "outTangent": 0.0
+              }
+            ],
+            "attenuationByLightShape": true,
+            "radialScreenAttenuationCurve": [
+              {
+                "time": 0.0,
+                "value": 1.0,
+                "inTangent": 0.0,
+                "outTangent": 0.0
+              },
+              {
+                "time": 1.0,
+                "value": 1.0,
+                "inTangent": 0.0,
+                "outTangent": 0.0
+              }
+            ],
+            "useOcclusion": true,
+            "useBackgroundCloudOcclusion": false,
+            "environmentOcclusion": false,
+            "useWaterOcclusion": false,
+            "occlusionRadius": 1.0,
+            "sampleCount": 16,
+            "occlusionOffset": 1.0,
+            "scale": 1.0,
+            "allowOffScreen": false,
+            "volumetricCloudOcclusion": false,
+            "occlusionRemapCurve.<length>k__BackingField": 2,
+            "occlusionRemapCurve.m_Loop": false,
+            "occlusionRemapCurve.m_ZeroValue": 1.0,
+            "occlusionRemapCurve.m_Range": 1.0,
+            "occlusionRemapCurve.m_Curve": [
+              {
+                "time": 0.0,
+                "value": 0.0,
+                "inTangent": 0.0,
+                "outTangent": 0.0
+              },
+              {
+                "time": 1.0,
+                "value": 1.0,
+                "inTangent": 2.0,
+                "outTangent": 2.0
+              }
+            ],
+            "lightOverride": null
+          }
+        }
+      ]
+    },
+    {
+      "hierarchy": "Root/Teleport/TerminalLoader_01_Prefab/ControlPanel2/HologramLight2",
+      "active": false,
+      "enabled": true,
+      "type": "Point",
+      "mode": "Realtime",
+      "intensity": 0.0,
+      "color": [
+        0.5896226,
+        0.8461126,
+        1.0,
+        1.0
+      ],
+      "useColorTemperature": false,
+      "colorTemperature": 5412.0,
+      "range": 10.0,
+      "spotAngle": 80.98867,
+      "innerSpotAngle": 72.79075,
+      "shadows": "None",
+      "shadowStrength": 1.0,
+      "shadowBias": 0.05,
+      "shadowNormalBias": 0.4,
+      "shadowNearPlane": 0.2,
+      "bounceIntensity": 1.0,
+      "cullingMask": -1,
+      "renderingLayerMask": 1,
+      "cookie": null,
+      "position": [
+        -3.132,
+        3.89900017,
+        -90.201004
+      ],
+      "rotation": [
+        0.0,
+        270.0,
+        0.0
+      ],
+      "serialized": {
+        "m_Type": {
+          "value": 2,
+          "index": 2,
+          "names": [
+            "Spot",
+            "Directional",
+            "Point",
+            "Rectangle",
+            "Disc",
+            "Pyramid",
+            "Box",
+            "Tube"
+          ]
+        },
+        "m_Color": [
+          0.5896226,
+          0.8461126,
+          1.0,
+          1.0
+        ],
+        "m_Intensity": 0.0,
+        "m_Range": 10.0,
+        "m_SpotAngle": 80.9886703491211,
+        "m_InnerSpotAngle": 72.7907485961914,
+        "m_CookieSize2D": [
+          10.0,
+          10.0
+        ],
+        "m_CookieSize2D.x": 10.0,
+        "m_CookieSize2D.y": 10.0,
+        "m_Shadows.m_Type": {
+          "value": 0,
+          "index": 0,
+          "names": [
+            "No Shadows",
+            "Hard Shadows",
+            "Soft Shadows"
+          ]
+        },
+        "m_Shadows.m_Resolution": {
+          "value": -1,
+          "index": 0,
+          "names": [
+            "Use Quality Settings",
+            "Low Resolution",
+            "Medium Resolution",
+            "High Resolution",
+            "Very High Resolution"
+          ]
+        },
+        "m_Shadows.m_CustomResolution": -1,
+        "m_Shadows.m_Strength": 1.0,
+        "m_Shadows.m_Bias": 0.05000000074505806,
+        "m_Shadows.m_NormalBias": 0.40000000596046448,
+        "m_Shadows.m_NearPlane": 0.20000000298023224,
+        "m_Shadows.m_CullingMatrixOverride.e00": 1.0,
+        "m_Shadows.m_CullingMatrixOverride.e01": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e02": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e03": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e10": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e11": 1.0,
+        "m_Shadows.m_CullingMatrixOverride.e12": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e13": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e20": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e21": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e22": 1.0,
+        "m_Shadows.m_CullingMatrixOverride.e23": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e30": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e31": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e32": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e33": 1.0,
+        "m_Shadows.m_UseCullingMatrixOverride": false,
+        "m_Cookie": null,
+        "m_DrawHalo": false,
+        "m_BakingOutput.probeOcclusionLightIndex": -1,
+        "m_BakingOutput.occlusionMaskChannel": -1,
+        "m_BakingOutput.lightmapBakeMode.lightmapBakeType": {
+          "value": 4,
+          "index": 2,
+          "names": [
+            "Mixed",
+            "Baked",
+            "Realtime"
+          ]
+        },
+        "m_BakingOutput.lightmapBakeMode.mixedLightingMode": {
+          "value": 2,
+          "index": 2,
+          "names": [
+            "IndirectOnly",
+            "Subtractive",
+            "Shadowmask"
+          ]
+        },
+        "m_BakingOutput.isBaked": false,
+        "m_Flare": null,
+        "m_RenderMode": {
+          "value": 0,
+          "index": 0,
+          "names": [
+            "Auto",
+            "Important",
+            "Not Important"
+          ]
+        },
+        "m_CullingMask": -1,
+        "m_RenderingLayerMask": 1,
+        "m_Lightmapping": {
+          "value": 4,
+          "index": 2,
+          "names": [
+            "Mixed",
+            "Baked",
+            "Realtime"
+          ]
+        },
+        "m_LightShadowCasterMode": 0,
+        "m_AreaSize": [
+          1.0,
+          1.0
+        ],
+        "m_AreaSize.x": 1.0,
+        "m_AreaSize.y": 1.0,
+        "m_BounceIntensity": 1.0,
+        "m_ColorTemperature": 5412.0,
+        "m_UseColorTemperature": false,
+        "m_BoundingSphereOverride": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "m_BoundingSphereOverride.x": 0.0,
+        "m_BoundingSphereOverride.y": 0.0,
+        "m_BoundingSphereOverride.z": 0.0,
+        "m_BoundingSphereOverride.w": 0.0,
+        "m_UseBoundingSphereOverride": false,
+        "m_UseViewFrustumForShadowCasterCull": true,
+        "m_ForceVisible": false,
+        "m_ShapeRadius": 0.0,
+        "m_ShadowAngle": 0.0,
+        "m_LightUnit": 1,
+        "m_LuxAtDistance": 1.0,
+        "m_EnableSpotReflector": true
+      },
+      "urp": {
+        "m_UsePipelineSettings": true,
+        "m_AdditionalLightsShadowResolutionTier": 0,
+        "m_CustomShadowLayers": false,
+        "m_LightCookieSize": [
+          1.0,
+          1.0
+        ],
+        "m_LightCookieSize.x": 1.0,
+        "m_LightCookieSize.y": 1.0,
+        "m_LightCookieOffset": [
+          0.0,
+          0.0
+        ],
+        "m_LightCookieOffset.x": 0.0,
+        "m_LightCookieOffset.y": 0.0,
+        "m_SoftShadowQuality": {
+          "value": 2,
+          "index": 2,
+          "names": [
+            "UsePipelineSettings",
+            "Low",
+            "Medium",
+            "High"
+          ]
+        },
+        "m_Version": {
+          "value": 4,
+          "index": 3,
+          "names": [
+            "Initial",
+            "RenderingLayers",
+            "SoftShadowQuality",
+            "RenderingLayersMask",
+            "Count"
+          ]
+        },
+        "m_LightLayerMask": {
+          "value": 1,
+          "index": 1,
+          "names": [
+            "Nothing",
+            "LightLayerDefault",
+            "LightLayer1",
+            "LightLayer2",
+            "LightLayer3",
+            "LightLayer4",
+            "LightLayer5",
+            "LightLayer6",
+            "LightLayer7",
+            "Everything"
+          ]
+        },
+        "m_ShadowLayerMask": {
+          "value": 1,
+          "index": 1,
+          "names": [
+            "Nothing",
+            "LightLayerDefault",
+            "LightLayer1",
+            "LightLayer2",
+            "LightLayer3",
+            "LightLayer4",
+            "LightLayer5",
+            "LightLayer6",
+            "LightLayer7",
+            "Everything"
+          ]
+        },
+        "m_RenderingLayers": 1,
+        "m_ShadowRenderingLayers": 1
+      },
+      "controllers": [
+        {
+          "type": "UnityEngine.Rendering.Universal.UniversalAdditionalLightData",
+          "properties": {
+            "m_UsePipelineSettings": true,
+            "m_AdditionalLightsShadowResolutionTier": 0,
+            "m_CustomShadowLayers": false,
+            "m_LightCookieSize": [
+              1.0,
+              1.0
+            ],
+            "m_LightCookieSize.x": 1.0,
+            "m_LightCookieSize.y": 1.0,
+            "m_LightCookieOffset": [
+              0.0,
+              0.0
+            ],
+            "m_LightCookieOffset.x": 0.0,
+            "m_LightCookieOffset.y": 0.0,
+            "m_SoftShadowQuality": {
+              "value": 2,
+              "index": 2,
+              "names": [
+                "UsePipelineSettings",
+                "Low",
+                "Medium",
+                "High"
+              ]
+            },
+            "m_Version": {
+              "value": 4,
+              "index": 3,
+              "names": [
+                "Initial",
+                "RenderingLayers",
+                "SoftShadowQuality",
+                "RenderingLayersMask",
+                "Count"
+              ]
+            },
+            "m_LightLayerMask": {
+              "value": 1,
+              "index": 1,
+              "names": [
+                "Nothing",
+                "LightLayerDefault",
+                "LightLayer1",
+                "LightLayer2",
+                "LightLayer3",
+                "LightLayer4",
+                "LightLayer5",
+                "LightLayer6",
+                "LightLayer7",
+                "Everything"
+              ]
+            },
+            "m_ShadowLayerMask": {
+              "value": 1,
+              "index": 1,
+              "names": [
+                "Nothing",
+                "LightLayerDefault",
+                "LightLayer1",
+                "LightLayer2",
+                "LightLayer3",
+                "LightLayer4",
+                "LightLayer5",
+                "LightLayer6",
+                "LightLayer7",
+                "Everything"
+              ]
+            },
+            "m_RenderingLayers": 1,
+            "m_ShadowRenderingLayers": 1
+          }
+        }
+      ]
+    },
+    {
+      "hierarchy": "Root/Teleport/TerminalLoader_01_Prefab/ControlPanel2/HologramLight1",
+      "active": false,
+      "enabled": true,
+      "type": "Point",
+      "mode": "Realtime",
+      "intensity": 0.0,
+      "color": [
+        0.5896226,
+        0.8461126,
+        1.0,
+        1.0
+      ],
+      "useColorTemperature": false,
+      "colorTemperature": 5412.0,
+      "range": 2.0,
+      "spotAngle": 80.98867,
+      "innerSpotAngle": 72.79075,
+      "shadows": "None",
+      "shadowStrength": 1.0,
+      "shadowBias": 0.05,
+      "shadowNormalBias": 0.4,
+      "shadowNearPlane": 0.2,
+      "bounceIntensity": 1.0,
+      "cullingMask": -1,
+      "renderingLayerMask": 1,
+      "cookie": {
+        "name": "PedestalCookie_T_Cookie",
+        "type": "UnityEngine.Cubemap",
+        "path": "Assets/Scenes/Terminal/Art/Props/Textures/PedestalCookie_T_Cookie.png",
+        "guid": "d6e8de67933b5434e9dd20e1c0d93c97",
+        "fileId": 8900000
+      },
+      "position": [
+        -3.132,
+        3.06400013,
+        -90.201004
+      ],
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "serialized": {
+        "m_Type": {
+          "value": 2,
+          "index": 2,
+          "names": [
+            "Spot",
+            "Directional",
+            "Point",
+            "Rectangle",
+            "Disc",
+            "Pyramid",
+            "Box",
+            "Tube"
+          ]
+        },
+        "m_Color": [
+          0.5896226,
+          0.8461126,
+          1.0,
+          1.0
+        ],
+        "m_Intensity": 0.0,
+        "m_Range": 2.0,
+        "m_SpotAngle": 80.9886703491211,
+        "m_InnerSpotAngle": 72.7907485961914,
+        "m_CookieSize2D": [
+          10.0,
+          10.0
+        ],
+        "m_CookieSize2D.x": 10.0,
+        "m_CookieSize2D.y": 10.0,
+        "m_Shadows.m_Type": {
+          "value": 0,
+          "index": 0,
+          "names": [
+            "No Shadows",
+            "Hard Shadows",
+            "Soft Shadows"
+          ]
+        },
+        "m_Shadows.m_Resolution": {
+          "value": -1,
+          "index": 0,
+          "names": [
+            "Use Quality Settings",
+            "Low Resolution",
+            "Medium Resolution",
+            "High Resolution",
+            "Very High Resolution"
+          ]
+        },
+        "m_Shadows.m_CustomResolution": -1,
+        "m_Shadows.m_Strength": 1.0,
+        "m_Shadows.m_Bias": 0.05000000074505806,
+        "m_Shadows.m_NormalBias": 0.40000000596046448,
+        "m_Shadows.m_NearPlane": 0.20000000298023224,
+        "m_Shadows.m_CullingMatrixOverride.e00": 1.0,
+        "m_Shadows.m_CullingMatrixOverride.e01": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e02": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e03": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e10": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e11": 1.0,
+        "m_Shadows.m_CullingMatrixOverride.e12": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e13": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e20": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e21": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e22": 1.0,
+        "m_Shadows.m_CullingMatrixOverride.e23": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e30": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e31": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e32": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e33": 1.0,
+        "m_Shadows.m_UseCullingMatrixOverride": false,
+        "m_Cookie": {
+          "name": "PedestalCookie_T_Cookie",
+          "type": "UnityEngine.Cubemap",
+          "path": "Assets/Scenes/Terminal/Art/Props/Textures/PedestalCookie_T_Cookie.png",
+          "guid": "d6e8de67933b5434e9dd20e1c0d93c97",
+          "fileId": 8900000
+        },
+        "m_DrawHalo": false,
+        "m_BakingOutput.probeOcclusionLightIndex": -1,
+        "m_BakingOutput.occlusionMaskChannel": -1,
+        "m_BakingOutput.lightmapBakeMode.lightmapBakeType": {
+          "value": 4,
+          "index": 2,
+          "names": [
+            "Mixed",
+            "Baked",
+            "Realtime"
+          ]
+        },
+        "m_BakingOutput.lightmapBakeMode.mixedLightingMode": {
+          "value": 2,
+          "index": 2,
+          "names": [
+            "IndirectOnly",
+            "Subtractive",
+            "Shadowmask"
+          ]
+        },
+        "m_BakingOutput.isBaked": false,
+        "m_Flare": null,
+        "m_RenderMode": {
+          "value": 0,
+          "index": 0,
+          "names": [
+            "Auto",
+            "Important",
+            "Not Important"
+          ]
+        },
+        "m_CullingMask": -1,
+        "m_RenderingLayerMask": 1,
+        "m_Lightmapping": {
+          "value": 4,
+          "index": 2,
+          "names": [
+            "Mixed",
+            "Baked",
+            "Realtime"
+          ]
+        },
+        "m_LightShadowCasterMode": 0,
+        "m_AreaSize": [
+          1.0,
+          1.0
+        ],
+        "m_AreaSize.x": 1.0,
+        "m_AreaSize.y": 1.0,
+        "m_BounceIntensity": 1.0,
+        "m_ColorTemperature": 5412.0,
+        "m_UseColorTemperature": false,
+        "m_BoundingSphereOverride": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "m_BoundingSphereOverride.x": 0.0,
+        "m_BoundingSphereOverride.y": 0.0,
+        "m_BoundingSphereOverride.z": 0.0,
+        "m_BoundingSphereOverride.w": 0.0,
+        "m_UseBoundingSphereOverride": false,
+        "m_UseViewFrustumForShadowCasterCull": true,
+        "m_ForceVisible": false,
+        "m_ShapeRadius": 0.0,
+        "m_ShadowAngle": 0.0,
+        "m_LightUnit": 1,
+        "m_LuxAtDistance": 1.0,
+        "m_EnableSpotReflector": true
+      },
+      "urp": {
+        "m_UsePipelineSettings": true,
+        "m_AdditionalLightsShadowResolutionTier": 2,
+        "m_CustomShadowLayers": false,
+        "m_LightCookieSize": [
+          1.0,
+          1.0
+        ],
+        "m_LightCookieSize.x": 1.0,
+        "m_LightCookieSize.y": 1.0,
+        "m_LightCookieOffset": [
+          0.0,
+          0.0
+        ],
+        "m_LightCookieOffset.x": 0.0,
+        "m_LightCookieOffset.y": 0.0,
+        "m_SoftShadowQuality": {
+          "value": 2,
+          "index": 2,
+          "names": [
+            "UsePipelineSettings",
+            "Low",
+            "Medium",
+            "High"
+          ]
+        },
+        "m_Version": {
+          "value": 4,
+          "index": 3,
+          "names": [
+            "Initial",
+            "RenderingLayers",
+            "SoftShadowQuality",
+            "RenderingLayersMask",
+            "Count"
+          ]
+        },
+        "m_LightLayerMask": {
+          "value": 1,
+          "index": 1,
+          "names": [
+            "Nothing",
+            "LightLayerDefault",
+            "LightLayer1",
+            "LightLayer2",
+            "LightLayer3",
+            "LightLayer4",
+            "LightLayer5",
+            "LightLayer6",
+            "LightLayer7",
+            "Everything"
+          ]
+        },
+        "m_ShadowLayerMask": {
+          "value": 1,
+          "index": 1,
+          "names": [
+            "Nothing",
+            "LightLayerDefault",
+            "LightLayer1",
+            "LightLayer2",
+            "LightLayer3",
+            "LightLayer4",
+            "LightLayer5",
+            "LightLayer6",
+            "LightLayer7",
+            "Everything"
+          ]
+        },
+        "m_RenderingLayers": 1,
+        "m_ShadowRenderingLayers": 1
+      },
+      "controllers": [
+        {
+          "type": "UnityEngine.Rendering.Universal.UniversalAdditionalLightData",
+          "properties": {
+            "m_UsePipelineSettings": true,
+            "m_AdditionalLightsShadowResolutionTier": 2,
+            "m_CustomShadowLayers": false,
+            "m_LightCookieSize": [
+              1.0,
+              1.0
+            ],
+            "m_LightCookieSize.x": 1.0,
+            "m_LightCookieSize.y": 1.0,
+            "m_LightCookieOffset": [
+              0.0,
+              0.0
+            ],
+            "m_LightCookieOffset.x": 0.0,
+            "m_LightCookieOffset.y": 0.0,
+            "m_SoftShadowQuality": {
+              "value": 2,
+              "index": 2,
+              "names": [
+                "UsePipelineSettings",
+                "Low",
+                "Medium",
+                "High"
+              ]
+            },
+            "m_Version": {
+              "value": 4,
+              "index": 3,
+              "names": [
+                "Initial",
+                "RenderingLayers",
+                "SoftShadowQuality",
+                "RenderingLayersMask",
+                "Count"
+              ]
+            },
+            "m_LightLayerMask": {
+              "value": 1,
+              "index": 1,
+              "names": [
+                "Nothing",
+                "LightLayerDefault",
+                "LightLayer1",
+                "LightLayer2",
+                "LightLayer3",
+                "LightLayer4",
+                "LightLayer5",
+                "LightLayer6",
+                "LightLayer7",
+                "Everything"
+              ]
+            },
+            "m_ShadowLayerMask": {
+              "value": 1,
+              "index": 1,
+              "names": [
+                "Nothing",
+                "LightLayerDefault",
+                "LightLayer1",
+                "LightLayer2",
+                "LightLayer3",
+                "LightLayer4",
+                "LightLayer5",
+                "LightLayer6",
+                "LightLayer7",
+                "Everything"
+              ]
+            },
+            "m_RenderingLayers": 1,
+            "m_ShadowRenderingLayers": 1
+          }
+        }
+      ]
+    }
+  ],
+  "volumes": [
+    {
+      "hierarchy": "Root/Lighting/Outdoor/Outdoor Volume",
+      "active": false,
+      "enabled": true,
+      "isGlobal": false,
+      "priority": 1.0,
+      "weight": 1.0,
+      "blendDistance": 4.0,
+      "profile": {
+        "name": "Oasis_Outdoor_Volume_Profile",
+        "type": "UnityEngine.Rendering.VolumeProfile",
+        "path": "Assets/Scenes/Oasis/Settings/Oasis_Outdoor_Volume_Profile.asset",
+        "guid": "d0ca6400681eee44fafc379de6c273b5",
+        "fileId": 11400000
+      },
+      "components": [
+        {
+          "type": "UnityEngine.Rendering.Universal.ColorAdjustments",
+          "active": true,
+          "properties": {
+            "active": true,
+            "postExposure.m_OverrideState": true,
+            "postExposure.m_Value": 0.25,
+            "contrast.m_OverrideState": false,
+            "contrast.m_Value": 15.0,
+            "colorFilter.m_OverrideState": false,
+            "colorFilter.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "hueShift.m_OverrideState": false,
+            "hueShift.m_Value": 0.0,
+            "saturation.m_OverrideState": false,
+            "saturation.m_Value": 0.0
+          }
+        },
+        {
+          "type": "UnityEngine.Rendering.Universal.Bloom",
+          "active": true,
+          "properties": {
+            "active": true,
+            "skipIterations.m_OverrideState": false,
+            "skipIterations.m_Value": 1,
+            "threshold.m_OverrideState": false,
+            "threshold.m_Value": 0.60000002384185791,
+            "intensity.m_OverrideState": true,
+            "intensity.m_Value": 0.5,
+            "scatter.m_OverrideState": false,
+            "scatter.m_Value": 0.699999988079071,
+            "clamp.m_OverrideState": false,
+            "clamp.m_Value": 65472.0,
+            "tint.m_OverrideState": false,
+            "tint.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "highQualityFiltering.m_OverrideState": false,
+            "highQualityFiltering.m_Value": false,
+            "filter.m_OverrideState": false,
+            "filter.m_Value": {
+              "value": 0,
+              "index": 0,
+              "names": [
+                "Gaussian",
+                "Dual",
+                "Kawase"
+              ]
+            },
+            "downscale.m_OverrideState": false,
+            "downscale.m_Value": {
+              "value": 0,
+              "index": 0,
+              "names": [
+                "Half",
+                "Quarter"
+              ]
+            },
+            "maxIterations.m_OverrideState": false,
+            "maxIterations.m_Value": 6,
+            "dirtTexture.m_OverrideState": false,
+            "dirtTexture.m_Value": null,
+            "dirtTexture.dimension": {
+              "value": 1,
+              "index": 2,
+              "names": [
+                "Unknown",
+                "None",
+                "Any",
+                "Tex2D",
+                "Tex3D",
+                "Cube",
+                "Tex2DArray",
+                "CubeArray"
+              ]
+            },
+            "dirtIntensity.m_OverrideState": false,
+            "dirtIntensity.m_Value": 0.0
+          }
+        },
+        {
+          "type": "OasisFogVolumeComponent",
+          "active": true,
+          "properties": {
+            "active": true,
+            "Density.m_OverrideState": true,
+            "Density.m_Value": 0.004999999888241291,
+            "StartDistance.m_OverrideState": true,
+            "StartDistance.m_Value": 20.0,
+            "HeightRange.m_OverrideState": true,
+            "HeightRange.m_Value": [
+              0.0,
+              20.0
+            ],
+            "HeightRange.m_Value.x": 0.0,
+            "HeightRange.m_Value.y": 20.0,
+            "Tint.m_OverrideState": true,
+            "Tint.m_Value": [
+              1.0,
+              0.5215277,
+              0.3254717,
+              1.0
+            ],
+            "SunScatteringIntensity.m_OverrideState": true,
+            "SunScatteringIntensity.m_Value": 2.0
+          }
+        }
+      ]
+    },
+    {
+      "hierarchy": "Root/Lighting/Tent/Tent Volume",
+      "active": false,
+      "enabled": true,
+      "isGlobal": false,
+      "priority": 2.0,
+      "weight": 1.0,
+      "blendDistance": 2.0,
+      "profile": {
+        "name": "Oasis_Tent_Volume_Profile",
+        "type": "UnityEngine.Rendering.VolumeProfile",
+        "path": "Assets/Scenes/Oasis/Settings/Oasis_Tent_Volume_Profile.asset",
+        "guid": "1bc808edfddf4cc42a0679aab9c67554",
+        "fileId": 11400000
+      },
+      "components": [
+        {
+          "type": "UnityEngine.Rendering.Universal.ColorAdjustments",
+          "active": true,
+          "properties": {
+            "active": true,
+            "postExposure.m_OverrideState": true,
+            "postExposure.m_Value": 3.0,
+            "contrast.m_OverrideState": false,
+            "contrast.m_Value": 0.0,
+            "colorFilter.m_OverrideState": false,
+            "colorFilter.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "hueShift.m_OverrideState": false,
+            "hueShift.m_Value": 0.0,
+            "saturation.m_OverrideState": false,
+            "saturation.m_Value": 0.0
+          }
+        },
+        {
+          "type": "UnityEngine.Rendering.Universal.Bloom",
+          "active": true,
+          "properties": {
+            "active": true,
+            "skipIterations.m_OverrideState": false,
+            "skipIterations.m_Value": 1,
+            "threshold.m_OverrideState": true,
+            "threshold.m_Value": 0.800000011920929,
+            "intensity.m_OverrideState": false,
+            "intensity.m_Value": 0.0,
+            "scatter.m_OverrideState": true,
+            "scatter.m_Value": 0.800000011920929,
+            "clamp.m_OverrideState": false,
+            "clamp.m_Value": 65472.0,
+            "tint.m_OverrideState": false,
+            "tint.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "highQualityFiltering.m_OverrideState": false,
+            "highQualityFiltering.m_Value": false,
+            "filter.m_OverrideState": false,
+            "filter.m_Value": {
+              "value": 0,
+              "index": 0,
+              "names": [
+                "Gaussian",
+                "Dual",
+                "Kawase"
+              ]
+            },
+            "downscale.m_OverrideState": false,
+            "downscale.m_Value": {
+              "value": 0,
+              "index": 0,
+              "names": [
+                "Half",
+                "Quarter"
+              ]
+            },
+            "maxIterations.m_OverrideState": false,
+            "maxIterations.m_Value": 6,
+            "dirtTexture.m_OverrideState": false,
+            "dirtTexture.m_Value": null,
+            "dirtTexture.dimension": {
+              "value": 1,
+              "index": 2,
+              "names": [
+                "Unknown",
+                "None",
+                "Any",
+                "Tex2D",
+                "Tex3D",
+                "Cube",
+                "Tex2DArray",
+                "CubeArray"
+              ]
+            },
+            "dirtIntensity.m_OverrideState": false,
+            "dirtIntensity.m_Value": 0.0
+          }
+        },
+        {
+          "type": "OasisFogVolumeComponent",
+          "active": true,
+          "properties": {
+            "active": true,
+            "Density.m_OverrideState": true,
+            "Density.m_Value": 0.0020000000949949026,
+            "StartDistance.m_OverrideState": false,
+            "StartDistance.m_Value": 0.0,
+            "HeightRange.m_OverrideState": true,
+            "HeightRange.m_Value": [
+              0.0,
+              35.0
+            ],
+            "HeightRange.m_Value.x": 0.0,
+            "HeightRange.m_Value.y": 35.0,
+            "Tint.m_OverrideState": true,
+            "Tint.m_Value": [
+              1.0,
+              0.357080638,
+              0.230188668,
+              1.0
+            ],
+            "SunScatteringIntensity.m_OverrideState": true,
+            "SunScatteringIntensity.m_Value": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "hierarchy": "Root/Teleport/TerminalLoader_01_Prefab/SceneLoader",
+      "active": false,
+      "enabled": true,
+      "isGlobal": false,
+      "priority": 3.0,
+      "weight": 0.0,
+      "blendDistance": 0.0,
+      "profile": {
+        "name": "TerminalRoom_Profile",
+        "type": "UnityEngine.Rendering.VolumeProfile",
+        "path": "Assets/Scenes/Terminal/Settings/TerminalRoom_Profile.asset",
+        "guid": "21c5b28a3f80a1c438ff81a35ecf6ee7",
+        "fileId": 11400000
+      },
+      "components": [
+        {
+          "type": "UnityEngine.Rendering.Universal.ColorAdjustments",
+          "active": true,
+          "properties": {
+            "active": true,
+            "postExposure.m_OverrideState": true,
+            "postExposure.m_Value": 2.0,
+            "contrast.m_OverrideState": false,
+            "contrast.m_Value": 0.0,
+            "colorFilter.m_OverrideState": false,
+            "colorFilter.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "hueShift.m_OverrideState": false,
+            "hueShift.m_Value": 0.0,
+            "saturation.m_OverrideState": true,
+            "saturation.m_Value": 13.699999809265137
+          }
+        },
+        {
+          "type": "UnityEngine.Rendering.Universal.WhiteBalance",
+          "active": true,
+          "properties": {
+            "active": true,
+            "temperature.m_OverrideState": true,
+            "temperature.m_Value": 0.0,
+            "tint.m_OverrideState": false,
+            "tint.m_Value": 0.0
+          }
+        },
+        {
+          "type": "UnityEngine.Rendering.Universal.LiftGammaGain",
+          "active": true,
+          "properties": {
+            "active": true,
+            "lift.m_OverrideState": true,
+            "lift.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              0.0
+            ],
+            "lift.m_Value.x": 1.0,
+            "lift.m_Value.y": 1.0,
+            "lift.m_Value.z": 1.0,
+            "lift.m_Value.w": 0.0,
+            "gamma.m_OverrideState": true,
+            "gamma.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              0.0
+            ],
+            "gamma.m_Value.x": 1.0,
+            "gamma.m_Value.y": 1.0,
+            "gamma.m_Value.z": 1.0,
+            "gamma.m_Value.w": 0.0,
+            "gain.m_OverrideState": true,
+            "gain.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              0.0
+            ],
+            "gain.m_Value.x": 1.0,
+            "gain.m_Value.y": 1.0,
+            "gain.m_Value.z": 1.0,
+            "gain.m_Value.w": 0.0
+          }
+        },
+        {
+          "type": "UnityEngine.Rendering.Universal.Bloom",
+          "active": true,
+          "properties": {
+            "active": true,
+            "skipIterations.m_OverrideState": false,
+            "skipIterations.m_Value": 1,
+            "threshold.m_OverrideState": true,
+            "threshold.m_Value": 1.0,
+            "intensity.m_OverrideState": true,
+            "intensity.m_Value": 0.25,
+            "scatter.m_OverrideState": false,
+            "scatter.m_Value": 0.699999988079071,
+            "clamp.m_OverrideState": false,
+            "clamp.m_Value": 65472.0,
+            "tint.m_OverrideState": false,
+            "tint.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "highQualityFiltering.m_OverrideState": false,
+            "highQualityFiltering.m_Value": false,
+            "filter.m_OverrideState": false,
+            "filter.m_Value": {
+              "value": 0,
+              "index": 0,
+              "names": [
+                "Gaussian",
+                "Dual",
+                "Kawase"
+              ]
+            },
+            "downscale.m_OverrideState": false,
+            "downscale.m_Value": {
+              "value": 0,
+              "index": 0,
+              "names": [
+                "Half",
+                "Quarter"
+              ]
+            },
+            "maxIterations.m_OverrideState": false,
+            "maxIterations.m_Value": 6,
+            "dirtTexture.m_OverrideState": false,
+            "dirtTexture.m_Value": null,
+            "dirtTexture.dimension": {
+              "value": 1,
+              "index": 2,
+              "names": [
+                "Unknown",
+                "None",
+                "Any",
+                "Tex2D",
+                "Tex3D",
+                "Cube",
+                "Tex2DArray",
+                "CubeArray"
+              ]
+            },
+            "dirtIntensity.m_OverrideState": false,
+            "dirtIntensity.m_Value": 0.0
+          }
+        },
+        {
+          "type": "UnityEngine.Rendering.Universal.ShadowsMidtonesHighlights",
+          "active": true,
+          "properties": {
+            "active": true,
+            "shadows.m_OverrideState": true,
+            "shadows.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              0.0
+            ],
+            "shadows.m_Value.x": 1.0,
+            "shadows.m_Value.y": 1.0,
+            "shadows.m_Value.z": 1.0,
+            "shadows.m_Value.w": 0.0,
+            "midtones.m_OverrideState": true,
+            "midtones.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              0.0
+            ],
+            "midtones.m_Value.x": 1.0,
+            "midtones.m_Value.y": 1.0,
+            "midtones.m_Value.z": 1.0,
+            "midtones.m_Value.w": 0.0,
+            "highlights.m_OverrideState": true,
+            "highlights.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              0.0
+            ],
+            "highlights.m_Value.x": 1.0,
+            "highlights.m_Value.y": 1.0,
+            "highlights.m_Value.z": 1.0,
+            "highlights.m_Value.w": 0.0,
+            "shadowsStart.m_OverrideState": false,
+            "shadowsStart.m_Value": 0.0,
+            "shadowsEnd.m_OverrideState": false,
+            "shadowsEnd.m_Value": 0.30000001192092896,
+            "highlightsStart.m_OverrideState": false,
+            "highlightsStart.m_Value": 0.550000011920929,
+            "highlightsEnd.m_OverrideState": false,
+            "highlightsEnd.m_Value": 1.0
+          }
+        }
+      ]
+    }
+  ],
+  "reflectionProbes": [
+    {
+      "hierarchy": "Root/Lighting/Outdoor/Reflection Probe Lower",
+      "active": false,
+      "enabled": true,
+      "mode": "Baked",
+      "resolution": 128,
+      "intensity": 1.0,
+      "boxProjection": true,
+      "blendDistance": 2.0,
+      "importance": 1,
+      "size": [
+        80.0,
+        25.0,
+        90.0
+      ],
+      "center": [
+        -2.38220167,
+        7.145302,
+        3.87521362
+      ],
+      "texture": {
+        "name": "ReflectionProbe-0",
+        "type": "UnityEngine.Cubemap",
+        "path": "Assets/Scenes/Oasis/OasisScene/ReflectionProbe-0.exr",
+        "guid": "2b04be30cca22d044acf333d183b8899",
+        "fileId": 8900000
+      }
+    },
+    {
+      "hierarchy": "Root/Lighting/Outdoor/Reflection Probe Upper",
+      "active": false,
+      "enabled": true,
+      "mode": "Baked",
+      "resolution": 128,
+      "intensity": 1.0,
+      "boxProjection": true,
+      "blendDistance": 3.0,
+      "importance": 1,
+      "size": [
+        32.4,
+        18.5,
+        46.7
+      ],
+      "center": [
+        0.0,
+        1.96074224,
+        0.0
+      ],
+      "texture": {
+        "name": "ReflectionProbe-2",
+        "type": "UnityEngine.Cubemap",
+        "path": "Assets/Scenes/Oasis/OasisScene/ReflectionProbe-2.exr",
+        "guid": "2ccb4b96e5ce4e34b9a9b146c1617a5a",
+        "fileId": 8900000
+      }
+    },
+    {
+      "hierarchy": "Root/Lighting/Tent/Reflection Probe Tent",
+      "active": false,
+      "enabled": true,
+      "mode": "Baked",
+      "resolution": 128,
+      "intensity": 1.0,
+      "boxProjection": true,
+      "blendDistance": 1.0,
+      "importance": 1,
+      "size": [
+        10.11,
+        6.426076,
+        14.6399994
+      ],
+      "center": [
+        0.5297985,
+        0.713037968,
+        -1.035492
+      ],
+      "texture": {
+        "name": "ReflectionProbe-1",
+        "type": "UnityEngine.Cubemap",
+        "path": "Assets/Scenes/Oasis/OasisScene/ReflectionProbe-1.exr",
+        "guid": "1c51d2e89b9cab14b9bdba932f49c3f9",
+        "fileId": 8900000
+      }
+    }
+  ],
+  "cameras": [
+    {
+      "hierarchy": "Cameras/FPS_Controller/MainCamera",
+      "active": false,
+      "enabled": true,
+      "fieldOfView": 40.0,
+      "nearClipPlane": 0.2,
+      "farClipPlane": 500.0,
+      "allowHDR": true,
+      "allowMSAA": true,
+      "clearFlags": "Skybox",
+      "position": [
+        -2.636,
+        3.242,
+        -94.15
+      ],
+      "rotation": [
+        0.0,
+        170.788818,
+        0.0
+      ],
+      "urp": {
+        "m_RenderShadows": true,
+        "m_RequiresDepthTextureOption": {
+          "value": 2,
+          "index": 2,
+          "names": [
+            "Off",
+            "On",
+            "UsePipelineSettings"
+          ]
+        },
+        "m_RequiresOpaqueTextureOption": {
+          "value": 2,
+          "index": 2,
+          "names": [
+            "Off",
+            "On",
+            "UsePipelineSettings"
+          ]
+        },
+        "m_CameraType": {
+          "value": 0,
+          "index": 0,
+          "names": [
+            "Base",
+            "Overlay"
+          ]
+        },
+        "m_RendererIndex": -1,
+        "m_VolumeLayerMask": 1,
+        "m_VolumeTrigger": null,
+        "m_VolumeFrameworkUpdateModeOption": {
+          "value": 2,
+          "index": 2,
+          "names": [
+            "EveryFrame",
+            "ViaScripting",
+            "UsePipelineSettings"
+          ]
+        },
+        "m_RenderPostProcessing": true,
+        "m_Antialiasing": {
+          "value": 3,
+          "index": 3,
+          "names": [
+            "None",
+            "FastApproximateAntialiasing",
+            "SubpixelMorphologicalAntiAliasing",
+            "TemporalAntiAliasing"
+          ]
+        },
+        "m_AntialiasingQuality": {
+          "value": 2,
+          "index": 2,
+          "names": [
+            "Low",
+            "Medium",
+            "High"
+          ]
+        },
+        "m_StopNaN": false,
+        "m_Dithering": true,
+        "m_ClearDepth": true,
+        "m_AllowXRRendering": true,
+        "m_AllowHDROutput": true,
+        "m_UseScreenCoordOverride": false,
+        "m_ScreenSizeOverride": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "m_ScreenSizeOverride.x": 0.0,
+        "m_ScreenSizeOverride.y": 0.0,
+        "m_ScreenSizeOverride.z": 0.0,
+        "m_ScreenSizeOverride.w": 0.0,
+        "m_ScreenCoordScaleBias": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "m_ScreenCoordScaleBias.x": 0.0,
+        "m_ScreenCoordScaleBias.y": 0.0,
+        "m_ScreenCoordScaleBias.z": 0.0,
+        "m_ScreenCoordScaleBias.w": 0.0,
+        "m_RequiresDepthTexture": false,
+        "m_RequiresColorTexture": false,
+        "m_TaaSettings.m_Quality": {
+          "value": 2,
+          "index": 2,
+          "names": [
+            "VeryLow",
+            "Low",
+            "Medium",
+            "High",
+            "VeryHigh"
+          ]
+        },
+        "m_TaaSettings.m_FrameInfluence": 0.10000000149011612,
+        "m_TaaSettings.m_JitterScale": 1.0,
+        "m_TaaSettings.m_MipBias": 0.0,
+        "m_TaaSettings.m_VarianceClampScale": 0.89999997615814209,
+        "m_TaaSettings.m_ContrastAdaptiveSharpening": 0.20000000298023224,
+        "m_Version": {
+          "value": 2,
+          "index": 1,
+          "names": [
+            "Initial",
+            "DepthAndOpaqueTextureOptions",
+            "Count"
+          ]
+        }
+      }
+    },
+    {
+      "hierarchy": "Root/OasisMedia/Cinematic Timeline/Cinematic Physical Camera A",
+      "active": false,
+      "enabled": true,
+      "fieldOfView": 8.5,
+      "nearClipPlane": 0.3,
+      "farClipPlane": 1000.0,
+      "allowHDR": true,
+      "allowMSAA": true,
+      "clearFlags": "Skybox",
+      "position": [
+        -14.296,
+        -3.192,
+        -146.151
+      ],
+      "rotation": [
+        0.801985741,
+        350.473145,
+        0.5162431
+      ],
+      "urp": {
+        "m_RenderShadows": true,
+        "m_RequiresDepthTextureOption": {
+          "value": 2,
+          "index": 2,
+          "names": [
+            "Off",
+            "On",
+            "UsePipelineSettings"
+          ]
+        },
+        "m_RequiresOpaqueTextureOption": {
+          "value": 2,
+          "index": 2,
+          "names": [
+            "Off",
+            "On",
+            "UsePipelineSettings"
+          ]
+        },
+        "m_CameraType": {
+          "value": 0,
+          "index": 0,
+          "names": [
+            "Base",
+            "Overlay"
+          ]
+        },
+        "m_RendererIndex": -1,
+        "m_VolumeLayerMask": 2049,
+        "m_VolumeTrigger": null,
+        "m_VolumeFrameworkUpdateModeOption": {
+          "value": 2,
+          "index": 2,
+          "names": [
+            "EveryFrame",
+            "ViaScripting",
+            "UsePipelineSettings"
+          ]
+        },
+        "m_RenderPostProcessing": true,
+        "m_Antialiasing": {
+          "value": 3,
+          "index": 3,
+          "names": [
+            "None",
+            "FastApproximateAntialiasing",
+            "SubpixelMorphologicalAntiAliasing",
+            "TemporalAntiAliasing"
+          ]
+        },
+        "m_AntialiasingQuality": {
+          "value": 2,
+          "index": 2,
+          "names": [
+            "Low",
+            "Medium",
+            "High"
+          ]
+        },
+        "m_StopNaN": false,
+        "m_Dithering": false,
+        "m_ClearDepth": true,
+        "m_AllowXRRendering": true,
+        "m_AllowHDROutput": true,
+        "m_UseScreenCoordOverride": false,
+        "m_ScreenSizeOverride": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "m_ScreenSizeOverride.x": 0.0,
+        "m_ScreenSizeOverride.y": 0.0,
+        "m_ScreenSizeOverride.z": 0.0,
+        "m_ScreenSizeOverride.w": 0.0,
+        "m_ScreenCoordScaleBias": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "m_ScreenCoordScaleBias.x": 0.0,
+        "m_ScreenCoordScaleBias.y": 0.0,
+        "m_ScreenCoordScaleBias.z": 0.0,
+        "m_ScreenCoordScaleBias.w": 0.0,
+        "m_RequiresDepthTexture": false,
+        "m_RequiresColorTexture": false,
+        "m_TaaSettings.m_Quality": {
+          "value": 3,
+          "index": 3,
+          "names": [
+            "VeryLow",
+            "Low",
+            "Medium",
+            "High",
+            "VeryHigh"
+          ]
+        },
+        "m_TaaSettings.m_FrameInfluence": 0.10000000149011612,
+        "m_TaaSettings.m_JitterScale": 1.0,
+        "m_TaaSettings.m_MipBias": 0.0,
+        "m_TaaSettings.m_VarianceClampScale": 0.89999997615814209,
+        "m_TaaSettings.m_ContrastAdaptiveSharpening": 0.0,
+        "m_Version": {
+          "value": 2,
+          "index": 1,
+          "names": [
+            "Initial",
+            "DepthAndOpaqueTextureOptions",
+            "Count"
+          ]
+        }
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "StencilOnly_Mat",
+      "path": "Assets/Scenes/Terminal/Art/Props/Materials/StencilOnly_Mat.mat",
+      "shader": "Custom/StencilOnly",
+      "shaderPath": "Assets/SharedAssets/Shaders/HLSL/StencilOnly.shader"
+    },
+    {
+      "name": "Hidden/VFX/VFXG_Dune_Sand/Sand Tongue /Out Sand Tongue",
+      "path": "",
+      "shader": "Hidden/VFX/VFXG_Dune_Sand/Sand Tongue /Out Sand Tongue",
+      "shaderPath": "Assets/Scenes/Oasis/VFX/VFXGraph/VFXG_Dune_Sand.vfx"
+    },
+    {
+      "name": "Hidden/VFX/VFXG_Falling_Sand_Rocks/Dust Fall/Sand",
+      "path": "",
+      "shader": "Hidden/VFX/VFXG_Falling_Sand_Rocks/Dust Fall/Sand",
+      "shaderPath": "Assets/Scenes/Oasis/VFX/VFXGraph/VFXG_Falling_Sand_Rocks.vfx"
+    },
+    {
+      "name": "Hidden/VFX/VFXG_Falling_Sand_Rocks/Small_Rocks/Rocks",
+      "path": "",
+      "shader": "Hidden/VFX/VFXG_Falling_Sand_Rocks/Small_Rocks/Rocks",
+      "shaderPath": "Assets/Scenes/Oasis/VFX/VFXGraph/VFXG_Falling_Sand_Rocks.vfx"
+    },
+    {
+      "name": "Hidden/VFX/VFXG_Insects/System/Output Particle Unlit Quad",
+      "path": "",
+      "shader": "Hidden/VFX/VFXG_Insects/System/Output Particle Unlit Quad",
+      "shaderPath": "Assets/Scenes/Oasis/VFX/VFXGraph/VFXG_Insects.vfx"
+    },
+    {
+      "name": "Hidden/VFX/VFXG_Insects/Trail Bodies/Output ParticleStrip Unlit Quad",
+      "path": "",
+      "shader": "Hidden/VFX/VFXG_Insects/Trail Bodies/Output ParticleStrip Unlit Quad",
+      "shaderPath": "Assets/Scenes/Oasis/VFX/VFXGraph/VFXG_Insects.vfx"
+    },
+    {
+      "name": "Hidden/VFX/VFXG_LocalizedSand/Fog/Output Particle Shader Graph Quad - Unlit",
+      "path": "",
+      "shader": "Hidden/VFX/VFXG_LocalizedSand/Fog/Output Particle Shader Graph Quad - Unlit",
+      "shaderPath": "Assets/Scenes/Oasis/VFX/VFXGraph/VFXG_LocalizedSand.vfx"
+    },
+    {
+      "name": "Hidden/VFX/VFXG_LocalizedSand/Sand/Output Particle URP Lit Quad",
+      "path": "",
+      "shader": "Hidden/VFX/VFXG_LocalizedSand/Sand/Output Particle URP Lit Quad",
+      "shaderPath": "Assets/Scenes/Oasis/VFX/VFXGraph/VFXG_LocalizedSand.vfx"
+    },
+    {
+      "name": "Hidden/VFX/VFXG_TerrainSand/GroupedSpawn/Output Particle Shader Graph Quad - Unlit",
+      "path": "",
+      "shader": "Hidden/VFX/VFXG_TerrainSand/GroupedSpawn/Output Particle Shader Graph Quad - Unlit",
+      "shaderPath": "Assets/Scenes/Oasis/VFX/VFXGraph/VFXG_TerrainSand.vfx"
+    },
+    {
+      "name": "Hidden/VFX/VFXG_TerrainSand/SparseSpawn/Output Particle Shader Graph Quad - Unlit",
+      "path": "",
+      "shader": "Hidden/VFX/VFXG_TerrainSand/SparseSpawn/Output Particle Shader Graph Quad - Unlit",
+      "shaderPath": "Assets/Scenes/Oasis/VFX/VFXGraph/VFXG_TerrainSand.vfx"
+    },
+    {
+      "name": "Hidden/VFX/VFXG_TerrainSand/SPAWN_DEBUG/Output Particle Unlit Quad",
+      "path": "",
+      "shader": "Hidden/VFX/VFXG_TerrainSand/SPAWN_DEBUG/Output Particle Unlit Quad",
+      "shaderPath": "Assets/Scenes/Oasis/VFX/VFXGraph/VFXG_TerrainSand.vfx"
+    },
+    {
+      "name": "HexagonHologram_Mat",
+      "path": "Assets/Scenes/Terminal/Art/VFX/Materials/HexagonHologram_Mat.mat",
+      "shader": "Shader Graphs/HexagonHologram_Graph",
+      "shaderPath": "Assets/Scenes/Terminal/Shaders/HexagonHologram_Graph.shadergraph"
+    },
+    {
+      "name": "ProjectionCone_Mat",
+      "path": "Assets/Scenes/Terminal/Art/VFX/Materials/ProjectionCone_Mat.mat",
+      "shader": "Shader Graphs/HolgramCone_Graph",
+      "shaderPath": "Assets/Scenes/Terminal/Shaders/HolgramCone_Graph.shadergraph"
+    },
+    {
+      "name": "HoloLoading_01_Mat",
+      "path": "Assets/Scenes/Terminal/Art/VFX/Materials/HoloLoading_01_Mat.mat",
+      "shader": "Shader Graphs/HoloRing_Graph",
+      "shaderPath": "Assets/Scenes/Terminal/Art/VFX/Shaders/HoloRing_Graph.shadergraph"
+    },
+    {
+      "name": "HoloLoading_02_Mat",
+      "path": "Assets/Scenes/Terminal/Art/VFX/Materials/HoloLoading_02_Mat.mat",
+      "shader": "Shader Graphs/HoloRing_Graph",
+      "shaderPath": "Assets/Scenes/Terminal/Art/VFX/Shaders/HoloRing_Graph.shadergraph"
+    },
+    {
+      "name": "OasisTerrain_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Environment/Materials/OasisTerrain_Mat.mat",
+      "shader": "Shader Graphs/OasisTerrain_Graph",
+      "shaderPath": "Assets/Scenes/Oasis/Shaders/OasisTerrain_Graph.shadergraph"
+    },
+    {
+      "name": "GrassAtlas_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Vegetation/Materials/GrassAtlas_Mat.mat",
+      "shader": "Shader Graphs/OasisVegetationGraph",
+      "shaderPath": "Assets/Scenes/Oasis/Shaders/OasisVegetationGraph.shadergraph"
+    },
+    {
+      "name": "PalmBark_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Vegetation/Materials/PalmBark_Mat.mat",
+      "shader": "Shader Graphs/OasisVegetationGraph",
+      "shaderPath": "Assets/Scenes/Oasis/Shaders/OasisVegetationGraph.shadergraph"
+    },
+    {
+      "name": "PalmAtlas_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Vegetation/Materials/PalmAtlas_Mat.mat",
+      "shader": "Shader Graphs/OasisVegetationGraph",
+      "shaderPath": "Assets/Scenes/Oasis/Shaders/OasisVegetationGraph.shadergraph"
+    },
+    {
+      "name": "FountainStem_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Vegetation/Materials/FountainStem_Mat.mat",
+      "shader": "Shader Graphs/OasisVegetationGraph",
+      "shaderPath": "Assets/Scenes/Oasis/Shaders/OasisVegetationGraph.shadergraph"
+    },
+    {
+      "name": "FountainAtlas_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Vegetation/Materials/FountainAtlas_Mat.mat",
+      "shader": "Shader Graphs/OasisVegetationGraph",
+      "shaderPath": "Assets/Scenes/Oasis/Shaders/OasisVegetationGraph.shadergraph"
+    },
+    {
+      "name": "Grassl_LongAtlas_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Vegetation/Materials/Grassl_LongAtlas_Mat.mat",
+      "shader": "Shader Graphs/OasisVegetationGraph",
+      "shaderPath": "Assets/Scenes/Oasis/Shaders/OasisVegetationGraph.shadergraph"
+    },
+    {
+      "name": "LongGrassAtlas_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Environment/Materials/Vegetation/LongGrassAtlas_Mat.mat",
+      "shader": "Shader Graphs/OasisVegetationGraph",
+      "shaderPath": "Assets/Scenes/Oasis/Shaders/OasisVegetationGraph.shadergraph"
+    },
+    {
+      "name": "BackToTerminalScreen_Mat",
+      "path": "Assets/Scenes/Terminal/Art/Props/Materials/BackToTerminalScreen_Mat.mat",
+      "shader": "Shader Graphs/Screen_Graph",
+      "shaderPath": "Assets/Scenes/Terminal/Shaders/Screen_Graph.shadergraph"
+    },
+    {
+      "name": "ControlPanel_Mat",
+      "path": "Assets/Scenes/Terminal/Art/Props/Materials/ControlPanel_Mat.mat",
+      "shader": "Shader Graphs/ScreenBlockerDissolve_Graph",
+      "shaderPath": "Assets/Scenes/Terminal/Shaders/ScreenBlockerDissolve_Graph.shadergraph"
+    },
+    {
+      "name": "ScreenBorder_Mat",
+      "path": "Assets/Scenes/Terminal/Art/Props/Materials/ScreenBorder_Mat.mat",
+      "shader": "Shader Graphs/ScreenBlockerDissolve_Graph",
+      "shaderPath": "Assets/Scenes/Terminal/Shaders/ScreenBlockerDissolve_Graph.shadergraph"
+    },
+    {
+      "name": "SpeckHologram_Mat",
+      "path": "Assets/Scenes/Terminal/Art/VFX/Materials/SpeckHologram_Mat.mat",
+      "shader": "Shader Graphs/ScrollingHologram_Graph",
+      "shaderPath": "Assets/Scenes/Terminal/Shaders/ScrollingHologram_Graph.shadergraph"
+    },
+    {
+      "name": "LogoHologram_Mat",
+      "path": "Assets/Scenes/Terminal/Art/VFX/Materials/LogoHologram_Mat.mat",
+      "shader": "Shader Graphs/SpriteSheetHologram_Graph",
+      "shaderPath": "Assets/Scenes/Terminal/Shaders/SpriteSheetHologram_Graph.shadergraph"
+    },
+    {
+      "name": "Tent_Tiling_01_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Architecture/Materials/Tent_Tiling_01_Mat.mat",
+      "shader": "Shader Graphs/Tent_Graph",
+      "shaderPath": "Assets/Scenes/Oasis/Shaders/Tent_Graph.shadergraph"
+    },
+    {
+      "name": "Tent_01_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Architecture/Materials/Tent_01_Mat.mat",
+      "shader": "Shader Graphs/Tent_Graph",
+      "shaderPath": "Assets/Scenes/Oasis/Shaders/Tent_Graph.shadergraph"
+    },
+    {
+      "name": "Tent_Strings_01_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Architecture/Materials/Tent_Strings_01_Mat.mat",
+      "shader": "Shader Graphs/Tent_Graph",
+      "shaderPath": "Assets/Scenes/Oasis/Shaders/Tent_Graph.shadergraph"
+    },
+    {
+      "name": "Triangle_Graph",
+      "path": "Assets/Scenes/Terminal/Art/VFX/Shaders/Triangle_Graph.shadergraph",
+      "shader": "Shader Graphs/Triangle_Graph",
+      "shaderPath": "Assets/Scenes/Terminal/Art/VFX/Shaders/Triangle_Graph.shadergraph"
+    },
+    {
+      "name": "OasisWater_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Environment/Materials/OasisWater_Mat.mat",
+      "shader": "Shader Graphs/Water",
+      "shaderPath": "Assets/SharedAssets/Shaders/Water.shadergraph"
+    },
+    {
+      "name": "LiberationSans SDF Material",
+      "path": "Assets/SharedAssets/TextMeshPro/Resources/FontsAndMaterials/LiberationSansSDF.asset",
+      "shader": "TextMeshPro/Mobile/Distance Field",
+      "shaderPath": "Assets/SharedAssets/TextMeshPro/Shaders/TMP_SDF-Mobile.shader"
+    },
+    {
+      "name": "Rock_01_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Environment/Materials/Rock_01_Mat.mat",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "Cushions_02_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Props/Materials/Cushions_02_Mat.mat",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "Cushions_03_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Props/Materials/Cushions_03_Mat.mat",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "Cushions_01_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Props/Materials/Cushions_01_Mat.mat",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "Teaset_01_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Props/Materials/Teaset_01_Mat.mat",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "Shisha_01_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Props/Materials/Shisha_01_Mat.mat",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "Firepit_01_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Props/Materials/Firepit_01_Mat.mat",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "Carpets_Big_02_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Props/Materials/Carpets_Big_02_Mat.mat",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "Carpets_02_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Props/Materials/Carpets_02_Mat.mat",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "Carpets_01_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Props/Materials/Carpets_01_Mat.mat",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "Carpets_Big_01_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Props/Materials/Carpets_Big_01_Mat.mat",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "lambert2",
+      "path": "Assets/Scenes/Oasis/Art/Architecture/Meshes/Tent_01_Mesh.fbx",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "lambert2",
+      "path": "Assets/Scenes/Oasis/Art/Architecture/Meshes/Tent_03_Mesh.fbx",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "lambert2",
+      "path": "Assets/Scenes/Oasis/Art/Architecture/Meshes/Tent_02_Mesh.fbx",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "lambert2",
+      "path": "Assets/Scenes/Oasis/Art/Architecture/Meshes/Tent_04_Mesh.fbx",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "Tent_Stand_01_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Architecture/Materials/Tent_Stand_01_Mat.mat",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "Mountain_01_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Environment/Materials/Mountain_01_Mat.mat",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "Mountain_02_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Environment/Materials/Mountain_02_Mat.mat",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "Gravel_01_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Environment/Materials/Gravel_01_Mat.mat",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "BigRock_01_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Environment/Materials/BigRock_01_Mat.mat",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "Vertex Color",
+      "path": "Assets/Scenes/Oasis/Art/Environment/Meshes/Terrain_01_ShadowCage_Mesh.fbx",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "Lit",
+      "path": "Packages/com.unity.render-pipelines.universal/Runtime/Materials/Lit.mat",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "Teleporter_Platform_02_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Architecture/Materials/Teleporter_Platform_02_Mat.mat",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "Teleporter_Platform_01_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Architecture/Materials/Teleporter_Platform_01_Mat.mat",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "lambert1",
+      "path": "Assets/Scenes/Oasis/Art/Architecture/Meshes/Teleporter_Platform_01_Mesh.fbx",
+      "shader": "Universal Render Pipeline/Lit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
+    },
+    {
+      "name": "Cliff_02_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Environment/Materials/Cliff_02_Mat.mat",
+      "shader": "URP Sample/Oasis/LayeredLit_Graph",
+      "shaderPath": "Assets/Scenes/Oasis/Shaders/LayeredLit_Graph.shadergraph"
+    },
+    {
+      "name": "Cliff_01_Mat",
+      "path": "Assets/Scenes/Oasis/Art/Environment/Materials/Cliff_01_Mat.mat",
+      "shader": "URP Sample/Oasis/LayeredLit_Graph",
+      "shaderPath": "Assets/Scenes/Oasis/Shaders/LayeredLit_Graph.shadergraph"
+    }
+  ],
+  "renderSettingsYaml": "RenderSettings:\n  m_ObjectHideFlags: 0\n  serializedVersion: 10\n  m_Fog: 1\n  m_FogColor: {r: 0.9607843, g: 0.47843137, b: 0.33333334, a: 1}\n  m_FogMode: 1\n  m_FogDensity: 0.002\n  m_LinearFogStart: 0\n  m_LinearFogEnd: 300\n  m_AmbientSkyColor: {r: 0.254902, g: 0.44830096, b: 0.7176471, a: 1}\n  m_AmbientEquatorColor: {r: 0.88420105, g: 0.97492677, b: 1.3091658, a: 1}\n  m_AmbientGroundColor: {r: 0, g: 0, b: 0, a: 1}\n  m_AmbientIntensity: 1\n  m_AmbientMode: 1\n  m_SubtractiveShadowColor: {r: 0.44588825, g: 0.5453871, b: 0.5660378, a: 1}\n  m_SkyboxMaterial: {fileID: 2100000, guid: babc67b72a83f184e8592680fc29d551, type: 2}\n  m_HaloStrength: 0.5\n  m_FlareStrength: 1\n  m_FlareFadeSpeed: 3\n  m_HaloTexture: {fileID: 0}\n  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}\n  m_DefaultReflectionMode: 0\n  m_DefaultReflectionResolution: 128\n  m_ReflectionBounces: 2\n  m_ReflectionIntensity: 1\n  m_CustomReflection: {fileID: 0}\n  m_Sun: {fileID: 0}\n  m_UseRadianceAmbientProbe: 0\n",
+  "lightmapSettingsYaml": "LightmapSettings:\n  m_ObjectHideFlags: 0\n  serializedVersion: 12\n  m_GISettings:\n    serializedVersion: 2\n    m_BounceScale: 1\n    m_IndirectOutputScale: 1\n    m_AlbedoBoost: 1\n    m_EnvironmentLightingMode: 0\n    m_EnableBakedLightmaps: 1\n    m_EnableRealtimeLightmaps: 0\n  m_LightmapEditorSettings:\n    serializedVersion: 12\n    m_Resolution: 2\n    m_BakeResolution: 40\n    m_AtlasSize: 1024\n    m_AO: 0\n    m_AOMaxDistance: 1\n    m_CompAOExponent: 1\n    m_CompAOExponentDirect: 0\n    m_ExtractAmbientOcclusion: 0\n    m_Padding: 2\n    m_LightmapParameters: {fileID: 0}\n    m_LightmapsBakeMode: 1\n    m_TextureCompression: 1\n    m_ReflectionCompression: 2\n    m_MixedBakeMode: 2\n    m_BakeBackend: 1\n    m_PVRSampling: 1\n    m_PVRDirectSampleCount: 32\n    m_PVRSampleCount: 512\n    m_PVRBounces: 2\n    m_PVREnvironmentSampleCount: 256\n    m_PVREnvironmentReferencePointCount: 2048\n    m_PVRFilteringMode: 1\n    m_PVRDenoiserTypeDirect: 1\n    m_PVRDenoiserTypeIndirect: 1\n    m_PVRDenoiserTypeAO: 1\n    m_PVRFilterTypeDirect: 0\n    m_PVRFilterTypeIndirect: 0\n    m_PVRFilterTypeAO: 0\n    m_PVREnvironmentMIS: 1\n    m_PVRCulling: 1\n    m_PVRFilteringGaussRadiusDirect: 1\n    m_PVRFilteringGaussRadiusIndirect: 5\n    m_PVRFilteringGaussRadiusAO: 2\n    m_PVRFilteringAtrousPositionSigmaDirect: 0.5\n    m_PVRFilteringAtrousPositionSigmaIndirect: 2\n    m_PVRFilteringAtrousPositionSigmaAO: 1\n    m_ExportTrainingData: 0\n    m_TrainingDataDestination: TrainingData\n    m_LightProbeSampleCountMultiplier: 4\n  m_LightingDataAsset: {fileID: 112000000, guid: ff4948a40d2598f488f5263c086f9c3a, type: 2}\n  m_LightingSettings: {fileID: 4890085278179872738, guid: 29beb229072e243dbb383d4432699e9c, type: 2}\n"
+}

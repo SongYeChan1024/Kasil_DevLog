@@ -1,0 +1,1920 @@
+{
+  "path": "Assets/Scenes/Cockpit/CockpitScene.unity",
+  "name": "CockpitScene",
+  "capture": "live loaded scene",
+  "dirty": false,
+  "lightCount": 3,
+  "lightGroups": [
+    {
+      "type": "Point",
+      "mode": "Realtime",
+      "count": 2
+    },
+    {
+      "type": "Directional",
+      "mode": "Realtime",
+      "count": 1
+    }
+  ],
+  "lights": [
+    {
+      "hierarchy": "Root/Cockpit/Pivot/Geo/TerminalLoader_01_Prefab/ControlPanel2/HologramLight2",
+      "active": false,
+      "enabled": true,
+      "type": "Point",
+      "mode": "Realtime",
+      "intensity": 0.0,
+      "color": [
+        0.5896226,
+        0.8461126,
+        1.0,
+        1.0
+      ],
+      "useColorTemperature": false,
+      "colorTemperature": 5412.0,
+      "range": 10.0,
+      "spotAngle": 80.98867,
+      "innerSpotAngle": 72.79075,
+      "shadows": "None",
+      "shadowStrength": 1.0,
+      "shadowBias": 0.05,
+      "shadowNormalBias": 0.4,
+      "shadowNearPlane": 0.2,
+      "bounceIntensity": 1.0,
+      "cullingMask": -1,
+      "renderingLayerMask": 1,
+      "cookie": null,
+      "position": [
+        -1.67269635,
+        10.0512009,
+        0.583225
+      ],
+      "rotation": [
+        0.0,
+        300.300964,
+        0.0
+      ],
+      "serialized": {
+        "m_Type": {
+          "value": 2,
+          "index": 2,
+          "names": [
+            "Spot",
+            "Directional",
+            "Point",
+            "Rectangle",
+            "Disc",
+            "Pyramid",
+            "Box",
+            "Tube"
+          ]
+        },
+        "m_Color": [
+          0.5896226,
+          0.8461126,
+          1.0,
+          1.0
+        ],
+        "m_Intensity": 0.0,
+        "m_Range": 10.0,
+        "m_SpotAngle": 80.9886703491211,
+        "m_InnerSpotAngle": 72.7907485961914,
+        "m_CookieSize2D": [
+          10.0,
+          10.0
+        ],
+        "m_CookieSize2D.x": 10.0,
+        "m_CookieSize2D.y": 10.0,
+        "m_Shadows.m_Type": {
+          "value": 0,
+          "index": 0,
+          "names": [
+            "No Shadows",
+            "Hard Shadows",
+            "Soft Shadows"
+          ]
+        },
+        "m_Shadows.m_Resolution": {
+          "value": -1,
+          "index": 0,
+          "names": [
+            "Use Quality Settings",
+            "Low Resolution",
+            "Medium Resolution",
+            "High Resolution",
+            "Very High Resolution"
+          ]
+        },
+        "m_Shadows.m_CustomResolution": -1,
+        "m_Shadows.m_Strength": 1.0,
+        "m_Shadows.m_Bias": 0.05000000074505806,
+        "m_Shadows.m_NormalBias": 0.40000000596046448,
+        "m_Shadows.m_NearPlane": 0.20000000298023224,
+        "m_Shadows.m_CullingMatrixOverride.e00": 1.0,
+        "m_Shadows.m_CullingMatrixOverride.e01": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e02": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e03": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e10": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e11": 1.0,
+        "m_Shadows.m_CullingMatrixOverride.e12": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e13": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e20": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e21": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e22": 1.0,
+        "m_Shadows.m_CullingMatrixOverride.e23": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e30": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e31": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e32": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e33": 1.0,
+        "m_Shadows.m_UseCullingMatrixOverride": false,
+        "m_Cookie": null,
+        "m_DrawHalo": false,
+        "m_BakingOutput.probeOcclusionLightIndex": -1,
+        "m_BakingOutput.occlusionMaskChannel": -1,
+        "m_BakingOutput.lightmapBakeMode.lightmapBakeType": {
+          "value": 4,
+          "index": 2,
+          "names": [
+            "Mixed",
+            "Baked",
+            "Realtime"
+          ]
+        },
+        "m_BakingOutput.lightmapBakeMode.mixedLightingMode": {
+          "value": 2,
+          "index": 2,
+          "names": [
+            "IndirectOnly",
+            "Subtractive",
+            "Shadowmask"
+          ]
+        },
+        "m_BakingOutput.isBaked": false,
+        "m_Flare": null,
+        "m_RenderMode": {
+          "value": 0,
+          "index": 0,
+          "names": [
+            "Auto",
+            "Important",
+            "Not Important"
+          ]
+        },
+        "m_CullingMask": -1,
+        "m_RenderingLayerMask": 1,
+        "m_Lightmapping": {
+          "value": 4,
+          "index": 2,
+          "names": [
+            "Mixed",
+            "Baked",
+            "Realtime"
+          ]
+        },
+        "m_LightShadowCasterMode": 0,
+        "m_AreaSize": [
+          1.0,
+          1.0
+        ],
+        "m_AreaSize.x": 1.0,
+        "m_AreaSize.y": 1.0,
+        "m_BounceIntensity": 1.0,
+        "m_ColorTemperature": 5412.0,
+        "m_UseColorTemperature": false,
+        "m_BoundingSphereOverride": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "m_BoundingSphereOverride.x": 0.0,
+        "m_BoundingSphereOverride.y": 0.0,
+        "m_BoundingSphereOverride.z": 0.0,
+        "m_BoundingSphereOverride.w": 0.0,
+        "m_UseBoundingSphereOverride": false,
+        "m_UseViewFrustumForShadowCasterCull": true,
+        "m_ForceVisible": false,
+        "m_ShapeRadius": 0.0,
+        "m_ShadowAngle": 0.0,
+        "m_LightUnit": 1,
+        "m_LuxAtDistance": 1.0,
+        "m_EnableSpotReflector": true
+      },
+      "urp": {
+        "m_UsePipelineSettings": true,
+        "m_AdditionalLightsShadowResolutionTier": 0,
+        "m_CustomShadowLayers": false,
+        "m_LightCookieSize": [
+          1.0,
+          1.0
+        ],
+        "m_LightCookieSize.x": 1.0,
+        "m_LightCookieSize.y": 1.0,
+        "m_LightCookieOffset": [
+          0.0,
+          0.0
+        ],
+        "m_LightCookieOffset.x": 0.0,
+        "m_LightCookieOffset.y": 0.0,
+        "m_SoftShadowQuality": {
+          "value": 2,
+          "index": 2,
+          "names": [
+            "UsePipelineSettings",
+            "Low",
+            "Medium",
+            "High"
+          ]
+        },
+        "m_Version": {
+          "value": 4,
+          "index": 3,
+          "names": [
+            "Initial",
+            "RenderingLayers",
+            "SoftShadowQuality",
+            "RenderingLayersMask",
+            "Count"
+          ]
+        },
+        "m_LightLayerMask": {
+          "value": 1,
+          "index": 1,
+          "names": [
+            "Nothing",
+            "LightLayerDefault",
+            "LightLayer1",
+            "LightLayer2",
+            "LightLayer3",
+            "LightLayer4",
+            "LightLayer5",
+            "LightLayer6",
+            "LightLayer7",
+            "Everything"
+          ]
+        },
+        "m_ShadowLayerMask": {
+          "value": 1,
+          "index": 1,
+          "names": [
+            "Nothing",
+            "LightLayerDefault",
+            "LightLayer1",
+            "LightLayer2",
+            "LightLayer3",
+            "LightLayer4",
+            "LightLayer5",
+            "LightLayer6",
+            "LightLayer7",
+            "Everything"
+          ]
+        },
+        "m_RenderingLayers": 1,
+        "m_ShadowRenderingLayers": 1
+      },
+      "controllers": [
+        {
+          "type": "UnityEngine.Rendering.Universal.UniversalAdditionalLightData",
+          "properties": {
+            "m_UsePipelineSettings": true,
+            "m_AdditionalLightsShadowResolutionTier": 0,
+            "m_CustomShadowLayers": false,
+            "m_LightCookieSize": [
+              1.0,
+              1.0
+            ],
+            "m_LightCookieSize.x": 1.0,
+            "m_LightCookieSize.y": 1.0,
+            "m_LightCookieOffset": [
+              0.0,
+              0.0
+            ],
+            "m_LightCookieOffset.x": 0.0,
+            "m_LightCookieOffset.y": 0.0,
+            "m_SoftShadowQuality": {
+              "value": 2,
+              "index": 2,
+              "names": [
+                "UsePipelineSettings",
+                "Low",
+                "Medium",
+                "High"
+              ]
+            },
+            "m_Version": {
+              "value": 4,
+              "index": 3,
+              "names": [
+                "Initial",
+                "RenderingLayers",
+                "SoftShadowQuality",
+                "RenderingLayersMask",
+                "Count"
+              ]
+            },
+            "m_LightLayerMask": {
+              "value": 1,
+              "index": 1,
+              "names": [
+                "Nothing",
+                "LightLayerDefault",
+                "LightLayer1",
+                "LightLayer2",
+                "LightLayer3",
+                "LightLayer4",
+                "LightLayer5",
+                "LightLayer6",
+                "LightLayer7",
+                "Everything"
+              ]
+            },
+            "m_ShadowLayerMask": {
+              "value": 1,
+              "index": 1,
+              "names": [
+                "Nothing",
+                "LightLayerDefault",
+                "LightLayer1",
+                "LightLayer2",
+                "LightLayer3",
+                "LightLayer4",
+                "LightLayer5",
+                "LightLayer6",
+                "LightLayer7",
+                "Everything"
+              ]
+            },
+            "m_RenderingLayers": 1,
+            "m_ShadowRenderingLayers": 1
+          }
+        }
+      ]
+    },
+    {
+      "hierarchy": "Root/Cockpit/Pivot/Geo/TerminalLoader_01_Prefab/ControlPanel2/HologramLight1",
+      "active": false,
+      "enabled": true,
+      "type": "Point",
+      "mode": "Realtime",
+      "intensity": 0.0,
+      "color": [
+        0.5896226,
+        0.8461126,
+        1.0,
+        1.0
+      ],
+      "useColorTemperature": false,
+      "colorTemperature": 5412.0,
+      "range": 2.0,
+      "spotAngle": 80.98867,
+      "innerSpotAngle": 72.79075,
+      "shadows": "None",
+      "shadowStrength": 1.0,
+      "shadowBias": 0.05,
+      "shadowNormalBias": 0.4,
+      "shadowNearPlane": 0.2,
+      "bounceIntensity": 1.0,
+      "cullingMask": -1,
+      "renderingLayerMask": 1,
+      "cookie": {
+        "name": "PedestalCookie_T_Cookie",
+        "type": "UnityEngine.Cubemap",
+        "path": "Assets/Scenes/Terminal/Art/Props/Textures/PedestalCookie_T_Cookie.png",
+        "guid": "d6e8de67933b5434e9dd20e1c0d93c97",
+        "fileId": 8900000
+      },
+      "position": [
+        -1.67269635,
+        9.77565,
+        0.583225
+      ],
+      "rotation": [
+        0.0,
+        210.300964,
+        0.0
+      ],
+      "serialized": {
+        "m_Type": {
+          "value": 2,
+          "index": 2,
+          "names": [
+            "Spot",
+            "Directional",
+            "Point",
+            "Rectangle",
+            "Disc",
+            "Pyramid",
+            "Box",
+            "Tube"
+          ]
+        },
+        "m_Color": [
+          0.5896226,
+          0.8461126,
+          1.0,
+          1.0
+        ],
+        "m_Intensity": 0.0,
+        "m_Range": 2.0,
+        "m_SpotAngle": 80.9886703491211,
+        "m_InnerSpotAngle": 72.7907485961914,
+        "m_CookieSize2D": [
+          10.0,
+          10.0
+        ],
+        "m_CookieSize2D.x": 10.0,
+        "m_CookieSize2D.y": 10.0,
+        "m_Shadows.m_Type": {
+          "value": 0,
+          "index": 0,
+          "names": [
+            "No Shadows",
+            "Hard Shadows",
+            "Soft Shadows"
+          ]
+        },
+        "m_Shadows.m_Resolution": {
+          "value": -1,
+          "index": 0,
+          "names": [
+            "Use Quality Settings",
+            "Low Resolution",
+            "Medium Resolution",
+            "High Resolution",
+            "Very High Resolution"
+          ]
+        },
+        "m_Shadows.m_CustomResolution": -1,
+        "m_Shadows.m_Strength": 1.0,
+        "m_Shadows.m_Bias": 0.05000000074505806,
+        "m_Shadows.m_NormalBias": 0.40000000596046448,
+        "m_Shadows.m_NearPlane": 0.20000000298023224,
+        "m_Shadows.m_CullingMatrixOverride.e00": 1.0,
+        "m_Shadows.m_CullingMatrixOverride.e01": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e02": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e03": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e10": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e11": 1.0,
+        "m_Shadows.m_CullingMatrixOverride.e12": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e13": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e20": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e21": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e22": 1.0,
+        "m_Shadows.m_CullingMatrixOverride.e23": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e30": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e31": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e32": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e33": 1.0,
+        "m_Shadows.m_UseCullingMatrixOverride": false,
+        "m_Cookie": {
+          "name": "PedestalCookie_T_Cookie",
+          "type": "UnityEngine.Cubemap",
+          "path": "Assets/Scenes/Terminal/Art/Props/Textures/PedestalCookie_T_Cookie.png",
+          "guid": "d6e8de67933b5434e9dd20e1c0d93c97",
+          "fileId": 8900000
+        },
+        "m_DrawHalo": false,
+        "m_BakingOutput.probeOcclusionLightIndex": -1,
+        "m_BakingOutput.occlusionMaskChannel": -1,
+        "m_BakingOutput.lightmapBakeMode.lightmapBakeType": {
+          "value": 4,
+          "index": 2,
+          "names": [
+            "Mixed",
+            "Baked",
+            "Realtime"
+          ]
+        },
+        "m_BakingOutput.lightmapBakeMode.mixedLightingMode": {
+          "value": 2,
+          "index": 2,
+          "names": [
+            "IndirectOnly",
+            "Subtractive",
+            "Shadowmask"
+          ]
+        },
+        "m_BakingOutput.isBaked": false,
+        "m_Flare": null,
+        "m_RenderMode": {
+          "value": 0,
+          "index": 0,
+          "names": [
+            "Auto",
+            "Important",
+            "Not Important"
+          ]
+        },
+        "m_CullingMask": -1,
+        "m_RenderingLayerMask": 1,
+        "m_Lightmapping": {
+          "value": 4,
+          "index": 2,
+          "names": [
+            "Mixed",
+            "Baked",
+            "Realtime"
+          ]
+        },
+        "m_LightShadowCasterMode": 0,
+        "m_AreaSize": [
+          1.0,
+          1.0
+        ],
+        "m_AreaSize.x": 1.0,
+        "m_AreaSize.y": 1.0,
+        "m_BounceIntensity": 1.0,
+        "m_ColorTemperature": 5412.0,
+        "m_UseColorTemperature": false,
+        "m_BoundingSphereOverride": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "m_BoundingSphereOverride.x": 0.0,
+        "m_BoundingSphereOverride.y": 0.0,
+        "m_BoundingSphereOverride.z": 0.0,
+        "m_BoundingSphereOverride.w": 0.0,
+        "m_UseBoundingSphereOverride": false,
+        "m_UseViewFrustumForShadowCasterCull": true,
+        "m_ForceVisible": false,
+        "m_ShapeRadius": 0.0,
+        "m_ShadowAngle": 0.0,
+        "m_LightUnit": 1,
+        "m_LuxAtDistance": 1.0,
+        "m_EnableSpotReflector": true
+      },
+      "urp": {
+        "m_UsePipelineSettings": true,
+        "m_AdditionalLightsShadowResolutionTier": 2,
+        "m_CustomShadowLayers": false,
+        "m_LightCookieSize": [
+          1.0,
+          1.0
+        ],
+        "m_LightCookieSize.x": 1.0,
+        "m_LightCookieSize.y": 1.0,
+        "m_LightCookieOffset": [
+          0.0,
+          0.0
+        ],
+        "m_LightCookieOffset.x": 0.0,
+        "m_LightCookieOffset.y": 0.0,
+        "m_SoftShadowQuality": {
+          "value": 2,
+          "index": 2,
+          "names": [
+            "UsePipelineSettings",
+            "Low",
+            "Medium",
+            "High"
+          ]
+        },
+        "m_Version": {
+          "value": 4,
+          "index": 3,
+          "names": [
+            "Initial",
+            "RenderingLayers",
+            "SoftShadowQuality",
+            "RenderingLayersMask",
+            "Count"
+          ]
+        },
+        "m_LightLayerMask": {
+          "value": 1,
+          "index": 1,
+          "names": [
+            "Nothing",
+            "LightLayerDefault",
+            "LightLayer1",
+            "LightLayer2",
+            "LightLayer3",
+            "LightLayer4",
+            "LightLayer5",
+            "LightLayer6",
+            "LightLayer7",
+            "Everything"
+          ]
+        },
+        "m_ShadowLayerMask": {
+          "value": 1,
+          "index": 1,
+          "names": [
+            "Nothing",
+            "LightLayerDefault",
+            "LightLayer1",
+            "LightLayer2",
+            "LightLayer3",
+            "LightLayer4",
+            "LightLayer5",
+            "LightLayer6",
+            "LightLayer7",
+            "Everything"
+          ]
+        },
+        "m_RenderingLayers": 1,
+        "m_ShadowRenderingLayers": 1
+      },
+      "controllers": [
+        {
+          "type": "UnityEngine.Rendering.Universal.UniversalAdditionalLightData",
+          "properties": {
+            "m_UsePipelineSettings": true,
+            "m_AdditionalLightsShadowResolutionTier": 2,
+            "m_CustomShadowLayers": false,
+            "m_LightCookieSize": [
+              1.0,
+              1.0
+            ],
+            "m_LightCookieSize.x": 1.0,
+            "m_LightCookieSize.y": 1.0,
+            "m_LightCookieOffset": [
+              0.0,
+              0.0
+            ],
+            "m_LightCookieOffset.x": 0.0,
+            "m_LightCookieOffset.y": 0.0,
+            "m_SoftShadowQuality": {
+              "value": 2,
+              "index": 2,
+              "names": [
+                "UsePipelineSettings",
+                "Low",
+                "Medium",
+                "High"
+              ]
+            },
+            "m_Version": {
+              "value": 4,
+              "index": 3,
+              "names": [
+                "Initial",
+                "RenderingLayers",
+                "SoftShadowQuality",
+                "RenderingLayersMask",
+                "Count"
+              ]
+            },
+            "m_LightLayerMask": {
+              "value": 1,
+              "index": 1,
+              "names": [
+                "Nothing",
+                "LightLayerDefault",
+                "LightLayer1",
+                "LightLayer2",
+                "LightLayer3",
+                "LightLayer4",
+                "LightLayer5",
+                "LightLayer6",
+                "LightLayer7",
+                "Everything"
+              ]
+            },
+            "m_ShadowLayerMask": {
+              "value": 1,
+              "index": 1,
+              "names": [
+                "Nothing",
+                "LightLayerDefault",
+                "LightLayer1",
+                "LightLayer2",
+                "LightLayer3",
+                "LightLayer4",
+                "LightLayer5",
+                "LightLayer6",
+                "LightLayer7",
+                "Everything"
+              ]
+            },
+            "m_RenderingLayers": 1,
+            "m_ShadowRenderingLayers": 1
+          }
+        }
+      ]
+    },
+    {
+      "hierarchy": "Root/Lighting/Sun",
+      "active": false,
+      "enabled": true,
+      "type": "Directional",
+      "mode": "Realtime",
+      "intensity": 2.0,
+      "color": [
+        1.0,
+        0.8219454,
+        0.6839622,
+        1.0
+      ],
+      "useColorTemperature": false,
+      "colorTemperature": 6570.0,
+      "range": 10.0,
+      "spotAngle": 30.0,
+      "innerSpotAngle": 21.80208,
+      "shadows": "None",
+      "shadowStrength": 1.0,
+      "shadowBias": 0.05,
+      "shadowNormalBias": 0.4,
+      "shadowNearPlane": 0.94,
+      "bounceIntensity": 1.0,
+      "cullingMask": -1,
+      "renderingLayerMask": 1,
+      "cookie": null,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        359.53,
+        332.86,
+        0.0
+      ],
+      "serialized": {
+        "m_Type": {
+          "value": 1,
+          "index": 1,
+          "names": [
+            "Spot",
+            "Directional",
+            "Point",
+            "Rectangle",
+            "Disc",
+            "Pyramid",
+            "Box",
+            "Tube"
+          ]
+        },
+        "m_Color": [
+          1.0,
+          0.8219454,
+          0.6839622,
+          1.0
+        ],
+        "m_Intensity": 2.0,
+        "m_Range": 10.0,
+        "m_SpotAngle": 30.0,
+        "m_InnerSpotAngle": 21.802080154418945,
+        "m_CookieSize2D": [
+          10.0,
+          10.0
+        ],
+        "m_CookieSize2D.x": 10.0,
+        "m_CookieSize2D.y": 10.0,
+        "m_Shadows.m_Type": {
+          "value": 0,
+          "index": 0,
+          "names": [
+            "No Shadows",
+            "Hard Shadows",
+            "Soft Shadows"
+          ]
+        },
+        "m_Shadows.m_Resolution": {
+          "value": 128,
+          "index": -1,
+          "names": [
+            "Use Quality Settings",
+            "Low Resolution",
+            "Medium Resolution",
+            "High Resolution",
+            "Very High Resolution"
+          ]
+        },
+        "m_Shadows.m_CustomResolution": -1,
+        "m_Shadows.m_Strength": 1.0,
+        "m_Shadows.m_Bias": 0.05000000074505806,
+        "m_Shadows.m_NormalBias": 0.40000000596046448,
+        "m_Shadows.m_NearPlane": 0.93999999761581421,
+        "m_Shadows.m_CullingMatrixOverride.e00": 1.0,
+        "m_Shadows.m_CullingMatrixOverride.e01": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e02": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e03": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e10": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e11": 1.0,
+        "m_Shadows.m_CullingMatrixOverride.e12": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e13": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e20": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e21": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e22": 1.0,
+        "m_Shadows.m_CullingMatrixOverride.e23": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e30": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e31": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e32": 0.0,
+        "m_Shadows.m_CullingMatrixOverride.e33": 1.0,
+        "m_Shadows.m_UseCullingMatrixOverride": false,
+        "m_Cookie": null,
+        "m_DrawHalo": false,
+        "m_BakingOutput.probeOcclusionLightIndex": -1,
+        "m_BakingOutput.occlusionMaskChannel": -1,
+        "m_BakingOutput.lightmapBakeMode.lightmapBakeType": {
+          "value": 4,
+          "index": 2,
+          "names": [
+            "Mixed",
+            "Baked",
+            "Realtime"
+          ]
+        },
+        "m_BakingOutput.lightmapBakeMode.mixedLightingMode": {
+          "value": 2,
+          "index": 2,
+          "names": [
+            "IndirectOnly",
+            "Subtractive",
+            "Shadowmask"
+          ]
+        },
+        "m_BakingOutput.isBaked": false,
+        "m_Flare": null,
+        "m_RenderMode": {
+          "value": 0,
+          "index": 0,
+          "names": [
+            "Auto",
+            "Important",
+            "Not Important"
+          ]
+        },
+        "m_CullingMask": -1,
+        "m_RenderingLayerMask": 1,
+        "m_Lightmapping": {
+          "value": 4,
+          "index": 2,
+          "names": [
+            "Mixed",
+            "Baked",
+            "Realtime"
+          ]
+        },
+        "m_LightShadowCasterMode": 0,
+        "m_AreaSize": [
+          1.0,
+          1.0
+        ],
+        "m_AreaSize.x": 1.0,
+        "m_AreaSize.y": 1.0,
+        "m_BounceIntensity": 1.0,
+        "m_ColorTemperature": 6570.0,
+        "m_UseColorTemperature": false,
+        "m_BoundingSphereOverride": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "m_BoundingSphereOverride.x": 0.0,
+        "m_BoundingSphereOverride.y": 0.0,
+        "m_BoundingSphereOverride.z": 0.0,
+        "m_BoundingSphereOverride.w": 0.0,
+        "m_UseBoundingSphereOverride": false,
+        "m_UseViewFrustumForShadowCasterCull": true,
+        "m_ForceVisible": false,
+        "m_ShapeRadius": 0.0,
+        "m_ShadowAngle": 0.0,
+        "m_LightUnit": 1,
+        "m_LuxAtDistance": 1.0,
+        "m_EnableSpotReflector": true
+      },
+      "urp": {
+        "m_UsePipelineSettings": true,
+        "m_AdditionalLightsShadowResolutionTier": 1,
+        "m_CustomShadowLayers": false,
+        "m_LightCookieSize": [
+          1.0,
+          1.0
+        ],
+        "m_LightCookieSize.x": 1.0,
+        "m_LightCookieSize.y": 1.0,
+        "m_LightCookieOffset": [
+          0.0,
+          0.0
+        ],
+        "m_LightCookieOffset.x": 0.0,
+        "m_LightCookieOffset.y": 0.0,
+        "m_SoftShadowQuality": {
+          "value": 0,
+          "index": 0,
+          "names": [
+            "UsePipelineSettings",
+            "Low",
+            "Medium",
+            "High"
+          ]
+        },
+        "m_Version": {
+          "value": 4,
+          "index": 3,
+          "names": [
+            "Initial",
+            "RenderingLayers",
+            "SoftShadowQuality",
+            "RenderingLayersMask",
+            "Count"
+          ]
+        },
+        "m_LightLayerMask": {
+          "value": 1,
+          "index": 1,
+          "names": [
+            "Nothing",
+            "LightLayerDefault",
+            "LightLayer1",
+            "LightLayer2",
+            "LightLayer3",
+            "LightLayer4",
+            "LightLayer5",
+            "LightLayer6",
+            "LightLayer7",
+            "Everything"
+          ]
+        },
+        "m_ShadowLayerMask": {
+          "value": 1,
+          "index": 1,
+          "names": [
+            "Nothing",
+            "LightLayerDefault",
+            "LightLayer1",
+            "LightLayer2",
+            "LightLayer3",
+            "LightLayer4",
+            "LightLayer5",
+            "LightLayer6",
+            "LightLayer7",
+            "Everything"
+          ]
+        },
+        "m_RenderingLayers": 1,
+        "m_ShadowRenderingLayers": 1
+      },
+      "controllers": [
+        {
+          "type": "UnityEngine.Rendering.Universal.UniversalAdditionalLightData",
+          "properties": {
+            "m_UsePipelineSettings": true,
+            "m_AdditionalLightsShadowResolutionTier": 1,
+            "m_CustomShadowLayers": false,
+            "m_LightCookieSize": [
+              1.0,
+              1.0
+            ],
+            "m_LightCookieSize.x": 1.0,
+            "m_LightCookieSize.y": 1.0,
+            "m_LightCookieOffset": [
+              0.0,
+              0.0
+            ],
+            "m_LightCookieOffset.x": 0.0,
+            "m_LightCookieOffset.y": 0.0,
+            "m_SoftShadowQuality": {
+              "value": 0,
+              "index": 0,
+              "names": [
+                "UsePipelineSettings",
+                "Low",
+                "Medium",
+                "High"
+              ]
+            },
+            "m_Version": {
+              "value": 4,
+              "index": 3,
+              "names": [
+                "Initial",
+                "RenderingLayers",
+                "SoftShadowQuality",
+                "RenderingLayersMask",
+                "Count"
+              ]
+            },
+            "m_LightLayerMask": {
+              "value": 1,
+              "index": 1,
+              "names": [
+                "Nothing",
+                "LightLayerDefault",
+                "LightLayer1",
+                "LightLayer2",
+                "LightLayer3",
+                "LightLayer4",
+                "LightLayer5",
+                "LightLayer6",
+                "LightLayer7",
+                "Everything"
+              ]
+            },
+            "m_ShadowLayerMask": {
+              "value": 1,
+              "index": 1,
+              "names": [
+                "Nothing",
+                "LightLayerDefault",
+                "LightLayer1",
+                "LightLayer2",
+                "LightLayer3",
+                "LightLayer4",
+                "LightLayer5",
+                "LightLayer6",
+                "LightLayer7",
+                "Everything"
+              ]
+            },
+            "m_RenderingLayers": 1,
+            "m_ShadowRenderingLayers": 1
+          }
+        }
+      ]
+    }
+  ],
+  "volumes": [
+    {
+      "hierarchy": "Root/Cockpit/Pivot/Geo/TerminalLoader_01_Prefab/SceneLoader",
+      "active": false,
+      "enabled": true,
+      "isGlobal": false,
+      "priority": 3.0,
+      "weight": 0.0,
+      "blendDistance": 0.0,
+      "profile": {
+        "name": "TerminalRoom_Profile",
+        "type": "UnityEngine.Rendering.VolumeProfile",
+        "path": "Assets/Scenes/Terminal/Settings/TerminalRoom_Profile.asset",
+        "guid": "21c5b28a3f80a1c438ff81a35ecf6ee7",
+        "fileId": 11400000
+      },
+      "components": [
+        {
+          "type": "UnityEngine.Rendering.Universal.ColorAdjustments",
+          "active": true,
+          "properties": {
+            "active": true,
+            "postExposure.m_OverrideState": true,
+            "postExposure.m_Value": 2.0,
+            "contrast.m_OverrideState": false,
+            "contrast.m_Value": 0.0,
+            "colorFilter.m_OverrideState": false,
+            "colorFilter.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "hueShift.m_OverrideState": false,
+            "hueShift.m_Value": 0.0,
+            "saturation.m_OverrideState": true,
+            "saturation.m_Value": 13.699999809265137
+          }
+        },
+        {
+          "type": "UnityEngine.Rendering.Universal.WhiteBalance",
+          "active": true,
+          "properties": {
+            "active": true,
+            "temperature.m_OverrideState": true,
+            "temperature.m_Value": 0.0,
+            "tint.m_OverrideState": false,
+            "tint.m_Value": 0.0
+          }
+        },
+        {
+          "type": "UnityEngine.Rendering.Universal.LiftGammaGain",
+          "active": true,
+          "properties": {
+            "active": true,
+            "lift.m_OverrideState": true,
+            "lift.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              0.0
+            ],
+            "lift.m_Value.x": 1.0,
+            "lift.m_Value.y": 1.0,
+            "lift.m_Value.z": 1.0,
+            "lift.m_Value.w": 0.0,
+            "gamma.m_OverrideState": true,
+            "gamma.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              0.0
+            ],
+            "gamma.m_Value.x": 1.0,
+            "gamma.m_Value.y": 1.0,
+            "gamma.m_Value.z": 1.0,
+            "gamma.m_Value.w": 0.0,
+            "gain.m_OverrideState": true,
+            "gain.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              0.0
+            ],
+            "gain.m_Value.x": 1.0,
+            "gain.m_Value.y": 1.0,
+            "gain.m_Value.z": 1.0,
+            "gain.m_Value.w": 0.0
+          }
+        },
+        {
+          "type": "UnityEngine.Rendering.Universal.Bloom",
+          "active": true,
+          "properties": {
+            "active": true,
+            "skipIterations.m_OverrideState": false,
+            "skipIterations.m_Value": 1,
+            "threshold.m_OverrideState": true,
+            "threshold.m_Value": 1.0,
+            "intensity.m_OverrideState": true,
+            "intensity.m_Value": 0.25,
+            "scatter.m_OverrideState": false,
+            "scatter.m_Value": 0.699999988079071,
+            "clamp.m_OverrideState": false,
+            "clamp.m_Value": 65472.0,
+            "tint.m_OverrideState": false,
+            "tint.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "highQualityFiltering.m_OverrideState": false,
+            "highQualityFiltering.m_Value": false,
+            "filter.m_OverrideState": false,
+            "filter.m_Value": {
+              "value": 0,
+              "index": 0,
+              "names": [
+                "Gaussian",
+                "Dual",
+                "Kawase"
+              ]
+            },
+            "downscale.m_OverrideState": false,
+            "downscale.m_Value": {
+              "value": 0,
+              "index": 0,
+              "names": [
+                "Half",
+                "Quarter"
+              ]
+            },
+            "maxIterations.m_OverrideState": false,
+            "maxIterations.m_Value": 6,
+            "dirtTexture.m_OverrideState": false,
+            "dirtTexture.m_Value": null,
+            "dirtTexture.dimension": {
+              "value": 1,
+              "index": 2,
+              "names": [
+                "Unknown",
+                "None",
+                "Any",
+                "Tex2D",
+                "Tex3D",
+                "Cube",
+                "Tex2DArray",
+                "CubeArray"
+              ]
+            },
+            "dirtIntensity.m_OverrideState": false,
+            "dirtIntensity.m_Value": 0.0
+          }
+        },
+        {
+          "type": "UnityEngine.Rendering.Universal.ShadowsMidtonesHighlights",
+          "active": true,
+          "properties": {
+            "active": true,
+            "shadows.m_OverrideState": true,
+            "shadows.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              0.0
+            ],
+            "shadows.m_Value.x": 1.0,
+            "shadows.m_Value.y": 1.0,
+            "shadows.m_Value.z": 1.0,
+            "shadows.m_Value.w": 0.0,
+            "midtones.m_OverrideState": true,
+            "midtones.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              0.0
+            ],
+            "midtones.m_Value.x": 1.0,
+            "midtones.m_Value.y": 1.0,
+            "midtones.m_Value.z": 1.0,
+            "midtones.m_Value.w": 0.0,
+            "highlights.m_OverrideState": true,
+            "highlights.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              0.0
+            ],
+            "highlights.m_Value.x": 1.0,
+            "highlights.m_Value.y": 1.0,
+            "highlights.m_Value.z": 1.0,
+            "highlights.m_Value.w": 0.0,
+            "shadowsStart.m_OverrideState": false,
+            "shadowsStart.m_Value": 0.0,
+            "shadowsEnd.m_OverrideState": false,
+            "shadowsEnd.m_Value": 0.30000001192092896,
+            "highlightsStart.m_OverrideState": false,
+            "highlightsStart.m_Value": 0.550000011920929,
+            "highlightsEnd.m_OverrideState": false,
+            "highlightsEnd.m_Value": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "hierarchy": "Root/Cockpit/Pivot/Logic/Volume",
+      "active": false,
+      "enabled": false,
+      "isGlobal": false,
+      "priority": 0.0,
+      "weight": 1.0,
+      "blendDistance": 0.0,
+      "profile": {
+        "name": "CockpitVolume",
+        "type": "UnityEngine.Rendering.VolumeProfile",
+        "path": "Assets/Scenes/Cockpit/Settings/CockpitVolume.asset",
+        "guid": "2a36eb3ecfec7e24fad984654317fc5e",
+        "fileId": 11400000
+      },
+      "components": [
+        {
+          "type": "UnityEngine.Rendering.Universal.Bloom",
+          "active": true,
+          "properties": {
+            "active": true,
+            "skipIterations.m_OverrideState": true,
+            "skipIterations.m_Value": 5,
+            "threshold.m_OverrideState": true,
+            "threshold.m_Value": 1.0,
+            "intensity.m_OverrideState": true,
+            "intensity.m_Value": 0.699999988079071,
+            "scatter.m_OverrideState": false,
+            "scatter.m_Value": 0.765999972820282,
+            "clamp.m_OverrideState": false,
+            "clamp.m_Value": 65472.0,
+            "tint.m_OverrideState": false,
+            "tint.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "highQualityFiltering.m_OverrideState": false,
+            "highQualityFiltering.m_Value": false,
+            "filter.m_OverrideState": false,
+            "filter.m_Value": {
+              "value": 0,
+              "index": 0,
+              "names": [
+                "Gaussian",
+                "Dual",
+                "Kawase"
+              ]
+            },
+            "downscale.m_OverrideState": false,
+            "downscale.m_Value": {
+              "value": 0,
+              "index": 0,
+              "names": [
+                "Half",
+                "Quarter"
+              ]
+            },
+            "maxIterations.m_OverrideState": false,
+            "maxIterations.m_Value": 6,
+            "dirtTexture.m_OverrideState": false,
+            "dirtTexture.m_Value": null,
+            "dirtTexture.dimension": {
+              "value": 1,
+              "index": 2,
+              "names": [
+                "Unknown",
+                "None",
+                "Any",
+                "Tex2D",
+                "Tex3D",
+                "Cube",
+                "Tex2DArray",
+                "CubeArray"
+              ]
+            },
+            "dirtIntensity.m_OverrideState": false,
+            "dirtIntensity.m_Value": 0.0
+          }
+        },
+        {
+          "type": "UnityEngine.Rendering.Universal.LiftGammaGain",
+          "active": true,
+          "properties": {
+            "active": true,
+            "lift.m_OverrideState": true,
+            "lift.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              0.0
+            ],
+            "lift.m_Value.x": 1.0,
+            "lift.m_Value.y": 1.0,
+            "lift.m_Value.z": 1.0,
+            "lift.m_Value.w": 0.0,
+            "gamma.m_OverrideState": true,
+            "gamma.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              0.0
+            ],
+            "gamma.m_Value.x": 1.0,
+            "gamma.m_Value.y": 1.0,
+            "gamma.m_Value.z": 1.0,
+            "gamma.m_Value.w": 0.0,
+            "gain.m_OverrideState": true,
+            "gain.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              0.0
+            ],
+            "gain.m_Value.x": 1.0,
+            "gain.m_Value.y": 1.0,
+            "gain.m_Value.z": 1.0,
+            "gain.m_Value.w": 0.0
+          }
+        },
+        {
+          "type": "UnityEngine.Rendering.Universal.ColorAdjustments",
+          "active": true,
+          "properties": {
+            "active": true,
+            "postExposure.m_OverrideState": true,
+            "postExposure.m_Value": 0.5,
+            "contrast.m_OverrideState": true,
+            "contrast.m_Value": 0.0,
+            "colorFilter.m_OverrideState": true,
+            "colorFilter.m_Value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "hueShift.m_OverrideState": true,
+            "hueShift.m_Value": 0.0,
+            "saturation.m_OverrideState": true,
+            "saturation.m_Value": 0.0
+          }
+        },
+        {
+          "type": "UnityEngine.Rendering.Universal.Vignette",
+          "active": true,
+          "properties": {
+            "active": true,
+            "color.m_OverrideState": false,
+            "color.m_Value": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "center.m_OverrideState": false,
+            "center.m_Value": [
+              0.5,
+              0.5
+            ],
+            "center.m_Value.x": 0.5,
+            "center.m_Value.y": 0.5,
+            "intensity.m_OverrideState": true,
+            "intensity.m_Value": 0.30399999022483826,
+            "smoothness.m_OverrideState": false,
+            "smoothness.m_Value": 0.20000000298023224,
+            "rounded.m_OverrideState": false,
+            "rounded.m_Value": false
+          }
+        },
+        {
+          "type": "UnityEngine.Rendering.Universal.Tonemapping",
+          "active": true,
+          "properties": {
+            "active": true,
+            "mode.m_OverrideState": true,
+            "mode.m_Value": {
+              "value": 0,
+              "index": 0,
+              "names": [
+                "None",
+                "Neutral",
+                "ACES"
+              ]
+            },
+            "neutralHDRRangeReductionMode.m_OverrideState": false,
+            "neutralHDRRangeReductionMode.m_Value": {
+              "value": 2,
+              "index": 1,
+              "names": [
+                "Reinhard",
+                "BT2390"
+              ]
+            },
+            "acesPreset.m_OverrideState": false,
+            "acesPreset.m_Value": {
+              "value": 3,
+              "index": 0,
+              "names": [
+                "ACES1000Nits",
+                "ACES2000Nits",
+                "ACES4000Nits"
+              ]
+            },
+            "hueShiftAmount.m_OverrideState": false,
+            "hueShiftAmount.m_Value": 0.0,
+            "detectPaperWhite.m_OverrideState": false,
+            "detectPaperWhite.m_Value": false,
+            "paperWhite.m_OverrideState": false,
+            "paperWhite.m_Value": 300.0,
+            "detectBrightnessLimits.m_OverrideState": false,
+            "detectBrightnessLimits.m_Value": true,
+            "minNits.m_OverrideState": false,
+            "minNits.m_Value": 0.004999999888241291,
+            "maxNits.m_OverrideState": false,
+            "maxNits.m_Value": 1000.0
+          }
+        }
+      ]
+    },
+    {
+      "hierarchy": "Root/Cockpit/Pivot/SeatPosition/Volume",
+      "active": false,
+      "enabled": true,
+      "isGlobal": false,
+      "priority": 0.0,
+      "weight": 1.0,
+      "blendDistance": 0.0,
+      "profile": {
+        "name": "OutlineEnabled",
+        "type": "UnityEngine.Rendering.VolumeProfile",
+        "path": "Assets/Settings/VolumeProfiles/OutlineEnabled.asset",
+        "guid": "3532e98caae428047bcefe69a344f72c",
+        "fileId": 11400000
+      },
+      "components": [
+        {
+          "type": "OutlineVolumeComponent",
+          "active": true,
+          "properties": {
+            "active": true,
+            "Enabled.m_OverrideState": true,
+            "Enabled.m_Value": true
+          }
+        }
+      ]
+    },
+    {
+      "hierarchy": "Root/ScreenCameraPosition/Volume",
+      "active": false,
+      "enabled": true,
+      "isGlobal": false,
+      "priority": 0.0,
+      "weight": 1.0,
+      "blendDistance": 0.0,
+      "profile": {
+        "name": "OutlineEnabled",
+        "type": "UnityEngine.Rendering.VolumeProfile",
+        "path": "Assets/Settings/VolumeProfiles/OutlineEnabled.asset",
+        "guid": "3532e98caae428047bcefe69a344f72c",
+        "fileId": 11400000
+      },
+      "components": [
+        {
+          "type": "OutlineVolumeComponent",
+          "active": true,
+          "properties": {
+            "active": true,
+            "Enabled.m_OverrideState": true,
+            "Enabled.m_Value": true
+          }
+        }
+      ]
+    }
+  ],
+  "reflectionProbes": [],
+  "cameras": [],
+  "materials": [
+    {
+      "name": "Default-ParticleSystem",
+      "path": "Resources/unity_builtin_extra",
+      "shader": "Particles/Standard Unlit",
+      "shaderPath": "Resources/unity_builtin_extra"
+    },
+    {
+      "name": "CockpitInstrumentals",
+      "path": "Assets/Scenes/Cockpit/Shaders/CockpitInstrumentals.shadergraph",
+      "shader": "Shader Graphs/CockpitInstrumentals",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/CockpitInstrumentals.shadergraph"
+    },
+    {
+      "name": "BoidTrail_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/BoidTrail_Mat.mat",
+      "shader": "Shader Graphs/EngineTrail_Graph",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/EngineTrail_Graph.shadergraph"
+    },
+    {
+      "name": "FighterTrail_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/FighterTrail_Mat.mat",
+      "shader": "Shader Graphs/EngineTrail_Graph",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/EngineTrail_Graph.shadergraph"
+    },
+    {
+      "name": "InvaderTrail_Mesh",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/InvaderTrail_Mesh.mat",
+      "shader": "Shader Graphs/EngineTrail_Graph",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/EngineTrail_Graph.shadergraph"
+    },
+    {
+      "name": "LaserParticles_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/LaserParticles_Mat.mat",
+      "shader": "Shader Graphs/ExplosionParticle_Graph",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/ExplosionParticle_Graph.shadergraph"
+    },
+    {
+      "name": "HexagonHologram_Mat",
+      "path": "Assets/Scenes/Terminal/Art/VFX/Materials/HexagonHologram_Mat.mat",
+      "shader": "Shader Graphs/HexagonHologram_Graph",
+      "shaderPath": "Assets/Scenes/Terminal/Shaders/HexagonHologram_Graph.shadergraph"
+    },
+    {
+      "name": "ProjectionCone_Mat",
+      "path": "Assets/Scenes/Terminal/Art/VFX/Materials/ProjectionCone_Mat.mat",
+      "shader": "Shader Graphs/HolgramCone_Graph",
+      "shaderPath": "Assets/Scenes/Terminal/Shaders/HolgramCone_Graph.shadergraph"
+    },
+    {
+      "name": "HoloLoading_01_Mat",
+      "path": "Assets/Scenes/Terminal/Art/VFX/Materials/HoloLoading_01_Mat.mat",
+      "shader": "Shader Graphs/HoloRing_Graph",
+      "shaderPath": "Assets/Scenes/Terminal/Art/VFX/Shaders/HoloRing_Graph.shadergraph"
+    },
+    {
+      "name": "HoloLoading_02_Mat",
+      "path": "Assets/Scenes/Terminal/Art/VFX/Materials/HoloLoading_02_Mat.mat",
+      "shader": "Shader Graphs/HoloRing_Graph",
+      "shaderPath": "Assets/Scenes/Terminal/Art/VFX/Shaders/HoloRing_Graph.shadergraph"
+    },
+    {
+      "name": "BackToTerminalScreen_Mat",
+      "path": "Assets/Scenes/Terminal/Art/Props/Materials/BackToTerminalScreen_Mat.mat",
+      "shader": "Shader Graphs/Screen_Graph",
+      "shaderPath": "Assets/Scenes/Terminal/Shaders/Screen_Graph.shadergraph"
+    },
+    {
+      "name": "ControlPanel_Mat",
+      "path": "Assets/Scenes/Terminal/Art/Props/Materials/ControlPanel_Mat.mat",
+      "shader": "Shader Graphs/ScreenBlockerDissolve_Graph",
+      "shaderPath": "Assets/Scenes/Terminal/Shaders/ScreenBlockerDissolve_Graph.shadergraph"
+    },
+    {
+      "name": "ScreenBorder_Mat",
+      "path": "Assets/Scenes/Terminal/Art/Props/Materials/ScreenBorder_Mat.mat",
+      "shader": "Shader Graphs/ScreenBlockerDissolve_Graph",
+      "shaderPath": "Assets/Scenes/Terminal/Shaders/ScreenBlockerDissolve_Graph.shadergraph"
+    },
+    {
+      "name": "SpeckHologram_Mat",
+      "path": "Assets/Scenes/Terminal/Art/VFX/Materials/SpeckHologram_Mat.mat",
+      "shader": "Shader Graphs/ScrollingHologram_Graph",
+      "shaderPath": "Assets/Scenes/Terminal/Shaders/ScrollingHologram_Graph.shadergraph"
+    },
+    {
+      "name": "ShadowCaster_graph",
+      "path": "Assets/Scenes/Cockpit/Shaders/ShadowCaster_graph.shadergraph",
+      "shader": "Shader Graphs/ShadowCaster_graph",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/ShadowCaster_graph.shadergraph"
+    },
+    {
+      "name": "LogoHologram_Mat",
+      "path": "Assets/Scenes/Terminal/Art/VFX/Materials/LogoHologram_Mat.mat",
+      "shader": "Shader Graphs/SpriteSheetHologram_Graph",
+      "shaderPath": "Assets/Scenes/Terminal/Shaders/SpriteSheetHologram_Graph.shadergraph"
+    },
+    {
+      "name": "Triangle_Graph",
+      "path": "Assets/Scenes/Terminal/Art/VFX/Shaders/Triangle_Graph.shadergraph",
+      "shader": "Shader Graphs/Triangle_Graph",
+      "shaderPath": "Assets/Scenes/Terminal/Art/VFX/Shaders/Triangle_Graph.shadergraph"
+    },
+    {
+      "name": "AsteroidCluster_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Environment/Materials/AsteroidCluster_Mat.mat",
+      "shader": "Shader Graphs/Unlit3DSkybox",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/Unlit3DSkybox.shadergraph"
+    },
+    {
+      "name": "StarLayer_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Environment/Materials/StarLayer_Mat.mat",
+      "shader": "Shader Graphs/Unlit3DSkybox",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/Unlit3DSkybox.shadergraph"
+    },
+    {
+      "name": "WindowDetail_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/WindowDetail_Mat.mat",
+      "shader": "Shader Graphs/WindowDetail_Graph",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/WindowDetail_Graph.shadergraph"
+    },
+    {
+      "name": "WormBeamHit",
+      "path": "Assets/Scenes/Cockpit/Shaders/WormBeamHit.shadergraph",
+      "shader": "Shader Graphs/WormBeamHit",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/WormBeamHit.shadergraph"
+    },
+    {
+      "name": "ParticlesUnlit",
+      "path": "Packages/com.unity.render-pipelines.universal/Runtime/Materials/ParticlesUnlit.mat",
+      "shader": "Universal Render Pipeline/Particles/Unlit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Particles/ParticlesUnlit.shader"
+    },
+    {
+      "name": "Laser_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/VFX/Materials/Laser_Mat.mat",
+      "shader": "Universal Render Pipeline/Particles/Unlit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Particles/ParticlesUnlit.shader"
+    },
+    {
+      "name": "WormBeamMiss_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/WormBeamMiss_Mat.mat",
+      "shader": "Universal Render Pipeline/Particles/Unlit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Particles/ParticlesUnlit.shader"
+    },
+    {
+      "name": "Sparks_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/VFX/Materials/Sparks_Mat.mat",
+      "shader": "Universal Render Pipeline/Particles/Unlit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Particles/ParticlesUnlit.shader"
+    },
+    {
+      "name": "CrosshairGlow_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/CrosshairGlow_Mat.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Unlit.shader"
+    },
+    {
+      "name": "CrosshairGlass_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/CrosshairGlass_Mat.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Unlit.shader"
+    },
+    {
+      "name": "CapitalShipGlow_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/CapitalShipGlow_Mat.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Unlit.shader"
+    },
+    {
+      "name": "CapitalShipWindow_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/CapitalShipWindow_Mat.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Unlit.shader"
+    },
+    {
+      "name": "CapitalShipHangerLights_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/CapitalShipHangerLights_Mat.mat",
+      "shader": "Universal Render Pipeline/Unlit",
+      "shaderPath": "Packages/com.unity.render-pipelines.universal/Shaders/Unlit.shader"
+    },
+    {
+      "name": "CockpitPalette_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/CockpitPalette_Mat.mat",
+      "shader": "URP Sample/Cockpit/Fighter/Cockpit",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/Cockpit/Cockpit.shadergraph"
+    },
+    {
+      "name": "Seat_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/Seat_Mat.mat",
+      "shader": "URP Sample/Cockpit/Fighter/Cockpit",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/Cockpit/Cockpit.shadergraph"
+    },
+    {
+      "name": "Glass_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/Glass_Mat.mat",
+      "shader": "URP Sample/Cockpit/Fighter/CockpitGlass",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/Cockpit/CockpitGlass.shadergraph"
+    },
+    {
+      "name": "GreenScreen_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/GreenScreen_Mat.mat",
+      "shader": "URP Sample/Cockpit/Fighter/CockpitScreen",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/Cockpit/CockpitScreen.shadergraph"
+    },
+    {
+      "name": "HyperSpace",
+      "path": "Assets/Scenes/Cockpit/Shaders/HyperSpace/HyperSpace.shadergraph",
+      "shader": "URP Sample/Cockpit/FX/HyperSpace",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/HyperSpace/HyperSpace.shadergraph"
+    },
+    {
+      "name": "HyperSpaceTunnel",
+      "path": "Assets/Scenes/Cockpit/Shaders/HyperSpace/HyperSpaceTunnel.shadergraph",
+      "shader": "URP Sample/Cockpit/FX/HyperSpaceTunnel",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/HyperSpace/HyperSpaceTunnel.shadergraph"
+    },
+    {
+      "name": "IncidenceGlowCapitalEngineQuad_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/IncidenceGlowCapitalEngineQuad_Mat.mat",
+      "shader": "URP Sample/Cockpit/FX/IncidenceGlow",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/IncidenceGlow.shadergraph"
+    },
+    {
+      "name": "IncidenceGlowCapitalEngineSphere_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/IncidenceGlowCapitalEngineSphere_Mat.mat",
+      "shader": "URP Sample/Cockpit/FX/IncidenceGlow",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/IncidenceGlow.shadergraph"
+    },
+    {
+      "name": "CapitalShipSlipStream_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/CapitalShipSlipStream_Mat.mat",
+      "shader": "URP Sample/Cockpit/FX/IncidenceGlow",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/IncidenceGlow.shadergraph"
+    },
+    {
+      "name": "IncidenceGlowWormMouthQuad_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/IncidenceGlowWormMouthQuad_Mat.mat",
+      "shader": "URP Sample/Cockpit/FX/IncidenceGlow",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/IncidenceGlow.shadergraph"
+    },
+    {
+      "name": "IncidenceGlowWormMouthSphere_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/IncidenceGlowWormMouthSphere_Mat.mat",
+      "shader": "URP Sample/Cockpit/FX/IncidenceGlow",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/IncidenceGlow.shadergraph"
+    },
+    {
+      "name": "WormLazerBeam_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/WormLazerBeam_Mat.mat",
+      "shader": "URP Sample/Cockpit/FX/IncidenceGlow",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/IncidenceGlow.shadergraph"
+    },
+    {
+      "name": "FighterEngineGlowQuad_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/FighterEngineGlowQuad_Mat.mat",
+      "shader": "URP Sample/Cockpit/FX/IncidenceGlow",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/IncidenceGlow.shadergraph"
+    },
+    {
+      "name": "FighterEngineGlowSphere_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/FighterEngineGlowSphere_Mat.mat",
+      "shader": "URP Sample/Cockpit/FX/IncidenceGlow",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/IncidenceGlow.shadergraph"
+    },
+    {
+      "name": "IncidenceGlowEnemyFighterEngine_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/IncidenceGlowEnemyFighterEngine_Mat.mat",
+      "shader": "URP Sample/Cockpit/FX/IncidenceGlow",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/IncidenceGlow.shadergraph"
+    },
+    {
+      "name": "StarBG_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Environment/Materials/StarBG_Mat.mat",
+      "shader": "URP Sample/Cockpit/FX/StarBG",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/StarBG.shadergraph"
+    },
+    {
+      "name": "Glowing_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/Glowing_Mat.mat",
+      "shader": "URP Sample/Cockpit/GlowingButtons_Graph",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/GlowingButtons_Graph.shadergraph"
+    },
+    {
+      "name": "FireBall_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/VFX/Materials/FireBall_Mat.mat",
+      "shader": "URP Sample/Cockpit/Particles",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/Particles.shadergraph"
+    },
+    {
+      "name": "ExplosionStreaks_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/VFX/Materials/ExplosionStreaks_Mat.mat",
+      "shader": "URP Sample/Cockpit/Particles",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/Particles.shadergraph"
+    },
+    {
+      "name": "LargeExplosion_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/VFX/Materials/LargeExplosion_Mat.mat",
+      "shader": "URP Sample/Cockpit/Particles",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/Particles.shadergraph"
+    },
+    {
+      "name": "MainExplosion_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/VFX/Materials/MainExplosion_Mat.mat",
+      "shader": "URP Sample/Cockpit/Particles",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/Particles.shadergraph"
+    },
+    {
+      "name": "MainExplosionDebris_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/VFX/Materials/MainExplosionDebris_Mat.mat",
+      "shader": "URP Sample/Cockpit/Particles",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/Particles.shadergraph"
+    },
+    {
+      "name": "ExplosionStreaks_Mat_forsphere",
+      "path": "Assets/Scenes/Cockpit/Art/VFX/Materials/ExplosionStreaks_Mat_forsphere.mat",
+      "shader": "URP Sample/Cockpit/Particles",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/Particles.shadergraph"
+    },
+    {
+      "name": "Planet4_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Environment/Materials/Planets/Planet4_Mat.mat",
+      "shader": "URP Sample/Cockpit/Planet",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/Planet.shadergraph"
+    },
+    {
+      "name": "Planet2_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Environment/Materials/Planets/Planet2_Mat.mat",
+      "shader": "URP Sample/Cockpit/Planet",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/Planet.shadergraph"
+    },
+    {
+      "name": "Planet1_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Environment/Materials/Planets/Planet1_Mat.mat",
+      "shader": "URP Sample/Cockpit/Planet",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/Planet.shadergraph"
+    },
+    {
+      "name": "Planet3_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Environment/Materials/Planets/Planet3_Mat.mat",
+      "shader": "URP Sample/Cockpit/Planet",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/Planet.shadergraph"
+    },
+    {
+      "name": "Planet",
+      "path": "Assets/Scenes/Cockpit/Shaders/Planet.shadergraph",
+      "shader": "URP Sample/Cockpit/Planet",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/Planet.shadergraph"
+    },
+    {
+      "name": "Ring1_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Environment/Materials/Planets/Ring1_Mat.mat",
+      "shader": "URP Sample/Cockpit/PlanetRing",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/PlanetRing.shadergraph"
+    },
+    {
+      "name": "Shockwave",
+      "path": "Assets/Scenes/Cockpit/Shaders/Shockwave.shadergraph",
+      "shader": "URP Sample/Cockpit/Shockwave",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/Shockwave.shadergraph"
+    },
+    {
+      "name": "Fighter_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/Fighter_Mat.mat",
+      "shader": "URP Sample/Cockpit/ToonLightmap",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/ToonLightmap.shadergraph"
+    },
+    {
+      "name": "Boids_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/Boids_Mat.mat",
+      "shader": "URP Sample/Cockpit/ToonLightmap",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/ToonLightmap.shadergraph"
+    },
+    {
+      "name": "AsteroidInside_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Environment/Materials/AsteroidInside_Mat.mat",
+      "shader": "URP Sample/Cockpit/ToonLightmap",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/ToonLightmap.shadergraph"
+    },
+    {
+      "name": "Asteroid_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Environment/Materials/Asteroid_Mat.mat",
+      "shader": "URP Sample/Cockpit/ToonLightmap",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/ToonLightmap.shadergraph"
+    },
+    {
+      "name": "Invader_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/Invader_Mat.mat",
+      "shader": "URP Sample/Cockpit/ToonLightmap",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/ToonLightmap.shadergraph"
+    },
+    {
+      "name": "CapitalShipMain_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/CapitalShipMain_Mat.mat",
+      "shader": "URP Sample/Cockpit/ToonVertexColorLightmap",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/ToonVertexColorLightmap.shadergraph"
+    },
+    {
+      "name": "Worm_Mat",
+      "path": "Assets/Scenes/Cockpit/Art/Props/Materials/Worm_Mat.mat",
+      "shader": "URP Sample/Cockpit/ToonVertexColorLightmap",
+      "shaderPath": "Assets/Scenes/Cockpit/Shaders/ToonVertexColorLightmap.shadergraph"
+    }
+  ],
+  "renderSettingsYaml": "RenderSettings:\n  m_ObjectHideFlags: 0\n  serializedVersion: 10\n  m_Fog: 1\n  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}\n  m_FogMode: 2\n  m_FogDensity: 0.001\n  m_LinearFogStart: 0\n  m_LinearFogEnd: 300\n  m_AmbientSkyColor: {r: 0.21368816, g: 0.4454839, b: 0.9245283, a: 1}\n  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}\n  m_AmbientGroundColor: {r: 0.1254895, g: 0.5660378, b: 0.21075693, a: 1}\n  m_AmbientIntensity: 1\n  m_AmbientMode: 1\n  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}\n  m_SkyboxMaterial: {fileID: 0}\n  m_HaloStrength: 0.5\n  m_FlareStrength: 1\n  m_FlareFadeSpeed: 3\n  m_HaloTexture: {fileID: 0}\n  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}\n  m_DefaultReflectionMode: 1\n  m_DefaultReflectionResolution: 128\n  m_ReflectionBounces: 1\n  m_ReflectionIntensity: 1\n  m_CustomReflection: {fileID: 0}\n  m_Sun: {fileID: 0}\n  m_UseRadianceAmbientProbe: 0\n",
+  "lightmapSettingsYaml": "LightmapSettings:\n  m_ObjectHideFlags: 0\n  serializedVersion: 12\n  m_GISettings:\n    serializedVersion: 2\n    m_BounceScale: 1\n    m_IndirectOutputScale: 1\n    m_AlbedoBoost: 1\n    m_EnvironmentLightingMode: 0\n    m_EnableBakedLightmaps: 1\n    m_EnableRealtimeLightmaps: 0\n  m_LightmapEditorSettings:\n    serializedVersion: 12\n    m_Resolution: 2\n    m_BakeResolution: 40\n    m_AtlasSize: 1024\n    m_AO: 0\n    m_AOMaxDistance: 1\n    m_CompAOExponent: 1\n    m_CompAOExponentDirect: 0\n    m_ExtractAmbientOcclusion: 0\n    m_Padding: 2\n    m_LightmapParameters: {fileID: 0}\n    m_LightmapsBakeMode: 1\n    m_TextureCompression: 1\n    m_ReflectionCompression: 2\n    m_MixedBakeMode: 2\n    m_BakeBackend: 1\n    m_PVRSampling: 1\n    m_PVRDirectSampleCount: 32\n    m_PVRSampleCount: 512\n    m_PVRBounces: 2\n    m_PVREnvironmentSampleCount: 256\n    m_PVREnvironmentReferencePointCount: 2048\n    m_PVRFilteringMode: 1\n    m_PVRDenoiserTypeDirect: 1\n    m_PVRDenoiserTypeIndirect: 1\n    m_PVRDenoiserTypeAO: 1\n    m_PVRFilterTypeDirect: 0\n    m_PVRFilterTypeIndirect: 0\n    m_PVRFilterTypeAO: 0\n    m_PVREnvironmentMIS: 1\n    m_PVRCulling: 1\n    m_PVRFilteringGaussRadiusDirect: 1\n    m_PVRFilteringGaussRadiusIndirect: 5\n    m_PVRFilteringGaussRadiusAO: 2\n    m_PVRFilteringAtrousPositionSigmaDirect: 0.5\n    m_PVRFilteringAtrousPositionSigmaIndirect: 2\n    m_PVRFilteringAtrousPositionSigmaAO: 1\n    m_ExportTrainingData: 0\n    m_TrainingDataDestination: TrainingData\n    m_LightProbeSampleCountMultiplier: 4\n  m_LightingDataAsset: {fileID: 112000000, guid: 298a12b8f9a0c433f8c510daa2745693, type: 2}\n  m_LightingSettings: {fileID: 4890085278179872738, guid: 8ec8996880b09ce4aa84844e4b244fe8, type: 2}\n"
+}
