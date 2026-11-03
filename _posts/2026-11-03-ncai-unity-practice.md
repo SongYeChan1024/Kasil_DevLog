@@ -159,6 +159,33 @@ rigidbody.linearVelocity = Vector3.Lerp(
 
 변수 이름이나 Inspector 설명만 읽는 것보다, 그 값이 실제로 위치에 들어가는지 속도에 들어가는지 확인해야 한다는 것을 배웠다.
 
+## 내가 사용하는 CharacterController와의 차이
+
+After Seconds의 `PlayerMotor`는 Rigidbody의 속도를 바꾸지 않는다. 직접 계산한 속도에 경과 시간을 곱하고, 그 이동량을 `CharacterController.Move()`에 전달한다.
+
+```csharp
+// 현재 PlayerMotor의 핵심 흐름을 줄인 예시
+Vector3 horizontalVelocity = moveDirection * settings.MoveSpeed;
+verticalVelocity += settings.GravityAcceleration * deltaTime;
+
+Vector3 velocity = horizontalVelocity + Vector3.up * verticalVelocity;
+characterController.Move(velocity * deltaTime);
+```
+
+| 비교할 부분 | 현재 After Seconds | 현재 Invector 실습 코드 |
+| --- | --- | --- |
+| 이동 전달 | 이번에 이동할 거리 | Rigidbody의 속도 |
+| 호출 | `CharacterController.Move(속도 × 시간)` | `Rigidbody.linearVelocity = 목표 속도` |
+| 중력 | 코드가 수직 속도에 누적 | Rigidbody의 중력에 추가 중력·점프 속도 제어를 결합 |
+| 관성·밀림 | 원하는 동작을 별도로 설계해야 함 | 물리 영향을 받지만 컨트롤러의 속도 대입으로 덮어쓸 수 있음 |
+| 공중 방향 전환 | 공중에도 수평 입력을 적용할지 코드에서 결정 | `AirControl()`이 입력에 따라 수평 속도를 보간 |
+
+`CharacterController.Move()`에도 충돌 처리는 있다. 다만 Rigidbody처럼 힘을 받아 움직이는 방식으로 제어하는 것은 아니다. 넉백이나 가속·감속을 만들고 싶다면 별도의 속도와 감쇠 규칙을 계산해서 이동량에 합칠 수 있다.
+
+반대로 Rigidbody를 쓴다고 언제나 현실적인 관성이 유지되는 것도 아니다. 이번 Invector 코드는 지상에서 목표 속도를 대입하고 공중에서도 목표 속도로 보간한다. 외부에서 밀린 속도가 있더라도 이후 이동 코드가 그 속도를 바꿀 수 있다.
+
+내 `PlayerMotor.Move()`에는 공중이라는 이유로 수평 입력을 막는 분기가 없다. 따라서 점프를 추가하더라도 같은 이동 흐름을 유지하면, 공중에서 매번 새 입력 방향으로 수평 속도를 계산하게 된다. 현재는 점프 기능이 없으므로 실제 점프 조작을 검증한 결과와는 구분한다. Invector처럼 부드러운 공중 조작을 원한다면 수평 속도를 따로 저장하고 목표 속도로 보간하는 방식을 참고할 수 있다.
+
 ## 내 로코모션을 만들 때 참고할 점
 
 이번에 확인한 구조에서 참고하고 싶은 부분은 지상 이동, 공중 수평 이동, 수직 속도, 몸의 회전, 애니메이션 표시를 나누어 생각하는 방식이다.
