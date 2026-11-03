@@ -2,7 +2,7 @@
 title: "261103_NCAI_Unity_실습"
 date: 2026-11-03 10:07:00 +0900
 categories: [데일리로그, Unity]
-tags: [Unity, CSharp, Invector, 로코모션, Rigidbody, Animator, 점프, Skybox, UVC, Shader]
+tags: [Unity, CSharp, Invector, 로코모션, Rigidbody, Animator, 점프, Skybox, UVC, Shader, AfterSeconds, UV, 환경제작]
 pin: false
 toc: true
 ---
@@ -579,3 +579,52 @@ TPSControl의 Invector·UVC·VARCO 연동은 Unity 환경 샘플과 출처를 �
 
 - [Unity 6.4 — Character Controller 설명](https://docs.unity3d.com/6000.4/Documentation/Manual/CharacterControllers.html)
 - [Unity 6.4 — Rigidbody 설명](https://docs.unity3d.com/6000.4/Documentation/Manual/class-Rigidbody.html)
+
+## 오후에는 After Seconds 환경을 직접 정리해 봄
+
+오전에 본 Environment Training 자료 조사와는 별개로\
+오후에는 After Seconds에 가져온 환경 에셋과 벽 표면을 정리함
+
+모델이 화면에 보인다고 바로 반입이 끝나는 건 아니었음\
+감량한 모델의 구멍, UV 크기, 재질, 벽 접합부를 같이 봐야 했음
+
+### 폴리곤 수와 표면 상태는 같이 보기
+
+삼각형 수만 작게 만들면 가벼워질 거라고 보기 쉬운데\
+기존 감량본 일부는 원본에 없던 열린 면이 많이 생겨 있었음
+
+같은 위치에 나뉜 버텍스를 먼저 용접하고 원본에서 다시 감량함\
+천장처럼 얇은 부품은 목표 수를 올려야 형태와 관통 문제를 같이 잡을 수 있었음
+
+그리고 열린 경계가 0개라고 벽에 구멍이 없다는 뜻도 아니었음\
+터널처럼 뚫린 형태도 닫힌 메시일 수 있음\
+토폴로지 검사와 공간에서 원하는 모양인지는 따로 확인해야 하는 듯
+
+### 머티리얼을 늘리기 전에 UV부터
+
+벽 크기에 따라 텍스처가 늘어나 보이지 않게 미터 기준으로 UV를 맞춤\
+공용 머티리얼 1개로 길이가 다른 벽의 질감 크기와 도장 높이를 맞출 수 있었음
+
+Mask 한 장에 금속도·AO·매끄러움을 나눠 넣어 텍스처를 같이 씀\
+벽마다 머티리얼을 복제하는 게 먼저는 아니었음
+
+### 좋은 질감과 원하는 분위기도 다를 수 있음
+
+텍스처 자체는 괜찮았는데 회녹색 하단 도장을 넣으니 감옥 느낌이 강해짐\
+실험실 느낌을 원해서 흰색·회색·검은색 대비로 다시 조정함
+
+천장 패턴은 직접 180도 뒤집어 보이게 하고\
+노란 기운 대신 옅은 청백색 조명을 넣어 봄
+
+색 하나의 문제가 아니라 벽의 명도, 프레임, 광원 색을 같이 봐야 하는 듯\
+다음에는 같은 카메라에서 한 항목씩 비교하는 습관을 더 들여야겠음
+
+### 오늘 남긴 것
+
+일반 벽 접합은 정리했지만 천장·데크의 공면 후보는 추가 검수가 남음\
+내일 할 일과 남은 위치를 프로젝트 Docs에 기록해 둠
+
+시작 공간은 유리 돔과 배식구 구상까지 생각해 봄\
+오늘은 참고 이미지만 만들었고 실제 모델과 탈출 기능은 다음에 판단할 예정
+
+구현 내용과 화면은 [After Seconds 일일개발일지]({{ '/posts/after-seconds-environment-assets-and-clinical-tone/' | relative_url }})에 따로 정리함
