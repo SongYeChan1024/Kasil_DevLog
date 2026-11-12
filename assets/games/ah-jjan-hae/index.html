@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>아 짠 해</title>
+<style>
+  html, body {
+    margin: 0; height: 100%; background: #2a2521; overflow: hidden;
+    touch-action: none; user-select: none; -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body { display: flex; align-items: center; justify-content: center; }
+  canvas { display: block; border-radius: 14px; touch-action: none; cursor: pointer; }
+</style>
+</head>
+<body>
+<canvas id="c" aria-label="아 짠 해: 화면을 누르고 있으면 따르고, 떼면 멈춥니다. 두 컵의 양을 똑같이 맞추세요."></canvas>
+<script>
+(() => {
+'use strict';
+
+// ───────────────────────── 기본 상수 ─────────────────────────
+const W = 400, H = 640;            // 논리 해상도 (세로형)
+const TABLE_TOP = 505;             // 식탁 윗선
+const BASE_Y = 548;                // 컵 바닥 y
+const CAP = 12000;                 // 모든 컵의 용량(2D 면적, px²). 모양만 다르고 용량은 같다.
+const MIN_VOL = CAP * 0.25;        // 첫 컵 최소선
+const XS = [112, 288];             // 두 컵의 중심 x
+const TILT = 105 * Math.PI / 180;  // 팩이 완전히 기울었을 때 각도
+const G = 2600, V0 = 900;          // 물줄기 중력, 초기 속도 (px/s², px/s). 빠를수록 뗀 뒤 더 들어가는 양이 줄어든다.
+const F0 = 1100, F1 = 2400, RAMP = 3.5; // 유속: 누르고 있을수록 F0 → F1 (px²/s)
+const ZERO_DIFF = 0.30;            // 두 컵의 차이가 이 비율 이상이면 0점
+const ROUND_COUNT = 5;
+const FONT = '"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif';
+
+// 컵 모양: 바닥 너비 wb, 입구 너비 wt. 높이는 용량이 CAP이 되도록 계산한다.
+const SHAPES = {
+  mug:   { wb: 96,  wt: 96  },   // 머그
+  wide:  { wb: 124, wt: 136 },   // 넓고 낮은 컵
+  tall:  { wb: 58,  wt: 66  },   // 좁고 높은 컵
+  vee:   { wb: 52,  wt: 108 },   // 위로 벌어지는 컵
+  flask: { wb: 112, wt: 72  },   // 위로 좁아지는 컵
+};
+
+// 라운드 구성: 뒤로 갈수록 모양 차이가 커지고 유속이 빨라진다.
+const ROUNDS = [
+  { pair: ['mug', 'wide'],   flow: 1.0 },
+  { pair: ['wide', 'tall'],  flow: 1.0 },
+  { pair: ['vee', 'mug'],    flow: 1.0 },
+  { pair: ['flask', 'tall'], flow: 1.1 },
+  { pair: ['vee', 'flask'],  flow: 1.2 },
+];
+
+const LIQUIDS = [
+  { name: '우유',     color: '#fffdf5', carton: '#4a8fd6' },
+  { name: '딸기우유', color: '#ffb3c7', carton: '#e2557a' },
+  { name: '오렌지',   color: '#ffab2e', carton: '#ee861a' },
+  { name: '보리차',   color: '#a9682a', carton: '#7b5b3b' },
+  { name: '초코우유', color: '#8a5a3c', carton: '#5a3a28' },
+  { name: '포도',     color: '#8e55b8', carton: '#6a3d9a' },
+  { name: '바나나',   color: '#ffe89a', carton: '#e9b720' },
+];
+
+const GRADE_COLOR = { perfect: '#e39b00', great: '#2a9a66', good: '#3a7fc2', bad: '#b4524a' };
+
+// ───────────────────────── 유틸 ─────────────────────────
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const lerp = (a, b, t) => a + (b - a) * t;
+const easeInOut = t => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+const easeOutBack = t => { const c = 1.70158; return 1 + (c + 1) * Math.pow(t - 1, 3) + c * Math.pow(t - 1, 2); };
+function shuffle(a) {
+  const r = a.slice();
+  for (let i = r.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [r[i], r[j]] = [r[j], r[i]]; }
+  return r;
+}
+
+function makeCup(shapeKey, x) {
+  const s = SHAPES[shapeKey];
+  return { x, wb: s.wb, wt: s.wt, h: CAP / ((s.wb + s.wt) / 2), vol: 0, spill: false };
+}
+// 부피 → 수위(바닥에서의 높이). 사다리꼴 면적식의 역함수.
+function levelOf(cup, vol) {
+  const v = clamp(vol, 0, CAP);
+  const a = (cup.wt - cup.wb) / (2 * cup.h);
+  if (Math.abs(a) < 1e-9) return v / cup.wb;
+  return (-cup.wb + Math.sqrt(cup.wb * cup.wb + 4 * a * v)) / (2 * a);
+}
+const widthAt = (cup, y) => cup.wb + (cup.wt - cup.wb) * y / cup.h;
+
+function gradeOf(diff) {
+  if (diff <= 0.04) return { key: 'perfect', text: '짠!!',     sub: '완벽하게 똑같아요' };
+  if (diff <= 0.10) return { key: 'great',   text: '짠!',      sub: '거의 똑같아요' };
+  if (diff <= 0.18) return { key: 'good',    text: '짠…?',     sub: '살짝 달라요' };
+  return               { key: 'bad',     text: '아… 짠해', sub: '한쪽이 서운해해요' };
+}
+
+// ───────────────────────── 저장 ─────────────────────────
+function loadBest() { try { return parseInt(localStorage.getItem('ajh_best') || '0', 10) || 0; } catch (e) { return 0; } }
+function saveBest(v) { try { localStorage.setItem('ajh_best', String(v)); } catch (e) { /* 저장 불가 환경은 무시 */ } }
+
+// ───────────────────────── 상태 ─────────────────────────
+const st = {
+  mode: 'title',        // title | play | final
+  now: 0, modeT: 0,
+  round: 0, score: 0, results: [], best: loadBest(), newBest: false,
+  liquids: [], liquid: LIQUIDS[0], flowMul: 1,
+  cups: [], cupIdx: 0,
+  phase: 'enter',       // enter | pour | settle | move | reveal
+  phaseT: 0,
+  pressed: false, holdT: 0, emitting: false, poured: false,
+  packets: [], seg: 0, lastLandSeg: -1, lastLandT: -1,
+  carton: { x: XS[0], restY: 0, pourY: 0, pourX: XS[0], k: 0, mirror: false, offY: 0, from: null },
+  hint: '', rv: null,
+};
+window.__ajh = st; // 디버깅용 핸들
+
+// ───────────────────────── 소리 ─────────────────────────
+const audio = { ac: null, gain: null, filt: null, muted: false };
+function initAudio() {
+  if (audio.ac) { if (audio.ac.state === 'suspended') audio.ac.resume(); return; }
+  const AC = window.AudioContext || window.webkitAudioContext;
+  if (!AC) return;
+  try {
+    const ac = new AC();
+    const buf = ac.createBuffer(1, ac.sampleRate, ac.sampleRate);
+    const d = buf.getChannelData(0);
+    for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
+    const src = ac.createBufferSource(); src.buffer = buf; src.loop = true;
+    const f = ac.createBiquadFilter(); f.type = 'bandpass'; f.frequency.value = 600; f.Q.value = 1.4;
+    const g = ac.createGain(); g.gain.value = 0;
+    src.connect(f); f.connect(g); g.connect(ac.destination); src.start();
+    audio.ac = ac; audio.filt = f; audio.gain = g;
+  } catch (e) { audio.ac = null; }
+}
+// 따르는 소리: 컵이 찰수록 음이 높아진다(실제 컵과 같은 단서).
+function setPourSound(on, frac) {
+  if (!audio.ac) return;
+  const t = audio.ac.currentTime;
+  audio.gain.gain.setTargetAtTime(on && !audio.muted ? 0.2 : 0, t, 0.03);
+  audio.filt.frequency.setTargetAtTime(450 + 1500 * frac, t, 0.05);
+}
+function tone(freq, delay, dur, vol, type, freqEnd) {
+  if (!audio.ac || audio.muted) return;
+  const ac = audio.ac, t = ac.currentTime + delay;
+  const o = ac.createOscillator(), g = ac.createGain();
+  o.type = type || 'sine'; o.frequency.setValueAtTime(freq, t);
+  if (freqEnd) o.frequency.exponentialRampToValueAtTime(freqEnd, t + dur);
+  g.gain.setValueAtTime(vol, t); g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+  o.connect(g); g.connect(ac.destination); o.start(t); o.stop(t + dur + 0.05);
+}
+function sndClink(big) { tone(2093, 0, 0.5, 0.16); tone(2637, 0.02, 0.6, 0.12); if (big) tone(3136, 0.1, 0.7, 0.1); }
+function sndSad() { tone(392, 0, 0.55, 0.14, 'triangle', 247); }
+
+// ───────────────────────── 게임 흐름 ─────────────────────────
+function startGame() {
+  st.mode = 'play'; st.modeT = 0;
+  st.round = 0; st.score = 0; st.results = []; st.newBest = false;
+  st.liquids = shuffle(LIQUIDS);
+  startRound();
+}
+
+function cartonTargets(cup) {
+  const pourY = BASE_Y - cup.h - 40;       // 주둥이는 컵 입구 조금 위
+  return { pourY, restY: pourY - 125 };
+}
+
+function startRound() {
+  const cfg = ROUNDS[st.round];
+  const pair = Math.random() < 0.5 ? cfg.pair : [cfg.pair[1], cfg.pair[0]];
+  st.cups = [makeCup(pair[0], XS[0]), makeCup(pair[1], XS[1])];
+  st.liquid = st.liquids[st.round % st.liquids.length];
+  st.flowMul = cfg.flow;
+  st.cupIdx = 0;
+  st.phase = 'enter'; st.phaseT = 0;
+  st.pressed = false; st.holdT = 0; st.emitting = false; st.poured = false;
+  st.packets = []; st.lastLandSeg = -1;
+  st.hint = ''; st.rv = null;
+  const t = cartonTargets(st.cups[0]);
+  Object.assign(st.carton, { x: XS[0], pourX: XS[0], restY: t.restY, pourY: t.pourY, k: 0, mirror: false, offY: -340, from: null });
+}
+
+function inFlight() { let s = 0; for (const p of st.packets) s += p.vol; return s; }
+
+function onRelease() {
+  if (st.mode !== 'play' || st.phase !== 'pour') return;
+  const cup = st.cups[st.cupIdx];
+  const projected = cup.vol + inFlight();
+  if (st.cupIdx === 0) {
+    // 첫 컵은 최소선을 넘겨야 확정된다. 그 전에는 다시 눌러 이어 따를 수 있다.
+    if (projected < MIN_VOL) { st.hint = '점선까지는 채워야 해요. 다시 꾹!'; return; }
+  } else if (projected <= 0) {
+    st.hint = '꾹 누르고 있어야 따라져요'; return;   // 실수로 톡 누른 경우는 봐준다
+  }
+  st.hint = '';
+  st.phase = 'settle'; st.phaseT = 0;
+}
+
+function onOverflow(cup) {
+  cup.vol = CAP; cup.spill = true;
+  st.pressed = false; st.packets = [];
+  startReveal(true);
+}
+
+function startReveal(overflow) {
+  const [a, b] = st.cups;
+  const diff = overflow ? 1 : Math.abs(a.vol - b.vol) / a.vol;
+  const pts = overflow ? 0 : Math.round(100 * clamp(1 - diff / ZERO_DIFF, 0, 1));
+  const grade = overflow ? { key: 'bad', text: '아… 짠해', sub: '넘쳐 버렸어요' } : gradeOf(diff);
+  const fillDur = overflow ? 0 : Math.max(a.vol, b.vol) / CAP * 1.3;
+  const tFill = 0.35;
+  const tDiff = overflow ? 0.3 : tFill + fillDur + 0.3;
+  const tGrade = tDiff + (overflow ? 0.3 : 0.5);
+  st.rv = { t: 0, overflow, diff, pts, grade, tFill, tDiff, tGrade, tDone: tGrade + 0.6, fired: false };
+  st.phase = 'reveal'; st.phaseT = 0;
+  st.score += pts;
+  st.results.push({ key: grade.key, pts });
+}
+
+function nextRound() {
+  if (st.round + 1 < ROUND_COUNT) { st.round++; startRound(); return; }
+  st.mode = 'final'; st.modeT = 0;
+  if (st.score > st.best) { st.best = st.score; st.newBest = true; saveBest(st.best); }
+}
+
+// ───────────────────────── 입력 ─────────────────────────
+function pressDown() {
+  initAudio();
+  if (st.mode === 'title') { startGame(); return; }
+  if (st.mode === 'final') { if (st.modeT > 0.8) startGame(); return; }
+  if (st.phase === 'reveal') { if (st.rv.t >= st.rv.tDone) nextRound(); return; }
+  if (st.phase === 'pour' && !st.pressed) { st.pressed = true; st.holdT = 0; st.hint = ''; }
+}
+function pressUp() {
+  if (!st.pressed) return;
+  st.pressed = false;
+  onRelease();
+}
+
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+let scale = 1, activePointer = null;
+
+function toLogical(e) {
+  const r = canvas.getBoundingClientRect();
+  return { x: (e.clientX - r.left) / r.width * W, y: (e.clientY - r.top) / r.height * H };
+}
+const inMuteButton = p => p.x > W - 50 && p.x < W && p.y > 4 && p.y < 50;
+
+window.addEventListener('pointerdown', e => {
+  if (e.button !== undefined && e.button !== 0) return;
+  e.preventDefault();
+  if (inMuteButton(toLogical(e))) { initAudio(); audio.muted = !audio.muted; return; }
+  if (activePointer !== null) return;
+  activePointer = e.pointerId;
+  // 누른 채 게임 화면 밖에서 떼어도 pointerup을 받도록 포인터를 붙잡아 둔다.
+  try { canvas.setPointerCapture(e.pointerId); } catch (err) { /* 지원하지 않는 환경은 무시 */ }
+  pressDown();
+}, { passive: false });
+function pointerEnd(e) { if (e.pointerId !== activePointer) return; activePointer = null; pressUp(); }
+window.addEventListener('pointerup', pointerEnd);
+window.addEventListener('pointercancel', pointerEnd);
+window.addEventListener('keydown', e => {
+  if (e.code !== 'Space' && e.code !== 'Enter') return;
+  e.preventDefault();
+  if (!e.repeat) pressDown();
+});
+window.addEventListener('keyup', e => { if (e.code === 'Space' || e.code === 'Enter') pressUp(); });
+// 누른 채 창을 벗어나면 뗀 것으로 처리한다.
+window.addEventListener('blur', () => { activePointer = null; pressUp(); });
+document.addEventListener('visibilitychange', () => { if (document.hidden) { activePointer = null; pressUp(); } });
+window.addEventListener('contextmenu', e => e.preventDefault());
+
+function resize() {
+  // 창 전체가 아니라 body 안쪽 크기에 맞춘다(휴대폰의 상하 여백을 침범하지 않도록).
+  const bw = document.body.clientWidth || window.innerWidth;
+  const bh = document.body.clientHeight || window.innerHeight;
+  const s = Math.min(bw / W, bh / H);
+  const dpr = Math.min(window.devicePixelRatio || 1, 3);
+  canvas.style.width = Math.floor(W * s) + 'px';
+  canvas.style.height = Math.floor(H * s) + 'px';
+  canvas.width = Math.max(1, Math.round(W * s * dpr));
+  canvas.height = Math.max(1, Math.round(H * s * dpr));
+  scale = canvas.width / W;
+}
+window.addEventListener('resize', resize);
+
+// ───────────────────────── 갱신 ─────────────────────────
+function spoutPos() {
+  const c = st.carton, e = easeInOut(c.k), dir = c.mirror ? -1 : 1;
+  return { x: lerp(c.x - 31 * dir, c.pourX, e), y: lerp(c.restY, c.pourY, e) + c.offY, e, dir };
+}
+
+function update(dt) {
+  st.now += dt; st.modeT += dt;
+  if (st.mode !== 'play') { setPourSound(false, 0); return; }
+  st.phaseT += dt;
+  const c = st.carton;
+  const cup = st.cups[st.cupIdx];
+
+  // 팩 기울기
+  const wantTilt = st.pressed && st.phase === 'pour';
+  c.k = wantTilt ? Math.min(1, c.k + dt / 0.16) : Math.max(0, c.k - dt / 0.22);
+
+  // 물줄기 내보내기
+  if (wantTilt && c.k > 0.92) {
+    st.holdT += dt;
+    const ramp = Math.min(1, st.holdT / RAMP);
+    const rate = (F0 + (F1 - F0) * ramp) * st.flowMul;
+    const sp = spoutPos();
+    st.packets.push({ x: sp.x, y: sp.y, v: V0, vol: rate * dt, seg: st.seg, w: 5 + 4 * ramp });
+    st.emitting = true; st.poured = true;
+  } else if (st.emitting) { st.emitting = false; st.seg++; }
+
+  // 물줄기 낙하와 착수
+  if (st.packets.length) {
+    const keep = [];
+    let overflowed = false;
+    for (const p of st.packets) {
+      p.v += G * dt; p.y += p.v * dt;
+      const surface = BASE_Y - levelOf(cup, cup.vol);
+      if (p.y >= surface) {
+        cup.vol += p.vol;
+        st.lastLandSeg = p.seg; st.lastLandT = st.now;
+        if (cup.vol > CAP) { overflowed = true; break; }
+      } else keep.push(p);
+    }
+    if (overflowed) { onOverflow(cup); }
+    else st.packets = keep;
+  }
+  setPourSound(st.now - st.lastLandT < 0.07 && st.phase !== 'reveal', cup.vol / CAP);
+
+  // 단계 전환
+  if (st.phase === 'enter') {
+    const t = clamp(st.phaseT / 0.45, 0, 1);
+    c.offY = lerp(-340, 0, easeInOut(t));
+    if (t >= 1) { st.phase = 'pour'; st.phaseT = 0; }
+  } else if (st.phase === 'settle') {
+    if (st.packets.length === 0 && c.k <= 0.01 && st.phaseT > 0.35) {
+      if (st.cupIdx === 0) {
+        const t = cartonTargets(st.cups[1]);
+        c.from = { x: c.x, restY: c.restY, pourY: c.pourY, to: { x: XS[1], restY: t.restY, pourY: t.pourY } };
+        st.phase = 'move'; st.phaseT = 0;
+      } else startReveal(false);
+    }
+  } else if (st.phase === 'move') {
+    const t = clamp(st.phaseT / 0.5, 0, 1), e = easeInOut(t), f = c.from;
+    c.x = lerp(f.x, f.to.x, e); c.restY = lerp(f.restY, f.to.restY, e); c.pourY = lerp(f.pourY, f.to.pourY, e);
+    if (t >= 0.5) { c.mirror = true; c.pourX = XS[1]; }
+    if (t >= 1) { st.cupIdx = 1; st.holdT = 0; st.poured = false; st.phase = 'pour'; st.phaseT = 0; c.from = null; }
+  } else if (st.phase === 'reveal') {
+    const rv = st.rv;
+    rv.t += dt;
+    c.offY = lerp(c.offY, -600, Math.min(1, dt * 6));
+    if (!rv.fired && rv.t >= rv.tGrade) {
+      rv.fired = true;
+      if (rv.grade.key === 'bad') sndSad(); else sndClink(rv.grade.key === 'perfect');
+    }
+  }
+}
+
+// ───────────────────────── 그리기 ─────────────────────────
+function text(str, x, y, size, color, align, weight) {
+  ctx.font = `${weight || 'bold'} ${size}px ${FONT}`;
+  ctx.fillStyle = color; ctx.textAlign = align || 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText(str, x, y);
+}
+function rrect(x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y); ctx.lineTo(x + w - r, y); ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+  ctx.lineTo(x + w, y + h - r); ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+  ctx.lineTo(x + r, y + h); ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+  ctx.lineTo(x, y + r); ctx.quadraticCurveTo(x, y, x + r, y); ctx.closePath();
+}
+
+function drawScene() {
+  ctx.fillStyle = '#bcdad4'; ctx.fillRect(0, 0, W, H);
+  ctx.fillStyle = '#b0d0c9'; ctx.fillRect(0, TABLE_TOP - 40, W, 40);
+  ctx.fillStyle = '#d3a474'; ctx.fillRect(0, TABLE_TOP, W, H - TABLE_TOP);
+  ctx.fillStyle = '#e3b98c'; ctx.fillRect(0, TABLE_TOP, W, 5);
+}
+
+function drawCup(cup, color, o) {
+  const dx = (o && o.dx) || 0, tilt = (o && o.tilt) || 0, minLine = o && o.minLine;
+  const hb = cup.wb / 2, ht = cup.wt / 2, h = cup.h;
+  ctx.save();
+  ctx.translate(cup.x + dx, BASE_Y);
+  // 그림자
+  ctx.fillStyle = 'rgba(70,35,10,0.18)';
+  ctx.beginPath(); ctx.ellipse(0, 5, Math.max(hb, ht * 0.85) + 9, 7, 0, 0, Math.PI * 2); ctx.fill();
+  // 넘친 자국
+  if (cup.spill) {
+    ctx.fillStyle = color; ctx.globalAlpha = 0.9;
+    ctx.beginPath(); ctx.ellipse(0, 8, Math.max(hb, ht) + 26, 10, 0, 0, Math.PI * 2); ctx.fill();
+    ctx.globalAlpha = 1;
+  }
+  ctx.rotate(tilt);
+  // 유리 안쪽
+  ctx.beginPath(); ctx.moveTo(-hb, 0); ctx.lineTo(hb, 0); ctx.lineTo(ht, -h); ctx.lineTo(-ht, -h); ctx.closePath();
+  ctx.fillStyle = 'rgba(255,255,255,0.42)'; ctx.fill();
+  // 액체
+  if (cup.vol > 0.5) {
+    const y = levelOf(cup, cup.vol), hw = widthAt(cup, y) / 2;
+    ctx.beginPath(); ctx.moveTo(-hb, 0); ctx.lineTo(hb, 0); ctx.lineTo(hw, -y); ctx.lineTo(-hw, -y); ctx.closePath();
+    ctx.fillStyle = color; ctx.fill();
+    ctx.fillStyle = 'rgba(255,255,255,0.4)'; ctx.fillRect(-hw, -y, hw * 2, 2.5);
+    ctx.fillStyle = 'rgba(0,0,0,0.10)'; ctx.fillRect(-hw, -y - 1, hw * 2, 1);
+  }
+  // 최소선
+  if (minLine) {
+    const y = levelOf(cup, MIN_VOL), hw = widthAt(cup, y) / 2;
+    ctx.strokeStyle = 'rgba(40,60,70,0.75)'; ctx.lineWidth = 2; ctx.setLineDash([6, 5]);
+    ctx.beginPath(); ctx.moveTo(-hw + 3, -y); ctx.lineTo(hw - 3, -y); ctx.stroke(); ctx.setLineDash([]);
+    text('최소', hw + 20, -y, 12, 'rgba(40,60,70,0.85)');
+  }
+  // 연습용 안내선: 첫 컵과 같은 양이 되는 높이
+  if (o && o.hintVol > 0) {
+    const y = levelOf(cup, o.hintVol), hw = widthAt(cup, y) / 2;
+    ctx.strokeStyle = '#d2452f'; ctx.lineWidth = 2.5; ctx.setLineDash([7, 5]);
+    ctx.beginPath(); ctx.moveTo(-hw + 3, -y); ctx.lineTo(hw - 3, -y); ctx.stroke(); ctx.setLineDash([]);
+    text('여기쯤', -hw - 26, -y, 13, '#d2452f');
+  }
+  // 넘쳐 흐르는 줄기
+  if (cup.spill) {
+    ctx.strokeStyle = color; ctx.lineWidth = 6; ctx.lineCap = 'round';
+    ctx.beginPath(); ctx.moveTo(-ht - 3, -h + 2); ctx.lineTo(-hb - 4, -4); ctx.moveTo(ht + 3, -h + 2); ctx.lineTo(hb + 4, -4); ctx.stroke();
+  }
+  // 바닥과 외곽선
+  ctx.fillStyle = 'rgba(110,140,150,0.6)'; rrect(-hb - 2, 0, cup.wb + 4, 6, 3); ctx.fill();
+  ctx.strokeStyle = 'rgba(60,85,95,0.8)'; ctx.lineWidth = 3.5; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+  ctx.beginPath(); ctx.moveTo(-ht, -h); ctx.lineTo(-hb, 0); ctx.lineTo(hb, 0); ctx.lineTo(ht, -h); ctx.stroke();
+  // 반사광
+  ctx.strokeStyle = 'rgba(255,255,255,0.65)'; ctx.lineWidth = 3;
+  ctx.beginPath();
+  ctx.moveTo(-widthAt(cup, h * 0.78) / 2 + 9, -h * 0.78); ctx.lineTo(-widthAt(cup, h * 0.25) / 2 + 9, -h * 0.25); ctx.stroke();
+  ctx.restore();
+}
+
+function drawStream() {
+  if (!st.packets.length) return;
+  const cup = st.cups[st.cupIdx];
+  const surface = BASE_Y - levelOf(cup, cup.vol);
+  const groups = new Map();
+  for (const p of st.packets) { if (!groups.has(p.seg)) groups.set(p.seg, []); groups.get(p.seg).push(p); }
+  ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+  for (const [seg, ps] of groups) {
+    // ps는 오래된(아래쪽) 것부터 들어 있다.
+    const lowest = ps[0], newest = ps[ps.length - 1];
+    const bottom = (seg === st.lastLandSeg && st.now - st.lastLandT < 0.06) ? surface : lowest.y;
+    let top = newest.y - 8;
+    if (st.emitting && seg === st.seg) top = spoutPos().y;
+    for (const pass of [0, 1]) {
+      ctx.strokeStyle = pass === 0 ? 'rgba(40,60,70,0.16)' : st.liquid.color;
+      ctx.lineWidth = lowest.w + (pass === 0 ? 2.5 : 0);
+      ctx.beginPath(); ctx.moveTo(lowest.x, top); ctx.lineTo(lowest.x, bottom); ctx.stroke();
+    }
+    // 착수 지점 물보라
+    if (bottom === surface) {
+      ctx.fillStyle = 'rgba(255,255,255,0.55)';
+      ctx.beginPath(); ctx.ellipse(lowest.x, surface + 1, lowest.w + 4, 2.5, 0, 0, Math.PI * 2); ctx.fill();
+    }
+  }
+}
+
+function drawCarton() {
+  const liq = st.liquid, sp = spoutPos();
+  if (sp.y < -260) return;
+  ctx.save();
+  ctx.translate(sp.x, sp.y); ctx.scale(sp.dir, 1); ctx.rotate(-sp.e * TILT);
+  ctx.fillStyle = liq.carton; rrect(-4, 18, 70, 120, 7); ctx.fill();
+  ctx.fillStyle = 'rgba(255,255,255,0.28)';
+  ctx.beginPath(); ctx.moveTo(-4, 20); ctx.lineTo(66, 20); ctx.lineTo(58, 2); ctx.lineTo(4, 2); ctx.closePath();
+  ctx.fillStyle = liq.carton; ctx.fill(); ctx.fillStyle = 'rgba(255,255,255,0.28)'; ctx.fill();
+  ctx.fillStyle = 'rgba(0,0,0,0.22)'; rrect(3, -4, 56, 7, 2); ctx.fill();
+  ctx.fillStyle = 'rgba(255,255,255,0.93)'; ctx.fillRect(-4, 56, 70, 46);
+  ctx.fillStyle = 'rgba(0,0,0,0.10)'; ctx.fillRect(-4, 126, 70, 4);
+  ctx.save(); ctx.translate(31, 80); ctx.scale(sp.dir, 1);
+  text(liq.name, 0, 0, liq.name.length > 3 ? 15 : 18, liq.carton);
+  ctx.restore();
+  ctx.restore();
+}
+
+function drawMute() {
+  const x = W - 28, y = 27;
+  ctx.save(); ctx.translate(x, y);
+  ctx.fillStyle = 'rgba(40,55,55,0.7)'; ctx.strokeStyle = 'rgba(40,55,55,0.7)'; ctx.lineWidth = 2; ctx.lineCap = 'round';
+  ctx.beginPath(); ctx.moveTo(-9, -4); ctx.lineTo(-4, -4); ctx.lineTo(2, -9); ctx.lineTo(2, 9); ctx.lineTo(-4, 4); ctx.lineTo(-9, 4); ctx.closePath(); ctx.fill();
+  if (audio.muted) { ctx.beginPath(); ctx.moveTo(6, -4); ctx.lineTo(13, 4); ctx.moveTo(13, -4); ctx.lineTo(6, 4); ctx.stroke(); }
+  else { ctx.beginPath(); ctx.arc(3, 0, 5, -0.9, 0.9); ctx.stroke(); ctx.beginPath(); ctx.arc(3, 0, 9.5, -0.9, 0.9); ctx.stroke(); }
+  ctx.restore();
+}
+
+function drawDots(cx, y, gap) {
+  for (let i = 0; i < ROUND_COUNT; i++) {
+    const r = st.results[i], x = cx + (i - (ROUND_COUNT - 1) / 2) * gap;
+    ctx.beginPath(); ctx.arc(x, y, 6, 0, Math.PI * 2);
+    if (r) { ctx.fillStyle = GRADE_COLOR[r.key]; ctx.fill(); }
+    else { ctx.fillStyle = 'rgba(255,255,255,0.55)'; ctx.fill(); if (i === st.round && st.mode === 'play') { ctx.strokeStyle = 'rgba(40,55,55,0.7)'; ctx.lineWidth = 2; ctx.stroke(); } }
+  }
+}
+
+function drawHud() {
+  text(`${st.round + 1} / ${ROUND_COUNT}`, 16, 28, 17, '#2f403e', 'left');
+  drawDots(W / 2, 28, 20);
+  text(`${st.score}점`, W - 58, 28, 17, '#2f403e', 'right');
+}
+
+function drawReveal(rv) {
+  if (rv.overflow) return;
+  const [a, b] = st.cups;
+  const gx = [150, 250], gw = 54, gh = 150, gb = 228;
+  const alpha = clamp(rv.t / 0.3, 0, 1);
+  ctx.save(); ctx.globalAlpha = alpha;
+  text('똑같은 잔에 옮겨 담으면…', W / 2, 62, 15, '#2f403e');
+  const speed = gh / 1.3;
+  const ft = Math.max(0, rv.t - rv.tFill);
+  const hs = [a, b].map(c => Math.min(c.vol / CAP * gh, ft * speed));
+  for (let i = 0; i < 2; i++) {
+    const x = gx[i] - gw / 2;
+    ctx.fillStyle = 'rgba(255,255,255,0.5)'; ctx.fillRect(x, gb - gh, gw, gh);
+    ctx.fillStyle = st.liquid.color; ctx.fillRect(x, gb - hs[i], gw, hs[i]);
+    ctx.strokeStyle = 'rgba(60,85,95,0.8)'; ctx.lineWidth = 3; ctx.lineJoin = 'round';
+    ctx.beginPath(); ctx.moveTo(x, gb - gh); ctx.lineTo(x, gb); ctx.lineTo(x + gw, gb); ctx.lineTo(x + gw, gb - gh); ctx.stroke();
+    text(i === 0 ? '왼쪽' : '오른쪽', gx[i], gb + 15, 12, 'rgba(47,64,62,0.8)', 'center', 'normal');
+  }
+  if (rv.t >= rv.tDiff) {
+    // 왼쪽 잔 높이를 기준선으로 그어 차이를 보여준다.
+    const ya = gb - a.vol / CAP * gh;
+    ctx.strokeStyle = 'rgba(40,60,70,0.8)'; ctx.lineWidth = 1.5; ctx.setLineDash([5, 4]);
+    ctx.beginPath(); ctx.moveTo(gx[0] - gw / 2 - 12, ya); ctx.lineTo(gx[1] + gw / 2 + 12, ya); ctx.stroke(); ctx.setLineDash([]);
+    let line = `차이 ${(rv.diff * 100).toFixed(1)}%`;
+    if (rv.t >= rv.tGrade) line += `  ·  +${rv.pts}점`;
+    text(line, W / 2, gb + 38, 15, '#2f403e');
+  }
+  ctx.restore();
+}
+
+function drawGrade(rv) {
+  if (rv.t < rv.tGrade) return;
+  const p = clamp((rv.t - rv.tGrade) / 0.3, 0, 1);
+  const s = 0.5 + 0.5 * easeOutBack(p);
+  const y = rv.overflow ? 200 : 316;
+  ctx.save(); ctx.translate(W / 2, y); ctx.scale(s, s);
+  ctx.lineWidth = 8; ctx.strokeStyle = 'rgba(255,255,255,0.9)'; ctx.lineJoin = 'round';
+  ctx.font = `bold 46px ${FONT}`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.strokeText(rv.grade.text, 0, 0);
+  ctx.fillStyle = GRADE_COLOR[rv.grade.key]; ctx.fillText(rv.grade.text, 0, 0);
+  ctx.restore();
+  if (rv.overflow) text('+0점', W / 2, 250, 16, '#2f403e');
+}
+
+// 잔 부딪치기: 두 컵이 가운데로 다가와 안쪽으로 살짝 기운다.
+function clinkPose(rv) {
+  if (!rv || rv.overflow || rv.grade.key === 'bad') return null;
+  const t0 = rv.tGrade - 0.28;
+  if (rv.t < t0) return null;
+  const [a, b] = st.cups, ang = 7 * Math.PI / 180;
+  const ext = c => Math.max(c.wb / 2, c.wt / 2 * Math.cos(ang) + c.h * Math.sin(ang));
+  const gap = (b.x - a.x) - ext(a) - ext(b);
+  let f;
+  if (rv.t < rv.tGrade) { const p = (rv.t - t0) / 0.28; f = p * p; }
+  else f = 1 - 0.14 * Math.sin(clamp((rv.t - rv.tGrade) / 0.35, 0, 1) * Math.PI);
+  return { dx: gap / 2 * f, tilt: ang * f, sparkY: BASE_Y - Math.min(a.h, b.h) - 6 };
+}
+
+function drawSparks(rv, pose) {
+  const p = (rv.t - rv.tGrade) / 0.45;
+  if (p < 0 || p > 1) return;
+  ctx.save(); ctx.translate(W / 2, pose.sparkY);
+  ctx.strokeStyle = GRADE_COLOR[rv.grade.key]; ctx.globalAlpha = 1 - p; ctx.lineWidth = 3; ctx.lineCap = 'round';
+  for (let i = 0; i < 9; i++) {
+    const a = -Math.PI + (i / 8) * Math.PI, r0 = 8 + 26 * p, r1 = r0 + 10;
+    ctx.beginPath(); ctx.moveTo(Math.cos(a) * r0, Math.sin(a) * r0); ctx.lineTo(Math.cos(a) * r1, Math.sin(a) * r1); ctx.stroke();
+  }
+  ctx.restore();
+}
+
+function hintText() {
+  if (st.hint) return st.hint;
+  if (st.phase === 'reveal') {
+    if (st.rv.t < st.rv.tDone) return st.rv.t >= st.rv.tGrade ? st.rv.grade.sub : '';
+    return st.round + 1 < ROUND_COUNT ? '눌러서 다음 잔' : '눌러서 결과 보기';
+  }
+  if (st.phase === 'pour') {
+    if (st.pressed) return '떼면 멈춰요';
+    if (st.cupIdx === 0) return st.poured ? '점선까지는 채워야 해요. 다시 꾹!' : '화면을 꾹 눌러 왼쪽 컵에 따르세요';
+    if (st.round === 0) return '연습! 빨간 선에 닿기 직전에 떼세요';
+    return st.round === 1 ? '이제 선 없이! 오른쪽 컵도 똑같이' : '이번엔 오른쪽 컵! 똑같은 양으로';
+  }
+  return '';
+}
+
+function drawPlay() {
+  const rv = st.phase === 'reveal' ? st.rv : null;
+  if (rv) drawReveal(rv);
+  const pose = clinkPose(rv);
+  drawCup(st.cups[0], st.liquid.color, { dx: pose ? pose.dx : 0, tilt: pose ? pose.tilt : 0, minLine: st.cupIdx === 0 && (st.phase === 'pour' || st.phase === 'enter') });
+  // 1라운드는 연습: 오른쪽 컵에 정답 높이를 보여준다.
+  const showHint = st.round === 0 && !rv && (st.phase === 'move' || st.cupIdx === 1);
+  drawCup(st.cups[1], st.liquid.color, { dx: pose ? -pose.dx : 0, tilt: pose ? -pose.tilt : 0, hintVol: showHint ? st.cups[0].vol : 0 });
+  drawStream();
+  drawCarton();
+  drawHud();
+  if (rv) { if (pose) drawSparks(rv, pose); drawGrade(rv); }
+  const hint = hintText();
+  if (hint) {
+    const blink = st.phase === 'reveal' && rv.t >= rv.tDone;
+    ctx.globalAlpha = blink ? 0.55 + 0.45 * Math.sin(st.now * 5) : 1;
+    text(hint, W / 2, 602, 17, '#4a3221');
+    ctx.globalAlpha = 1;
+  }
+}
+
+const titleCups = (() => {
+  const a = makeCup('wide', 118), b = makeCup('tall', 276);
+  a.vol = b.vol = CAP * 0.62;
+  return [a, b];
+})();
+
+function drawTitle() {
+  text('아 짠 해', W / 2, 150, 68, '#2f403e');
+  text('두 잔 똑같이 따르기', W / 2, 205, 19, '#3f5552');
+  const lines = ['꾹 누르면 따르고, 떼면 멈춰요', '컵마다 딱 한 번씩', '두 잔의 양이 똑같으면 — 짠!'];
+  lines.forEach((l, i) => text(l, W / 2, 262 + i * 27, 16, '#2f403e', 'center', 'normal'));
+  const sway = Math.sin(st.now * 2.2) * 0.5 + 0.5, ang = 6 * Math.PI / 180 * sway;
+  drawCup(titleCups[0], '#ffab2e', { dx: 18 * sway, tilt: ang });
+  drawCup(titleCups[1], '#ffab2e', { dx: -18 * sway, tilt: -ang });
+  ctx.globalAlpha = 0.55 + 0.45 * Math.sin(st.now * 4);
+  text('화면을 눌러 시작', W / 2, 602, 18, '#4a3221');
+  ctx.globalAlpha = 1;
+  if (st.best > 0) text(`최고 ${st.best}점`, 16, 28, 15, '#2f403e', 'left');
+}
+
+function drawFinal() {
+  const max = ROUND_COUNT * 100;
+  const msg = st.score >= 450 ? '눈대중의 달인!' : st.score >= 350 ? '제법인데요?' : st.score >= 200 ? '조금만 더 하면 짠!' : '아… 짠해';
+  text('오늘의 짠', W / 2, 96, 22, '#3f5552');
+  text(`${st.score}`, W / 2, 168, 84, '#2f403e');
+  text(`/ ${max}점`, W / 2, 226, 17, '#3f5552', 'center', 'normal');
+  text(msg, W / 2, 272, 24, GRADE_COLOR[st.score >= 350 ? 'perfect' : st.score >= 200 ? 'great' : 'bad']);
+  st.results.forEach((r, i) => {
+    const y = 322 + i * 30;
+    ctx.beginPath(); ctx.arc(128, y, 7, 0, Math.PI * 2); ctx.fillStyle = GRADE_COLOR[r.key]; ctx.fill();
+    text(`${i + 1}번째 잔`, 148, y, 16, '#2f403e', 'left', 'normal');
+    text(`${r.pts}점`, 280, y, 16, '#2f403e', 'right');
+  });
+  text(st.newBest ? '최고 기록 갱신!' : `최고 ${st.best}점`, W / 2, 482, 16, st.newBest ? GRADE_COLOR.perfect : '#3f5552');
+  if (st.modeT > 0.8) {
+    ctx.globalAlpha = 0.55 + 0.45 * Math.sin(st.now * 4);
+    text('눌러서 다시 하기', W / 2, 602, 18, '#4a3221');
+    ctx.globalAlpha = 1;
+  }
+}
+
+function render() {
+  ctx.setTransform(scale, 0, 0, scale, 0, 0);
+  drawScene();
+  if (st.mode === 'title') drawTitle();
+  else if (st.mode === 'final') drawFinal();
+  else drawPlay();
+  drawMute();
+}
+
+// ───────────────────────── 루프 ─────────────────────────
+let last = 0;
+function frame(ts) {
+  const dt = Math.min(0.033, (ts - last) / 1000 || 0);
+  last = ts;
+  update(dt);
+  render();
+  requestAnimationFrame(frame);
+}
+resize();
+requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
