@@ -193,6 +193,33 @@
         "id": "notion-meeting-notes",
         "title": "회의 기록",
         "parent": "daily-log"
+      },
+      {
+        "categories": [
+          "수업 노트",
+          "수업메모",
+          "C#",
+          "AI",
+          "Daily Log",
+          "개발 메모",
+          "개발일지",
+          "개인 프로젝트",
+          "게임 기획",
+          "데이터",
+          "데일리로그",
+          "Blender",
+          "에이전트 사용",
+          "프로젝트 전체",
+          "학습 기록",
+          "회의 기록",
+          "NCAI"
+        ],
+        "all": false,
+        "show_top": true,
+        "show_side": true,
+        "id": "tab-153c8cce-a793-45e3-8524-c3d80cee9907",
+        "title": "NCAI",
+        "parent": "daily-log"
       }
     ]
   }
