@@ -9,6 +9,8 @@ import tomllib
 
 ROOT = Path(__file__).resolve().parent
 SOURCE = ROOT / "RULES.md"
+SKILLS = ("shared-intent", "shared-spec-plan", "shared-quality")
+SKILL_FILES = tuple(f"{folder}/skills/{name}/SKILL.md" for folder in (".agents", ".claude") for name in SKILLS)
 PROJECTS = {
     "After_Seconds": ("unity", "after-seconds"),
     "ERGOSQUARE-ARCHITECT": ("unity", "ergo-game"),
@@ -34,7 +36,7 @@ def sections(source: bytes) -> dict[str, str]:
     text = source.decode("utf-8-sig")
     matches = re.findall(r"<!-- scope:([\w-]+) -->\s*\n(.*?)<!-- /scope -->", text, re.S)
     parts = {key: body.strip() + "\n" for key, body in matches}
-    required = {"common", "workspace", "lucid-reference", "reviewer"} | {x for group in PROJECTS.values() for x in group}
+    required = {"common", "workspace", "lucid-reference", "reviewer", *SKILLS} | {x for group in PROJECTS.values() for x in group}
     if set(parts) != required or len(parts) != len(matches) or len(matches) != text.count("<!-- scope:") or len(matches) != text.count("<!-- /scope -->"):
         raise ValueError("RULES.md 범위가 누락·중복되었거나 구분 표식이 잘못되었습니다.")
     return parts
@@ -50,6 +52,22 @@ def instructions(source: bytes, scopes: tuple[str, ...]) -> bytes:
     ).encode("utf-8")
     if len(result) > 25000:
         raise ValueError("적용 지침이 너무 큽니다. 범위를 더 나누세요.")
+    return result
+
+
+def render_skills(source: bytes) -> dict[str, bytes]:
+    parts = sections(source)
+    result = {}
+    for name in SKILLS:
+        metadata, separator, body = parts[name].partition("\n---\n")
+        if not metadata.startswith("---\n") or not separator or f"\nname: {name}\n" not in metadata + "\n" or not re.search(r"^description: \S.+", metadata, re.M):
+            raise ValueError(f"스킬 메타데이터를 확인하세요: {name}")
+        generated = (metadata + separator + "\n<!-- Generated from RULES.md; 직접 편집하지 않습니다. -->\n"
+                     + f"<!-- Source SHA256: {sha(source)} -->\n"
+                     + f"편집 원본: [통합 규칙]({SOURCE_URL}). [출처·라이선스](../../../.agent-rules/THIRD_PARTY_NOTICES.md).\n\n"
+                     + body.lstrip()).encode("utf-8")
+        for folder in (".agents", ".claude"):
+            result[f"{folder}/skills/{name}/SKILL.md"] = generated
     return result
 
 
@@ -123,7 +141,7 @@ prefix_rule(pattern=["git", "push", "-f"], decision="forbidden")
 def validation_tasks(profile: str) -> list[dict]:
     if profile == "blog":
         return [
-            {"name": "agent-rules", "patterns": ["tools/agent-rules/*", ".agent-rules/*", ".claude/*", ".codex/*"],
+            {"name": "agent-rules", "patterns": ["tools/agent-rules/*", ".agent-rules/*", ".agents/*", ".claude/*", ".codex/*"],
              "requires": "tools/agent-rules/test_manage.py", "command": ["{python}", "-B", "-m", "unittest", "discover", "-s", "tools/agent-rules", "-p", "test_*.py"]},
             {"name": "blog-editor", "patterns": ["admin/*", "assets/js/*", "tools/*regression*"],
              "requires": "tools/editor-regression.test.mjs", "command": ["node", "--test", "tools/editor-regression.test.mjs", "tools/cache-regression.test.mjs"]},
@@ -142,13 +160,15 @@ def render_project(project: Path, source: bytes, existing: dict[str, bytes | Non
         "CLAUDE.md": b"# Shared agent instructions\n\n@AGENTS.md\n",
         ".agent-rules/runtime.py": (ROOT / "runtime.py").read_bytes(),
         ".agent-rules/.gitignore": b".cache/\n__pycache__/\n",
+        ".agent-rules/THIRD_PARTY_NOTICES.md": (ROOT / "THIRD_PARTY_NOTICES.md").read_bytes(),
         ".codex/rules/shared.rules": EXEC_RULES.encode("utf-8"),
         ".codex/agents/shared-reviewer.toml": ('sandbox_mode = "read-only"\ndeveloper_instructions = ' + json.dumps(reviewer, ensure_ascii=False) + '\n').encode("utf-8"),
         ".claude/agents/shared-reviewer.md": ('---\nname: shared-reviewer\ndescription: Read-only review when the user explicitly requests an independent reviewer.\ntools: Read, Grep, Glob\nmodel: inherit\n---\n\n' + reviewer).encode("utf-8"),
     }
+    result.update(render_skills(source))
     attributes = (existing.get(".gitattributes") or b"").decode("utf-8-sig").replace("\r\n", "\n")
     attributes = re.sub(r"(?ms)^# BEGIN shared-agent-rules\r?\n.*?^# END shared-agent-rules\r?\n?", "", attributes).rstrip()
-    managed_attributes = "\n".join(f"{name} text eol=lf" for name in (".gitattributes", "AGENTS.md", "CLAUDE.md", "DOCUMENT_RULES.md", ".agent-rules/**", ".claude/**", ".codex/**", "tools/agent-rules/**"))
+    managed_attributes = "\n".join(f"{name} text eol=lf" for name in (".gitattributes", "AGENTS.md", "CLAUDE.md", "DOCUMENT_RULES.md", ".agent-rules/**", ".agents/skills/**", ".claude/**", ".codex/**", "tools/agent-rules/**"))
     result[".gitattributes"] = (attributes + ("\n\n" if attributes else "") + "# BEGIN shared-agent-rules\n" + managed_attributes + "\n# END shared-agent-rules\n").encode("utf-8")
     if scopes[-1] == "ergo-docs":
         result["DOCUMENT_RULES.md"] = ("# 문서 운영 규칙\n\n작성자: 송예찬\n\n문서 운영 규칙은 [통합 작업 지침](AGENTS.md)의 ERGOSQUARE 문서 범위를 따릅니다. "
@@ -182,4 +202,4 @@ def render_project(project: Path, source: bytes, existing: dict[str, bytes | Non
 
 PROJECT_FILES = ("AGENTS.md", "CLAUDE.md", ".agent-rules/runtime.py", ".agent-rules/.gitignore",
                  ".agent-rules/policy.json", ".claude/settings.json", ".codex/hooks.json",
-                 ".codex/config.toml", ".codex/rules/shared.rules", ".codex/agents/shared-reviewer.toml", ".claude/agents/shared-reviewer.md", ".gitattributes", "DOCUMENT_RULES.md")
+                 ".codex/config.toml", ".codex/rules/shared.rules", ".codex/agents/shared-reviewer.toml", ".claude/agents/shared-reviewer.md", ".gitattributes", "DOCUMENT_RULES.md", ".agent-rules/THIRD_PARTY_NOTICES.md") + SKILL_FILES

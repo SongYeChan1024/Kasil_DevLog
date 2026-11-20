@@ -1,17 +1,24 @@
 {
   "format": 2,
   "profile": "blog",
-  "source_sha256": "5026a166ee5598e691f12d03bb76cf6d2eb982b1fdfe3544a516e1c620a4a651",
+  "source_sha256": "41784fe50287a7f8c8a7ff679ccbfdc1756b6d2cc1eef74102ab0a5b1219c099",
   "source_url": "https://github.com/SongYeChan1024/Kasil_DevLog/blob/chore/shared-agent-rules-20261120/tools/agent-rules/RULES.md",
   "files": {
-    "AGENTS.md": "763f46ce70df1f091ae4787d1807df7cf0613157e2196882da5799023abbec22",
+    "AGENTS.md": "526888f895ea591cb47e5b30cd286596bc87c2d4e672986d0e338b8f46ab5615",
     "CLAUDE.md": "1320cebfc04d78e5bc11d1dbad8490baf79584aacda8a3975912a4e60ebbf5aa",
     ".agent-rules/runtime.py": "4d9223478035dd0bd7c425a0cce44729aaf52a0909fad02c973a31870a304a12",
     ".agent-rules/.gitignore": "046032151fe6113c18a8d7d9971c557e81129ca1ba244e5263d54b7e0e6f9643",
+    ".agent-rules/THIRD_PARTY_NOTICES.md": "bef9c7585fb283bec1e8ea9a8dfef969d58e4000b41649f6399b12790ad81579",
     ".codex/rules/shared.rules": "175ce0d9ce7061b536c9774fbb951d3158e15b907ec4465f06a22a9273988551",
-    ".codex/agents/shared-reviewer.toml": "508f6c34bc5438a1751565b31d81f0591409ebcc8762b4149a8bd5bb37cafd1f",
-    ".claude/agents/shared-reviewer.md": "c89d73f7fb46efce29f1c37ade6e8d700cdd29123c265846ff217917f21b4061",
-    ".gitattributes": "a61fbe4321ebee245c96badba3f43317afc2bee9c9d5b3ff4a049b063ca4e2ca",
+    ".codex/agents/shared-reviewer.toml": "1d9246cd42d7bb02ed61c4224670f30493afa666f763424e05357329732911c8",
+    ".claude/agents/shared-reviewer.md": "a61f0452b3f8a7018ac5e0d7975fdbb69d4932ea6bc2a3a0e6434ee296e67a00",
+    ".agents/skills/shared-intent/SKILL.md": "c9d2bfb3ad4b31c70ce58891baa47cf1dfa4196c4c54fbb999ae1cbbf37b2ec5",
+    ".claude/skills/shared-intent/SKILL.md": "c9d2bfb3ad4b31c70ce58891baa47cf1dfa4196c4c54fbb999ae1cbbf37b2ec5",
+    ".agents/skills/shared-spec-plan/SKILL.md": "d83051a29c1c0f681a4cf680de92916afe58000887550ba66786b46c37229212",
+    ".claude/skills/shared-spec-plan/SKILL.md": "d83051a29c1c0f681a4cf680de92916afe58000887550ba66786b46c37229212",
+    ".agents/skills/shared-quality/SKILL.md": "894d9ba751a0814c00046c2bccd6ee281ad4291bcfbfaf900d4ceba84e3ea7b1",
+    ".claude/skills/shared-quality/SKILL.md": "894d9ba751a0814c00046c2bccd6ee281ad4291bcfbfaf900d4ceba84e3ea7b1",
+    ".gitattributes": "9fa506a0963b298b7525f7bebef39b9cab1b7c25d71a6c7add88d1377e9314ed",
     ".claude/settings.json": "fc77fc8acb9ef66d67b4e0cba071d02ad93cd5e30258fcd0417ed4c6ca4c7250",
     ".codex/hooks.json": "ef4549929b4c900f5ef6bdbd2c7c92cd741e785d481d189f8bcbaa350ba650ff",
     ".codex/config.toml": "41807e8411b37a31f2552c10b11b62a6e137cf6929bc2e71399ea3fbffcdc49f"
@@ -22,6 +29,7 @@
       "patterns": [
         "tools/agent-rules/*",
         ".agent-rules/*",
+        ".agents/*",
         ".claude/*",
         ".codex/*"
       ],

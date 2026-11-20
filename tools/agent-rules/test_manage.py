@@ -108,6 +108,36 @@ class InstallationTests(Fixture):
 
 
 class RenderingTests(Fixture):
+    def test_skills_share_source_and_include_portable_license(self):
+        source = core.SOURCE.read_bytes()
+        rendered = core.render_project(self.base / 'Project_DOB', source, {})
+        policy = json.loads(rendered['.agent-rules/policy.json'])
+        for name in core.SKILLS:
+            codex, claude = (f'{folder}/skills/{name}/SKILL.md' for folder in ('.agents', '.claude'))
+            self.assertEqual(rendered[codex], rendered[claude])
+            self.assertTrue(rendered[codex].startswith(b'---\n'))
+            self.assertEqual(policy['files'][codex], core.sha(rendered[codex]))
+            self.assertIn(codex, core.PROJECT_FILES)
+        self.assertIn('.agent-rules/THIRD_PARTY_NOTICES.md', policy['files'])
+        changed = source.replace(b'# ', b'# Source edit: ', 1)
+        updated = core.render_skills(changed)
+        self.assertNotEqual(updated[core.SKILL_FILES[0]], rendered[core.SKILL_FILES[0]])
+
+    def test_skill_metadata_mismatch_fails_before_install(self):
+        source = core.SOURCE.read_bytes().replace(b'name: shared-intent', b'name: wrong-name')
+        with self.assertRaises(ValueError): core.render_skills(source)
+
+    def test_manual_skill_edit_is_preserved_on_sync(self):
+        root = self.base / 'Project_DOB'
+        initial = core.render_project(root, core.SOURCE.read_bytes(), {})
+        state = self.base / 'state.json'
+        manage.Transaction({root / p: data for p, data in initial.items()}, state).sync()
+        skill = root / core.SKILL_FILES[0]
+        skill.write_bytes(b'user-edited-skill')
+        with self.assertRaises(ValueError):
+            manage.Transaction({root / p: data for p, data in initial.items()}, state).sync()
+        self.assertEqual(skill.read_bytes(), b'user-edited-skill')
+
     def test_existing_attributes_preserved(self):
         root = self.base / "Project_DOB"
         prior = b'*.unity text eol=lf\n'
@@ -192,6 +222,13 @@ class HookTests(Fixture):
         policy = json.loads((root / ".agent-rules/policy.json").read_text(encoding="utf-8"))
         self.assertFalse(runtime.check_install(root, policy))
         (root / "AGENTS.md").write_text("changed", encoding="utf-8")
+        self.assertTrue(runtime.check_install(root, policy))
+
+    def test_skill_install_drift_detected(self):
+        root = self.project()
+        policy = json.loads((root / '.agent-rules/policy.json').read_text(encoding='utf-8'))
+        self.assertFalse(runtime.check_install(root, policy))
+        (root / core.SKILL_FILES[0]).write_bytes(b'changed')
         self.assertTrue(runtime.check_install(root, policy))
 
     def test_parser_errors_do_not_echo_secret_values(self):

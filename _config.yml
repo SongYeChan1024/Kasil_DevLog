@@ -227,6 +227,7 @@ exclude:
   - AGENTS.md
   - CLAUDE.md
   - .agent-rules
+  - .agents
   - .claude
   - .codex
   - LICENSE

@@ -8,6 +8,7 @@ on:
       - AGENTS.md
       - CLAUDE.md
       - .agent-rules/**
+      - .agents/skills/**
       - .claude/**
       - .codex/**
   push:
@@ -18,6 +19,7 @@ on:
       - AGENTS.md
       - CLAUDE.md
       - .agent-rules/**
+      - .agents/skills/**
       - .claude/**
       - .codex/**
   workflow_dispatch:

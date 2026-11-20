@@ -21,6 +21,7 @@ AGENTS.md text eol=lf
 CLAUDE.md text eol=lf
 DOCUMENT_RULES.md text eol=lf
 .agent-rules/** text eol=lf
+.agents/skills/** text eol=lf
 .claude/** text eol=lf
 .codex/** text eol=lf
 tools/agent-rules/** text eol=lf
