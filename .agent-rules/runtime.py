@@ -29,7 +29,7 @@ def preflight(event: dict) -> str | None:
     for key in ("file_path", "path"):
         if isinstance(args.get(key), str) and secret_path(args[key]):
             return "비밀 파일 접근은 공통 규칙에서 차단합니다. 값 대신 비밀 없는 예제·키 이름을 사용하세요."
-    patch = str(args.get("input", args.get("patch", "")))
+    patch = str(args.get("input", args.get("patch", args.get("command", "") if event.get("tool_name") == "apply_patch" else "")))
     for name in re.findall(r"^\*\*\* (?:(?:Add|Update|Delete) File|Move to): (.+)$", patch, re.M):
         if secret_path(name):
             return "비밀 파일을 패치하지 않습니다. 대상·범위를 별도로 확인하세요."
@@ -116,16 +116,16 @@ def write_cache(path: Path, data: dict) -> None:
         if os.path.exists(temp): os.unlink(temp)
 
 
-def process(root: Path, event: dict) -> tuple[int, dict, str]:
+def process(root: Path, event: dict, changed: list[str] | None = None, cache_dir: Path | None = None) -> tuple[int, dict, str]:
     event_name = event.get("hook_event_name", "")
     if event_name == "PreToolUse":
         reason = preflight(event)
         return (2, {}, reason) if reason else (0, {}, "")
     policy = json.loads((root / ".agent-rules/policy.json").read_text(encoding="utf-8"))
     key = hashlib.sha256(str(event.get("session_id", "manual")).encode()).hexdigest()[:24]
-    cache_path = root / ".agent-rules/.cache" / (key + ".json")
+    cache_path = (cache_dir if cache_dir is not None else root / ".agent-rules/.cache") / (key + ".json")
     cache = json.loads(cache_path.read_text(encoding="utf-8")) if cache_path.exists() else {}
-    current = fingerprint(root, changed_files(root))
+    current = fingerprint(root, changed_files(root) if changed is None else changed)
     if event_name == "SessionStart":
         cache.setdefault("baseline", current)
         write_cache(cache_path, cache)
@@ -139,7 +139,7 @@ def process(root: Path, event: dict) -> tuple[int, dict, str]:
     snapshots = fingerprint(root, sorted(touched))
     signature = hashlib.sha256(json.dumps(snapshots, sort_keys=True).encode()).hexdigest()
     errors = static_checks(root, sorted(touched)) + check_install(root, policy)
-    if event_name == "Stop" and cache.get("validated") != signature:
+    if event_name == "Stop" and not errors and cache.get("validated") != signature:
         for check in policy.get("checks", []):
             if not any(fnmatch.fnmatch(name, pattern) for name in touched for pattern in check["patterns"]):
                 continue

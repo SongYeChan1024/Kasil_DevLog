@@ -4,7 +4,7 @@ description: Clarify a materially ambiguous request or an explicit request to in
 ---
 
 <!-- Generated from RULES.md; 직접 편집하지 않습니다. -->
-<!-- Source SHA256: 41784fe50287a7f8c8a7ff679ccbfdc1756b6d2cc1eef74102ab0a5b1219c099 -->
+<!-- Source SHA256: 90cd5ed6d1f40f71c5d14510cab65d27099f8960ac0200819721e32397ddd9e4 -->
 편집 원본: [통합 규칙](https://github.com/SongYeChan1024/Kasil_DevLog/blob/chore/shared-agent-rules-20261120/tools/agent-rules/RULES.md). [출처·라이선스](../../../.agent-rules/THIRD_PARTY_NOTICES.md).
 
 # 의도 확인

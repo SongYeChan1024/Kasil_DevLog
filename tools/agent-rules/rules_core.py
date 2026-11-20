@@ -99,14 +99,16 @@ def claude_permissions() -> dict:
     return {"permissions": {"ask": asks, "deny": denies}}
 
 
+HOOK_BOOTSTRAP = "import pathlib,runpy,sys; p=pathlib.Path.cwd(); ds=(p,*p.parents); g=next((d for d in ds if (d/'.git').exists()),None); w=next((d for d in ds if (d/'.agent-rules/workspace.json').is_file() and (g is None or g.parent==d or d.is_relative_to(g))),None); r=w if w else g; f=r/'.agent-rules'/('workspace_hook.py' if w else 'runtime.py'); sys.path.insert(0,str(f.parent)); runpy.run_path(str(f),run_name='__main__')"
+
+
 def hook_config(agent: str) -> dict:
     if agent == "claude":
-        handler = {"type": "command", "command": "python", "args": ["${CLAUDE_PROJECT_DIR}/.agent-rules/runtime.py"], "timeout": 120}
+        handler = {"type": "command", "command": "python", "args": ["-B", "-c", HOOK_BOOTSTRAP], "timeout": 240}
     else:
-        # Resolve the Git root when a session starts from a subdirectory. No shell input interpolation.
-        bootstrap = "import pathlib,runpy; p=pathlib.Path.cwd(); r=next(d for d in (p,*p.parents) if (d/'.git').exists()); runpy.run_path(str(r/'.agent-rules/runtime.py'),run_name='__main__')"
-        handler = {"type": "command", "command": f'python3 -c "{bootstrap}"',
-                   "commandWindows": f'python -c "{bootstrap}"', "timeout": 120,
+        # Identical project/workspace commands intentionally share the dispatcher's event cache.
+        handler = {"type": "command", "command": f'python3 -B -c "{HOOK_BOOTSTRAP}"',
+                   "commandWindows": f'python -B -c "{HOOK_BOOTSTRAP}"', "timeout": 240,
                    "statusMessage": "공통 규칙·변경 파일 검사"}
     return {"hooks": {
         "SessionStart": [{"hooks": [handler]}],
@@ -114,6 +116,40 @@ def hook_config(agent: str) -> dict:
         "PostToolUse": [{"matcher": "Edit|Write|Bash|PowerShell|apply_patch|exec_command", "hooks": [handler]}],
         "Stop": [{"hooks": [handler]}],
     }}
+
+
+def merged_hooks(agent: str, prior: bytes | None) -> bytes:
+    old = json.loads(prior.decode("utf-8-sig")) if prior else {}
+    for groups in old.get("hooks", {}).values():
+        for group in groups:
+            group["hooks"] = [h for h in group.get("hooks", [])
+                              if not any(marker in json.dumps(h) for marker in
+                                         (".agent-rules/runtime.py", ".agent-rules/workspace.json"))]
+    for event in list(old.get("hooks", {})):
+        old["hooks"][event] = [g for g in old["hooks"][event] if g.get("hooks")]
+    additions = hook_config(agent)
+    if agent == "claude": additions = merge_lists(additions, claude_permissions())
+    return encoded(merge_lists(old, additions))
+
+
+WORKSPACE_FILES = ("AGENTS.md", "CLAUDE.md", ".agent-rules/runtime.py", ".agent-rules/workspace_hook.py",
+                   ".agent-rules/workspace.json", ".agent-rules/.gitignore", ".codex/hooks.json", ".claude/settings.json")
+
+
+def render_workspace(source: bytes, policies: dict[str, bytes], uninstalled: list[str], existing: dict) -> dict[str, bytes]:
+    result = {"AGENTS.md": instructions(source, ("common", "workspace")),
+              "CLAUDE.md": b"# Shared workspace instructions\n\n@AGENTS.md\n",
+              ".agent-rules/runtime.py": (ROOT / "runtime.py").read_bytes(),
+              ".agent-rules/workspace_hook.py": (ROOT / "workspace_hook.py").read_bytes(),
+              ".agent-rules/.gitignore": b".cache/\n__pycache__/\n"}
+    registry = {"format": 1, "source_sha256": sha(source),
+                "projects": {name: sha(value) for name, value in sorted(policies.items())},
+                "uninstalled": sorted(uninstalled),
+                "files": {name: sha(value) for name, value in result.items()}}
+    result[".agent-rules/workspace.json"] = encoded(registry)
+    for agent, name in (("codex", ".codex/hooks.json"), ("claude", ".claude/settings.json")):
+        result[name] = merged_hooks(agent, existing.get(name))
+    return result
 
 
 CODEX_CONFIG = '''# Managed by Kasil_DevLog/tools/agent-rules/manage.py
@@ -175,17 +211,7 @@ def render_project(project: Path, source: bytes, existing: dict[str, bytes | Non
             f"[편집 원본]({SOURCE_URL})에서 고치고 동기화합니다. 이 파일은 기존 링크를 보존하는 안내입니다.\n\n"
             "게임 기획의 원본은 종합 기획서이며, 과거 문서 운영 규칙과 변경 기록은 Git 이력·통합 전 백업에서 확인합니다.\n").encode("utf-8")
     for agent, name in (("claude", ".claude/settings.json"), ("codex", ".codex/hooks.json")):
-        old = json.loads(existing[name].decode("utf-8-sig")) if existing.get(name) else {}
-        # Replace only our previous handlers; preserve other custom hooks.
-        for groups in old.get("hooks", {}).values():
-            for group in groups:
-                group["hooks"] = [h for h in group.get("hooks", []) if ".agent-rules/runtime.py" not in json.dumps(h)]
-        for event in list(old.get("hooks", {})):
-            old["hooks"][event] = [g for g in old["hooks"][event] if g.get("hooks")]
-        additions = hook_config(agent)
-        if agent == "claude":
-            additions = merge_lists(additions, claude_permissions())
-        result[name] = encoded(merge_lists(old, additions))
+        result[name] = merged_hooks(agent, existing.get(name))
     prior = existing.get(".codex/config.toml")
     if prior and prior != CODEX_CONFIG.encode("utf-8"):
         # Never replace a project's custom sandbox/model/MCP configuration silently.

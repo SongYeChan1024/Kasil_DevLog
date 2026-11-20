@@ -1,5 +1,6 @@
 """Installation, policy scope and hook safety regression checks. Author: 송예찬."""
 import json
+import os
 from pathlib import Path
 import shutil
 import unittest
@@ -21,7 +22,14 @@ class Fixture(unittest.TestCase):
     def tearDown(self):
         target = self.base.resolve()
         if target.is_relative_to(self.test_root.resolve()) and target != self.test_root.resolve():
-            shutil.rmtree(target)
+            def remove_readonly(function, name, error):
+                path = Path(name)
+                if not path.resolve().is_relative_to(target) or not isinstance(error[1], PermissionError):
+                    raise error[1]
+                # Git fixture objects have the Windows read-only attribute.
+                os.chmod(path, 0o700)
+                function(path)
+            shutil.rmtree(target, onerror=remove_readonly)
 
     def transaction(self, value=b"new"):
         return manage.Transaction({self.base / "AGENTS.md": value, self.base / "CLAUDE.md": b"@AGENTS.md\n"}, self.base / "state.json")

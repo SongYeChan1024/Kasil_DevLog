@@ -5,9 +5,9 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 -c \"import pathlib,runpy; p=pathlib.Path.cwd(); r=next(d for d in (p,*p.parents) if (d/'.git').exists()); runpy.run_path(str(r/'.agent-rules/runtime.py'),run_name='__main__')\"",
-            "commandWindows": "python -c \"import pathlib,runpy; p=pathlib.Path.cwd(); r=next(d for d in (p,*p.parents) if (d/'.git').exists()); runpy.run_path(str(r/'.agent-rules/runtime.py'),run_name='__main__')\"",
-            "timeout": 120,
+            "command": "python3 -B -c \"import pathlib,runpy,sys; p=pathlib.Path.cwd(); ds=(p,*p.parents); g=next((d for d in ds if (d/'.git').exists()),None); w=next((d for d in ds if (d/'.agent-rules/workspace.json').is_file() and (g is None or g.parent==d or d.is_relative_to(g))),None); r=w if w else g; f=r/'.agent-rules'/('workspace_hook.py' if w else 'runtime.py'); sys.path.insert(0,str(f.parent)); runpy.run_path(str(f),run_name='__main__')\"",
+            "commandWindows": "python -B -c \"import pathlib,runpy,sys; p=pathlib.Path.cwd(); ds=(p,*p.parents); g=next((d for d in ds if (d/'.git').exists()),None); w=next((d for d in ds if (d/'.agent-rules/workspace.json').is_file() and (g is None or g.parent==d or d.is_relative_to(g))),None); r=w if w else g; f=r/'.agent-rules'/('workspace_hook.py' if w else 'runtime.py'); sys.path.insert(0,str(f.parent)); runpy.run_path(str(f),run_name='__main__')\"",
+            "timeout": 240,
             "statusMessage": "공통 규칙·변경 파일 검사"
           }
         ]
@@ -19,9 +19,9 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 -c \"import pathlib,runpy; p=pathlib.Path.cwd(); r=next(d for d in (p,*p.parents) if (d/'.git').exists()); runpy.run_path(str(r/'.agent-rules/runtime.py'),run_name='__main__')\"",
-            "commandWindows": "python -c \"import pathlib,runpy; p=pathlib.Path.cwd(); r=next(d for d in (p,*p.parents) if (d/'.git').exists()); runpy.run_path(str(r/'.agent-rules/runtime.py'),run_name='__main__')\"",
-            "timeout": 120,
+            "command": "python3 -B -c \"import pathlib,runpy,sys; p=pathlib.Path.cwd(); ds=(p,*p.parents); g=next((d for d in ds if (d/'.git').exists()),None); w=next((d for d in ds if (d/'.agent-rules/workspace.json').is_file() and (g is None or g.parent==d or d.is_relative_to(g))),None); r=w if w else g; f=r/'.agent-rules'/('workspace_hook.py' if w else 'runtime.py'); sys.path.insert(0,str(f.parent)); runpy.run_path(str(f),run_name='__main__')\"",
+            "commandWindows": "python -B -c \"import pathlib,runpy,sys; p=pathlib.Path.cwd(); ds=(p,*p.parents); g=next((d for d in ds if (d/'.git').exists()),None); w=next((d for d in ds if (d/'.agent-rules/workspace.json').is_file() and (g is None or g.parent==d or d.is_relative_to(g))),None); r=w if w else g; f=r/'.agent-rules'/('workspace_hook.py' if w else 'runtime.py'); sys.path.insert(0,str(f.parent)); runpy.run_path(str(f),run_name='__main__')\"",
+            "timeout": 240,
             "statusMessage": "공통 규칙·변경 파일 검사"
           }
         ]
@@ -33,9 +33,9 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 -c \"import pathlib,runpy; p=pathlib.Path.cwd(); r=next(d for d in (p,*p.parents) if (d/'.git').exists()); runpy.run_path(str(r/'.agent-rules/runtime.py'),run_name='__main__')\"",
-            "commandWindows": "python -c \"import pathlib,runpy; p=pathlib.Path.cwd(); r=next(d for d in (p,*p.parents) if (d/'.git').exists()); runpy.run_path(str(r/'.agent-rules/runtime.py'),run_name='__main__')\"",
-            "timeout": 120,
+            "command": "python3 -B -c \"import pathlib,runpy,sys; p=pathlib.Path.cwd(); ds=(p,*p.parents); g=next((d for d in ds if (d/'.git').exists()),None); w=next((d for d in ds if (d/'.agent-rules/workspace.json').is_file() and (g is None or g.parent==d or d.is_relative_to(g))),None); r=w if w else g; f=r/'.agent-rules'/('workspace_hook.py' if w else 'runtime.py'); sys.path.insert(0,str(f.parent)); runpy.run_path(str(f),run_name='__main__')\"",
+            "commandWindows": "python -B -c \"import pathlib,runpy,sys; p=pathlib.Path.cwd(); ds=(p,*p.parents); g=next((d for d in ds if (d/'.git').exists()),None); w=next((d for d in ds if (d/'.agent-rules/workspace.json').is_file() and (g is None or g.parent==d or d.is_relative_to(g))),None); r=w if w else g; f=r/'.agent-rules'/('workspace_hook.py' if w else 'runtime.py'); sys.path.insert(0,str(f.parent)); runpy.run_path(str(f),run_name='__main__')\"",
+            "timeout": 240,
             "statusMessage": "공통 규칙·변경 파일 검사"
           }
         ]
@@ -46,9 +46,9 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 -c \"import pathlib,runpy; p=pathlib.Path.cwd(); r=next(d for d in (p,*p.parents) if (d/'.git').exists()); runpy.run_path(str(r/'.agent-rules/runtime.py'),run_name='__main__')\"",
-            "commandWindows": "python -c \"import pathlib,runpy; p=pathlib.Path.cwd(); r=next(d for d in (p,*p.parents) if (d/'.git').exists()); runpy.run_path(str(r/'.agent-rules/runtime.py'),run_name='__main__')\"",
-            "timeout": 120,
+            "command": "python3 -B -c \"import pathlib,runpy,sys; p=pathlib.Path.cwd(); ds=(p,*p.parents); g=next((d for d in ds if (d/'.git').exists()),None); w=next((d for d in ds if (d/'.agent-rules/workspace.json').is_file() and (g is None or g.parent==d or d.is_relative_to(g))),None); r=w if w else g; f=r/'.agent-rules'/('workspace_hook.py' if w else 'runtime.py'); sys.path.insert(0,str(f.parent)); runpy.run_path(str(f),run_name='__main__')\"",
+            "commandWindows": "python -B -c \"import pathlib,runpy,sys; p=pathlib.Path.cwd(); ds=(p,*p.parents); g=next((d for d in ds if (d/'.git').exists()),None); w=next((d for d in ds if (d/'.agent-rules/workspace.json').is_file() and (g is None or g.parent==d or d.is_relative_to(g))),None); r=w if w else g; f=r/'.agent-rules'/('workspace_hook.py' if w else 'runtime.py'); sys.path.insert(0,str(f.parent)); runpy.run_path(str(f),run_name='__main__')\"",
+            "timeout": 240,
             "statusMessage": "공통 규칙·변경 파일 검사"
           }
         ]

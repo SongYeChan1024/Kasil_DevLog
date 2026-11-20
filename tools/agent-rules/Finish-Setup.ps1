@@ -1,9 +1,18 @@
 # 작성자: 송예찬. 일반 터미널에서 남은 로컬 설치를 실행합니다. 자동 관리자 권한 상승은 하지 않습니다.
 [CmdletBinding()]
-param([string]$Workspace = 'C:\GitHubProjects')
+param([string]$Workspace = 'C:\GitHubProjects', [switch]$WorkspaceOnly)
 $ErrorActionPreference = 'Stop'
 $OutputEncoding = [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false)
 $manager = Join-Path $PSScriptRoot 'manage.py'
+if ($WorkspaceOnly) {
+    & python -X utf8 -B $manager sync --workspace $Workspace --workspace-only
+    if ($LASTEXITCODE -ne 0) { throw '작업 공간 연결 설치 실패. 기존 파일 변경이 있으면 preview로 먼저 검토하세요.' }
+    & python -X utf8 -B $manager check --workspace $Workspace --workspace-only
+    if ($LASTEXITCODE -ne 0) { throw '작업 공간 연결 검증 실패.' }
+    Write-Host '작업 공간 연결 파일 확인 완료. C:\GitHubProjects에서 새 세션을 열고 /hooks에서 훅 정의를 검토·신뢰하세요.'
+    Write-Host '설치·갱신 필요 프로젝트가 표시되면 해당 프로젝트의 설치·검증은 별도로 완료해야 합니다. 전체 갱신은 -WorkspaceOnly 없이 실행합니다.'
+    return
+}
 $dob = Join-Path $Workspace 'Project_DOB'
 if (Test-Path -LiteralPath (Join-Path $dob '.git')) {
     $branch = (& git -C $dob branch --show-current).Trim()

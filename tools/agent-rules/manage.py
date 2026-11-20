@@ -11,7 +11,7 @@ import subprocess
 import tempfile
 import tomllib
 import uuid
-from rules_core import ROOT, SOURCE, PROJECTS, PROJECT_FILES, sha, encoded, instructions, render_project, merge_lists, claude_permissions
+from rules_core import ROOT, SOURCE, PROJECTS, PROJECT_FILES, WORKSPACE_FILES, sha, encoded, instructions, render_project, render_workspace, merge_lists, claude_permissions
 from memory_migration import targets as memory_targets
 
 
@@ -138,17 +138,22 @@ def main() -> int:
     parser.add_argument("--projects", nargs="*", choices=list(PROJECTS))
     parser.add_argument("--global", dest="global_install", action="store_true", help="홈 전역 지침·자동 모드도 설치. 해당 경로 쓰기 권한 필요")
     parser.add_argument("--global-only", action="store_true")
+    parser.add_argument("--workspace-only", action="store_true", help="기존 프로젝트 설치를 연결하는 작업 공간 훅만 설치")
+    parser.add_argument("--defer-workspace-codex", action="store_true", help="보호된 작업 공간 .codex 쓰기를 보류. 전체 설치 완료를 의미하지 않음")
     parser.add_argument("--codex-home", type=Path, default=Path(os.environ.get("CODEX_HOME", str(Path.home() / ".codex"))))
     parser.add_argument("--claude-home", type=Path, default=Path(os.environ.get("CLAUDE_CONFIG_DIR", str(Path.home() / ".claude"))))
     parser.add_argument("--adopt-existing", action="store_true")
     args = parser.parse_args()
+    if args.workspace_only and (args.global_only or args.global_install or args.projects is not None):
+        parser.error("--workspace-only는 --global/--global-only/--projects와 함께 사용할 수 없습니다.")
     workspace = plain(args.workspace)
     source = SOURCE.read_bytes()
     selected = args.projects if args.projects is not None else [name for name in PROJECTS if (workspace / name).is_dir()]
     transactions = []
+    policies = {}
     if not args.global_only:
         if not workspace.is_dir(): raise ValueError("작업 공간이 없습니다.")
-        for name in selected:
+        for name in ([] if args.workspace_only else selected):
             project = plain(workspace / name)
             if not (project / ".git").exists(): raise ValueError(f"Git 프로젝트가 아닙니다: {project}")
             if name == "Project_DOB" and args.command == "sync":
@@ -159,10 +164,26 @@ def main() -> int:
             if override.exists() and override.read_text(encoding="utf-8-sig").strip(): raise ValueError(f"우선 지침 검토 필요: {override}")
             existing = {key: read(plain(project / key)) for key in PROJECT_FILES}
             desired = render_project(project, source, existing)
+            policies[name] = desired[".agent-rules/policy.json"]
             transactions.append((name, Transaction({project / key: value for key, value in desired.items()}, ROOT / ".state" / name / "state.json")))
-        targets = {workspace / "AGENTS.md": instructions(source, ("common", "workspace")),
-                   workspace / "CLAUDE.md": b"# Shared workspace instructions\n\n@AGENTS.md\n"}
+        missing = []
+        for name in PROJECTS:
+            if name in policies or not (workspace / name).is_dir(): continue
+            project = plain(workspace / name)
+            installed = read(plain(project / ".agent-rules/policy.json"))
+            if installed:
+                import runtime
+                if runtime.check_install(project, json.loads(installed)):
+                    raise ValueError(f"{name}: 기존 설치 불일치. 프로젝트를 먼저 동기화하세요.")
+                expected = render_project(project, source, {key: read(plain(project / key)) for key in PROJECT_FILES})
+                if installed == expected[".agent-rules/policy.json"]: policies[name] = installed
+                else: missing.append(name)
+            else: missing.append(name)
+        desired_workspace = render_workspace(source, policies, missing, {name: read(plain(workspace / name)) for name in WORKSPACE_FILES})
+        targets = {workspace / key: value for key, value in desired_workspace.items() if key != ".codex/hooks.json"}
         transactions.append(("workspace", Transaction(targets, ROOT / ".state/workspace/state.json")))
+        if not args.defer_workspace_codex:
+            transactions.append(("workspace-codex", Transaction({workspace / ".codex/hooks.json": desired_workspace[".codex/hooks.json"]}, ROOT / ".state/workspace-codex/state.json")))
     if args.global_install or args.global_only:
         transactions.append(("global", Transaction(global_targets(source, args.codex_home, args.claude_home), ROOT / ".state/global/state.json")))
     if SOURCE.read_bytes() != source: raise ValueError("준비 중 규칙 원본이 바뀌었습니다.")
@@ -177,6 +198,10 @@ def main() -> int:
         else:
             okay = transaction.check(); valid &= okay
             print(f"{name}: " + ("PASS" if okay else "설치 불일치"))
+    if args.defer_workspace_codex and not args.global_only:
+        print("보류: 작업 공간 .codex/hooks.json 설치·검사를 생략했습니다. 일반 터미널에서 Finish-Setup.ps1 -WorkspaceOnly를 실행하세요. 전체 설치 완료가 아닙니다.")
+    if not args.global_only and missing:
+        print("프로젝트 설치·갱신 필요: " + ", ".join(missing) + ". 연결 완료 대상으로 계산하지 않습니다.")
     if args.global_install or args.global_only:
         print("전역 설정 파일 검사와 실제 세션 활성화는 다릅니다. 새 세션에서 /hooks 신뢰와 자동 모드를 확인하세요.")
         if os.name == "nt": print("Claude OS 샌드박스는 native Windows에서 지원되지 않습니다. WSL2 사용 시 별도 설치가 필요합니다.")
