@@ -1,108 +1,97 @@
-# 공통 에이전트 규칙 관리
+# Codex · Claude 공통 규칙 관리
 
 작성자: 송예찬
 
-이 폴더의 [COMMON.md](COMMON.md)가 개인 공통 규칙의 Git 원본이다. 한 번 설치하면 Codex와 Claude Code가 모든 로컬 프로젝트에서 같은 규칙을 읽는다. 프로젝트 파일을 일괄 덮어쓰지 않아 팀 합의·담당 범위·직접 코딩 학습 방침을 보존한다.
+[RULES.md](RULES.md)가 공통·프로젝트별·검토 역할 지침의 단일 편집 원본입니다. AGENTS.md·CLAUDE.md·검토 역할 파일은 이 원본에서 생성합니다. 권한과 훅의 도구별 문법은 `rules_core.py`, 공통 검사는 `runtime.py`에서 관리합니다. 기존 `COMMON.md`는 원본 이동 안내입니다.
 
-```text
-블로그 Git: tools/agent-rules/COMMON.md  ← 공통 규칙 수정
-                │ manage.py sync
-                ▼
-PC: ~/.codex/AGENTS.md                 ← 공통 규칙 설치본
-    ~/.claude/CLAUDE.md                ← 위 설치본을 @import
-                +
-프로젝트: AGENTS.md / CLAUDE.md         ← 프로젝트 고유 규칙
-          인수인계 문서                  ← 현재 상태·작업 이력
-```
+## 설치 대상과 파일
 
-전역 설치가 핵심이다. 상위 `C:\GitHubProjects\AGENTS.md` 하나만 바꾸면 하위 Git 저장소에도 자동으로 적용된다고 가정하지 않는다. Codex는 전역 지침과 저장소 안의 지침을 조합한다. Claude는 개인 지침에서 공통 설치본을 가져온다. [Codex 지침 검색](https://learn.chatgpt.com/docs/agent-configuration/agents-md) · [Claude 가져오기](https://code.claude.com/docs/en/memory#import-additional-files)
-
-## 처음 설치
-
-Python 3.10 이상이 필요하며 추가 패키지는 없다. 아래 명령은 블로그 저장소 루트의 일반 터미널에서 실행한다. 샌드박스가 사용자 홈 쓰기를 막는 세션에서는 미리보기와 검증까지만 가능하다.
-
-```powershell
-python tools/agent-rules/manage.py preview --workspace C:\GitHubProjects
-```
-
-`COMMON.md`와 기존 `~/.codex/AGENTS.md`, `~/.claude/CLAUDE.md`를 비교한 뒤 이전한다. 기존 파일은 백업한다. 원본에 없는 개인 규칙이 있다면 먼저 공통 원본 또는 해당 프로젝트 지침으로 옮긴다.
-
-```powershell
-python tools/agent-rules/manage.py sync --workspace C:\GitHubProjects --adopt-existing
-python tools/agent-rules/manage.py check
-```
-
-- `--adopt-existing`은 기존 지침을 공통 원본으로 **교체하는 첫 이전**에 사용한다. 설치 후 수동 편집을 무시하는 데도 사용될 수 있으므로 평소 갱신에서는 생략한다.
-- 설치본과 원본이 이미 같으면 파일을 다시 쓰거나 백업을 늘리지 않는다.
-- `CODEX_HOME`, `CLAUDE_CONFIG_DIR`를 사용 중이면 따른다. `--codex-home`, `--claude-home`으로 직접 지정할 수도 있다.
-- 홈 경로가 바뀌면 기존 설치 기록을 확인하고 이전한다. 링크·정션 경로에는 쓰지 않는다.
-- `AGENTS.override.md`가 공통 지침을 가리고 있으면 설치를 멈추고 그 경로를 알려 준다. 자동으로 삭제하지 않는다.
-- `--workspace`는 PC별 경로이며 설치 기록에만 저장한다. 다른 PC에서는 그 PC의 프로젝트 모음 경로를 지정한다. 이후 생략하면 기록된 경로를 사용한다.
-
-설치 후 **새 Codex·Claude 세션**에서 “현재 적용된 공통 지침의 출처와 프로젝트 고유 규칙을 요약해 줘”라고 확인한다. `check` 성공은 파일과 설치 기록이 일치한다는 뜻이며, 실행 중인 세션의 재로딩이나 실제 모델 준수 여부를 보장하지 않는다.
-
-## 다른 PC와 이후 갱신
-
-블로그 저장소를 받은 뒤 같은 설치 명령을 실행한다. 폴더 이름과 절대 경로가 달라도 된다. 블로그 worktree를 쓰는 PC는 `git worktree list`로 현재 브랜치부터 확인한다.
-
-```powershell
-git status --short --branch
-git pull --ff-only
-python tools/agent-rules/manage.py preview
-python tools/agent-rules/manage.py sync
-python tools/agent-rules/manage.py check
-```
-
-`pull` 실패 시 중단하고 차이를 확인한다. 스크립트가 Git pull·commit·push를 대신 실행하지 않는다. 다른 PC가 받는 변경은 공통 원본이 해당 원격 브랜치에 반영된 이후부터다. 동기화 없이 원본만 바꿔도 설치본이 자동 갱신되는 것은 아니다.
-
-## 프로젝트별 적용
-
-이미 `AGENTS.md`와 `CLAUDE.md`가 있는 프로젝트는 그대로 사용한다. 공통 규칙을 복사해서 넣지 않고 프로젝트 고유 규칙만 관리한다. 팀 규칙은 팀 저장소의 기존 문서를 기준으로 유지하며 개인 전역 지침으로 팀 합의를 바꾸지 않는다.
-
-새 프로젝트에는 [Codex 안내 템플릿](templates/AGENTS.md.txt)과 [프로젝트 규칙 템플릿](templates/CLAUDE.md.txt)을 참고한다. 기존 파일에 자동으로 덮어쓰지 않는다. Claude의 `@문서` 구문이 Codex에서도 자동으로 펼쳐진다고 가정하지 말고, Codex 안내에 읽을 문서를 명시한다.
-
-작업 공간과 바로 아래 Git 저장소의 지침 크기는 읽기 전용으로 확인할 수 있다.
-
-```powershell
-python tools/agent-rules/manage.py audit --workspace C:\GitHubProjects
-```
-
-이 검사는 파일명·줄 수·UTF-8 바이트 크기만 확인한다. Codex의 기본 지침 크기 한도는 합산 32KiB이므로 개별 파일이 그보다 작아도 중첩 지침과 합치면 잘릴 수 있다. 200줄은 정리의 참고 기준이며 Codex의 강제 줄 수 제한이 아니다. 오래된 상태 기록을 옮길 때는 최신 인수인계 링크와 고유 규칙을 남기고 기록 자체는 보존한다. [Codex 크기 한도](https://learn.chatgpt.com/docs/agent-configuration/agents-md) · [지침 정리 기준](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra)
-
-## 권한·비밀 파일·검사 자동화
-
-이번 동기화 대상은 **작업 지침**이다. `config.toml`, Claude `settings.json`, MCP 연결, 승인 정책, 모델, 샌드박스, 훅은 설치 스크립트가 변경하지 않는다. 지침에 “비밀을 출력하지 않는다”고 적는 것과 OS 수준에서 읽기를 차단하는 것은 다르다.
-
-추가 설정은 해당 실행 환경과 프로젝트에 맞춰 별도로 검증한다.
-
-| 대상 | 적용 기준 |
+| 대상 | 적용 내용 |
 | --- | --- |
-| 파일·네트워크 권한 | Codex 권한 프로필과 Claude 샌드박스의 현재 지원 범위를 확인한 뒤 필요한 경로·도메인만 지정한다. 더 넓은 권한으로 기존 제한을 우회하지 않는다. |
-| 자동 승인 | 현재 승인 정책을 확인한다. 공통 지침의 외부 반영 승인 범위를 설정 파일로 임의 완화하지 않는다. |
-| 검사 훅 | 해당 프로젝트에서 이미 검증한 명령을 연결한다. Unity·문서·블로그에 똑같은 `npm test`를 적용하지 않는다. |
-| 종료 시 검사 | 관련 변경이 있을 때 실행한다. 실패 시 동작과 반복 방지까지 검증한 뒤 켠다. 매 편집마다 전체 테스트를 강제하지 않는다. |
-| 클라우드 세션 | 로컬 홈 설치가 자동 전달된다고 가정하지 않는다. 그 환경의 설정·지침 로딩을 따로 확인한다. |
+| After Seconds, ERGO 게임·문서, DOB, 블로그 두 worktree, UnityGameFoundation | 공통 + 해당 프로젝트 규칙, Claude 연결 파일, 검증·접근 검사 훅, 외부 반영 확인 규칙, 읽기 전용 검토 역할 |
+| 작업 공간 | 공통 규칙과 프로젝트 지도 |
+| 선택적 홈 전역 설치 | Codex 공통 지침, Claude 연결 파일·auto 모드·추가 권한 규칙, 기존 Codex 설정에 없는 안전한 기본값 |
+| LucidDiver 참고용 사본 | 원래 읽기 전용 방침을 유지하며 설치 대상에서 제외 |
 
-Codex의 로컬 훅은 `hooks.json` 또는 `config.toml`에 둘 수 있지만 환경별 지원이 다르다. Claude 예제의 `type: "agent"` 핸들러를 그대로 옮기지 않는다. 문서상 Codex는 `command`, `mcp_tool` 핸들러를 지원하고 `agent`, `prompt`는 건너뛴다. [Codex 훅](https://learn.chatgpt.com/docs/hooks) · [Codex 권한](https://learn.chatgpt.com/docs/permissions)
+저장소별 AGENTS에는 공통 규칙을 함께 담아 홈 설정이 없는 환경에서도 읽을 수 있게 합니다. 생성된 내용이 반복되더라도 사람이 수정하는 원본은 RULES.md 하나입니다. 팀 README·게임 명세·아키텍처는 해당 자료의 현행 계약으로 유지합니다.
 
-## 백업과 복구
+## 사용
 
-변경 전 원본과 설치 기록은 `~/.codex/agent-rules/backups/<시각-식별자>/`에 저장한다. `manifest.json`은 원래 경로와 백업 파일을 대응시킨다. 백업은 개인 PC에만 두며 Git에 올리지 않는다.
-
-설치 중 파일 쓰기가 실패하면 이미 쓴 파일을 이전 내용으로 되돌린다. 자동 복원이 실패한 경로와 백업 위치는 오류로 출력한다. 수동 복구 시 실행 중인 편집을 먼저 멈추고, `manifest.json`의 `existed: true` 항목은 해당 백업을 원래 `target`에 복사한다. `existed: false` 항목은 이번 설치로 생성된 파일이므로 이후 편집이 없는지 확인한 뒤 제거한다. 이전 `state.json`도 함께 복구한다.
-
-## 도구 검증
+Python 3.11 이상과 Git이 필요합니다. Claude 훅은 현재 2.1.325의 exec-form 명령을, Codex 훅은 현재 0.167.0의 command/commandWindows 형식을 기준으로 구성했습니다. 모델은 바꾸지 않습니다.
 
 ```powershell
-python -B -m unittest discover -s tools/agent-rules -p "test_*.py" -v
+python -B tools/agent-rules/manage.py preview --workspace C:\GitHubProjects
+python -B tools/agent-rules/manage.py sync --workspace C:\GitHubProjects --adopt-existing
+python -B tools/agent-rules/manage.py check --workspace C:\GitHubProjects
 ```
 
-테스트는 임시 홈만 사용한다. 첫 설치·기존 파일 백업·반복 실행·원본 갱신·수동 변경 보호·쓰기 실패 복원·전역 override·공백과 한글 경로를 확인한다. 실제 사용자 설정과 외부 서비스는 변경하지 않는다.
+처음 설치할 때만 검토한 기존 파일을 `--adopt-existing`으로 이전합니다. 이후 원본을 고친 뒤 일반 `sync`를 사용합니다. 생성 파일을 수동으로 수정하면 덮어쓰지 않고 검토를 요구합니다. `--projects Project_DOB`처럼 특정 저장소만 선택할 수도 있으며 작업 공간 지도는 함께 확인합니다.
 
-종료 코드는 성공 `0`, `check` 불일치 `1`, 사용·설치 오류 `2`다. 이는 이 CLI의 종료 코드이며 에이전트 훅의 종료 코드 계약과 별개다.
+홈 전역 설정까지 설치하려면 해당 경로를 쓸 수 있는 일반 터미널에서 실행합니다.
+
+```powershell
+python -B tools/agent-rules/manage.py preview --workspace C:\GitHubProjects --global
+python -B tools/agent-rules/manage.py sync --workspace C:\GitHubProjects --global --adopt-existing
+python -B tools/agent-rules/manage.py check --workspace C:\GitHubProjects --global
+```
+
+전역만 처리하려면 `--global-only`를 사용합니다. 기존 `CODEX_HOME`·`CLAUDE_CONFIG_DIR`를 읽으며 명시적 `--codex-home`·`--claude-home`도 지원합니다. 이 경로들은 권한 제한을 우회하는 기능이 아닙니다. 접근 거부는 해당 환경에서 해결해야 합니다.
+
+현재 PC에서 남은 설치는 `tools/agent-rules/Finish-Setup.ps1`로 실행할 수 있습니다. DOB main이 깨끗할 때 기존 backend 브랜치로 전환하고 전체 설치·전역 설정·검증을 수행합니다. 변경이 있거나 쓰기 권한이 없으면 중단하며 관리자 권한 상승·보안 우회·Git push는 하지 않습니다. DOB 설정은 문서 예외에 포함되지 않으므로 역할 브랜치에서 반영합니다.
+
+전역 설치는 검토한 Claude 개인 메모 5개도 새 지침으로 연결합니다. 원문은 백업하고 검토본 식별용 링크는 개인 메모에 유지합니다. 검토 이후 내용이 바뀌었으면 해시로 감지해 먼저 확인하도록 중단합니다. 개인 메모 본문·링크는 이 공개 도구에 포함하지 않습니다.
+
+기존 model·MCP·theme·별도 훅·deny/allow 목록을 유지합니다. 프로젝트의 기존 custom Codex config는 통째로 교체하지 않습니다. 새 설정이 기존 보호를 완화한다고 가정하지 말고 실제 활성 설정을 확인합니다.
+
+완료 스크립트는 ERGO 문서 저장소의 `requirements-docs.txt`를 격리된 `.agent-rules/.cache/venv`에 설치하고 링크 검사도 실행합니다. 패키지 다운로드에는 네트워크 연결이 필요합니다. 훅은 이 가상 환경이 있으면 검증용 Python으로 사용합니다.
+
+## 자동 검사
+
+- SessionStart: 통합 설치본의 해시를 확인하고 기존 변경을 기준 상태로 기록합니다.
+- PreToolUse: 명시적인 비밀 파일 경로와 강제 push의 일반적인 형태를 검사합니다. 차단 시 비밀 값·명령 원문을 출력하지 않습니다.
+- PostToolUse: 이번 세션에서 바뀐 파일의 Python·JSON·TOML 문법, 병합 충돌 표식, 규칙 설치본의 차이를 검사합니다.
+- Stop: 바뀐 경로에 관련된 검증만 실행합니다. 블로그 관리 도구·편집기 회귀 검사와 ERGO 문서 링크 검사가 연결됩니다. 성공한 동일 변경에 대한 검사는 반복하지 않습니다.
+- 실패는 종료 코드 2로 전달합니다. 이미 종료 훅 때문에 재개된 턴에서 문제가 계속되면 반복 차단을 중단하고 미해결 검증을 보고하도록 알립니다.
+- Unity 코드는 정적 검사와 실제 에디터 컴파일·참조·Play 검증을 구분합니다. 훅이 Unity를 임의로 띄우거나 사용 중인 씬을 바꾸지 않습니다.
+
+훅은 자동 포맷·외부 업로드·메시지·Git push·대화 로그 수집을 하지 않습니다. 캐시는 각 저장소 `.agent-rules/.cache/`에만 두고 Git에서 제외합니다. hooks는 사용자가 신뢰한 코드가 실행되는 기능이므로 스크립트와 명령을 함께 검토합니다.
+
+## 권한과 활성화
+
+Claude: `.env`·`secrets`·일부 인증 파일의 Read/Edit 거부, push·PR·릴리스 생성의 확인 규칙을 추가합니다. 전역 설치는 사용자 설정에서 auto 모드를 지정하고 기본 autoMode 규칙을 `$defaults`로 유지합니다. 이미 받은 대상·내용 승인을 중복 요청하지 않는 의미 규칙과 native 권한 확인은 서로 다른 층입니다.
+
+Codex: 새 프로젝트 설정은 workspace-write와 on-request, 기본 네트워크 차단을 사용합니다. `.codex/rules/shared.rules`의 외부 반영 확인과 일반 강제 push 거부를 추가합니다. 상위 관리 정책을 바꾸거나 자동 승인하지 않습니다.
+
+**파일 설치만으로 모든 기능이 활성화됐다고 보장하지 않습니다.** Codex는 새 세션의 `/hooks`에서 정확한 훅 정의를 검토·신뢰해야 합니다. Claude도 신뢰한 프로젝트에서 `/hooks`·`/status`로 로드된 설정을 확인합니다. 이 도구는 신뢰 기록을 위조하거나 bypass 플래그를 사용하지 않습니다.
+
+Claude의 OS 샌드박스는 macOS·Linux·WSL2에서 지원되며 native Windows에서는 지원되지 않습니다. 전역 설치를 지원 OS에서 실행할 때 sandbox.enabled·failIfUnavailable·unsandboxed 재시도 금지를 추가합니다. Windows에서는 작동하지 않는 설정을 켰다고 보고하지 않습니다. 파일 도구 규칙과 문자열 기반 명령 검사만으로 임의 하위 프로세스의 모든 비밀 접근을 막는다고 보장하지 않습니다.
+
+현재 Codex Windows 환경의 OS 보호는 실제 활성 샌드박스·관리 정책을 따릅니다. 이 패키지는 임의의 네트워크 허용·전역 폴더 쓰기·새 관리자 권한을 부여하지 않습니다.
+
+## 검토 역할과 클라우드
+
+`shared-reviewer`는 같은 RULES.md의 reviewer 구간에서 생성합니다. Claude는 Read/Grep/Glob만, Codex는 read-only sandbox로 검토하며 모델은 부모 설정을 상속합니다. 사용자가 독립 검토·분담을 요청했을 때 사용하고 파일 수정·외부 반영을 맡기지 않습니다. 정의 설치와 실제 검토 실행은 별도입니다.
+
+클라우드용 규칙·프로젝트 설정·검사 스크립트는 저장소 안에 있으며 홈의 비밀·인증 상태에 의존하지 않습니다. 새 환경에 Python·Git과 프로젝트에 필요한 검사 의존성을 설치해야 합니다. 서비스의 신뢰·권한·네트워크·훅 지원을 확인한 뒤 실행합니다. 이 작업은 클라우드 계정·실행 환경을 새로 만들거나 유료 세션을 시작하지 않습니다. Codex Work Cloud의 local orchestration에서는 로컬 command hook이 실행되지 않을 수 있으므로 아래 공식 지원 범위를 확인합니다.
+
+## 백업과 검증
+
+`.state/<대상>/backups/<시각>/`에 원문과 manifest를 저장합니다. manifest에는 원래 경로와 변경 전후 SHA256이 있습니다. 각 대상 설치 중 실패하면 그 대상의 쓰기를 되돌립니다. 먼저 성공한 다른 대상까지 되돌리지는 않습니다. 로그와 `check`로 부분 성공 여부를 확인합니다. 백업·설치 상태는 개인 경로·기존 설정을 포함할 수 있어 공개하지 않습니다.
+
+```powershell
+python -B -m unittest discover -s tools/agent-rules -p 'test_*.py' -v
+python -B tools/agent-rules/verify_bundle.py
+```
+
+CI도 같은 검사로 백업·충돌·복원·범위 분리·훅 실패 처리를 확인하고 생성물의 차이를 잡습니다. 전역 설치·actual 세션의 hook 활성화는 CI가 대신 검증하지 않습니다.
+
+## 공식 근거
+
+- [Codex 지침](https://learn.chatgpt.com/docs/agent-configuration/agents-md), [Codex hooks와 신뢰](https://learn.chatgpt.com/docs/hooks), [Codex 권한](https://learn.chatgpt.com/docs/permissions)
+- [Claude 설정 범위](https://code.claude.com/docs/en/settings-reference), [hooks](https://code.claude.com/docs/en/hooks), [샌드박스](https://code.claude.com/docs/en/sandboxing), [검토 역할](https://code.claude.com/docs/en/sub-agents)
 
 ## 변경 기록
 
 | 날짜 | 작성자 | 내용 |
 | --- | --- | --- |
-| 2026-11-20 | 송예찬 | 개인 공통 규칙을 Git 원본으로 분리하고 Codex·Claude 전역 지침 동기화·백업·점검 도구 추가 |
+| 2026-11-20 | 송예찬 | 전역 공통 규칙 v1을 프로젝트별 범위·검증 훅·권한 확인·읽기 전용 검토 역할까지 포함하는 단일 원본 관리 방식으로 확장 |

@@ -5,11 +5,21 @@ on:
     paths:
       - tools/agent-rules/**
       - .github/workflows/agent-rules-check.yml
+      - AGENTS.md
+      - CLAUDE.md
+      - .agent-rules/**
+      - .claude/**
+      - .codex/**
   push:
-    branches: [main, master]
+    branches: [main, master, 'chore/shared-agent-rules-*']
     paths:
       - tools/agent-rules/**
       - .github/workflows/agent-rules-check.yml
+      - AGENTS.md
+      - CLAUDE.md
+      - .agent-rules/**
+      - .claude/**
+      - .codex/**
   workflow_dispatch:
 
 permissions:
@@ -20,5 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - name: Test synchronization in disposable homes
+      - name: Test installation, policies and hooks in disposable directories
         run: python3 -B -m unittest discover -s tools/agent-rules -p 'test_*.py' -v
+      - name: Check committed generated files
+        run: python3 -B tools/agent-rules/verify_bundle.py

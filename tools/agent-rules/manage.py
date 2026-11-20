@@ -1,273 +1,188 @@
 #!/usr/bin/env python3
-"""Sync personal Codex/Claude instructions. Standard library only. Author: 송예찬."""
-
+"""Backed-up, conflict-aware rule deployment. Author: 송예찬."""
 from __future__ import annotations
-
 import argparse
 from datetime import datetime, timezone
-import hashlib
 import json
 import os
 from pathlib import Path
 import stat
-import sys
+import subprocess
 import tempfile
+import tomllib
 import uuid
-
-SOURCE = Path(__file__).with_name("COMMON.md")
-
-
-def digest(data: bytes | None) -> str | None:
-    return hashlib.sha256(data).hexdigest() if data is not None else None
+from rules_core import ROOT, SOURCE, PROJECTS, PROJECT_FILES, sha, encoded, instructions, render_project, merge_lists, claude_permissions
+from memory_migration import targets as memory_targets
 
 
-def read_optional(path: Path) -> bytes | None:
+def plain(path: Path) -> Path:
+    path = path.expanduser().absolute()
+    for p in (path, *path.parents):
+        if p.is_symlink() or (hasattr(p, "is_junction") and p.is_junction()):
+            raise ValueError(f"링크·junction에는 설치하지 않습니다: {p}")
+    return path
+
+
+def read(path: Path) -> bytes | None:
     return path.read_bytes() if path.exists() else None
 
 
 def atomic_write(path: Path, data: bytes) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    fd, temporary = tempfile.mkstemp(prefix=f".{path.name}.", dir=path.parent)
-    temporary_path = Path(temporary)
+    fd, temporary = tempfile.mkstemp(prefix=".agent-rules-", dir=path.parent)
     try:
         with os.fdopen(fd, "wb") as stream:
-            stream.write(data)
-            stream.flush()
-            os.fsync(stream.fileno())
-        if path.exists():
-            os.chmod(temporary_path, stat.S_IMODE(path.stat().st_mode))
-        os.replace(temporary_path, path)
+            stream.write(data); stream.flush(); os.fsync(stream.fileno())
+        if path.exists(): os.chmod(temporary, stat.S_IMODE(path.stat().st_mode))
+        os.replace(temporary, path)
     finally:
-        temporary_path.unlink(missing_ok=True)
+        if os.path.exists(temporary): os.unlink(temporary)
 
 
-def plain_path(path: Path) -> Path:
-    path = path.expanduser().absolute()
-    for part in (path, *path.parents):
-        if part.is_symlink() or (hasattr(part, "is_junction") and part.is_junction()):
-            raise ValueError(f"링크 경로에는 설치하지 않습니다. 실제 경로를 지정하세요: {part}")
-    if any(c in str(path) for c in '\n\r\t`<>'):
-        raise ValueError("지침에 안전하게 표시할 수 없는 문자가 경로에 있습니다.")
-    return path
+class Transaction:
+    def __init__(self, targets: dict[Path, bytes], state_path: Path):
+        self.targets = {plain(k): v for k, v in targets.items()}
+        self.state_path = plain(state_path)
+        if self.state_path in self.targets: raise ValueError("설치 기록과 대상 경로가 겹칩니다.")
+        self.original_state = read(self.state_path)
+        self.old_state = json.loads(self.original_state) if self.original_state else {}
+        if self.old_state and self.old_state.get("format") != 2: raise ValueError("설치 기록 버전을 확인하세요.")
+        self.before = {p: read(p) for p in self.targets}
+        self.state = encoded({"format": 2, "targets": {str(p): sha(data) for p, data in self.targets.items()}})
 
+    def changed(self) -> list[Path]:
+        return [p for p, data in self.targets.items() if data != self.before[p]]
 
-class Installation:
-    def __init__(self, codex_home: Path, claude_home: Path,
-                 workspace: Path | None = None, source: Path = SOURCE):
-        self.codex_home = plain_path(codex_home)
-        self.claude_home = plain_path(claude_home)
-        self.source = source.resolve()
-        self.state_path = plain_path(self.codex_home / "agent-rules" / "state.json")
-        self.original_state = read_optional(self.state_path)
-        self.state = json.loads(self.original_state) if self.original_state else {}
-        if not isinstance(self.state, dict):
-            raise ValueError("설치 기록은 JSON 객체여야 합니다. 기존 기록을 먼저 확인하세요.")
-        if self.state and self.state.get("format") != 1:
-            raise ValueError("알 수 없는 설치 기록 형식입니다. 기존 기록을 먼저 확인하세요.")
-        records = self.state.get("targets", {})
-        if not isinstance(records, dict) or any(not isinstance(v, dict) for v in records.values()):
-            raise ValueError("설치 대상 기록 형식이 잘못되었습니다.")
-        saved_workspace = self.state.get("workspace")
-        if saved_workspace is not None and not isinstance(saved_workspace, str):
-            raise ValueError("설치 기록의 workspace 경로 형식이 잘못되었습니다.")
-        self.workspace = plain_path(workspace) if workspace else (
-            Path(saved_workspace) if saved_workspace else None)
-        if self.workspace and not self.workspace.is_dir():
-            raise ValueError(f"작업 공간 폴더가 없습니다: {self.workspace}")
-        override = self.codex_home / "AGENTS.override.md"
-        if override.exists() and override.read_text(encoding="utf-8-sig").strip():
-            raise ValueError(f"{override}가 전역 AGENTS.md보다 우선합니다. 먼저 내용을 검토하세요.")
-        self.targets = {
-            "codex": plain_path(self.codex_home / "AGENTS.md"),
-            "claude": plain_path(self.claude_home / "CLAUDE.md"),
-        }
-        for name, path in self.targets.items():
-            recorded = self.state.get("targets", {}).get(name, {}).get("path")
-            if recorded and Path(recorded) != path:
-                raise ValueError(f"이전 설치와 대상 경로가 다릅니다: {name}. 이전 설치부터 확인하세요.")
-        self.source_bytes = self.source.read_bytes()
-        common = self.source_bytes.decode("utf-8-sig").strip()
-        if not common:
-            raise ValueError("공통 규칙 원본이 비어 있습니다.")
-        codex = (
-            "<!-- Generated by Kasil_DevLog/tools/agent-rules/manage.py. -->\n"
-            f"<!-- Source SHA256: {digest(self.source_bytes)} -->\n\n"
-            + common + "\n\n"
-            + f"원본 위치: <{self.source.as_posix()}>. 이 설치본 대신 원본을 수정한 뒤 동기화합니다.\n"
-        )
-        if self.workspace:
-            codex += (
-                f"\n이 PC의 프로젝트 모음: <{self.workspace.as_posix()}>. "
-                "해당 폴더에서 작업하거나 여러 프로젝트를 함께 다룰 때는 "
-                "그 폴더의 작업 공간 안내도 확인합니다.\n"
-            )
-        try:
-            imported_path = Path(os.path.relpath(self.targets["codex"], self.claude_home)).as_posix()
-        except ValueError:  # Windows homes on different drives.
-            imported_path = self.targets["codex"].as_posix()
-        imported_path = imported_path.replace(" ", "\\ ")
-        claude = (
-            "# 전역 공통 지침 (Claude Code)\n\n"
-            "Codex와 같은 설치본을 읽습니다. 공통 원본 수정 후 동기화하며 이 파일은 직접 편집하지 않습니다.\n\n"
-            f"@{imported_path}\n"
-        )
-        self.desired = {"codex": codex.encode("utf-8"), "claude": claude.encode("utf-8")}
-        self.before = {name: read_optional(path) for name, path in self.targets.items()}
-
-    def changed(self) -> list[str]:
-        return [name for name in self.targets if self.before[name] != self.desired[name]]
-
-    def conflicts(self) -> list[str]:
-        conflicts = []
-        for name in self.changed():
-            previous = self.before[name]
-            record = self.state.get("targets", {}).get(name)
-            if record:
-                if digest(previous) != record.get("sha256"):
-                    conflicts.append(name)
-            elif previous is not None:
-                conflicts.append(name)
-        return conflicts
-
-    def preview(self) -> None:
-        for name, path in self.targets.items():
-            status = "일치" if name not in self.changed() else (
-                "신규" if self.before[name] is None else "갱신")
-            print(f"{status}: {path}")
-        if self.conflicts():
-            print("검토 필요: " + ", ".join(self.conflicts()))
-            print("기존 파일을 확인한 뒤 sync --adopt-existing으로 백업 후 이전할 수 있습니다.")
-        print(f"원본: {self.source}")
-
-    def new_state(self) -> bytes:
-        state = {
-            "format": 1,
-            "source": str(self.source),
-            "source_sha256": digest(self.source_bytes),
-            "workspace": str(self.workspace) if self.workspace else None,
-            "targets": {name: {"path": str(path), "sha256": digest(self.desired[name])}
-                        for name, path in self.targets.items()},
-        }
-        return (json.dumps(state, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
+    def conflicts(self) -> list[Path]:
+        old = self.old_state.get("targets", {})
+        return [p for p in self.changed() if (str(p) in old and sha(self.before[p]) != old[str(p)]) or (str(p) not in old and self.before[p] is not None)]
 
     def check(self) -> bool:
-        return not self.changed() and self.original_state == self.new_state()
+        return not self.changed() and self.original_state == self.state
 
-    def sync(self, adopt_existing: bool = False) -> Path | None:
-        if self.conflicts() and not adopt_existing:
-            raise ValueError("기존 파일 또는 설치 후 수동 변경을 보존했습니다. preview로 확인 후 --adopt-existing을 사용하세요.")
-        if self.check():
-            return None
-        # Detect another editor changing either file after we prepared the plan.
-        for name, path in self.targets.items():
-            if read_optional(path) != self.before[name]:
-                raise ValueError(f"준비 중 파일이 바뀌었습니다. 다시 확인하세요: {path}")
-        if read_optional(self.state_path) != self.original_state:
-            raise ValueError("준비 중 설치 기록이 바뀌었습니다. 다시 확인하세요.")
-        if self.source.read_bytes() != self.source_bytes:
-            raise ValueError("준비 중 공통 원본이 바뀌었습니다. 다시 확인하세요.")
-        stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ") + "-" + uuid.uuid4().hex[:8]
-        backup = plain_path(self.state_path.parent / "backups" / stamp)
-        backup.mkdir(parents=True, exist_ok=False)
-        originals = {**{self.targets[n]: self.before[n] for n in self.changed()},
-                     self.state_path: self.original_state}
-        backup_map = []
-        for index, (path, data) in enumerate(originals.items()):
-            saved = f"{index}-{path.name}" if data is not None else None
-            if saved:
-                (backup / saved).write_bytes(data)
-            backup_map.append({"target": str(path), "backup": saved, "existed": data is not None})
-        (backup / "manifest.json").write_text(
-            json.dumps(backup_map, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    def sync(self, adopt: bool = False) -> Path | None:
+        if self.conflicts() and not adopt:
+            raise ValueError("기존·수동 수정 파일을 보존했습니다. preview 후 --adopt-existing으로 백업·이전하세요.")
+        if self.check(): return None
+        for path in self.targets:
+            plain(path)
+            if read(path) != self.before[path]: raise ValueError(f"준비 중 파일이 바뀌었습니다: {path}")
+        if read(self.state_path) != self.original_state: raise ValueError("준비 중 설치 기록이 바뀌었습니다.")
+        backup = self.state_path.parent / "backups" / (datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ") + "-" + uuid.uuid4().hex[:8])
+        plain(backup).mkdir(parents=True, exist_ok=False)
+        originals = {p: self.before[p] for p in self.changed()}
+        originals[self.state_path] = self.original_state
+        manifest = []
+        for i, (path, data) in enumerate(originals.items()):
+            name = f"{i:03d}.backup" if data is not None else None
+            if data is not None: (backup / name).write_bytes(data)
+            manifest.append({"target": str(path), "backup": name, "before_sha256": sha(data),
+                             "after_sha256": sha(self.state if path == self.state_path else self.targets[path])})
+        (backup / "manifest.json").write_bytes(encoded(manifest))
         written = []
         try:
-            for name in self.changed():
-                path = self.targets[name]
-                atomic_write(path, self.desired[name])
-                written.append(path)
-            atomic_write(self.state_path, self.new_state())
-            written.append(self.state_path)
+            for path in self.changed():
+                if read(path) != self.before[path]: raise OSError(f"동시 변경 감지: {path}")
+                atomic_write(path, self.targets[path]); written.append(path)
+            atomic_write(self.state_path, self.state); written.append(self.state_path)
         except OSError as error:
             failures = []
             for path in reversed(written):
                 try:
-                    old = originals[path]
-                    if old is None:
-                        path.unlink(missing_ok=True)
-                    else:
-                        atomic_write(path, old)
-                except OSError:
-                    failures.append(str(path))
-            detail = " / 자동 복원 실패: " + ", ".join(failures) if failures else " / 변경 파일 복원 완료"
-            raise OSError(f"설치 실패: {error}{detail}. 백업: {backup}") from error
+                    if originals[path] is None: path.unlink(missing_ok=True)
+                    else: atomic_write(path, originals[path])
+                except OSError: failures.append(str(path))
+            detail = "자동 복원 완료" if not failures else "자동 복원 실패: " + ", ".join(failures)
+            raise OSError(f"설치 실패; {detail}; 백업={backup}; {error}") from error
         return backup
 
 
-def audit(workspace: Path) -> None:
-    """Only inspect named instruction files in the workspace and direct Git children."""
-    workspace = workspace.expanduser().resolve()
-    if not workspace.is_dir():
-        raise ValueError(f"작업 공간 폴더가 없습니다: {workspace}")
-    projects = [workspace] + sorted(
-        p for p in workspace.iterdir() if p.is_dir() and not p.is_symlink() and (p / ".git").exists())
-    for project in projects:
-        found = False
-        for filename in ("AGENTS.override.md", "AGENTS.md", "CLAUDE.md"):
-            path = project / filename
-            if not path.is_file() or path.is_symlink():
-                continue
-            found = True
-            data = path.read_bytes()
-            text = data.decode("utf-8-sig")
-            lines = len(text.splitlines())
-            warnings = []
-            if filename == "AGENTS.override.md" and text.strip():
-                warnings.append("동일 폴더 AGENTS.md보다 우선")
-            if filename.startswith("AGENTS") and len(data) > 32768:
-                warnings.append("Codex 기본 32KiB 지침 한도 초과 가능")
-            if lines > 200:
-                warnings.append("긴 지침: 작업 이력·참조 문서 분리 검토")
-            print(f"{project.name}/{filename}: {len(data)} bytes, {lines} lines"
-                  + (" | " + "; ".join(warnings) if warnings else ""))
-        if not found:
-            print(f"{project.name}: 프로젝트 지침 없음 (전역 지침과 README 기준 확인)")
-    print("읽기 전용 점검입니다. 중첩 지침·충돌·실제 모델 로딩·보안 설정을 검증한 결과는 아닙니다.")
+def global_targets(source: bytes, codex_home: Path, claude_home: Path) -> dict[Path, bytes]:
+    codex_home, claude_home = plain(codex_home), plain(claude_home)
+    override = codex_home / "AGENTS.override.md"
+    if override.exists() and override.read_text(encoding="utf-8-sig").strip():
+        raise ValueError("전역 AGENTS.override.md부터 검토하세요.")
+    imported = Path(os.path.relpath(codex_home / "AGENTS.md", claude_home)).as_posix().replace(" ", "\\ ")
+    settings_path = claude_home / "settings.json"
+    existing = json.loads(settings_path.read_text(encoding="utf-8-sig")) if settings_path.exists() else {}
+    addition = merge_lists(claude_permissions(), {
+        "permissions": {"defaultMode": "auto"},
+        "autoMode": {
+            "environment": ["$defaults", "Personal development work in the current trusted workspace."],
+            "allow": ["$defaults", "Local analysis, edits and relevant validation within the user's requested task."],
+            "soft_deny": ["$defaults", "External writes, publishing, push, messages or paid generation without explicit approval of the target and content."],
+            "hard_deny": ["$defaults", "Expose credentials, overwrite unrelated work, or force-push remote history."],
+        },
+    })
+    if os.name != "nt":
+        addition["sandbox"] = {"enabled": True, "failIfUnavailable": True, "allowUnsandboxedCommands": False,
+                               "filesystem": {"denyRead": ["~/.ssh", "~/.aws/credentials", "~/.git-credentials"]}}
+    config_path = codex_home / "config.toml"
+    config = config_path.read_text(encoding="utf-8-sig") if config_path.exists() else ""
+    parsed = tomllib.loads(config)
+    prefix = []
+    if "approval_policy" not in parsed: prefix.append('approval_policy = "on-request"')
+    if "default_permissions" not in parsed and "sandbox_mode" not in parsed: prefix.append('sandbox_mode = "workspace-write"')
+    if prefix: config = "# Shared rule defaults; existing settings preserved.\n" + "\n".join(prefix) + "\n\n" + config
+    result = {codex_home / "AGENTS.md": instructions(source, ("common",)),
+            claude_home / "CLAUDE.md": ("# Shared global instructions\n\n@" + imported + "\n").encode("utf-8"),
+            settings_path: encoded(merge_lists(existing, addition)), config_path: config.encode("utf-8")}
+    result.update(memory_targets(claude_home))
+    return result
 
 
-def main(argv: list[str] | None = None) -> int:
+def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("action", choices=["preview", "sync", "check", "audit"])
-    parser.add_argument("--workspace", type=Path, help="PC별 프로젝트 모음 경로; 설치 시 기록")
-    parser.add_argument("--codex-home", type=Path,
-                        default=Path(os.environ.get("CODEX_HOME", str(Path.home() / ".codex"))))
-    parser.add_argument("--claude-home", type=Path,
-                        default=Path(os.environ.get("CLAUDE_CONFIG_DIR", str(Path.home() / ".claude"))))
-    parser.add_argument("--adopt-existing", action="store_true", help="기존 파일을 백업한 뒤 공통 규칙으로 이전")
-    args = parser.parse_args(argv)
-    try:
-        if args.action == "audit":
-            if not args.workspace:
-                parser.error("audit에는 --workspace가 필요합니다.")
-            audit(args.workspace)
-            return 0
-        install = Installation(args.codex_home, args.claude_home, args.workspace)
-        install.preview()
-        if args.action == "sync":
-            backup = install.sync(args.adopt_existing)
-            print(f"동기화 완료. 백업: {backup}" if backup else "이미 최신 설치본입니다.")
-            print("새 Codex/Claude 세션에서 지침 로딩을 확인하세요. 권한·훅 설정은 변경하지 않았습니다.")
-        elif args.action == "check":
-            ok = install.check()
-            print("설치본·기록 일치" if ok else "설치 또는 동기화가 필요합니다.")
-            return 0 if ok else 1
-        return 0
-    except (OSError, ValueError) as error:
-        print(f"오류: {error}", file=sys.stderr)
-        return 2
+    parser.add_argument("command", choices=["preview", "sync", "check"])
+    parser.add_argument("--workspace", type=Path, default=ROOT.parents[2])
+    parser.add_argument("--projects", nargs="*", choices=list(PROJECTS))
+    parser.add_argument("--global", dest="global_install", action="store_true", help="홈 전역 지침·자동 모드도 설치. 해당 경로 쓰기 권한 필요")
+    parser.add_argument("--global-only", action="store_true")
+    parser.add_argument("--codex-home", type=Path, default=Path(os.environ.get("CODEX_HOME", str(Path.home() / ".codex"))))
+    parser.add_argument("--claude-home", type=Path, default=Path(os.environ.get("CLAUDE_CONFIG_DIR", str(Path.home() / ".claude"))))
+    parser.add_argument("--adopt-existing", action="store_true")
+    args = parser.parse_args()
+    workspace = plain(args.workspace)
+    source = SOURCE.read_bytes()
+    selected = args.projects if args.projects is not None else [name for name in PROJECTS if (workspace / name).is_dir()]
+    transactions = []
+    if not args.global_only:
+        if not workspace.is_dir(): raise ValueError("작업 공간이 없습니다.")
+        for name in selected:
+            project = plain(workspace / name)
+            if not (project / ".git").exists(): raise ValueError(f"Git 프로젝트가 아닙니다: {project}")
+            if name == "Project_DOB" and args.command == "sync":
+                branch = subprocess.run(["git", "-C", str(project), "branch", "--show-current"], capture_output=True, text=True, check=True).stdout.strip()
+                if branch == "main":
+                    raise ValueError("DOB 설정 변경은 backend 등 역할 브랜치에서 적용하세요. main 직접 반영 예외는 합의된 문서에만 적용됩니다.")
+            override = project / "AGENTS.override.md"
+            if override.exists() and override.read_text(encoding="utf-8-sig").strip(): raise ValueError(f"우선 지침 검토 필요: {override}")
+            existing = {key: read(plain(project / key)) for key in PROJECT_FILES}
+            desired = render_project(project, source, existing)
+            transactions.append((name, Transaction({project / key: value for key, value in desired.items()}, ROOT / ".state" / name / "state.json")))
+        targets = {workspace / "AGENTS.md": instructions(source, ("common", "workspace")),
+                   workspace / "CLAUDE.md": b"# Shared workspace instructions\n\n@AGENTS.md\n"}
+        transactions.append(("workspace", Transaction(targets, ROOT / ".state/workspace/state.json")))
+    if args.global_install or args.global_only:
+        transactions.append(("global", Transaction(global_targets(source, args.codex_home, args.claude_home), ROOT / ".state/global/state.json")))
+    if SOURCE.read_bytes() != source: raise ValueError("준비 중 규칙 원본이 바뀌었습니다.")
+    valid = True
+    for name, transaction in transactions:
+        if args.command == "preview":
+            print(f"{name}: 변경 {len(transaction.changed())}개 / 기존·수동 변경 {len(transaction.conflicts())}개")
+            for path in transaction.changed(): print("  " + str(path))
+        elif args.command == "sync":
+            backup = transaction.sync(args.adopt_existing)
+            print(f"{name}: " + (f"설치 완료 / 백업 {backup}" if backup else "이미 일치"))
+        else:
+            okay = transaction.check(); valid &= okay
+            print(f"{name}: " + ("PASS" if okay else "설치 불일치"))
+    if args.global_install or args.global_only:
+        print("전역 설정 파일 검사와 실제 세션 활성화는 다릅니다. 새 세션에서 /hooks 신뢰와 자동 모드를 확인하세요.")
+        if os.name == "nt": print("Claude OS 샌드박스는 native Windows에서 지원되지 않습니다. WSL2 사용 시 별도 설치가 필요합니다.")
+    return 0 if valid else 1
 
 
 if __name__ == "__main__":
-    if hasattr(sys.stdout, "reconfigure"):
-        sys.stdout.reconfigure(encoding="utf-8")
-        sys.stderr.reconfigure(encoding="utf-8")
-    raise SystemExit(main())
+    try: raise SystemExit(main())
+    except (OSError, ValueError, KeyError) as error: raise SystemExit(f"오류: {error}")

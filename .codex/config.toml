@@ -1,0 +1,11 @@
+# Managed by Kasil_DevLog/tools/agent-rules/manage.py
+# 상위 관리 정책을 변경하지 않습니다. 실제 권한은 새 세션에서 확인합니다.
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+
+[sandbox_workspace_write]
+network_access = false
+
+[agents.shared_reviewer]
+description = "Read-only review when the user requests an independent reviewer."
+config_file = "agents/shared-reviewer.toml"

@@ -1,0 +1,57 @@
+{
+  "format": 2,
+  "profile": "blog",
+  "source_sha256": "5026a166ee5598e691f12d03bb76cf6d2eb982b1fdfe3544a516e1c620a4a651",
+  "source_url": "https://github.com/SongYeChan1024/Kasil_DevLog/blob/chore/shared-agent-rules-20261120/tools/agent-rules/RULES.md",
+  "files": {
+    "AGENTS.md": "763f46ce70df1f091ae4787d1807df7cf0613157e2196882da5799023abbec22",
+    "CLAUDE.md": "1320cebfc04d78e5bc11d1dbad8490baf79584aacda8a3975912a4e60ebbf5aa",
+    ".agent-rules/runtime.py": "4d9223478035dd0bd7c425a0cce44729aaf52a0909fad02c973a31870a304a12",
+    ".agent-rules/.gitignore": "046032151fe6113c18a8d7d9971c557e81129ca1ba244e5263d54b7e0e6f9643",
+    ".codex/rules/shared.rules": "175ce0d9ce7061b536c9774fbb951d3158e15b907ec4465f06a22a9273988551",
+    ".codex/agents/shared-reviewer.toml": "508f6c34bc5438a1751565b31d81f0591409ebcc8762b4149a8bd5bb37cafd1f",
+    ".claude/agents/shared-reviewer.md": "c89d73f7fb46efce29f1c37ade6e8d700cdd29123c265846ff217917f21b4061",
+    ".gitattributes": "a61fbe4321ebee245c96badba3f43317afc2bee9c9d5b3ff4a049b063ca4e2ca",
+    ".claude/settings.json": "fc77fc8acb9ef66d67b4e0cba071d02ad93cd5e30258fcd0417ed4c6ca4c7250",
+    ".codex/hooks.json": "ef4549929b4c900f5ef6bdbd2c7c92cd741e785d481d189f8bcbaa350ba650ff",
+    ".codex/config.toml": "41807e8411b37a31f2552c10b11b62a6e137cf6929bc2e71399ea3fbffcdc49f"
+  },
+  "checks": [
+    {
+      "name": "agent-rules",
+      "patterns": [
+        "tools/agent-rules/*",
+        ".agent-rules/*",
+        ".claude/*",
+        ".codex/*"
+      ],
+      "requires": "tools/agent-rules/test_manage.py",
+      "command": [
+        "{python}",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/agent-rules",
+        "-p",
+        "test_*.py"
+      ]
+    },
+    {
+      "name": "blog-editor",
+      "patterns": [
+        "admin/*",
+        "assets/js/*",
+        "tools/*regression*"
+      ],
+      "requires": "tools/editor-regression.test.mjs",
+      "command": [
+        "node",
+        "--test",
+        "tools/editor-regression.test.mjs",
+        "tools/cache-regression.test.mjs"
+      ]
+    }
+  ]
+}

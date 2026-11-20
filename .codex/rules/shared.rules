@@ -1,0 +1,6 @@
+# 공통 외부 반영 확인. 명령 변형 전체를 보장하는 보안 경계는 아닙니다.
+prefix_rule(pattern=["git", "push"], decision="prompt")
+prefix_rule(pattern=["gh", "pr", "create"], decision="prompt")
+prefix_rule(pattern=["gh", "pr", "merge"], decision="prompt")
+prefix_rule(pattern=["git", "push", "--force"], decision="forbidden")
+prefix_rule(pattern=["git", "push", "-f"], decision="forbidden")

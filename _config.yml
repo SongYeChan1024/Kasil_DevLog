@@ -226,6 +226,9 @@ exclude:
   - README.md
   - AGENTS.md
   - CLAUDE.md
+  - .agent-rules
+  - .claude
+  - .codex
   - LICENSE
   - _legacy
   - purgecss.js

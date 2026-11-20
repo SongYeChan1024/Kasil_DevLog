@@ -1,0 +1,58 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c \"import pathlib,runpy; p=pathlib.Path.cwd(); r=next(d for d in (p,*p.parents) if (d/'.git').exists()); runpy.run_path(str(r/'.agent-rules/runtime.py'),run_name='__main__')\"",
+            "commandWindows": "python -c \"import pathlib,runpy; p=pathlib.Path.cwd(); r=next(d for d in (p,*p.parents) if (d/'.git').exists()); runpy.run_path(str(r/'.agent-rules/runtime.py'),run_name='__main__')\"",
+            "timeout": 120,
+            "statusMessage": "공통 규칙·변경 파일 검사"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Read|Edit|Write|Bash|PowerShell|apply_patch|exec_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c \"import pathlib,runpy; p=pathlib.Path.cwd(); r=next(d for d in (p,*p.parents) if (d/'.git').exists()); runpy.run_path(str(r/'.agent-rules/runtime.py'),run_name='__main__')\"",
+            "commandWindows": "python -c \"import pathlib,runpy; p=pathlib.Path.cwd(); r=next(d for d in (p,*p.parents) if (d/'.git').exists()); runpy.run_path(str(r/'.agent-rules/runtime.py'),run_name='__main__')\"",
+            "timeout": 120,
+            "statusMessage": "공통 규칙·변경 파일 검사"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|Bash|PowerShell|apply_patch|exec_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c \"import pathlib,runpy; p=pathlib.Path.cwd(); r=next(d for d in (p,*p.parents) if (d/'.git').exists()); runpy.run_path(str(r/'.agent-rules/runtime.py'),run_name='__main__')\"",
+            "commandWindows": "python -c \"import pathlib,runpy; p=pathlib.Path.cwd(); r=next(d for d in (p,*p.parents) if (d/'.git').exists()); runpy.run_path(str(r/'.agent-rules/runtime.py'),run_name='__main__')\"",
+            "timeout": 120,
+            "statusMessage": "공통 규칙·변경 파일 검사"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c \"import pathlib,runpy; p=pathlib.Path.cwd(); r=next(d for d in (p,*p.parents) if (d/'.git').exists()); runpy.run_path(str(r/'.agent-rules/runtime.py'),run_name='__main__')\"",
+            "commandWindows": "python -c \"import pathlib,runpy; p=pathlib.Path.cwd(); r=next(d for d in (p,*p.parents) if (d/'.git').exists()); runpy.run_path(str(r/'.agent-rules/runtime.py'),run_name='__main__')\"",
+            "timeout": 120,
+            "statusMessage": "공통 규칙·변경 파일 검사"
+          }
+        ]
+      }
+    ]
+  }
+}
