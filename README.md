@@ -5,6 +5,12 @@
 
 - 사이트: https://songyechan1024.github.io/Kasil_DevLog/
 
+## 개발 에이전트 공통 규칙
+
+Codex와 Claude Code의 개인 공통 규칙은 [tools/agent-rules/COMMON.md](tools/agent-rules/COMMON.md)에서 관리합니다. [설치·갱신 안내](tools/agent-rules/README.md)에 따라 각 PC의 전역 지침을 동기화하면 다른 프로젝트에도 같은 기준을 사용할 수 있습니다. 프로젝트별 팀 규칙·학습 방침은 각 저장소에 유지합니다.
+
+이 자료는 Git에서 관리하는 개발 도구이며 `tools/`는 Jekyll 사이트 출력에서 제외합니다.
+
 ## 폴더 구조
 
 ```text

@@ -1,0 +1,24 @@
+name: Agent rules checks
+
+on:
+  pull_request:
+    paths:
+      - tools/agent-rules/**
+      - .github/workflows/agent-rules-check.yml
+  push:
+    branches: [main, master]
+    paths:
+      - tools/agent-rules/**
+      - .github/workflows/agent-rules-check.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Test synchronization in disposable homes
+        run: python3 -B -m unittest discover -s tools/agent-rules -p 'test_*.py' -v
