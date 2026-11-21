@@ -224,6 +224,12 @@ exclude:
   - docs
   - tools
   - README.md
+  - AGENTS.md
+  - CLAUDE.md
+  - .agent-rules
+  - .agents
+  - .claude
+  - .codex
   - LICENSE
   - _legacy
   - purgecss.js
