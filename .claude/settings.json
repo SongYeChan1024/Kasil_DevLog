@@ -1,0 +1,100 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python",
+            "args": [
+              "-B",
+              "-c",
+              "import pathlib,runpy,sys; p=pathlib.Path.cwd(); ds=(p,*p.parents); g=next((d for d in ds if (d/'.git').exists()),None); w=next((d for d in ds if (d/'.agent-rules/workspace.json').is_file() and (g is None or g.parent==d or d.is_relative_to(g))),None); r=w if w else g; f=r/'.agent-rules'/('workspace_hook.py' if w else 'runtime.py'); sys.path.insert(0,str(f.parent)); runpy.run_path(str(f),run_name='__main__')"
+            ],
+            "timeout": 240
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Read|Edit|Write|Bash|PowerShell|apply_patch|exec_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python",
+            "args": [
+              "-B",
+              "-c",
+              "import pathlib,runpy,sys; p=pathlib.Path.cwd(); ds=(p,*p.parents); g=next((d for d in ds if (d/'.git').exists()),None); w=next((d for d in ds if (d/'.agent-rules/workspace.json').is_file() and (g is None or g.parent==d or d.is_relative_to(g))),None); r=w if w else g; f=r/'.agent-rules'/('workspace_hook.py' if w else 'runtime.py'); sys.path.insert(0,str(f.parent)); runpy.run_path(str(f),run_name='__main__')"
+            ],
+            "timeout": 240
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|Bash|PowerShell|apply_patch|exec_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python",
+            "args": [
+              "-B",
+              "-c",
+              "import pathlib,runpy,sys; p=pathlib.Path.cwd(); ds=(p,*p.parents); g=next((d for d in ds if (d/'.git').exists()),None); w=next((d for d in ds if (d/'.agent-rules/workspace.json').is_file() and (g is None or g.parent==d or d.is_relative_to(g))),None); r=w if w else g; f=r/'.agent-rules'/('workspace_hook.py' if w else 'runtime.py'); sys.path.insert(0,str(f.parent)); runpy.run_path(str(f),run_name='__main__')"
+            ],
+            "timeout": 240
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python",
+            "args": [
+              "-B",
+              "-c",
+              "import pathlib,runpy,sys; p=pathlib.Path.cwd(); ds=(p,*p.parents); g=next((d for d in ds if (d/'.git').exists()),None); w=next((d for d in ds if (d/'.agent-rules/workspace.json').is_file() and (g is None or g.parent==d or d.is_relative_to(g))),None); r=w if w else g; f=r/'.agent-rules'/('workspace_hook.py' if w else 'runtime.py'); sys.path.insert(0,str(f.parent)); runpy.run_path(str(f),run_name='__main__')"
+            ],
+            "timeout": 240
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "ask": [
+      "Bash(git push *)",
+      "Bash(gh pr create *)",
+      "Bash(gh pr merge *)",
+      "Bash(gh release create *)",
+      "PowerShell(git push *)",
+      "PowerShell(gh pr create *)",
+      "PowerShell(gh pr merge *)",
+      "PowerShell(gh release create *)"
+    ],
+    "deny": [
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(**/secrets/**)",
+      "Read(~/.ssh/**)",
+      "Read(~/.aws/credentials)",
+      "Read(~/.git-credentials)",
+      "Edit(**/.env)",
+      "Edit(**/.env.*)",
+      "Edit(**/secrets/**)",
+      "Edit(~/.ssh/**)",
+      "Edit(~/.aws/credentials)",
+      "Edit(~/.git-credentials)",
+      "Bash(git push *--force*)",
+      "Bash(git push * -f*)",
+      "PowerShell(git push *--force*)",
+      "PowerShell(git push * -f*)"
+    ]
+  }
+}

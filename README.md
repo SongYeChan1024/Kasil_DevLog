@@ -5,6 +5,14 @@
 
 - 사이트: https://songyechan1024.github.io/Kasil_DevLog/
 
+## 개발 에이전트 공통 규칙
+
+“Interview me”로 기획 의도를 확인하거나, 명세·구현·검증·출시 중 필요한 절차를 골라 쓸 수 있습니다. [공통 스킬 26개와 사용 예시](tools/agent-rules/README.md#개발-스킬-찾아-쓰기) · [Interview Me 한국어 지침](.agents/skills/interview-me/SKILL.md)
+
+전체 프로젝트의 공통 기준은 [블로그의 RULES.md](tools/agent-rules/RULES.md)에 둡니다. 작업할 프로젝트의 경로를 지정하면 공통 기준에 그 프로젝트의 고유 지침을 합쳐 읽습니다. 팀 합의와 게임 명세는 해당 저장소의 원문에서 관리합니다. [프로젝트 경로 지정과 설치·갱신 안내](tools/agent-rules/README.md#프로젝트-경로로-최종-지침-읽기)
+
+이 자료는 Git에서 관리하는 개발 도구이며 `tools/`는 Jekyll 사이트 출력에서 제외합니다.
+
 ## 폴더 구조
 
 ```text

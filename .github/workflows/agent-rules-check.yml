@@ -1,0 +1,38 @@
+name: Agent rules checks
+
+on:
+  pull_request:
+    paths:
+      - tools/agent-rules/**
+      - .github/workflows/agent-rules-check.yml
+      - AGENTS.md
+      - CLAUDE.md
+      - .agent-rules/**
+      - .agents/skills/**
+      - .claude/**
+      - .codex/**
+  push:
+    branches: [main, master, 'chore/shared-agent-rules-*']
+    paths:
+      - tools/agent-rules/**
+      - .github/workflows/agent-rules-check.yml
+      - AGENTS.md
+      - CLAUDE.md
+      - .agent-rules/**
+      - .agents/skills/**
+      - .claude/**
+      - .codex/**
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Test installation, policies and hooks in disposable directories
+        run: python3 -B -m unittest discover -s tools/agent-rules -p 'test_*.py' -v
+      - name: Check committed generated files
+        run: python3 -B tools/agent-rules/verify_bundle.py
