@@ -1,35 +1,44 @@
 # 작성자: 송예찬. 일반 터미널에서 남은 로컬 설치를 실행합니다. 자동 관리자 권한 상승은 하지 않습니다.
 [CmdletBinding()]
-param([string]$Workspace = 'C:\GitHubProjects', [switch]$WorkspaceOnly)
+param([string]$Workspace, [string]$ProjectPath, [switch]$WorkspaceOnly, [switch]$AdoptExisting)
 $ErrorActionPreference = 'Stop'
 $OutputEncoding = [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false)
 $manager = Join-Path $PSScriptRoot 'manage.py'
+if (-not $Workspace) {
+    if ($ProjectPath) { $Workspace = Split-Path -Parent (Resolve-Path -LiteralPath $ProjectPath).Path }
+    else {
+        $repoParent = (Get-Item -LiteralPath $PSScriptRoot).Parent.Parent.Parent
+        $candidate = $repoParent
+        while ($candidate -and -not (Test-Path -LiteralPath (Join-Path $candidate.FullName 'Management/projects.json'))) {
+            $candidate = $candidate.Parent
+        }
+        $Workspace = if ($candidate) { $candidate.FullName } else { $repoParent.FullName }
+    }
+    if ($ProjectPath) { $ProjectPath = (Resolve-Path -LiteralPath $ProjectPath).Path }
+}
+$adoption = @()
+if ($AdoptExisting) { $adoption += '--adopt-existing' }
 if ($WorkspaceOnly) {
-    & python -X utf8 -B $manager sync --workspace $Workspace --workspace-only
+    if ($ProjectPath) { throw '-WorkspaceOnly와 -ProjectPath는 함께 사용할 수 없습니다.' }
+    & python -X utf8 -B $manager sync --workspace $Workspace --workspace-only @adoption
     if ($LASTEXITCODE -ne 0) { throw '작업 공간 연결 설치 실패. 기존 파일 변경이 있으면 preview로 먼저 검토하세요.' }
     & python -X utf8 -B $manager check --workspace $Workspace --workspace-only
     if ($LASTEXITCODE -ne 0) { throw '작업 공간 연결 검증 실패.' }
-    Write-Host '작업 공간 연결 파일 확인 완료. C:\GitHubProjects에서 새 세션을 열고 /hooks에서 훅 정의를 검토·신뢰하세요.'
+    Write-Host "작업 공간 연결 파일 확인 완료. $Workspace 에서 새 세션의 /hooks를 확인하세요."
     Write-Host '설치·갱신 필요 프로젝트가 표시되면 해당 프로젝트의 설치·검증은 별도로 완료해야 합니다. 전체 갱신은 -WorkspaceOnly 없이 실행합니다.'
     return
 }
-$dob = Join-Path $Workspace 'Project_DOB'
-if (Test-Path -LiteralPath (Join-Path $dob '.git')) {
-    $branch = (& git -C $dob branch --show-current).Trim()
-    if ($LASTEXITCODE -ne 0) { throw 'DOB 브랜치를 확인하지 못했습니다.' }
-    if ($branch -eq 'main') {
-        $changes = & git -C $dob status --porcelain
-        if ($changes) { throw 'DOB main에 미커밋 변경이 있습니다. 보존한 뒤 backend 브랜치에서 다시 실행하세요.' }
-        & git -C $dob switch backend
-        if ($LASTEXITCODE -ne 0) { throw 'DOB backend 전환 실패. 변경을 덮어쓰지 않았습니다.' }
-    }
-}
-& python -X utf8 -B $manager sync --workspace $Workspace --global --adopt-existing
+$targets = if ($ProjectPath) { @('--project-path', $ProjectPath) } else { @('--global') }
+& python -X utf8 -B $manager sync --workspace $Workspace @targets @adoption
 if ($LASTEXITCODE -ne 0) { throw '일부 설치가 실패했습니다. 위 결과와 백업 경로를 확인하세요.' }
-& python -X utf8 -B $manager check --workspace $Workspace --global
+& python -X utf8 -B $manager check --workspace $Workspace @targets
 if ($LASTEXITCODE -ne 0) { throw '설치 파일 검증에 실패했습니다.' }
-$docs = Join-Path $Workspace 'Document_ERGOSQUARE-ARCHITECT'
-if (Test-Path -LiteralPath (Join-Path $docs 'requirements-docs.txt')) {
+$registry = Get-Content -Raw -Encoding UTF8 -LiteralPath (Join-Path $Workspace '.agent-rules/workspace.json') | ConvertFrom-Json
+foreach ($folder in $registry.projects.PSObject.Properties.Name) {
+    $docs = Join-Path $Workspace $folder
+    if ($ProjectPath -and (Resolve-Path -LiteralPath $docs).Path -ne (Resolve-Path -LiteralPath ([IO.Path]::Combine($Workspace, $ProjectPath))).Path) { continue }
+    $policy = Get-Content -Raw -Encoding UTF8 -LiteralPath (Join-Path $docs '.agent-rules/policy.json') | ConvertFrom-Json
+    if ($policy.profile -ne 'ergo-docs' -or -not (Test-Path -LiteralPath (Join-Path $docs 'requirements-docs.txt'))) { continue }
     $venv = Join-Path $docs '.agent-rules/.cache/venv'
     $venvPython = Join-Path $venv 'Scripts/python.exe'
     if (-not (Test-Path -LiteralPath $venvPython)) {

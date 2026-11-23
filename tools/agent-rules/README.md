@@ -2,7 +2,24 @@
 
 작성자: 송예찬
 
-[RULES.md](RULES.md)가 공통·프로젝트별·검토 역할 지침의 단일 편집 원본입니다. AGENTS.md·CLAUDE.md·검토 역할 파일은 이 원본에서 생성합니다. 권한과 훅의 도구별 문법은 `rules_core.py`, 공통 검사는 `runtime.py`에서 관리합니다. 기존 `COMMON.md`는 원본 이동 안내입니다.
+[RULES.md](RULES.md)는 모든 프로젝트가 공유하는 기준, 등록된 프로젝트에 맞춘 기본값, 검토 역할과 스킬의 원본입니다. 각 프로젝트의 고유 지침은 해당 저장소에서 편집합니다.
+
+## 프로젝트 경로로 최종 지침 읽기
+
+1. 작업할 폴더를 지정합니다. 이름으로 찾을 때는 작업 공간의 `Management/projects.json`에 있는 `Name`과 실제 `Path`를 사용합니다. 예전 환경의 등록 이름과 폴더 이름이 같은 경우도 지원합니다.
+2. `compose`는 중앙 공통 규칙, 대상 범위의 기본값, 지정한 폴더의 `AGENTS.md`·`CLAUDE.md` 고유 본문과 선택적 `PROJECT_RULES.md`를 차례로 출력합니다. ERGO 문서 저장소에서는 `DOCUMENT_RULES.md`도 읽습니다. 각 문서의 상대 링크는 원래 문서가 있는 폴더를 기준으로 확인합니다.
+3. 공통 규칙은 블로그에서 고칩니다. 프로젝트별 변경은 해당 프로젝트 파일에 기록합니다. 예를 들어 DOB의 씬 담당은 DOB의 팀 README가 기준입니다. 새 프로젝트에만 적용할 지침은 그 프로젝트의 `PROJECT_RULES.md`에 적으면 됩니다.
+
+아래 예시는 현재 PC의 `Projects` 폴더에서 실행합니다. 첫 두 명령은 같은 프로젝트를 읽습니다. 세 번째는 목록에 없는 폴더를 직접 지정합니다. `compose`는 설치·Git 변경 없이 표준 출력에만 결과를 내며 Git이 없는 프로젝트도 지원합니다. 관리 도구의 위치는 공통지침 브랜치를 체크아웃한 경로로 잡습니다.
+
+```powershell
+$manager = '.\.worktrees\Kasil_DevLog\tools\agent-rules\manage.py'
+python -X utf8 -B $manager compose --workspace . --project-path .\03.Project_DOB
+python -X utf8 -B $manager compose --workspace . --projects Project_DOB
+python -X utf8 -B $manager compose --workspace . --project-path .\261119_NCAI_UnityGame
+```
+
+상시 설치한 Codex·Claude 진입 파일에서는 `BEGIN kasil-shared-instructions`부터 `END kasil-shared-instructions`까지가 중앙 관리 영역입니다. 기존 파일 본문은 끝 표식 뒤에 보존합니다. 이 본문은 프로젝트에서 계속 수정할 수 있습니다. 구버전 설치본은 이전 설치 해시와 비교해 이전하며, 사람이 작성한 README·DOCUMENT_RULES.md는 동기화 대상에서 제외합니다.
 
 ## 설치 대상과 파일
 
@@ -13,7 +30,7 @@
 | 선택적 홈 전역 설치 | Codex 공통 지침, Claude 연결 파일·auto 모드·추가 권한 규칙, 기존 Codex 설정에 없는 안전한 기본값 |
 | LucidDiver 참고용 사본 | 원래 읽기 전용 방침을 유지하며 설치 대상에서 제외 |
 
-저장소별 AGENTS에는 공통 규칙을 함께 담아 홈 설정이 없는 환경에서도 읽을 수 있게 합니다. 생성된 내용이 반복되더라도 사람이 수정하는 원본은 RULES.md 하나입니다. 팀 README·게임 명세·아키텍처는 해당 자료의 현행 계약으로 유지합니다.
+설치된 저장소의 AGENTS.md에는 중앙 규칙이 들어 있어 홈 설정 없이도 읽을 수 있습니다. 공통 영역과 프로젝트 본문 각각의 원본을 유지합니다. 팀 README·게임 명세·아키텍처는 해당 자료의 현행 계약으로 유지합니다.
 
 ## 개발 스킬 찾아 쓰기
 
@@ -75,7 +92,7 @@ python -B tools/agent-rules/manage.py check --workspace C:\GitHubProjects --glob
 
 전역만 처리하려면 `--global-only`를 사용합니다. 기존 `CODEX_HOME`·`CLAUDE_CONFIG_DIR`를 읽으며 명시적 `--codex-home`·`--claude-home`도 지원합니다. 이 경로들은 권한 제한을 우회하는 기능이 아닙니다. 접근 거부는 해당 환경에서 해결해야 합니다.
 
-현재 PC에서 남은 설치는 `tools/agent-rules/Finish-Setup.ps1`로 실행할 수 있습니다. DOB main이 깨끗할 때 기존 backend 브랜치로 전환하고 전체 설치·전역 설정·검증을 수행합니다. 변경이 있거나 쓰기 권한이 없으면 중단하며 관리자 권한 상승·보안 우회·Git push는 하지 않습니다. DOB 설정은 문서 예외에 포함되지 않으므로 역할 브랜치에서 반영합니다.
+`tools/agent-rules/Finish-Setup.ps1 -Workspace <상위 폴더> -ProjectPath <대상 폴더>`는 그 프로젝트와 작업 공간 연결을 설치하고 검증합니다. 대상 없이 전체 설치를 실행하면 전역 설정도 처리합니다. 기존 파일을 처음 인수할 때만 preview로 차이를 확인하고 `-AdoptExisting`을 지정합니다. DOB 설정은 기존 팀 규칙에 따라 역할 브랜치에서 설치합니다. 읽기 전용인 `compose`는 모든 브랜치에서 사용할 수 있습니다.
 
 ### 작업 공간에서 시작하는 세션
 
@@ -130,7 +147,7 @@ Claude의 OS 샌드박스는 macOS·Linux·WSL2에서 지원되며 native Window
 
 ## 백업과 검증
 
-`.state/<대상>/backups/<시각>/`에 원문과 manifest를 저장합니다. manifest에는 원래 경로와 변경 전후 SHA256이 있습니다. 각 대상 설치 중 실패하면 그 대상의 쓰기를 되돌립니다. 먼저 성공한 다른 대상까지 되돌리지는 않습니다. 로그와 `check`로 부분 성공 여부를 확인합니다. 백업·설치 상태는 개인 경로·기존 설정을 포함할 수 있어 공개하지 않습니다.
+설치 이력과 백업은 `.state/workspaces/<경로 해시>/<대상>/`에 저장합니다. 같은 작업 공간의 구버전 이력은 기존 위치를 이어 씁니다. 백업 manifest에는 원래 경로와 변경 전후 SHA256이 있습니다. 설치 실패 시 해당 대상의 쓰기를 되돌리고, 로그와 `check`로 결과를 확인합니다. 백업·설치 상태에는 개인 경로·기존 설정이 포함될 수 있어 로컬에서 관리합니다.
 
 ```powershell
 python -B -m unittest discover -s tools/agent-rules -p 'test_*.py' -v
@@ -148,6 +165,7 @@ CI도 같은 검사로 백업·충돌·복원·범위 분리·훅 실패 처리�
 
 | 날짜 | 작성자 | 내용 |
 | --- | --- | --- |
+| 2026-11-23 | 송예찬 | 실제 프로젝트 경로 선택, 설치 전 최종 지침 조회, 공통 영역과 프로젝트 고유 본문의 분리 관리 |
 | 2026-11-23 | 송예찬 | 원본 이름 26종과 한국어 사용 절차, 공용 참고자료 7종과 Interview Me 평가 사례를 두 도구에 연결 |
 | 2026-11-20 | 송예찬 | 작업 공간 시작 세션의 하위 저장소 검사 연결, 여러 저장소·중복 이벤트·실패 처리와 상위 연결 전용 설치 추가 |
 | 2026-11-20 | 송예찬 | 단일 원본에서 의도 확인·명세/계획·품질 스킬 생성, Codex·Claude 공통 적용과 출처 고지 추가 |

@@ -117,6 +117,64 @@ class InstallationTests(Fixture):
 
 
 class RenderingTests(Fixture):
+    def test_common_updates_keep_editable_project_text_and_team_document(self):
+        root = self.base / "Document_ERGOSQUARE-ARCHITECT"
+        project_text = ("지역 기준 및 [팀 문서](DOCUMENT_RULES.md)\r\n" * 1000).encode()
+        old = {"AGENTS.md": b"\xef\xbb\xbf" + project_text, "CLAUDE.md": b"@README.md\r\n",
+               "DOCUMENT_RULES.md": b"team contract"}
+        source = core.SOURCE.read_bytes()
+        state = self.base / "test-state.json"
+        def install(bundle):
+            return manage.Transaction({root / p: data for p, data in bundle.items()}, state)
+        first = core.render_project(root, source, old)
+        self.assertNotIn("DOCUMENT_RULES.md", first)
+        self.assertTrue(first["AGENTS.md"].startswith(b"\xef\xbb\xbf"))
+        self.assertEqual(core.local_body("AGENTS.md", first), project_text)
+        self.assertEqual(core.local_body("CLAUDE.md", first), old["CLAUDE.md"])
+        install(first).sync()
+        new_rule = b"new local rule\r\n"
+        first["AGENTS.md"] += new_rule
+        (root / "AGENTS.md").write_bytes(first["AGENTS.md"])
+        self.assertEqual(runtime.check_install(root, json.loads(first[".agent-rules/policy.json"])), [])
+        self.assertTrue(install(core.render_project(root, source, first)).check())
+        changed = source.replace(b"<!-- scope:common -->", b"<!-- scope:common -->\nCentral revision.")
+        second = core.render_project(root, changed, first)
+        install(second).sync()
+        self.assertIn(b"Central revision.", second["AGENTS.md"])
+        self.assertEqual(core.local_body("AGENTS.md", second), project_text + new_rule)
+        self.assertEqual(core.render_project(root, changed, second), second)
+
+    def test_legacy_migration_checks_installed_hash_before_skipping_old_body(self):
+        root = self.base / "Kasil_DevLog"
+        source = core.SOURCE.read_bytes()
+        old = {"AGENTS.md": b"<!-- Generated: Kasil_DevLog/tools/agent-rules/manage.py; previous version -->\nOLD"}
+        old[".agent-rules/policy.json"] = core.encoded({"files": {"AGENTS.md": core.sha(old["AGENTS.md"])}})
+        self.assertNotIn(b"\nOLD", core.render_project(root, source, old)["AGENTS.md"])
+        old["AGENTS.md"] += b"local edit"
+        with self.assertRaises(ValueError):
+            core.render_project(root, source, old)
+
+    def test_registered_path_combines_only_selected_project_sources(self):
+        root = self.base / "03.Project_DOB"
+        other = self.base / "04.After_Seconds"
+        for project in (root, other):
+            project.mkdir()
+        index = self.base / "Management/projects.json"
+        index.parent.mkdir()
+        index.write_bytes(core.encoded([{"Name": "Project_DOB", "Path": root.name},
+                                        {"Name": "After_Seconds", "Path": str(other)}]))
+        (root / "AGENTS.md").write_text("DOB original", encoding="utf-8")
+        (root / "CLAUDE.md").write_text("DOB Claude", encoding="utf-8")
+        (root / "PROJECT_RULES.md").write_text("DOB local", encoding="utf-8")
+        (other / "AGENTS.md").write_text("After Seconds original", encoding="utf-8")
+        paths = manage.project_paths(self.base)
+        text = manage.compose(paths["Project_DOB"], "Project_DOB", core.SOURCE.read_bytes())
+        for expected in ("## 공통 규칙", "## Unity 프로젝트 공통", "## Project DOB", "DOB original", "DOB Claude", "DOB local"):
+            self.assertIn(expected, text)
+        self.assertNotIn("After Seconds original", text)
+        self.assertNotIn("## After Seconds\n", text)
+        self.assertFalse((root / ".agent-rules").exists())
+
     def test_skill_reference_links_resolve_in_standalone_install(self):
         root = self.base / "Project_DOB"
         bundle = core.render_project(root, core.SOURCE.read_bytes(), {})

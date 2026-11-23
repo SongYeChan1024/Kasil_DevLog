@@ -13,6 +13,27 @@ import sys
 import tempfile
 import tomllib
 
+ENTRY_BEGIN = b"<!-- BEGIN kasil-shared-instructions -->"
+ENTRY_END = b"<!-- END kasil-shared-instructions -->"
+
+
+def entry_parts(name: str, data: bytes) -> tuple[bytes, bytes]:
+    """Only the leading managed block belongs to the installer."""
+    if name not in ("AGENTS.md", "CLAUDE.md"):
+        return data, b""
+    text = data.removeprefix(b"\xef\xbb\xbf")
+    if not text.startswith(ENTRY_BEGIN):
+        return b"", text
+    match = re.match(re.escape(ENTRY_BEGIN) + rb"\r?\n.*?^" + re.escape(ENTRY_END) + rb"\r?\n", text, re.S | re.M)
+    if not match:
+        raise ValueError(f"{name}: 공통 지침의 끝 표식을 확인하세요.")
+    return match.group().replace(b"\r\n", b"\n"), text[match.end():]
+
+
+def installation_hash(name: str, data: bytes) -> str:
+    block, _ = entry_parts(name, data)
+    return hashlib.sha256(block or data).hexdigest()
+
 
 def secret_path(value: str) -> bool:
     parts = value.replace("\\", "/").lower().strip("\"'").split("/")
@@ -98,7 +119,7 @@ def check_install(root: Path, policy: dict) -> list[str]:
         path = root / name
         if not path.resolve().is_relative_to(root) or secret_path(name) or path.is_symlink():
             errors.append("설치 manifest에 허용되지 않는 경로가 있습니다.")
-        elif not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != expected:
+        elif not path.is_file() or installation_hash(name, path.read_bytes()) != expected:
             errors.append(f"{name}: 통합 원본 설치본과 불일치. 원본 수정 후 sync 또는 설치 검토가 필요합니다.")
     return errors
 

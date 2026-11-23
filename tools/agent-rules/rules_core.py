@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import re
 import tomllib
+from runtime import ENTRY_BEGIN, ENTRY_END, entry_parts, installation_hash
 
 ROOT = Path(__file__).resolve().parent
 SOURCE = ROOT / "RULES.md"
@@ -64,7 +65,7 @@ def sections(source: bytes) -> dict[str, str]:
 def instructions(source: bytes, scopes: tuple[str, ...]) -> bytes:
     parts = sections(source)
     result = (
-        "<!-- Generated: Kasil_DevLog/tools/agent-rules/manage.py; 직접 편집하지 않습니다. -->\n"
+        "<!-- Generated: Kasil_DevLog/tools/agent-rules/manage.py; 공통 부분은 RULES.md에서 편집합니다. -->\n"
         f"<!-- Source SHA256: {sha(source)} -->\n\n"
         f"편집 원본: [통합 규칙]({SOURCE_URL}). 원본에서 수정하고 관리 도구로 동기화합니다.\n\n"
         + "\n".join(parts[name] for name in scopes)
@@ -72,6 +73,39 @@ def instructions(source: bytes, scopes: tuple[str, ...]) -> bytes:
     if len(result) > 25000:
         raise ValueError("적용 지침이 너무 큽니다. 범위를 더 나누세요.")
     return result
+
+
+def local_body(name: str, existing: dict) -> bytes:
+    raw = existing.get(name) or b""
+    block, body = entry_parts(name, raw)
+    if block:
+        return body
+    # Before managed blocks, AGENTS.md was generated in full. Trust its old
+    # manifest only when it matches, so a hand-edited legacy file cannot vanish.
+    if name == "AGENTS.md" and body.startswith(b"<!-- Generated: Kasil_DevLog/tools/agent-rules/manage.py;"):
+        for manifest in (".agent-rules/policy.json", ".agent-rules/workspace.json"):
+            if existing.get(manifest):
+                expected = json.loads(existing[manifest]).get("files", {}).get(name)
+                if expected == sha(raw) or expected == sha(raw.replace(b"\r\n", b"\n")):
+                    return b""
+        raise ValueError("AGENTS.md: 구버전 생성 파일과 설치 기록이 다릅니다. 고유 지침을 PROJECT_RULES.md에 보존한 뒤 원래 설치본과 비교하세요.")
+    if name == "CLAUDE.md" and body.replace(b"\r\n", b"\n") in (
+        b"# Shared agent instructions\n\n@AGENTS.md\n", b"# Shared workspace instructions\n\n@AGENTS.md\n"
+    ):
+        return b""
+    return body
+
+
+def entry_file(name: str, shared: bytes, existing: dict) -> bytes:
+    raw = existing.get(name) or b""
+    bom = b"\xef\xbb\xbf" if raw.startswith(b"\xef\xbb\xbf") else b""
+    return bom + ENTRY_BEGIN + b"\n" + shared.rstrip() + b"\n" + ENTRY_END + b"\n" + local_body(name, existing)
+
+
+def project_scopes(project: Path, name: str) -> tuple[str, ...]:
+    if name in PROJECTS:
+        return PROJECTS[name]
+    return ("unity",) if (project / "ProjectSettings/ProjectVersion.txt").is_file() else ()
 
 
 def render_skills(source: bytes) -> dict[str, bytes]:
@@ -160,15 +194,15 @@ WORKSPACE_FILES = ("AGENTS.md", "CLAUDE.md", ".agent-rules/runtime.py", ".agent-
 
 
 def render_workspace(source: bytes, policies: dict[str, bytes], uninstalled: list[str], existing: dict) -> dict[str, bytes]:
-    result = {"AGENTS.md": instructions(source, ("common", "workspace")),
-              "CLAUDE.md": b"# Shared workspace instructions\n\n@AGENTS.md\n",
+    result = {"AGENTS.md": entry_file("AGENTS.md", instructions(source, ("common", "workspace")), existing),
+              "CLAUDE.md": entry_file("CLAUDE.md", b"@AGENTS.md\n", existing),
               ".agent-rules/runtime.py": (ROOT / "runtime.py").read_bytes(),
               ".agent-rules/workspace_hook.py": (ROOT / "workspace_hook.py").read_bytes(),
               ".agent-rules/.gitignore": b".cache/\n__pycache__/\n"}
     registry = {"format": 1, "source_sha256": sha(source),
                 "projects": {name: sha(value) for name, value in sorted(policies.items())},
                 "uninstalled": sorted(uninstalled),
-                "files": {name: sha(value) for name, value in result.items()}}
+                "files": {name: installation_hash(name, value) for name, value in result.items()}}
     result[".agent-rules/workspace.json"] = encoded(registry)
     for agent, name in (("codex", ".codex/hooks.json"), ("claude", ".claude/settings.json")):
         result[name] = merged_hooks(agent, existing.get(name))
@@ -211,12 +245,13 @@ def validation_tasks(profile: str) -> list[dict]:
     return []
 
 
-def render_project(project: Path, source: bytes, existing: dict[str, bytes | None]) -> dict[str, bytes]:
-    scopes = PROJECTS[project.name]
+def render_project(project: Path, source: bytes, existing: dict[str, bytes | None], name: str | None = None) -> dict[str, bytes]:
+    scopes = project_scopes(project, name or project.name)
+    profile = scopes[-1] if scopes else "common"
     reviewer = sections(source)["reviewer"]
     result = {
-        "AGENTS.md": instructions(source, ("common",) + scopes),
-        "CLAUDE.md": b"# Shared agent instructions\n\n@AGENTS.md\n",
+        "AGENTS.md": entry_file("AGENTS.md", instructions(source, ("common",) + scopes), existing),
+        "CLAUDE.md": entry_file("CLAUDE.md", b"@AGENTS.md\n", existing),
         ".agent-rules/runtime.py": (ROOT / "runtime.py").read_bytes(),
         ".agent-rules/.gitignore": b".cache/\n__pycache__/\n",
         ".agent-rules/THIRD_PARTY_NOTICES.md": (ROOT / "THIRD_PARTY_NOTICES.md").read_bytes(),
@@ -231,10 +266,6 @@ def render_project(project: Path, source: bytes, existing: dict[str, bytes | Non
     attributes = re.sub(r"(?ms)^# BEGIN shared-agent-rules\r?\n.*?^# END shared-agent-rules\r?\n?", "", attributes).rstrip()
     managed_attributes = "\n".join(f"{name} text eol=lf" for name in (".gitattributes", "AGENTS.md", "CLAUDE.md", "DOCUMENT_RULES.md", ".agent-rules/**", ".agents/skills/**", ".claude/**", ".codex/**", "tools/agent-rules/**"))
     result[".gitattributes"] = (attributes + ("\n\n" if attributes else "") + "# BEGIN shared-agent-rules\n" + managed_attributes + "\n# END shared-agent-rules\n").encode("utf-8")
-    if scopes[-1] == "ergo-docs":
-        result["DOCUMENT_RULES.md"] = ("# 문서 운영 규칙\n\n작성자: 송예찬\n\n문서 운영 규칙은 [통합 작업 지침](AGENTS.md)의 ERGOSQUARE 문서 범위를 따릅니다. "
-            f"[편집 원본]({SOURCE_URL})에서 고치고 동기화합니다. 이 파일은 기존 링크를 보존하는 안내입니다.\n\n"
-            "게임 기획의 원본은 종합 기획서이며, 과거 문서 운영 규칙과 변경 기록은 Git 이력·통합 전 백업에서 확인합니다.\n").encode("utf-8")
     for agent, name in (("claude", ".claude/settings.json"), ("codex", ".codex/hooks.json")):
         result[name] = merged_hooks(agent, existing.get(name))
     prior = existing.get(".codex/config.toml")
@@ -244,9 +275,9 @@ def render_project(project: Path, source: bytes, existing: dict[str, bytes | Non
         result[".codex/config.toml"] = prior
     else:
         result[".codex/config.toml"] = CODEX_CONFIG.encode("utf-8")
-    policy = {"format": 2, "profile": scopes[-1], "source_sha256": sha(source),
-              "source_url": SOURCE_URL, "files": {k: sha(v) for k, v in result.items()},
-              "checks": validation_tasks(scopes[-1])}
+    policy = {"format": 2, "profile": profile, "source_sha256": sha(source),
+              "source_url": SOURCE_URL, "files": {k: installation_hash(k, v) for k, v in result.items()},
+              "checks": validation_tasks(profile)}
     result[".agent-rules/policy.json"] = encoded(policy)
     return result
 

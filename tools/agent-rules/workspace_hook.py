@@ -148,7 +148,7 @@ def process(workspace: Path, event: dict, cache_path: Path) -> tuple[int, dict, 
     registry = json.loads(safe(workspace / '.agent-rules/workspace.json', workspace).read_text(encoding='utf-8'))
     if registry.get('format') != 1: raise ValueError('지원하지 않는 작업 공간 연결 형식')
     for name, expected in registry['files'].items():
-        if hashlib.sha256(safe(workspace / name, workspace).read_bytes()).hexdigest() != expected:
+        if runtime.installation_hash(name, safe(workspace / name, workspace).read_bytes()) != expected:
             raise ValueError('작업 공간 연결 파일이 설치본과 다릅니다. sync가 필요합니다.')
     cache = json.loads(safe(cache_path, workspace).read_text(encoding='utf-8')) if cache_path.exists() else {}
     cache.setdefault('active', {}); cache.setdefault('pending', {}); cache.setdefault('done', {})
