@@ -7,6 +7,8 @@
 
 ## 개발 에이전트 공통 규칙
 
+“Interview me”로 기획 의도를 확인하거나, 명세·구현·검증·출시 중 필요한 절차를 골라 쓸 수 있습니다. [공통 스킬 26개와 사용 예시](tools/agent-rules/README.md#개발-스킬-찾아-쓰기) · [Interview Me 한국어 지침](.agents/skills/interview-me/SKILL.md)
+
 Codex와 Claude Code의 공통·프로젝트별 작업 규칙은 [tools/agent-rules/RULES.md](tools/agent-rules/RULES.md) 한 곳에서 관리합니다. [설치·갱신 안내](tools/agent-rules/README.md)에 따라 같은 원본에서 각 저장소의 지침·검증 훅·권한 확인 규칙·읽기 전용 검토 역할을 생성합니다. 기존 지침은 백업하고, 팀 합의와 게임 명세는 해당 저장소의 현행 원문을 따릅니다.
 
 이 자료는 Git에서 관리하는 개발 도구이며 `tools/`는 Jekyll 사이트 출력에서 제외합니다.

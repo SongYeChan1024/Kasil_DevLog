@@ -2,6 +2,7 @@
 import json
 import os
 from pathlib import Path
+import re
 import shutil
 import unittest
 from unittest.mock import patch
@@ -116,6 +117,26 @@ class InstallationTests(Fixture):
 
 
 class RenderingTests(Fixture):
+    def test_skill_reference_links_resolve_in_standalone_install(self):
+        root = self.base / "Project_DOB"
+        bundle = core.render_project(root, core.SOURCE.read_bytes(), {})
+        policy = json.loads(bundle[".agent-rules/policy.json"])["files"]
+        for host in (".agents", ".claude"):
+            resources = set()
+            for name in core.UPSTREAM_SKILLS:
+                entry = f"{host}/skills/{name}/SKILL.md"
+                body = bundle[entry].decode("utf-8")
+                self.assertIn(f"/{core.UPSTREAM_REVISION}/skills/{name}/SKILL.md", body)
+                for target in re.findall(r"\]\(([^ )]+)\)", body):
+                    if target.startswith(("https://", "#")):
+                        continue
+                    path = ((root / entry).parent / target).resolve().relative_to(root).as_posix()
+                    self.assertIn(path, bundle, (entry, target))
+                    if path in core.RESOURCE_FILES:
+                        self.assertEqual(core.sha(bundle[path]), policy[path])
+                        resources.add(path)
+            self.assertEqual(resources, set(core.RESOURCE_FILES))
+
     def test_skills_share_source_and_include_portable_license(self):
         source = core.SOURCE.read_bytes()
         rendered = core.render_project(self.base / 'Project_DOB', source, {})

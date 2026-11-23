@@ -15,7 +15,27 @@
 
 저장소별 AGENTS에는 공통 규칙을 함께 담아 홈 설정이 없는 환경에서도 읽을 수 있게 합니다. 생성된 내용이 반복되더라도 사람이 수정하는 원본은 RULES.md 하나입니다. 팀 README·게임 명세·아키텍처는 해당 자료의 현행 계약으로 유지합니다.
 
-## 의도 확인·명세·품질 스킬
+## 개발 스킬 찾아 쓰기
+
+예를 들어 **“Interview me. 플레이어가 아이템을 꺼낼 때 무엇을 개선할지부터 정리해줘”**라고 요청합니다. 먼저 현재 동작과 기획을 살펴본 뒤, 아이템을 찾는 시간이 문제인지 꺼내는 조작이 문제인지처럼 구현이 달라지는 질문을 하나씩 묻습니다. 인터뷰 결과에는 사용자 표현으로 정리한 성공 기준과 제외 범위가 남습니다. [한국어 절차](../../.agents/skills/interview-me/SKILL.md) · [원본 대화 평가 사례](upstream/evals/cases/interview-me.json)
+
+아래 이름은 Codex와 Claude에서 동일합니다. 각 한국어 절차에는 기준 커밋의 상세 원문이 연결돼 있습니다. 필요한 항목만 열어 봅니다.
+
+| 작업 | 적용할 스킬 |
+| --- | --- |
+| 절차 선택 | [using-agent-skills](../../.agents/skills/using-agent-skills/SKILL.md) |
+| 의도·아이디어·명세·제약 | [interview-me](../../.agents/skills/interview-me/SKILL.md) · [idea-refine](../../.agents/skills/idea-refine/SKILL.md) · [spec-driven-development](../../.agents/skills/spec-driven-development/SKILL.md) · [constraint-driven-development](../../.agents/skills/constraint-driven-development/SKILL.md) |
+| 계획·구현 | [planning-and-task-breakdown](../../.agents/skills/planning-and-task-breakdown/SKILL.md) · [incremental-implementation](../../.agents/skills/incremental-implementation/SKILL.md) |
+| 테스트·맥락·근거·가정 검토 | [test-driven-development](../../.agents/skills/test-driven-development/SKILL.md) · [context-engineering](../../.agents/skills/context-engineering/SKILL.md) · [source-driven-development](../../.agents/skills/source-driven-development/SKILL.md) · [doubt-driven-development](../../.agents/skills/doubt-driven-development/SKILL.md) |
+| UI·인터페이스·브라우저·디버깅 | [frontend-ui-engineering](../../.agents/skills/frontend-ui-engineering/SKILL.md) · [api-and-interface-design](../../.agents/skills/api-and-interface-design/SKILL.md) · [browser-testing-with-devtools](../../.agents/skills/browser-testing-with-devtools/SKILL.md) · [debugging-and-error-recovery](../../.agents/skills/debugging-and-error-recovery/SKILL.md) |
+| 코드 검토·보수·성능·접근성 | [code-review-and-quality](../../.agents/skills/code-review-and-quality/SKILL.md) · [code-simplification](../../.agents/skills/code-simplification/SKILL.md) · [security-and-hardening](../../.agents/skills/security-and-hardening/SKILL.md) · [performance-optimization](../../.agents/skills/performance-optimization/SKILL.md) · [accessibility-engineering](../../.agents/skills/accessibility-engineering/SKILL.md) |
+| Git·자동화·이전·문서·관측·출시 | [git-workflow-and-versioning](../../.agents/skills/git-workflow-and-versioning/SKILL.md) · [ci-cd-and-automation](../../.agents/skills/ci-cd-and-automation/SKILL.md) · [deprecation-and-migration](../../.agents/skills/deprecation-and-migration/SKILL.md) · [documentation-and-adrs](../../.agents/skills/documentation-and-adrs/SKILL.md) · [observability-and-instrumentation](../../.agents/skills/observability-and-instrumentation/SKILL.md) · [shipping-and-launch](../../.agents/skills/shipping-and-launch/SKILL.md) |
+
+**함께 설치되는 자료**는 완료 기준, 테스트 패턴, 접근성, 보안, 성능, 관측, 여러 역할의 협업에 관한 Markdown 7개와 인터뷰 평가 JSON 1개입니다. 저장소에서는 [참고 문서](upstream/references)와 [평가 사례](upstream/evals/cases/interview-me.json)에, 설치한 프로젝트에서는 `.agent-rules/upstream/`에 있습니다. 각 스킬의 상대 링크로 오프라인에서도 관련 문서를 열 수 있습니다.
+
+**원본 패키지의 다른 자료**도 같은 기준 버전으로 찾아갈 수 있습니다. 원본 명령 10개는 [명령 정의](https://github.com/addyosmani/agent-skills/tree/8c99fa36d90068c82d547f7c12a9d67a3e95f4ee/commands), 검토 역할 5개는 [역할 정의](https://github.com/addyosmani/agent-skills/tree/8c99fa36d90068c82d547f7c12a9d67a3e95f4ee/agents), 스킬별 평가 입력은 [평가 목록](https://github.com/addyosmani/agent-skills/tree/8c99fa36d90068c82d547f7c12a9d67a3e95f4ee/evals/cases), 설치 환경별 설명은 [도입 문서](https://github.com/addyosmani/agent-skills/tree/8c99fa36d90068c82d547f7c12a9d67a3e95f4ee/docs)를 봅니다. 이 번들에서 실행할 수 있는 훅·역할·명령의 범위는 아래 설치 안내를 따릅니다.
+
+### 프로젝트에서 조정한 세 스킬
 
 세 스킬의 내용과 호출 조건은 RULES.md의 `shared-intent`, `shared-spec-plan`, `shared-quality` 구간에서 관리합니다. `sync`가 Codex용 `.agents/skills/<이름>/SKILL.md`와 Claude용 `.claude/skills/<이름>/SKILL.md`를 같은 내용으로 생성합니다. 설치 해시·수동 수정 보존·백업도 기존 지침과 같은 방식으로 적용합니다.
 
@@ -128,6 +148,7 @@ CI도 같은 검사로 백업·충돌·복원·범위 분리·훅 실패 처리�
 
 | 날짜 | 작성자 | 내용 |
 | --- | --- | --- |
+| 2026-11-23 | 송예찬 | 원본 이름 26종과 한국어 사용 절차, 공용 참고자료 7종과 Interview Me 평가 사례를 두 도구에 연결 |
 | 2026-11-20 | 송예찬 | 작업 공간 시작 세션의 하위 저장소 검사 연결, 여러 저장소·중복 이벤트·실패 처리와 상위 연결 전용 설치 추가 |
 | 2026-11-20 | 송예찬 | 단일 원본에서 의도 확인·명세/계획·품질 스킬 생성, Codex·Claude 공통 적용과 출처 고지 추가 |
 | 2026-11-20 | 송예찬 | 전역 공통 규칙 v1을 프로젝트별 범위·검증 훅·권한 확인·읽기 전용 검토 역할까지 포함하는 단일 원본 관리 방식으로 확장 |

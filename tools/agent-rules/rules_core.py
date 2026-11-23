@@ -9,7 +9,26 @@ import tomllib
 
 ROOT = Path(__file__).resolve().parent
 SOURCE = ROOT / "RULES.md"
-SKILLS = ("shared-intent", "shared-spec-plan", "shared-quality")
+UPSTREAM_REVISION = "8c99fa36d90068c82d547f7c12a9d67a3e95f4ee"
+UPSTREAM_SKILLS = (
+    "using-agent-skills", "interview-me", "idea-refine", "spec-driven-development",
+    "constraint-driven-development", "planning-and-task-breakdown", "incremental-implementation",
+    "test-driven-development", "context-engineering", "source-driven-development",
+    "doubt-driven-development", "frontend-ui-engineering", "api-and-interface-design",
+    "browser-testing-with-devtools", "debugging-and-error-recovery", "code-review-and-quality",
+    "code-simplification", "security-and-hardening", "performance-optimization",
+    "accessibility-engineering", "git-workflow-and-versioning", "ci-cd-and-automation",
+    "deprecation-and-migration", "documentation-and-adrs", "observability-and-instrumentation",
+    "shipping-and-launch",
+)
+SKILLS = ("shared-intent", "shared-spec-plan", "shared-quality") + UPSTREAM_SKILLS
+UPSTREAM_RESOURCES = (
+    "references/accessibility-checklist.md", "references/definition-of-done.md",
+    "references/observability-checklist.md", "references/orchestration-patterns.md",
+    "references/performance-checklist.md", "references/security-checklist.md",
+    "references/testing-patterns.md", "evals/cases/interview-me.json",
+)
+RESOURCE_FILES = tuple(f".agent-rules/upstream/{path}" for path in UPSTREAM_RESOURCES)
 SKILL_FILES = tuple(f"{folder}/skills/{name}/SKILL.md" for folder in (".agents", ".claude") for name in SKILLS)
 PROJECTS = {
     "After_Seconds": ("unity", "after-seconds"),
@@ -62,10 +81,14 @@ def render_skills(source: bytes) -> dict[str, bytes]:
         metadata, separator, body = parts[name].partition("\n---\n")
         if not metadata.startswith("---\n") or not separator or f"\nname: {name}\n" not in metadata + "\n" or not re.search(r"^description: \S.+", metadata, re.M):
             raise ValueError(f"스킬 메타데이터를 확인하세요: {name}")
+        upstream = ""
+        if name in UPSTREAM_SKILLS:
+            upstream = f"[원본 절차](https://github.com/addyosmani/agent-skills/blob/{UPSTREAM_REVISION}/skills/{name}/SKILL.md) · "
+        body = body.lstrip().replace("](upstream/", "](../../../.agent-rules/upstream/")
         generated = (metadata + separator + "\n<!-- Generated from RULES.md; 직접 편집하지 않습니다. -->\n"
                      + f"<!-- Source SHA256: {sha(source)} -->\n"
-                     + f"편집 원본: [통합 규칙]({SOURCE_URL}). [출처·라이선스](../../../.agent-rules/THIRD_PARTY_NOTICES.md).\n\n"
-                     + body.lstrip()).encode("utf-8")
+                     + f"편집 원본: [통합 규칙]({SOURCE_URL}). {upstream}[출처·라이선스](../../../.agent-rules/THIRD_PARTY_NOTICES.md).\n\n"
+                     + body).encode("utf-8")
         for folder in (".agents", ".claude"):
             result[f"{folder}/skills/{name}/SKILL.md"] = generated
     return result
@@ -202,6 +225,8 @@ def render_project(project: Path, source: bytes, existing: dict[str, bytes | Non
         ".claude/agents/shared-reviewer.md": ('---\nname: shared-reviewer\ndescription: Read-only review when the user explicitly requests an independent reviewer.\ntools: Read, Grep, Glob\nmodel: inherit\n---\n\n' + reviewer).encode("utf-8"),
     }
     result.update(render_skills(source))
+    for path in UPSTREAM_RESOURCES:
+        result[f".agent-rules/upstream/{path}"] = (ROOT / "upstream" / path).read_bytes()
     attributes = (existing.get(".gitattributes") or b"").decode("utf-8-sig").replace("\r\n", "\n")
     attributes = re.sub(r"(?ms)^# BEGIN shared-agent-rules\r?\n.*?^# END shared-agent-rules\r?\n?", "", attributes).rstrip()
     managed_attributes = "\n".join(f"{name} text eol=lf" for name in (".gitattributes", "AGENTS.md", "CLAUDE.md", "DOCUMENT_RULES.md", ".agent-rules/**", ".agents/skills/**", ".claude/**", ".codex/**", "tools/agent-rules/**"))
@@ -228,4 +253,4 @@ def render_project(project: Path, source: bytes, existing: dict[str, bytes | Non
 
 PROJECT_FILES = ("AGENTS.md", "CLAUDE.md", ".agent-rules/runtime.py", ".agent-rules/.gitignore",
                  ".agent-rules/policy.json", ".claude/settings.json", ".codex/hooks.json",
-                 ".codex/config.toml", ".codex/rules/shared.rules", ".codex/agents/shared-reviewer.toml", ".claude/agents/shared-reviewer.md", ".gitattributes", "DOCUMENT_RULES.md", ".agent-rules/THIRD_PARTY_NOTICES.md") + SKILL_FILES
+                 ".codex/config.toml", ".codex/rules/shared.rules", ".codex/agents/shared-reviewer.toml", ".claude/agents/shared-reviewer.md", ".gitattributes", "DOCUMENT_RULES.md", ".agent-rules/THIRD_PARTY_NOTICES.md") + SKILL_FILES + RESOURCE_FILES
