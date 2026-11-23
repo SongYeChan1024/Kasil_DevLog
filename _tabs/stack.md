@@ -31,6 +31,7 @@ order: 4
 | --- | --- | --- |
 | Claude Code | 사용 중 | 구현, 문서, 검수 |
 | Unity MCP (Unity AI Assistant) | 사용 중 | 에디터 조작·콘솔 확인·클립 측정 |
+| Notion MCP | 사용 중 | [Codex와 Claude Code에서 팀 기획서 읽기]({{ '/posts/notion-mcp-cli/' | relative_url }}) |
 
 ## 협업과 문서
 
